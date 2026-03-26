@@ -193,12 +193,20 @@
             border: 0;
         }
 
+        /* Audience response: NPS left, quotes right */
+        .audience-layout {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 3rem;
+            max-width: 900px;
+            margin: 0 auto;
+            align-items: start;
+        }
+
         .quotes-grid {
             display: grid;
             grid-template-columns: 1fr;
             gap: 1.5rem;
-            max-width: 700px;
-            margin: 0 auto;
         }
 
         .quote {
@@ -222,15 +230,14 @@
         .quote strong { font-weight: 700; font-style: italic; }
         .quote em { color: var(--text-muted); font-weight: 300; }
 
-        .nps-section { text-align: center; }
-
         .nps-card {
-            max-width: 400px;
-            margin: 0 auto;
             background: var(--bg-lighter);
             border: 1px solid rgba(255,255,255,0.06);
             border-radius: 12px;
             padding: 2.5rem 2rem 2rem;
+            text-align: center;
+            position: sticky;
+            top: 2rem;
         }
 
         .nps-number {
@@ -248,12 +255,12 @@
         .nps-stats {
             display: flex;
             justify-content: center;
-            gap: 3rem;
+            gap: 2rem;
             margin-bottom: 1.5rem;
         }
 
-        .nps-stat-number { font-size: 1.75rem; font-weight: 700; line-height: 1.2; }
-        .nps-stat-label { font-size: 0.8rem; color: var(--text-muted); }
+        .nps-stat-number { font-size: 1.5rem; font-weight: 700; line-height: 1.2; }
+        .nps-stat-label { font-size: 0.75rem; color: var(--text-muted); }
 
         .nps-bar {
             display: flex;
@@ -267,7 +274,7 @@
         .nps-bar-amber { background: var(--amber); flex: 17; }
         .nps-bar-red { background: var(--coral); flex: 8; }
 
-        .nps-context { font-size: 0.8rem; color: var(--text-dim); margin-top: 2rem; line-height: 1.5; }
+        .nps-context { font-size: 0.75rem; color: var(--text-dim); margin-top: 1.5rem; line-height: 1.5; }
 
         .photos-grid {
             display: grid;
@@ -369,6 +376,41 @@
 
         .logline-text em { color: var(--text); font-style: italic; }
 
+        /* What's Next section */
+        .next-section { text-align: center; }
+
+        .next-inner {
+            max-width: 640px;
+            margin: 0 auto;
+        }
+
+        .next-text {
+            font-size: 1rem;
+            font-weight: 300;
+            line-height: 1.75;
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+        }
+
+        .next-text strong {
+            color: var(--text);
+            font-weight: 500;
+        }
+
+        .form-wrapper {
+            max-width: 540px;
+            margin: 0 auto;
+            border-radius: 8px;
+            overflow: hidden;
+            background: var(--bg-lighter);
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .form-wrapper iframe {
+            width: 100%;
+            border: 0;
+        }
+
         .footer {
             padding: 4rem 1.5rem 3rem;
             text-align: center;
@@ -435,6 +477,18 @@
 
         .reveal.visible { opacity: 1; transform: translateY(0); }
 
+        @media (max-width: 768px) {
+            .audience-layout {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .nps-card {
+                max-width: 400px;
+                margin: 0 auto;
+                position: static;
+            }
+        }
+
         @media (max-width: 600px) {
             section { padding: 3.5rem 1.25rem; }
             .photos-grid { grid-template-columns: 1fr 1fr; }
@@ -448,7 +502,7 @@
 <body>
 
     <section class="hero">
-        <p class="hero-kicker">An Original Musical</p>
+        <p class="hero-kicker">A New Musical in Development</p>
         <h1 class="hero-title">Schooled</h1>
         <p class="hero-tagline">When does school end and life begin?</p>
         <p class="hero-genres">
@@ -480,46 +534,42 @@
         </div>
     </section>
 
-    <section class="quotes-section">
-        <div class="section-inner">
+    <section class="audience-section">
+        <div class="section-inner" style="max-width: 900px;">
             <p class="section-label reveal">How the SXSW EDU Audience Described the Show</p>
             <p class="section-summary reveal">A joyful and celebratory tone, wrapped around authentic, unflinching narratives.</p>
-            <div class="quotes-grid">
-                <div class="quote reveal">&ldquo;<strong>A musical for our times,</strong> <em>from the voice of young people who need to be listened to.</em>&rdquo;</div>
-                <div class="quote reveal">&ldquo;<strong>This writer captured the souls of students</strong> <em>hungry for relevancy and action.</em>&rdquo;</div>
-                <div class="quote reveal">&ldquo;It was <strong>funny while also asking very important questions.</strong>&rdquo;</div>
-                <div class="quote reveal">&ldquo;<strong>SO refreshing</strong> <em>that it&rsquo;s not the typical Hollywood disdain and boredom of high school.</em>&rdquo;</div>
-                <div class="quote reveal">&ldquo;I literally cried. <strong>I NEED MORE OF THIS IN MY LIFE!</strong>&rdquo;</div>
-                <div class="quote reveal">&ldquo;It was a <strong>joyful, engaging, and honest perspective</strong> of modern school! <em>You&rsquo;ll smile, laugh, and get teary eyed at how beautiful and real it is!</em>&rdquo;</div>
-                <div class="quote reveal">&ldquo;<strong>A necessary musical</strong> <em>to watch to see how students feel and learn about what they are ACTUALLY thinking.</em>&rdquo;</div>
-                <div class="quote reveal">&ldquo;<strong>The variety of musical styles was incredible!</strong>&rdquo;</div>
-            </div>
-        </div>
-    </section>
-
-    <section class="nps-section">
-        <div class="reveal">
-            <p class="section-label">SXSW EDU 2026 &mdash; Audience Response</p>
-            <div class="nps-card">
-                <div class="nps-number">67</div>
-                <div class="nps-label">Net Promoter Score</div>
-                <div class="nps-n">n = 96</div>
-                <div class="nps-stats">
-                    <div>
-                        <div class="nps-stat-number">75%</div>
-                        <div class="nps-stat-label">promoters</div>
+            <div class="audience-layout reveal">
+                <div class="nps-card">
+                    <div class="nps-number">67</div>
+                    <div class="nps-label">Net Promoter Score</div>
+                    <div class="nps-n">n = 96</div>
+                    <div class="nps-stats">
+                        <div>
+                            <div class="nps-stat-number">75%</div>
+                            <div class="nps-stat-label">promoters</div>
+                        </div>
+                        <div>
+                            <div class="nps-stat-number">69%</div>
+                            <div class="nps-stat-label">gave a perfect 10</div>
+                        </div>
                     </div>
-                    <div>
-                        <div class="nps-stat-number">69%</div>
-                        <div class="nps-stat-label">gave a perfect 10</div>
+                    <div class="nps-bar">
+                        <div class="nps-bar-green"></div>
+                        <div class="nps-bar-amber"></div>
+                        <div class="nps-bar-red"></div>
                     </div>
+                    <div class="nps-context">Act I staged reading<br>Educators &amp; industry audience</div>
                 </div>
-                <div class="nps-bar">
-                    <div class="nps-bar-green"></div>
-                    <div class="nps-bar-amber"></div>
-                    <div class="nps-bar-red"></div>
+                <div class="quotes-grid">
+                    <div class="quote">&ldquo;<strong>A musical for our times,</strong> <em>from the voice of young people who need to be listened to.</em>&rdquo;</div>
+                    <div class="quote">&ldquo;<strong>This writer captured the souls of students</strong> <em>hungry for relevancy and action.</em>&rdquo;</div>
+                    <div class="quote">&ldquo;It was <strong>funny while also asking very important questions.</strong>&rdquo;</div>
+                    <div class="quote">&ldquo;<strong>SO refreshing</strong> <em>that it&rsquo;s not the typical Hollywood disdain and boredom of high school.</em>&rdquo;</div>
+                    <div class="quote">&ldquo;I literally cried. <strong>I NEED MORE OF THIS IN MY LIFE!</strong>&rdquo;</div>
+                    <div class="quote">&ldquo;It was a <strong>joyful, engaging, and honest perspective</strong> of modern school! <em>You&rsquo;ll smile, laugh, and get teary eyed at how beautiful and real it is!</em>&rdquo;</div>
+                    <div class="quote">&ldquo;<strong>A necessary musical</strong> <em>to watch to see how students feel and learn about what they are ACTUALLY thinking.</em>&rdquo;</div>
+                    <div class="quote">&ldquo;<strong>The variety of musical styles was incredible!</strong>&rdquo;</div>
                 </div>
-                <div class="nps-context">Act I staged reading &middot; Educators &amp; industry audience</div>
             </div>
         </div>
     </section>
@@ -546,6 +596,28 @@
             <p class="logline-text">
                 An original musical fusing classical, hip-hop, Latin, jazz, and gospel, <em>Schooled</em> begins and ends in the same classroom &mdash; first with joy, then with wisdom &mdash; tracing a brother, a sister, and a friend through a decade of consequence as they discover how to navigate a world changing rapidly around them.
             </p>
+        </div>
+    </section>
+
+    <section class="next-section">
+        <div class="next-inner reveal">
+            <div class="spectrum-bar" style="margin-bottom: 2.5rem;">
+                <span class="c1"></span><span class="c2"></span><span class="c3"></span><span class="c4"></span>
+            </div>
+            <p class="section-label">What&rsquo;s Next for Schooled</p>
+            <p class="next-text">
+                <em>Schooled</em> has a book and score in active development and <strong>extraordinary audience affirmation</strong> for its work so far. We&rsquo;re now seeking creative and producing partners &mdash; including a director and music director &mdash; to help bring the full show to life.
+            </p>
+            <p class="next-text">
+                If you&rsquo;d like to follow the journey or know someone who should hear this show, we&rsquo;d love to connect.
+            </p>
+            <div class="form-wrapper">
+                <iframe
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSf7uT0TsXsQ8eqMijngDyEAcvg7PZzgE84elc5ECdSyUomm5g/viewform?embedded=true"
+                    height="450"
+                    title="Stay in touch with Schooled"
+                >Loading...</iframe>
+            </div>
         </div>
     </section>
 
