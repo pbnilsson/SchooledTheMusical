@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About the Creator — Schooled the Musical</title>
+  <meta name="description" content="Peter Nilsson is the book writer, lyricist, and composer of Schooled, an original musical set at the intersection of American education and the culture wars.">
+  <meta property="og:title" content="About the Creator — Schooled the Musical">
+  <meta property="og:description" content="Peter Nilsson — book, music & lyrics">
+  <meta property="og:image" content="/images/og-image.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="/images/og-image.jpg">
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700&family=Instrument+Serif&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #111827;
+      --bg-lighter: #1a2235;
+      --text: #f1f1f1;
+      --text-muted: #9ca3af;
+      --text-dim: #6b7280;
+      --coral: #f87171;
+      --amber: #fbbf24;
+      --teal: #2dd4bf;
+      --blue: #60a5fa;
+      --purple: #a78bfa;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 400;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--teal); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Back link */
+    .back-link {
+      position: fixed;
+      top: 24px;
+      left: 24px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      z-index: 100;
+      transition: color 0.2s;
+    }
+    .back-link:hover { color: var(--teal); text-decoration: none; }
+    .back-link span { margin-right: 6px; }
+
+    /* Main content */
+    .about-container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 100px 24px 80px;
+    }
+
+    /* Section label */
+    .section-label {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+
+    /* Photo */
+    .headshot-wrapper {
+      margin-bottom: 32px;
+    }
+    .headshot-wrapper img {
+      width: 200px;
+      border-radius: 8px;
+      display: block;
+    }
+
+    /* Name */
+    .creator-name {
+      font-family: 'Helvetica Neue', Helvetica, sans-serif;
+      font-weight: 700;
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      letter-spacing: -0.02em;
+      margin-bottom: 4px;
+    }
+    .creator-role {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+    }
+
+    /* Bio paragraphs */
+    .bio p {
+      font-size: 0.95rem;
+      color: rgba(241, 241, 241, 0.82);
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+    .bio p:last-child { margin-bottom: 0; }
+    .bio em { font-style: italic; }
+
+    /* Spectrum bar */
+    .spectrum-bar {
+      height: 3px;
+      width: 160px;
+      margin: 48px 0 0;
+      background: linear-gradient(90deg, var(--amber), var(--teal), var(--blue), var(--purple));
+      border-radius: 2px;
+    }
+
+    /* Footer */
+    .about-footer {
+      max-width: 720px;
+      margin: 48px auto 0;
+      padding: 24px 24px 48px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      text-align: center;
+    }
+    .about-footer a {
+      font-size: 0.8rem;
+      color: var(--teal);
+    }
+
+    /* Fade in */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(12px);
+      animation: fadeUp 0.6s ease forwards;
+    }
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.2s; }
+    .delay-3 { animation-delay: 0.35s; }
+    .delay-4 { animation-delay: 0.5s; }
+
+    @media (max-width: 480px) {
+      .about-container { padding: 80px 20px 60px; }
+      .back-link { top: 16px; left: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="/" class="back-link"><span>←</span> Schooled</a>
+
+  <div class="about-container">
+    <div class="section-label fade-in delay-1">ABOUT THE CREATOR</div>
+
+    <div class="headshot-wrapper fade-in delay-2">
+      <img src="/images/headshot.jpg" alt="Peter Nilsson">
+    </div>
+
+    <h1 class="creator-name fade-in delay-2">Peter Nilsson</h1>
+    <div class="creator-role fade-in delay-2">Book, music &amp; lyrics</div>
+
+    <div class="bio fade-in delay-3">
+      <p>Peter Nilsson is the book writer, lyricist, and composer of <em>Schooled</em>, an original musical set at the intersection of American education and the culture wars. The show follows three students and their teachers as they navigate who they are, who they dream to be, and what they can and cannot learn in school. In March 2026, a staged reading of Act I was performed at SXSW EDU in Austin (NPS 67, n=96).</p>
+
+      <p>Nilsson studied music composition and English literature at Middlebury College, earned a master's degree from Columbia University, and spent four years in New York City composing and performing across a range of genres — rock, jazz, bluegrass, funk, hip-hop, and off-Broadway theater — at venues including the Newport Folk Festival, The Bitter End, The Cutting Room, and Rockwood Music Hall. Among others, he accompanied Afro-Zouk legend Monique Seka, played with Nigerian reggae artist Ras Kimono at B.B. King's Blues Club, and performed with Harlem Spiritual Ensemble founder François Clemmons. He also served as the house band keyboardist at Jimmy Buffett's Margaritaville in Negril, Jamaica. A multi-instrumentalist, his performing credits span more than seventy-five engagements.</p>
+
+      <p>He spent two decades in schools: fifteen years teaching English and serving in leadership roles at Deerfield Academy, followed by four years as Head of School at King's Academy in Jordan, a coeducational boarding school founded by King Abdullah II serving students from over forty countries. It is this dual life — as both a working musician and a career educator — that makes <em>Schooled</em> possible. The show draws not only from research about schools but from lived experience inside them: in classrooms, in faculty meetings, in the daily work of teaching young people during a volatile cultural moment.</p>
+
+      <p>Nilsson is the co-author of <em>Irreplaceable: How AI Changes Everything (and Nothing) in Teaching and Learning</em>, a recipient of the Wolfram Innovator Award, the editor of The Educator's Notebook, and a longtime SXSW EDU advisory board member. He serves on the Board of Trustees at the Canterbury School in Fort Wayne, Indiana.</p>
+    </div>
+
+    <div class="spectrum-bar fade-in delay-4"></div>
+  </div>
+
+  <div class="about-footer fade-in delay-4">
+    <a href="/">← Back to Schooled the Musical</a>
+  </div>
+
+</body>
+</html>
