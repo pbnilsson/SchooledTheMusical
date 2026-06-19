@@ -1,808 +1,375 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Schooled the Musical</title>
-    <meta name="description" content="Hamilton meets The Sound of Music meets Good Night, and Good Luck — all set in and around a high school. An original musical fusing classical, hip-hop, Latin, pop, jazz, and spiritual.">
-    <meta property="og:title" content="Schooled the Musical">
-    <meta property="og:description" content="Hamilton meets The Sound of Music meets Good Night, and Good Luck — all set in and around a high school. An original musical fusing classical, hip-hop, Latin, pop, jazz, and spiritual.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://schooledthemusical.com">
-    <meta property="og:image" content="https://schooledthemusical.com/images/og-image.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Schooled the Musical">
-    <meta name="twitter:description" content="Hamilton meets The Sound of Music meets Good Night, and Good Luck — all set in and around a high school. An original musical fusing classical, hip-hop, Latin, pop, jazz, and spiritual.">
-    <meta name="twitter:image" content="https://schooledthemusical.com/images/og-image.jpg">
-    <link rel="icon" type="image/png" href="images/favicon.png">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-    <style>
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
-        :root {
-            --bg: #111827;
-            --bg-lighter: #1a2235;
-            --text: #f1f1f1;
-            --text-muted: #9ca3af;
-            --text-dim: #6b7280;
-            --coral: #f87171;
-            --amber: #fbbf24;
-            --teal: #2dd4bf;
-            --blue: #60a5fa;
-            --purple: #a78bfa;
-        }
-
-        html { font-size: 16px; scroll-behavior: smooth; }
-
-        body {
-            background-color: var(--bg);
-            color: var(--text);
-            font-family: 'DM Sans', sans-serif;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 2rem 1.5rem;
-            position: relative;
-        }
-
-        .hero-kicker {
-            font-size: 0.75rem;
-            font-weight: 500;
-            letter-spacing: 0.3em;
-            text-transform: uppercase;
-            color: var(--text-muted);
-            margin-bottom: 1.25rem;
-            opacity: 0;
-            animation: fadeUp 0.8s ease 0.2s forwards;
-        }
-
-        .hero-title {
-            font-family: 'Helvetica Neue', Helvetica, sans-serif;
-            font-size: clamp(4rem, 12vw, 8rem);
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            line-height: 0.95;
-            margin-bottom: 0.5em;
-            opacity: 0;
-            animation: fadeUp 0.8s ease 0.35s forwards;
-        }
-
-        .hero-tagline {
-            font-size: clamp(0.95rem, 2.2vw, 1.2rem);
-            font-weight: 300;
-            color: var(--text-dim);
-            margin-bottom: 2.5rem;
-            opacity: 0;
-            animation: fadeUp 0.8s ease 0.5s forwards;
-        }
-
-        .hero-genres {
-            font-size: 0.85rem;
-            font-weight: 400;
-            color: var(--text-dim);
-            letter-spacing: 0.05em;
-            margin-bottom: 3rem;
-            opacity: 0;
-            animation: fadeUp 0.8s ease 0.65s forwards;
-        }
-
-        .hero-genres span { margin: 0 0.5em; }
-
-        .hero-credit {
-            font-size: 0.9rem;
-            color: var(--text-dim);
-            opacity: 0;
-            animation: fadeUp 0.8s ease 0.8s forwards;
-        }
-
-        .hero-spectrum {
-            margin-top: 2.5rem;
-            opacity: 0;
-            animation: fadeIn 1s ease 1s forwards;
-        }
-
-        .hero-scroll {
-            position: absolute;
-            bottom: 2rem;
-            opacity: 0;
-            animation: fadeIn 1s ease 1.5s forwards;
-        }
-
-        .hero-scroll svg {
-            width: 24px;
-            height: 24px;
-            stroke: var(--text-dim);
-            animation: bobDown 2s ease-in-out infinite;
-        }
-
-        @keyframes bobDown {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(6px); }
-        }
-
-        .spectrum-bar {
-            display: flex;
-            width: 100%;
-            max-width: 320px;
-            height: 3px;
-            border-radius: 2px;
-            overflow: hidden;
-            margin: 0 auto;
-        }
-
-        .spectrum-bar span { flex: 1; }
-        .spectrum-bar .c1 { background: var(--amber); }
-        .spectrum-bar .c2 { background: var(--teal); }
-        .spectrum-bar .c3 { background: var(--blue); }
-        .spectrum-bar .c4 { background: var(--purple); }
-
-        section { padding: 5rem 1.5rem; }
-
-        .section-inner { max-width: 800px; margin: 0 auto; }
-
-        .section-label {
-            font-size: 0.7rem;
-            font-weight: 500;
-            letter-spacing: 0.25em;
-            text-transform: uppercase;
-            color: var(--text-muted);
-            text-align: center;
-            margin-bottom: 2.5rem;
-        }
-
-        .section-summary {
-            font-size: 0.95rem;
-            font-weight: 300;
-            color: var(--text-muted);
-            text-align: center;
-            max-width: 560px;
-            margin: -1.5rem auto 2.5rem;
-            line-height: 1.6;
-        }
-
-        .video-section { padding: 3rem 1.5rem 5rem; }
-
-        .video-wrapper {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-        }
-
-        .video-wrapper iframe {
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            border: 0;
-        }
-
-        .audience-layout {
-            display: grid;
-            grid-template-columns: 300px 1fr;
-            gap: 3rem;
-            max-width: 900px;
-            margin: 0 auto;
-            align-items: start;
-        }
-
-        .quotes-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-        }
-
-        .quote {
-            padding-left: 1.25rem;
-            border-left: 3px solid var(--teal);
-            font-style: italic;
-            font-weight: 300;
-            font-size: 1.05rem;
-            line-height: 1.65;
-        }
-
-        .quote:nth-child(1) { border-color: var(--teal); }
-        .quote:nth-child(2) { border-color: var(--amber); }
-        .quote:nth-child(3) { border-color: var(--blue); }
-        .quote:nth-child(4) { border-color: var(--purple); }
-        .quote:nth-child(5) { border-color: var(--teal); }
-        .quote:nth-child(6) { border-color: var(--amber); }
-        .quote:nth-child(7) { border-color: var(--blue); }
-        .quote:nth-child(8) { border-color: var(--purple); }
-
-        .quote strong { font-weight: 700; font-style: italic; }
-        .quote em { color: var(--text-muted); font-weight: 300; }
-
-        .nps-card {
-            background: var(--bg-lighter);
-            border: 1px solid rgba(255,255,255,0.06);
-            border-radius: 12px;
-            padding: 2.5rem 2rem 2rem;
-            text-align: center;
-            position: sticky;
-            top: 2rem;
-        }
-
-        .nps-number {
-            font-family: 'Instrument Serif', serif;
-            font-size: 4.5rem;
-            font-weight: 400;
-            color: var(--teal);
-            line-height: 1;
-            margin-bottom: 0.25rem;
-        }
-
-        .nps-label { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 0.15rem; }
-        .nps-n { font-size: 0.8rem; color: var(--text-dim); margin-bottom: 2rem; }
-
-        .nps-stats {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .nps-stat-number { font-size: 1.5rem; font-weight: 700; line-height: 1.2; }
-        .nps-stat-label { font-size: 0.75rem; color: var(--text-muted); }
-
-        .nps-bar {
-            display: flex;
-            width: 100%;
-            height: 8px;
-            border-radius: 4px;
-            overflow: hidden;
-        }
-
-        .nps-bar-green { background: var(--teal); flex: 75; }
-        .nps-bar-amber { background: var(--amber); flex: 17; }
-        .nps-bar-red { background: var(--coral); flex: 8; }
-
-        .nps-context { font-size: 0.75rem; color: var(--text-dim); margin-top: 1.5rem; line-height: 1.5; }
-
-        .photos-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 0.75rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .photos-grid a { display: block; cursor: pointer; }
-
-        .photos-grid img {
-            width: 100%;
-            aspect-ratio: 16 / 9;
-            object-fit: cover;
-            border-radius: 6px;
-            display: block;
-            transition: opacity 0.2s ease;
-        }
-
-        .photos-grid a:hover img { opacity: 0.8; }
-
-        .lightbox {
-            display: none;
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.92);
-            z-index: 1000;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-        }
-
-        .lightbox.active { display: flex; }
-
-        .lightbox img {
-            max-width: 90vw;
-            max-height: 90vh;
-            border-radius: 6px;
-            object-fit: contain;
-        }
-
-        .lightbox-close {
-            position: absolute;
-            top: 1.5rem; right: 1.5rem;
-            color: var(--text-muted);
-            font-size: 1.5rem;
-            cursor: pointer;
-            width: 40px; height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.1);
-            transition: background 0.2s ease;
-            border: none;
-        }
-
-        .lightbox-close:hover { background: rgba(255,255,255,0.2); }
-
-        .lightbox-nav {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--text-muted);
-            font-size: 2rem;
-            cursor: pointer;
-            width: 48px; height: 48px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.1);
-            transition: background 0.2s ease;
-            border: none;
-        }
-
-        .lightbox-nav:hover { background: rgba(255,255,255,0.2); }
-        .lightbox-prev { left: 1rem; }
-        .lightbox-next { right: 1rem; }
-
-        .logline-section { text-align: center; }
-
-        .logline-text {
-            max-width: 640px;
-            margin: 0 auto;
-            font-size: 1.05rem;
-            font-weight: 300;
-            line-height: 1.8;
-            color: var(--text-muted);
-        }
-
-        .logline-text em { color: var(--text); font-style: italic; }
-
-        .next-section { text-align: center; padding-bottom: 3rem; }
-
-        .next-inner { max-width: 640px; margin: 0 auto; }
-
-        .next-text {
-            font-size: 1rem;
-            font-weight: 300;
-            line-height: 1.75;
-            color: var(--text-muted);
-            margin-bottom: 2.5rem;
-        }
-
-        .next-text strong { color: var(--text); font-weight: 500; }
-
-        /* Custom form */
-        .custom-form {
-            max-width: 440px;
-            margin: 0 auto;
-            text-align: left;
-        }
-
-        .form-field {
-            margin-bottom: 1.25rem;
-        }
-
-        .form-field label {
-            display: block;
-            font-size: 0.8rem;
-            font-weight: 500;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: var(--text-muted);
-            margin-bottom: 0.5rem;
-        }
-
-        .form-field input,
-        .form-field textarea {
-            width: 100%;
-            background: var(--bg-lighter);
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 6px;
-            padding: 0.75rem 1rem;
-            color: var(--text);
-            font-family: 'DM Sans', sans-serif;
-            font-size: 0.95rem;
-            line-height: 1.5;
-            transition: border-color 0.2s ease;
-            outline: none;
-        }
-
-        .form-field input:focus,
-        .form-field textarea:focus {
-            border-color: var(--teal);
-        }
-
-        .form-field input::placeholder,
-        .form-field textarea::placeholder {
-            color: var(--text-dim);
-        }
-
-        .form-field textarea {
-            resize: vertical;
-            min-height: 80px;
-        }
-
-        .form-submit {
-            display: inline-block;
-            background: var(--teal);
-            color: var(--bg);
-            font-family: 'DM Sans', sans-serif;
-            font-size: 0.85rem;
-            font-weight: 600;
-            letter-spacing: 0.05em;
-            padding: 0.7rem 2rem;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: opacity 0.2s ease;
-        }
-
-        .form-submit:hover { opacity: 0.85; }
-        .form-submit:disabled { opacity: 0.5; cursor: default; }
-
-        .form-status {
-            margin-top: 1rem;
-            font-size: 0.9rem;
-            color: var(--teal);
-            text-align: center;
-            min-height: 1.4em;
-        }
-
-        .footer {
-            padding: 2rem 1.5rem 3rem;
-            text-align: center;
-        }
-
-        .footer-label {
-            font-size: 0.7rem;
-            font-weight: 500;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            color: var(--text-dim);
-            margin-bottom: 0.75rem;
-        }
-
-        .footer-email a {
-            color: var(--teal);
-            text-decoration: none;
-            font-size: 1rem;
-            transition: color 0.2s ease;
-        }
-
-        .footer-email a:hover { color: var(--blue); }
-
-        .footer-social {
-            display: flex;
-            justify-content: center;
-            gap: 1.25rem;
-            margin-top: 1.25rem;
-        }
-
-        .footer-social a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 36px; height: 36px;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.06);
-            transition: background 0.2s ease;
-        }
-
-        .footer-social a:hover { background: rgba(255,255,255,0.12); }
-
-        .footer-social svg { width: 18px; height: 18px; fill: var(--text-muted); }
-
-        .footer-bar { margin-top: 2.5rem; }
-        .footer-copyright { margin-top: 1.5rem; font-size: 0.7rem; color: var(--text-dim); }
-
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(14px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .reveal {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-
-        .reveal.visible { opacity: 1; transform: translateY(0); }
-
-        @media (max-width: 768px) {
-            .audience-layout {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            .nps-card {
-                max-width: 400px;
-                margin: 0 auto;
-                position: static;
-            }
-        }
-
-        @media (max-width: 600px) {
-            section { padding: 3.5rem 1.25rem; }
-            .photos-grid { grid-template-columns: 1fr 1fr; }
-            .nps-stats { gap: 2rem; }
-            .quote { font-size: 0.95rem; }
-            .hero-genres span { margin: 0 0.3em; }
-            .lightbox-nav { width: 36px; height: 36px; font-size: 1.5rem; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Schooled the Musical</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#111827;
+    --bg-lighter:#1a2235;
+    --text:#f1f1f1;
+    --text-muted:#9ca3af;
+    --text-dim:#6b7280;
+    --coral:#f87171;
+    --amber:#fbbf24;
+    --teal:#2dd4bf;
+    --blue:#60a5fa;
+    --purple:#a78bfa;
+  }
+  *{box-sizing:border-box;}
+  html{font-size:16px;scroll-behavior:smooth;}
+  body{
+    background-color:var(--bg);color:var(--text);
+    font-family:'DM Sans',sans-serif;line-height:1.6;overflow-x:hidden;margin:0;
+  }
+  a{color:inherit;}
+
+  /* spectrum bar (4 colors, matching site) */
+  .spectrum-bar{display:flex;width:100%;max-width:320px;height:3px;border-radius:2px;overflow:hidden;margin:0 auto;}
+  .spectrum-bar span{flex:1;}
+  .spectrum-bar .c1{background:var(--amber);}
+  .spectrum-bar .c2{background:var(--teal);}
+  .spectrum-bar .c3{background:var(--blue);}
+  .spectrum-bar .c4{background:var(--purple);}
+
+  /* ---------- HERO (unchanged) ---------- */
+  .hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:2rem 1.5rem;position:relative;}
+  .hero-kicker{font-size:0.75rem;font-weight:500;letter-spacing:0.3em;text-transform:uppercase;color:var(--text-muted);margin-bottom:1.25rem;opacity:0;animation:fadeUp .8s ease .2s forwards;}
+  .hero-title{font-family:'Helvetica Neue',Helvetica,sans-serif;font-size:clamp(4rem,12vw,8rem);font-weight:700;letter-spacing:-.02em;line-height:.95;margin:0 0 .5em;opacity:0;animation:fadeUp .8s ease .35s forwards;}
+  .hero-tagline{font-size:clamp(.95rem,2.2vw,1.2rem);font-weight:300;color:var(--text-dim);margin-bottom:2.5rem;opacity:0;animation:fadeUp .8s ease .5s forwards;}
+  .hero-tagline i{color:var(--text-muted);}
+  .hero-genres{font-size:.85rem;font-weight:400;color:var(--text-dim);letter-spacing:.05em;margin-bottom:3rem;opacity:0;animation:fadeUp .8s ease .65s forwards;}
+  .hero-genres span{margin:0 .5em;}
+  .hero-credit{font-size:.9rem;color:var(--text-dim);opacity:0;animation:fadeUp .8s ease .8s forwards;}
+  .hero-credit a{color:inherit;text-decoration:underline;text-decoration-color:rgba(255,255,255,.3);text-underline-offset:3px;}
+  .hero-spectrum{margin-top:2.5rem;opacity:0;animation:fadeIn 1s ease 1s forwards;}
+  .hero-scroll{position:absolute;bottom:2rem;opacity:0;animation:fadeIn 1s ease 1.5s forwards;}
+  .hero-scroll svg{width:24px;height:24px;stroke:var(--text-dim);animation:bobDown 2s ease-in-out infinite;}
+
+  /* ---------- SECTION SHELL ---------- */
+  section{padding:6rem 1.5rem;}
+  .section-inner{max-width:900px;margin:0 auto;}
+  .section-label{font-size:.7rem;font-weight:500;letter-spacing:.25em;text-transform:uppercase;color:var(--text-muted);text-align:center;margin-bottom:2.5rem;}
+  .section-summary{font-size:.95rem;font-weight:300;color:var(--text-muted);text-align:center;max-width:560px;margin:-1.5rem auto 2.5rem;line-height:1.6;}
+
+  /* ---------- ORIGIN BEAT (NEW · restyled to site) ---------- */
+  .origin-section{padding:5.5rem 1.5rem 4.5rem;}
+  .origin-text{
+    max-width:680px;margin:0 auto;text-align:center;
+    font-family:'DM Sans',sans-serif;font-weight:300;
+    font-size:clamp(1.15rem,2.6vw,1.45rem);line-height:1.65;color:var(--text);
+  }
+  .origin-text .accent{color:var(--purple);font-weight:400;}
+
+  /* ---------- VIDEO ---------- */
+  .video-section{padding:2rem 1.5rem 4rem;}
+  .video-wrapper{max-width:900px;margin:0 auto;position:relative;width:100%;aspect-ratio:16/9;border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.06);}
+  .video-wrapper iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+
+  /* ---------- AUDIENCE ---------- */
+  .audience-layout{display:grid;grid-template-columns:300px 1fr;gap:2.5rem;align-items:start;}
+  .nps-card{background:var(--bg-lighter);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:2.5rem 2rem 2rem;text-align:center;position:sticky;top:2rem;}
+  .nps-number{font-family:'Instrument Serif',serif;font-size:4.5rem;font-weight:400;color:var(--teal);line-height:1;margin-bottom:.25rem;}
+  .nps-label{font-size:.95rem;color:var(--text-muted);margin-bottom:.15rem;}
+  .nps-n{font-size:.8rem;color:var(--text-dim);margin-bottom:2rem;}
+  .nps-stats{display:flex;justify-content:center;gap:2.5rem;}
+  .nps-stat-number{font-size:1.5rem;font-weight:700;line-height:1.2;}
+  .nps-stat-label{font-size:.75rem;color:var(--text-muted);}
+  .nps-context{font-size:.75rem;color:var(--text-dim);margin-top:1.5rem;line-height:1.5;}
+  .quotes-grid{display:grid;grid-template-columns:1fr;gap:1.25rem;}
+  .quote{padding-left:1.25rem;border-left:3px solid var(--teal);font-style:italic;font-weight:300;font-size:1.05rem;line-height:1.65;color:var(--text-muted);}
+  .quote:nth-child(4n+1){border-color:var(--amber);}
+  .quote:nth-child(4n+2){border-color:var(--teal);}
+  .quote:nth-child(4n+3){border-color:var(--blue);}
+  .quote:nth-child(4n+4){border-color:var(--purple);}
+  .quote strong{color:var(--text);font-weight:500;font-style:normal;}
+
+  /* ---------- STILLS ---------- */
+  .photos-section{padding:2rem 1.5rem 4rem;}
+  .photos-grid{max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(6,1fr);gap:.6rem;}
+  .photos-grid img{width:100%;height:110px;object-fit:cover;border-radius:6px;border:1px solid rgba(255,255,255,.06);}
+
+  /* ---------- THE SHOW + TRILOGY TEASER ---------- */
+  .show-section{text-align:center;}
+  .show-heading{font-family:'Instrument Serif',serif;font-size:clamp(1.8rem,4vw,2.7rem);font-weight:400;letter-spacing:0;line-height:1.24;margin:0 auto 1.75rem;max-width:720px;color:var(--text);}
+  .show-synopsis{max-width:640px;margin:0 auto;font-size:1.05rem;font-weight:300;line-height:1.8;color:var(--text-muted);}
+  .trilogy-teaser{max-width:600px;margin:3.5rem auto 0;padding-top:2.5rem;border-top:1px solid rgba(255,255,255,.08);}
+  .trilogy-teaser p{font-size:.95rem;font-weight:300;line-height:1.7;color:var(--text-muted);margin:0 0 1rem;}
+  .trilogy-teaser .more{font-size:.85rem;font-weight:500;letter-spacing:.03em;color:var(--text);text-decoration:underline;text-decoration-color:var(--purple);text-underline-offset:4px;}
+
+  /* ---------- THE JOURNEY (NEW · signature) ---------- */
+  .journey-section{background:var(--bg-lighter);}
+  .thesis{font-family:'Instrument Serif',serif;font-style:italic;font-size:clamp(1.6rem,4vw,2.6rem);line-height:1.3;text-align:center;max-width:760px;margin:0 auto .6rem;color:var(--text);}
+  .thesis .hi{font-style:normal;color:var(--amber);}
+  .journey-sub{text-align:center;color:var(--text-dim);font-size:.9rem;font-weight:300;margin:0 auto 3.5rem;}
+
+  .tl{position:relative;margin:0 auto;max-width:980px;}
+  .tl .rail{position:absolute;top:6px;left:0;right:0;height:2px;background:rgba(255,255,255,.1);}
+  .tl .nodes{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;position:relative;}
+  .tl .node{text-align:center;}
+  .tl .node .dot{width:13px;height:13px;border-radius:50%;margin:0 auto 1rem;border:2px solid var(--bg-lighter);}
+  .tl .node:nth-child(1) .dot{background:var(--coral);}
+  .tl .node:nth-child(2) .dot{background:var(--amber);}
+  .tl .node:nth-child(3) .dot{background:var(--teal);}
+  .tl .node:nth-child(4) .dot{background:var(--blue);}
+  .tl .node:nth-child(5) .dot{background:transparent;border-color:var(--purple);box-shadow:0 0 0 3px rgba(167,139,250,.18);}
+  .tl .node .yr{font-weight:700;font-size:.9rem;}
+  .tl .node:nth-child(1) .yr{color:var(--coral);}
+  .tl .node:nth-child(2) .yr{color:var(--amber);}
+  .tl .node:nth-child(3) .yr{color:var(--teal);}
+  .tl .node:nth-child(4) .yr{color:var(--blue);}
+  .tl .node:nth-child(5) .yr{color:var(--purple);}
+  .tl .node .pl{font-size:.72rem;color:var(--text-dim);margin:.15rem 0 .5rem;}
+  .tl .node .ds{font-size:.78rem;color:var(--text-muted);font-weight:300;line-height:1.45;}
+  .tl-foot{font-family:'Instrument Serif',serif;font-style:italic;text-align:center;color:var(--text-muted);margin-top:2.25rem;font-size:1.05rem;}
+
+  .twoup{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;max-width:900px;margin:4rem auto 0;}
+  .panel{background:var(--bg);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:1.75rem 1.6rem;}
+  .panel .plabel{font-size:.7rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--text-dim);margin-bottom:1rem;}
+  .dlist{list-style:none;margin:0 0 1.25rem;padding:0;}
+  .dlist li{padding:.85rem 0;border-bottom:1px solid rgba(255,255,255,.07);}
+  .dlist li:first-child{padding-top:0;}
+  .dlist li:last-child{border-bottom:none;}
+  .dmeta{display:block;font-size:.8rem;color:var(--purple);font-weight:600;margin-bottom:.3rem;}
+  .dtext{display:block;color:var(--text-muted);font-size:.86rem;font-weight:300;line-height:1.55;}
+  .reading ul{list-style:none;margin:0 0 1.25rem;padding:0;}
+  .reading li{padding:.8rem 0;border-bottom:1px solid rgba(255,255,255,.07);}
+  .reading li:last-child{border-bottom:none;}
+  .reading .t{font-weight:500;font-size:.92rem;}
+  .reading .by{color:var(--text-dim);font-weight:300;}
+  .reading .lesson{display:block;color:var(--text-muted);font-weight:300;font-size:.83rem;margin-top:.2rem;line-height:1.5;}
+  .more{font-size:.85rem;font-weight:500;color:var(--text);text-decoration:underline;text-decoration-color:var(--purple);text-underline-offset:4px;}
+
+  /* ---------- WHAT'S NEXT + FORM ---------- */
+  .next-section{text-align:center;}
+  .next-heading{font-size:clamp(1.4rem,3vw,1.9rem);font-weight:500;letter-spacing:-.01em;color:var(--text);margin:0 auto 2rem;}
+  .next-text{font-size:1rem;font-weight:300;line-height:1.75;color:var(--text-muted);margin-bottom:2.5rem;max-width:620px;margin-left:auto;margin-right:auto;}
+  .custom-form{max-width:440px;margin:0 auto;text-align:left;}
+  .form-field{margin-bottom:1rem;}
+  .form-field label{display:block;font-size:.8rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:.5rem;}
+  .form-field input,.form-field textarea{width:100%;background:var(--bg-lighter);border:1px solid rgba(255,255,255,.1);border-radius:6px;padding:.75rem 1rem;color:var(--text);font-family:'DM Sans',sans-serif;font-size:.95rem;line-height:1.5;outline:none;transition:border-color .2s ease;}
+  .form-field input:focus,.form-field textarea:focus{border-color:var(--teal);}
+  .form-submit{background:var(--teal);color:var(--bg);font-family:'DM Sans',sans-serif;font-size:.85rem;font-weight:600;letter-spacing:.05em;padding:.7rem 2rem;border:none;border-radius:6px;cursor:pointer;transition:opacity .2s ease;}
+  .form-submit:hover{opacity:.85;}
+  .form-status{margin-top:1rem;font-size:.9rem;color:var(--teal);min-height:1.2em;}
+  .form-status:empty{min-height:0;}
+
+  /* ---------- FOOTER ---------- */
+  .footer{padding:4rem 1.5rem;text-align:center;}
+  .footer-label{font-size:.7rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--text-dim);margin-bottom:.75rem;}
+  .footer a{text-decoration:none;}
+  .footer-social{display:flex;gap:1.25rem;justify-content:center;margin-top:1.5rem;}
+  .footer-social svg{width:22px;height:22px;fill:var(--text-dim);transition:fill .2s ease;}
+  .footer-social a:hover svg{fill:var(--text);}
+  .footer-bar{margin-top:2.5rem;}
+  .footer-copyright{margin-top:1.5rem;font-size:.7rem;color:var(--text-dim);}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  @keyframes fadeUp{to{opacity:1;transform:translateY(0);}}
+  @keyframes fadeIn{to{opacity:1;}}
+  @keyframes bobDown{0%,100%{transform:translateY(0);}50%{transform:translateY(6px);}}
+
+  @media(max-width:760px){
+    .audience-layout{grid-template-columns:1fr;}
+    .nps-card{position:static;}
+    .quotes-grid{grid-template-columns:1fr;}
+    .photos-grid{grid-template-columns:1fr 1fr;}
+    .twoup{grid-template-columns:1fr;}
+    .tl .rail{top:0;bottom:0;left:6px;right:auto;width:2px;height:auto;}
+    .tl .nodes{grid-template-columns:1fr;gap:1.75rem;padding-left:1.75rem;}
+    .tl .node{text-align:left;}
+    .tl .node .dot{position:absolute;left:-1.75rem;margin:0;}
+    .tl .node{position:relative;}
+  }
+  @media(prefers-reduced-motion:reduce){
+    .reveal{opacity:1;transform:none;transition:none;}
+    .hero-kicker,.hero-title,.hero-tagline,.hero-genres,.hero-credit,.hero-spectrum,.hero-scroll{opacity:1;animation:none;}
+    .hero-scroll svg{animation:none;}
+    html{scroll-behavior:auto;}
+  }
+</style>
 </head>
 <body>
 
-    <section class="hero">
-        <p class="hero-kicker">A New Musical in Development</p>
-        <h1 class="hero-title">Schooled</h1>
-        <p class="hero-tagline"><i style="color: var(--text-muted);">Hamilton</i> meets <i style="color: var(--text-muted);">The Sound of Music</i> meets <i style="color: var(--text-muted);">Good Night, and Good Luck</i> &mdash;<br>all set in and around a contemporary high school</p>
-        <p class="hero-genres">
-            classical<span>&middot;</span>hip-hop<span>&middot;</span>Latin<span>&middot;</span>pop<span>&middot;</span>jazz<span>&middot;</span>spiritual
-        </p>
-        <p class="hero-credit">Book, music &amp; lyrics by <a href="https://schooledthemusical.com/about.html" style="color: inherit; text-decoration: underline; text-decoration-color: rgba(255,255,255,0.3); text-underline-offset: 3px;">Peter Nilsson</a></p>
-        <div class="hero-spectrum">
-            <div class="spectrum-bar">
-                <span class="c1"></span><span class="c2"></span><span class="c3"></span><span class="c4"></span>
-            </div>
-        </div>
-        <div class="hero-scroll">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="6 9 12 15 18 9"></polyline>
-            </svg>
-        </div>
-    </section>
+<!-- 1 · HERO (unchanged) -->
+<section class="hero">
+  <p class="hero-kicker">A New Musical in Development</p>
+  <h1 class="hero-title">Schooled</h1>
+  <p class="hero-tagline"><i>Hamilton</i> meets <i>The Sound of Music</i> meets <i>Good Night, and Good Luck</i> &mdash;<br>all set in and around a contemporary high school</p>
+  <p class="hero-genres">classical<span>&middot;</span>hip-hop<span>&middot;</span>Latin<span>&middot;</span>pop<span>&middot;</span>jazz<span>&middot;</span>spiritual</p>
+  <p class="hero-credit">Book, music &amp; lyrics by <a href="about.html">Peter Nilsson</a></p>
+  <div class="hero-spectrum"><div class="spectrum-bar"><span class="c1"></span><span class="c2"></span><span class="c3"></span><span class="c4"></span></div></div>
+  <div class="hero-scroll"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+</section>
 
-    <section class="video-section">
-        <div class="reveal">
-            <div class="video-wrapper">
-                <iframe
-                    src="https://www.youtube.com/embed/sybIJkiOjWc?rel=0&modestbranding=1"
-                    title="Schooled the Musical Highlights"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                ></iframe>
-            </div>
-        </div>
-    </section>
+<!-- 2 · ORIGIN BEAT (NEW) -->
+<section class="origin-section">
+  <p class="origin-text reveal">Schooled follows <span class="accent">a brother, a sister, and a friend</span> from the hallways of high school through the decade that reshapes them.</p>
+</section>
 
-    <section class="audience-section">
-        <div class="section-inner" style="max-width: 900px;">
-            <p class="section-label reveal">How the SXSW EDU Audience Described Schooled</p>
-            <p class="section-summary reveal">A joyful and celebratory show, wrapped around authentic, unflinching narratives.</p>
-            <div class="audience-layout reveal">
-                <div class="nps-card">
-                    <div class="nps-number">67</div>
-                    <div class="nps-label">Net Promoter Score</div>
-                    <div class="nps-n">n = 96</div>
-                    <div class="nps-stats">
-                        <div>
-                            <div class="nps-stat-number">75%</div>
-                            <div class="nps-stat-label">promoters</div>
-                        </div>
-                        <div>
-                            <div class="nps-stat-number">69%</div>
-                            <div class="nps-stat-label">gave a perfect 10</div>
-                        </div>
-                    </div>
-                    <div class="nps-bar">
-                        <div class="nps-bar-green"></div>
-                        <div class="nps-bar-amber"></div>
-                        <div class="nps-bar-red"></div>
-                    </div>
-                    <div class="nps-context">Act I staged reading<br>Educators &amp; industry audience</div>
-                </div>
-                <div class="quotes-grid">
-                    <div class="quote">&ldquo;<strong>A musical for our times,</strong> <em>from the voice of young people who need to be listened to.</em>&rdquo;</div>
-                    <div class="quote">&ldquo;<strong>This writer captured the souls of students</strong> <em>hungry for relevancy and action.</em>&rdquo;</div>
-                    <div class="quote">&ldquo;It was <strong>funny while also asking very important questions.</strong>&rdquo;</div>
-                    <div class="quote">&ldquo;<strong>SO refreshing</strong> <em>that it&rsquo;s not the typical Hollywood disdain and boredom of high school.</em>&rdquo;</div>
-                    <div class="quote">&ldquo;I literally cried. <strong>I NEED MORE OF THIS IN MY LIFE!</strong>&rdquo;</div>
-                    <div class="quote">&ldquo;It was a <strong>joyful, engaging, and honest perspective</strong> of modern school! <em>You&rsquo;ll smile, laugh, and get teary eyed at how beautiful and real it is!</em>&rdquo;</div>
-                    <div class="quote">&ldquo;<strong>A necessary musical</strong> <em>to watch to see how students feel and learn about what they are ACTUALLY thinking.</em>&rdquo;</div>
-                    <div class="quote">&ldquo;<strong>The variety of musical styles was incredible!</strong>&rdquo;</div>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- 3 · VIDEO -->
+<section class="video-section">
+  <div class="reveal">
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/sybIJkiOjWc?rel=0&modestbranding=1" title="Schooled @ SXSW EDU — Selections" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
 
-    <section class="photos-section">
-        <div class="section-inner">
-            <p class="section-label reveal">Stills from the SXSW EDU Reading</p>
-            <div class="photos-grid reveal">
-                <a data-lightbox="0"><img src="images/1.jpg" alt="Full cast performing at SXSW EDU" loading="lazy"></a>
-                <a data-lightbox="1"><img src="images/2.jpg" alt="Cast in classroom scene" loading="lazy"></a>
-                <a data-lightbox="2"><img src="images/3.jpg" alt="Cast in dramatic scene" loading="lazy"></a>
-                <a data-lightbox="3"><img src="images/4.jpg" alt="Two leads performing" loading="lazy"></a>
-                <a data-lightbox="4"><img src="images/5.jpg" alt="Emotional moment on stage" loading="lazy"></a>
-                <a data-lightbox="5"><img src="images/6.jpg" alt="Creator and director at SXSW EDU" loading="lazy"></a>
-            </div>
+<!-- 4 · AUDIENCE -->
+<section class="audience-section">
+  <div class="section-inner">
+    <p class="section-label reveal">How the SXSW EDU Audience Described Schooled</p>
+    <p class="section-summary reveal">A joyful and celebratory show, wrapped around authentic, unflinching narratives.</p>
+    <div class="audience-layout reveal">
+      <div class="nps-card">
+        <div class="nps-number">67</div>
+        <div class="nps-label">Net Promoter Score</div>
+        <div class="nps-n">n = 96</div>
+        <div class="nps-stats">
+          <div><div class="nps-stat-number">75%</div><div class="nps-stat-label">promoters</div></div>
+          <div><div class="nps-stat-number">69%</div><div class="nps-stat-label">perfect 10</div></div>
         </div>
-    </section>
+        <div class="nps-context">NPS above 50 is excellent by Bain &amp; Company standards; 70 is world-class. 67 is exceptional for a first reading of a work in development.</div>
+      </div>
+      <div class="quotes-grid">
+        <div class="quote">&ldquo;<strong>A musical for our times,</strong> from the voice of young people who need to be listened to.&rdquo;</div>
+        <div class="quote">&ldquo;<strong>This writer captured the souls of students</strong> hungry for relevancy and action.&rdquo;</div>
+        <div class="quote">&ldquo;It was <strong>funny while also asking very important questions.</strong>&rdquo;</div>
+        <div class="quote">&ldquo;<strong>SO refreshing</strong> that it&rsquo;s not the typical Hollywood disdain and boredom of high school.&rdquo;</div>
+        <div class="quote">&ldquo;Being from Loudoun County, VA &mdash; <strong>this is exactly what we went through.</strong>&rdquo;</div>
+        <div class="quote">&ldquo;I literally cried. <strong>I NEED MORE OF THIS IN MY LIFE!</strong>&rdquo;</div>
+        <div class="quote">&ldquo;It was a <strong>joyful, engaging, and honest perspective</strong> of modern school! You&rsquo;ll smile, laugh, and get teary eyed at how beautiful and real it is!&rdquo;</div>
+        <div class="quote">&ldquo;<strong>A necessary musical</strong> to watch to see how students feel and learn about what they are ACTUALLY thinking.&rdquo;</div>
+        <div class="quote">&ldquo;<strong>The variety of musical styles was incredible!</strong>&rdquo;</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <section class="logline-section">
-        <div class="section-inner reveal">
-            <div class="spectrum-bar" style="margin-bottom: 2.5rem;">
-                <span class="c1"></span><span class="c2"></span><span class="c3"></span><span class="c4"></span>
-            </div>
-            <p class="logline-text">
-                An original musical fusing classical, hip-hop, Latin, pop, jazz, and spiritual, <em>Schooled</em> begins and ends in the same classroom, tracing a brother, a sister, and a friend through a decade of consequence as they discover how to navigate a world changing rapidly around them.
-            </p>
-        </div>
-    </section>
+<!-- stills -->
+<section class="photos-section">
+  <div class="photos-grid reveal">
+    <img src="https://schooledthemusical.com/images/1.jpg" alt="Cast performing at SXSW EDU">
+    <img src="https://schooledthemusical.com/images/2.jpg" alt="Classroom scene">
+    <img src="https://schooledthemusical.com/images/3.jpg" alt="Dramatic scene">
+    <img src="https://schooledthemusical.com/images/4.jpg" alt="Two leads performing">
+    <img src="https://schooledthemusical.com/images/5.jpg" alt="Emotional moment on stage">
+    <img src="https://schooledthemusical.com/images/6.jpg" alt="Creator and director at SXSW EDU">
+  </div>
+</section>
 
-    <section class="next-section">
-        <div class="next-inner reveal">
-            <div class="spectrum-bar" style="margin-bottom: 2.5rem;">
-                <span class="c1"></span><span class="c2"></span><span class="c3"></span><span class="c4"></span>
-            </div>
-            <p class="section-label">What&rsquo;s Next for Schooled</p>
-            <p class="next-text">
-                <em>Schooled</em> has a book and score in active development and <strong>extraordinary audience affirmation</strong> for its work so far. We&rsquo;re now seeking creative and producing partners &mdash; including a director and music director &mdash; to help bring the full show to life.
-            </p>
-            <p class="next-text">
-                If you&rsquo;d like to receive updates, follow our journey here!
-            </p>
-            <div class="custom-form">
-                <div class="form-field">
-                    <label for="form-email">Email address</label>
-                    <input type="email" id="form-email" placeholder="you@example.com" required>
-                </div>
-                <div class="form-field">
-                    <label for="form-comments">Comments <span style="font-weight:300;text-transform:none;letter-spacing:0;">(optional)</span></label>
-                    <textarea id="form-comments" placeholder="Anything you'd like us to know"></textarea>
-                </div>
-                <button class="form-submit" id="form-submit">Stay in Touch</button>
-                <div class="form-status" id="form-status"></div>
-            </div>
-        </div>
-    </section>
+<!-- 5 · THE SHOW + TRILOGY TEASER -->
+<section class="show-section">
+  <div class="section-inner reveal">
+    <div class="spectrum-bar" style="margin-bottom:2.5rem;"><span class="c1"></span><span class="c2"></span><span class="c3"></span><span class="c4"></span></div>
+    <p class="section-label">The Show</p>
+    <h2 class="show-heading">Who you are,<br>who you dream to be,<br>and what you can and cannot learn in school.</h2>
+    <p class="show-synopsis">Starting with the thrill of the first day of class, Act I follows their adolescent years amidst turbulent times &mdash; classes, romance, a letter that goes viral, a rally that ends in gunfire, and the surprising, often humorous work of growing together. Act II jumps ahead ten years, tracing how those years shape their early adulthood, and how their dreams grow, shift, and collide with reality. Told through a joyous blend of classical, contemporary, and hip-hop, it&rsquo;s a show about awe, ambition, and justice.</p>
+    <div class="trilogy-teaser">
+      <p><em>Schooled</em> is the first in a trilogy.</p>
+      <a class="more" href="vision.html">The full vision &rarr;</a>
+    </div>
+  </div>
+</section>
 
-    <footer class="footer">
-        <p class="footer-label">Inquiries</p>
-        <p style="margin-bottom: 0.25rem;"><a href="https://schooledthemusical.com/about.html" style="color: var(--text-muted); text-decoration: underline; text-decoration-color: rgba(255,255,255,0.3); text-underline-offset: 3px; font-size: 0.95rem;">Peter Nilsson</a></p>
-        <p class="footer-email"><a id="contact-link">Loading...</a></p>
-        <div class="footer-social">
-            <a href="https://www.instagram.com/schooledthemusical" target="_blank" rel="noopener" aria-label="Instagram">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-            </a>
-            <a href="https://www.youtube.com/@SchooledtheMusical" target="_blank" rel="noopener" aria-label="YouTube">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-            </a>
-        </div>
-        <div class="footer-bar">
-            <div class="spectrum-bar">
-                <span class="c1"></span><span class="c2"></span><span class="c3"></span><span class="c4"></span>
-            </div>
-        </div>
-        <p class="footer-copyright">&copy; 2026 Peter Nilsson. All rights reserved.</p>
-    </footer>
+<!-- 6 · THE JOURNEY (NEW · signature) -->
+<section class="journey-section">
+  <div class="section-inner" style="max-width:1040px;">
+    <p class="thesis reveal">Telling a story about school requires<br><span class="hi">school for how to tell a story.</span></p>
+    <p class="journey-sub reveal">The making of <em>Schooled</em> &mdash; where it&rsquo;s been, what&rsquo;s happening now, and what&rsquo;s teaching it.</p>
 
-    <!-- Lightbox -->
-    <div class="lightbox" id="lightbox">
-        <button class="lightbox-close" aria-label="Close">&times;</button>
-        <button class="lightbox-nav lightbox-prev" aria-label="Previous">&lsaquo;</button>
-        <button class="lightbox-nav lightbox-next" aria-label="Next">&rsaquo;</button>
-        <img id="lightbox-img" src="" alt="">
+    <div class="tl reveal">
+      <div class="rail"></div>
+      <div class="nodes">
+        <div class="node"><div class="dot"></div><div class="yr">2019</div><div class="pl">School meeting</div><div class="ds">A 35-minute show composed for 25 teachers to perform for their students.</div></div>
+        <div class="node"><div class="dot"></div><div class="yr">Oct 2023</div><div class="pl">NY Times Center, NYC</div><div class="ds">Distilled to a 15-minute core; staged reading by 12 on- and off-Broadway actors.</div></div>
+        <div class="node"><div class="dot"></div><div class="yr">Apr 2024</div><div class="pl">San Diego</div><div class="ds">Another reading of the core for a larger audience at a national conference.</div></div>
+        <div class="node"><div class="dot"></div><div class="yr">Mar 2026</div><div class="pl">SXSW EDU, Austin</div><div class="ds">60-minute Act I staged reading with Q&amp;A. 96 survey responses. NPS 67.</div></div>
+        <div class="node"><div class="dot"></div><div class="yr">Oct 2026</div><div class="pl">Pittsburgh</div><div class="ds">First full two-act staged reading &mdash; workshopped with director, music director, and cast.</div></div>
+      </div>
     </div>
 
-    <!-- Hidden iframe for form submission -->
-    <iframe name="hidden-form-target" style="display:none;"></iframe>
+    <div class="twoup reveal">
+      <div class="panel dispatch">
+        <p class="plabel">Latest Dispatches</p>
+        <ul class="dlist">
+          <li>
+            <span class="dmeta">Update #2 &middot; June 2026</span>
+            <span class="dtext">Director Ryan Dobrin and music director Mike Mackey join the team; Pittsburgh is set for October 18, and the Act II score begins to take shape.</span>
+          </li>
+          <li>
+            <span class="dmeta">Update #1 &middot; May 2026</span>
+            <span class="dtext">Act I&rsquo;s reading at SXSW EDU lands an NPS of 67 &mdash; and a full two-act staged reading is booked for Pittsburgh in October.</span>
+          </li>
+        </ul>
+        <a class="more" href="dispatches.html">Read all updates &rarr;</a>
+      </div>
+      <div class="panel reading">
+        <p class="plabel">What&rsquo;s Teaching Us</p>
+        <ul>
+          <li><span class="t">The Making of Cabaret <span class="by">/ Keith Garebian</span></span><span class="lesson">The cabaret as Greek chorus &mdash; the structural model for telling Part One.</span></li>
+          <li><span class="t">Second Act Trouble <span class="by">/ Steven Suskin</span></span><span class="lesson">A catalogue of how second acts fail &mdash; and how shows survive previews.</span></li>
+          <li><span class="t">The Playwright&rsquo;s Guidebook <span class="by">/ Stuart Spencer</span></span><span class="lesson">Craft fundamentals: action, pressure, and what a scene is actually for.</span></li>
+          <li><span class="t">&ldquo;40 Questions for a Political Play&rdquo; <span class="by">/ Dan O&rsquo;Brien</span></span><span class="lesson">Keeping a political story honest to every side of the room.</span></li>
+        </ul>
+        <a class="more" href="reading.html">See the full reading list &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <script>
-        (function() {
-            var u = 'schooledthemusical';
-            var d = 'gmail.com';
-            var el = document.getElementById('contact-link');
-            el.href = 'mai' + 'lto:' + u + '@' + d;
-            el.textContent = u + '@' + d;
-        })();
+<!-- 7 · WHAT'S NEXT + FORM -->
+<section class="next-section">
+  <div class="section-inner reveal">
+    <div class="spectrum-bar" style="margin-bottom:2.5rem;"><span class="c1"></span><span class="c2"></span><span class="c3"></span><span class="c4"></span></div>
+    <h2 class="next-heading">Follow the journey</h2>
+    <div class="custom-form">
+      <div class="form-field"><label for="form-email">Email address</label><input type="email" id="form-email" placeholder="you@example.com"></div>
+      <div class="form-field"><label for="form-comments">Comments <span style="font-weight:300;text-transform:none;letter-spacing:0;">(optional)</span></label><textarea id="form-comments" rows="2" placeholder="Anything you'd like us to know"></textarea></div>
+      <button class="form-submit" type="button" onclick="subscribeLanding()">Stay in Touch</button>
+      <div class="form-status" id="form-status" role="status"></div>
+    </div>
+  </div>
+</section>
 
-        var reveals = document.querySelectorAll('.reveal');
-        var observer = new IntersectionObserver(function(entries) {
-            entries.forEach(function(entry) {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
-        reveals.forEach(function(el) { observer.observe(el); });
+<!-- 8 · FOOTER -->
+<footer class="footer">
+  <p class="footer-label">Inquiries</p>
+  <p><a href="about.html" style="color:var(--text-muted);text-decoration:underline;text-decoration-color:rgba(255,255,255,.3);text-underline-offset:3px;font-size:.95rem;">Peter Nilsson</a></p>
+  <div class="footer-social">
+    <a href="https://www.instagram.com/schooledthemusical" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+    <a href="https://www.youtube.com/@SchooledtheMusical" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+  </div>
+  <div class="footer-bar"><div class="spectrum-bar"><span class="c1"></span><span class="c2"></span><span class="c3"></span><span class="c4"></span></div></div>
+  <p class="footer-copyright">&copy; 2026 Peter Nilsson. All rights reserved.</p>
+</footer>
 
-        // Custom form submission to Google Forms
-        document.getElementById('form-submit').addEventListener('click', function() {
-            var email = document.getElementById('form-email').value.trim();
-            var comments = document.getElementById('form-comments').value.trim();
-            var status = document.getElementById('form-status');
-            var btn = this;
+<script>
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
 
-            if (!email) {
-                status.textContent = 'Please enter your email address.';
-                status.style.color = 'var(--coral)';
-                return;
-            }
-
-            btn.disabled = true;
-            btn.textContent = 'Sending...';
-
-            var formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSf7uT0TsXsQ8eqMijngDyEAcvg7PZzgE84elc5ECdSyUomm5g/formResponse';
-            var data = new URLSearchParams();
-            data.append('entry.1394194067', email);
-            data.append('entry.1529374300', comments);
-
-            fetch(formUrl, {
-                method: 'POST',
-                mode: 'no-cors',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: data.toString()
-            }).then(function() {
-                status.textContent = 'Thank you! We\u2019ll be in touch.';
-                status.style.color = 'var(--teal)';
-                btn.textContent = 'Sent';
-                document.getElementById('form-email').value = '';
-                document.getElementById('form-comments').value = '';
-            }).catch(function() {
-                status.textContent = 'Thank you! We\u2019ll be in touch.';
-                status.style.color = 'var(--teal)';
-                btn.textContent = 'Sent';
-                document.getElementById('form-email').value = '';
-                document.getElementById('form-comments').value = '';
-            });
-        });
-
-        // Lightbox
-        var lightbox = document.getElementById('lightbox');
-        var lightboxImg = document.getElementById('lightbox-img');
-        var images = ['images/1.jpg','images/2.jpg','images/3.jpg','images/4.jpg','images/5.jpg','images/6.jpg'];
-        var currentIndex = 0;
-
-        document.querySelectorAll('[data-lightbox]').forEach(function(el) {
-            el.addEventListener('click', function(e) {
-                e.preventDefault();
-                currentIndex = parseInt(this.getAttribute('data-lightbox'));
-                lightboxImg.src = images[currentIndex];
-                lightbox.classList.add('active');
-            });
-        });
-
-        lightbox.addEventListener('click', function(e) {
-            if (e.target === lightbox) lightbox.classList.remove('active');
-        });
-
-        document.querySelector('.lightbox-close').addEventListener('click', function() {
-            lightbox.classList.remove('active');
-        });
-
-        document.querySelector('.lightbox-prev').addEventListener('click', function(e) {
-            e.stopPropagation();
-            currentIndex = (currentIndex - 1 + images.length) % images.length;
-            lightboxImg.src = images[currentIndex];
-        });
-
-        document.querySelector('.lightbox-next').addEventListener('click', function(e) {
-            e.stopPropagation();
-            currentIndex = (currentIndex + 1) % images.length;
-            lightboxImg.src = images[currentIndex];
-        });
-
-        document.addEventListener('keydown', function(e) {
-            if (!lightbox.classList.contains('active')) return;
-            if (e.key === 'Escape') lightbox.classList.remove('active');
-            if (e.key === 'ArrowLeft') { currentIndex = (currentIndex - 1 + images.length) % images.length; lightboxImg.src = images[currentIndex]; }
-            if (e.key === 'ArrowRight') { currentIndex = (currentIndex + 1) % images.length; lightboxImg.src = images[currentIndex]; }
-        });
-    </script>
-
+  function subscribeLanding(){
+    var emailEl=document.getElementById('form-email');
+    var commentsEl=document.getElementById('form-comments');
+    var status=document.getElementById('form-status');
+    var email=(emailEl.value||'').trim();
+    if(!email||email.indexOf('@')<1){status.style.color='var(--coral)';status.textContent='Please enter a valid email address.';return;}
+    var url='https://docs.google.com/forms/d/e/1FAIpQLSf7uT0TsXsQ8eqMijngDyEAcvg7PZzgE84elc5ECdSyUomm5g/formResponse';
+    var body='entry.1394194067='+encodeURIComponent(email)+'&entry.1529374300='+encodeURIComponent(commentsEl.value||'');
+    fetch(url,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:body}).catch(function(){});
+    status.style.color='var(--teal)';
+    status.textContent='Thanks \u2014 you\u2019re on the list.';
+    emailEl.disabled=true;commentsEl.disabled=true;
+    document.querySelector('.form-submit').disabled=true;
+  }
+</script>
 </body>
 </html>
