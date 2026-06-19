@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Vision — Schooled the Musical</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#111827;--bg-lighter:#1a2235;--text:#f1f1f1;--text-muted:#9ca3af;--text-dim:#6b7280;
+    --coral:#f87171;--amber:#fbbf24;--teal:#2dd4bf;--blue:#60a5fa;--purple:#a78bfa;
+  }
+  *{box-sizing:border-box;}
+  html{font-size:16px;scroll-behavior:smooth;}
+  body{background-color:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;line-height:1.6;overflow-x:hidden;margin:0;}
+  a{color:inherit;}
+
+  .spectrum-bar{display:flex;width:100%;max-width:320px;height:3px;border-radius:2px;overflow:hidden;}
+  .spectrum-bar span{flex:1;}
+  .spectrum-bar .c1{background:var(--amber);}.spectrum-bar .c2{background:var(--teal);}
+  .spectrum-bar .c3{background:var(--blue);}.spectrum-bar .c4{background:var(--purple);}
+
+  .topbar{position:sticky;top:0;z-index:40;background:rgba(17,24,39,.85);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.06);}
+  .topbar .bar{max-width:760px;margin:0 auto;padding:0 1.5rem;height:58px;display:flex;align-items:center;justify-content:space-between;}
+  .wordmark{font-family:'Helvetica Neue',Helvetica,sans-serif;font-weight:700;letter-spacing:.01em;font-size:1.1rem;text-decoration:none;}
+  .topnav{display:flex;gap:1.5rem;font-size:.85rem;}
+  .topnav a{color:var(--text-muted);text-decoration:none;}
+  .topnav a:hover{color:var(--text);}
+  @media(max-width:560px){.topnav{gap:1rem;font-size:.8rem;}}
+
+  .page-head{max-width:680px;margin:0 auto;padding:4.5rem 1.5rem 1rem;}
+  .page-title{font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(2.6rem,8vw,4rem);line-height:1;margin:1.5rem 0 .6rem;}
+  .page-sub{color:var(--text-muted);font-weight:300;font-size:1.05rem;margin:0;}
+
+  .intro{max-width:640px;margin:0 auto;padding:1.5rem 1.5rem .5rem;}
+  .intro p{color:var(--text-muted);font-weight:300;font-size:1.08rem;line-height:1.8;margin:0;}
+  .intro em{color:var(--text);font-style:italic;}
+
+  .parts{max-width:680px;margin:2rem auto 0;padding:0 1.5rem;display:flex;flex-direction:column;gap:1rem;}
+  .part{display:flex;gap:1.4rem;background:var(--bg-lighter);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:1.5rem 1.6rem;}
+  .part .num{font-family:'Instrument Serif',serif;font-size:2.6rem;line-height:.9;flex:0 0 auto;min-width:2.2rem;}
+  .part .eyebrow{font-size:.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;margin-bottom:.55rem;}
+  .part p{color:var(--text-muted);font-weight:300;font-size:.99rem;line-height:1.7;margin:0;}
+  .part p em{font-style:italic;}
+  .part .status{display:inline-block;margin-top:.85rem;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-dim);border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:.2rem .65rem;}
+  .p1 .num,.p1 .eyebrow{color:var(--teal);}
+  .p2 .num,.p2 .eyebrow{color:var(--amber);}
+  .p3 .num,.p3 .eyebrow{color:var(--purple);}
+  .p1{border-left:3px solid var(--teal);}
+  .p2{border-left:3px solid var(--amber);}
+  .p3{border-left:3px solid var(--purple);}
+
+  .principle{max-width:640px;margin:3rem auto 0;padding:0 1.5rem;}
+  .principle .lbl{font-size:.7rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--text-dim);margin:0 0 1.1rem;}
+  .principle h2{font-family:'Instrument Serif',serif;font-weight:400;font-style:italic;font-size:clamp(1.5rem,3.6vw,2rem);line-height:1.3;color:var(--text);margin:0 0 1.25rem;}
+  .principle p{color:var(--text-muted);font-weight:300;font-size:1.02rem;line-height:1.75;margin:0 0 1.1rem;}
+  .principle p strong{color:var(--text);font-weight:500;}
+  .shared{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.4rem;}
+  .shared span{font-size:.78rem;color:var(--text-muted);background:var(--bg-lighter);border:1px solid rgba(255,255,255,.08);border-radius:999px;padding:.3rem .8rem;}
+
+  .closing{max-width:640px;margin:3rem auto 0;padding:0 1.5rem;}
+  .closing p{font-family:'Instrument Serif',serif;font-style:italic;font-size:clamp(1.3rem,3vw,1.7rem);line-height:1.4;color:var(--text);margin:0;text-align:center;}
+
+  /* signup */
+  .signup{max-width:640px;margin:3rem auto 0;padding:0 1.5rem;}
+  .signup-inner{background:var(--bg-lighter);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:1.4rem 1.5rem;display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1.25rem;}
+  .signup-label{font-weight:500;font-size:1rem;color:var(--text);margin:0;flex:0 0 auto;}
+  .signup-form{display:flex;align-items:center;gap:.6rem;flex:1 1 260px;}
+  .signup-form input{flex:1 1 160px;background:var(--bg);border:1px solid rgba(255,255,255,.1);border-radius:6px;padding:.7rem .9rem;color:var(--text);font-family:'DM Sans',sans-serif;font-size:.95rem;line-height:1.4;outline:none;transition:border-color .2s ease;}
+  .signup-form input:focus{border-color:var(--teal);}
+  .signup-form button{flex:0 0 auto;background:var(--teal);color:var(--bg);border:none;border-radius:6px;padding:.7rem 1.4rem;font-weight:600;font-size:.85rem;letter-spacing:.03em;line-height:1.4;cursor:pointer;font-family:'DM Sans',sans-serif;transition:opacity .2s ease;}
+  .signup-form button:hover{opacity:.85;}
+  .signup-status{flex-basis:100%;font-size:.85rem;color:var(--teal);margin:0;}
+  .signup-status:empty{display:none;}
+
+  .footer{max-width:760px;margin:0 auto;padding:3.5rem 1.5rem 4rem;text-align:center;}
+  .footer-label{font-size:.7rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--text-dim);margin-bottom:.75rem;}
+  .footer a{text-decoration:none;}
+  .footer-social{display:flex;gap:1.25rem;justify-content:center;margin-top:1.5rem;}
+  .footer-social svg{width:22px;height:22px;fill:var(--text-dim);transition:fill .2s ease;}
+  .footer-social a:hover svg{fill:var(--text);}
+  .footer-bar{margin-top:2.5rem;display:flex;justify-content:center;}
+  .footer-copyright{margin-top:1.5rem;font-size:.7rem;color:var(--text-dim);}
+</style>
+</head>
+<body>
+
+<div class="topbar" id="top">
+  <div class="bar">
+    <a class="wordmark" href="index.html">Schooled</a>
+    <nav class="topnav">
+      <a href="about.html">About</a>
+      <a href="dispatches.html">Dispatches</a>
+      <a href="reading.html">Reading&nbsp;List</a>
+    </nav>
+  </div>
+</div>
+
+<div class="page-head">
+  <div class="spectrum-bar"><span class="c1"></span><span class="c2"></span><span class="c3"></span><span class="c4"></span></div>
+  <h1 class="page-title">The Vision</h1>
+  <p class="page-sub">One school. The same events. Three vantage points.</p>
+</div>
+
+<div class="intro">
+  <p><em>Schooled</em> is complete on its own &mdash; a full two-act story of three students and the decade that reshapes them. But a school holds more perspectives than a single evening can carry. So <em>Schooled</em> is the first of three musicals, each set in the same school and moving through many of the same events &mdash; the letter, the rally, the debate &mdash; but seen from a different vantage point. Part One belongs to the students. Part Two to the teachers. Part Three to the head of school.</p>
+</div>
+
+<div class="parts">
+  <div class="part p1">
+    <div class="num">I</div>
+    <div class="body">
+      <div class="eyebrow">Part One &middot; The Students</div>
+      <p>Marcus, Emily, and Sami &mdash; a brother, a sister, and a friend &mdash; from their school years through a rally that ends in gunfire and into the decade that follows. Three young people who want very different things from the same education. This is the show that exists today.</p>
+      <span class="status">In development</span>
+    </div>
+  </div>
+  <div class="part p2">
+    <div class="num">II</div>
+    <div class="body">
+      <div class="eyebrow">Part Two &middot; The Teachers</div>
+      <p>The same years from inside the faculty lounge. Elsie and Mitchell &mdash; two young teachers caught between what they believe and what their jobs allow &mdash; their romance, their reckoning, and the institutional pressures the students never see. Songs from Part One return, reharmonized with new meaning.</p>
+      <span class="status">To come</span>
+    </div>
+  </div>
+  <div class="part p3">
+    <div class="num">III</div>
+    <div class="body">
+      <div class="eyebrow">Part Three &middot; The Head of School</div>
+      <p>Mrs. Nestor. Across the first two shows she reads as the institution&rsquo;s enforcer &mdash; the one who chose the system over the people. Part Three inverts that: her history, her impossible position during the events, her resignation and disappearance, and her return years later when her granddaughter enrolls. This is where the trilogy&rsquo;s thesis fully lands.</p>
+      <span class="status">To come</span>
+    </div>
+  </div>
+</div>
+
+<div class="principle">
+  <p class="lbl">The same events, seen three ways</p>
+  <h2>The debate isn&rsquo;t three different debates. It&rsquo;s one debate, seen three times, from three positions.</h2>
+  <p>This is the Rashomon principle applied to an institution rather than a single event. In Part One, the students ask the questions and the candidates flounder. In Part Two, Elsie watches the discussion skills she taught come back in her students&rsquo; voices. In Part Three, the woman who built the place &mdash; and left it &mdash; watches from the back of the room. <strong>Same moment; three different truths.</strong></p>
+  <div class="shared">
+    <span>The letter</span><span>The rally</span><span>The shooting</span><span>The debate</span><span>The classroom</span>
+  </div>
+</div>
+
+<div class="closing">
+  <p>Part One comes first, and stands entirely on its own. The trilogy is where it can go &mdash; not the price of admission. One school was never only one story.</p>
+</div>
+
+<!-- signup -->
+<div class="signup">
+  <div class="signup-inner">
+    <p class="signup-label">Follow the journey</p>
+    <form class="signup-form" onsubmit="return subscribe(event)">
+      <input type="email" required placeholder="Email address" aria-label="Email address">
+      <button type="submit">Subscribe</button>
+    </form>
+    <p class="signup-status" role="status"></p>
+  </div>
+</div>
+
+<footer class="footer">
+  <p class="footer-label">Inquiries</p>
+  <p><a href="about.html" style="color:var(--text-muted);text-decoration:underline;text-decoration-color:rgba(255,255,255,.3);text-underline-offset:3px;font-size:.95rem;">Peter Nilsson</a></p>
+  <div class="footer-social">
+    <a href="https://www.instagram.com/schooledthemusical" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+    <a href="https://www.youtube.com/@SchooledtheMusical" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+  </div>
+  <div class="footer-bar"><div class="spectrum-bar"><span class="c1"></span><span class="c2"></span><span class="c3"></span><span class="c4"></span></div></div>
+  <p class="footer-copyright">&copy; 2026 Peter Nilsson. All rights reserved.</p>
+</footer>
+
+<script>
+  function subscribe(e){
+    e.preventDefault();
+    var form=e.target;
+    var email=form.querySelector('input[type=email]').value;
+    var url='https://docs.google.com/forms/d/e/1FAIpQLSf7uT0TsXsQ8eqMijngDyEAcvg7PZzgE84elc5ECdSyUomm5g/formResponse';
+    fetch(url,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:'entry.1394194067='+encodeURIComponent(email)}).catch(function(){});
+    var status=form.closest('.signup-inner').querySelector('.signup-status');
+    status.textContent='Thanks \u2014 you\u2019re on the list.';
+    form.querySelector('input').disabled=true;
+    form.querySelector('button').disabled=true;
+    return false;
+  }
+</script>
+</body>
+</html>

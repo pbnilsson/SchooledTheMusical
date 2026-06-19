@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dispatches — Schooled the Musical</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#111827;--bg-lighter:#1a2235;--text:#f1f1f1;--text-muted:#9ca3af;--text-dim:#6b7280;
+    --coral:#f87171;--amber:#fbbf24;--teal:#2dd4bf;--blue:#60a5fa;--purple:#a78bfa;
+  }
+  *{box-sizing:border-box;}
+  html{font-size:16px;scroll-behavior:smooth;}
+  body{background-color:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;line-height:1.6;overflow-x:hidden;margin:0;}
+  a{color:inherit;}
+
+  .spectrum-bar{display:flex;width:100%;max-width:320px;height:3px;border-radius:2px;overflow:hidden;}
+  .spectrum-bar span{flex:1;}
+  .spectrum-bar .c1{background:var(--amber);}
+  .spectrum-bar .c2{background:var(--teal);}
+  .spectrum-bar .c3{background:var(--blue);}
+  .spectrum-bar .c4{background:var(--purple);}
+
+  .topbar{position:sticky;top:0;z-index:40;background:rgba(17,24,39,.85);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.06);}
+  .topbar .bar{max-width:760px;margin:0 auto;padding:0 1.5rem;height:58px;display:flex;align-items:center;justify-content:space-between;}
+  .wordmark{font-family:'Helvetica Neue',Helvetica,sans-serif;font-weight:700;letter-spacing:.01em;font-size:1.1rem;text-decoration:none;}
+  .topnav{display:flex;gap:1.5rem;font-size:.85rem;}
+  .topnav a{color:var(--text-muted);text-decoration:none;}
+  .topnav a:hover{color:var(--text);}
+  .topnav a.current{color:var(--text);}
+  @media(max-width:560px){.topnav{gap:1rem;font-size:.8rem;}}
+
+  .page-head{max-width:760px;margin:0 auto;padding:4.5rem 1.5rem 2rem;}
+  .page-title{font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(2.6rem,8vw,4rem);line-height:1;margin:1.5rem 0 .75rem;}
+  .page-sub{color:var(--text-muted);font-weight:300;font-size:1.05rem;margin:0;max-width:480px;}
+
+  /* signup */
+  .signup{max-width:760px;margin:0 auto;padding:.5rem 1.5rem;}
+  .signup-inner{background:var(--bg-lighter);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:1.4rem 1.5rem;display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1.25rem;}
+  .signup-label{font-weight:500;font-size:1rem;color:var(--text);margin:0;flex:0 0 auto;}
+  .signup-form{display:flex;align-items:center;gap:.6rem;flex:1 1 260px;}
+  .signup-form input{flex:1 1 160px;background:var(--bg);border:1px solid rgba(255,255,255,.1);border-radius:6px;padding:.7rem .9rem;color:var(--text);font-family:'DM Sans',sans-serif;font-size:.95rem;line-height:1.4;outline:none;transition:border-color .2s ease;}
+  .signup-form input:focus{border-color:var(--teal);}
+  .signup-form button{flex:0 0 auto;background:var(--teal);color:var(--bg);border:none;border-radius:6px;padding:.7rem 1.4rem;font-weight:600;font-size:.85rem;letter-spacing:.03em;line-height:1.4;cursor:pointer;font-family:'DM Sans',sans-serif;transition:opacity .2s ease;}
+  .signup-form button:hover{opacity:.85;}
+  .signup-status{flex-basis:100%;font-size:.85rem;color:var(--teal);margin:0;}
+  .signup-status:empty{display:none;}
+
+  .jump{max-width:760px;margin:0 auto;padding:1.5rem 1.5rem .5rem;}
+  .jump-label{font-size:.7rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--text-dim);margin:0 0 1rem;}
+  .jump a{display:flex;gap:1rem;align-items:baseline;padding:.85rem 0;border-top:1px solid rgba(255,255,255,.07);text-decoration:none;color:var(--text);font-size:1rem;}
+  .jump a:last-child{border-bottom:1px solid rgba(255,255,255,.07);}
+  .jump a:hover{color:var(--teal);}
+  .jump .jdate{flex:0 0 5.5rem;color:var(--text-dim);font-size:.85rem;font-weight:300;}
+  .jump .jnum{color:var(--text-dim);font-weight:300;}
+
+  .dispatches{max-width:680px;margin:0 auto;padding:2rem 1.5rem 1rem;}
+  .dispatch-article{padding:3.5rem 0;border-top:1px solid rgba(255,255,255,.08);scroll-margin-top:72px;}
+  .dispatch-article:first-child{border-top:none;}
+  .d-eyebrow{font-size:.75rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;margin-bottom:1rem;}
+  .d-eyebrow .ddate{color:var(--text-dim);font-weight:400;}
+  .dispatch-article:nth-of-type(1) .d-eyebrow{color:var(--teal);}
+  .dispatch-article:nth-of-type(2) .d-eyebrow{color:var(--amber);}
+  .dispatch-article:nth-of-type(3) .d-eyebrow{color:var(--blue);}
+  .dispatch-article:nth-of-type(4) .d-eyebrow{color:var(--purple);}
+  .d-title{font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(1.7rem,4.5vw,2.4rem);line-height:1.18;margin:0 0 1.5rem;}
+  .d-greeting{font-weight:500;color:var(--text);margin:0 0 .9rem;}
+  .d-subhead{font-family:'Helvetica Neue',Helvetica,sans-serif;font-size:1rem;font-weight:700;letter-spacing:.01em;color:var(--text);margin:2rem 0 .6rem;}
+  .dispatches p{color:var(--text-muted);font-weight:300;font-size:1.02rem;line-height:1.75;margin:0 0 1.1rem;}
+  .dispatches p strong{color:var(--text);font-weight:500;}
+  .dispatches a.inline{color:var(--text);text-decoration:underline;text-decoration-color:var(--purple);text-underline-offset:3px;}
+  .signoff{font-family:'Instrument Serif',serif;font-style:italic;font-size:1.4rem;color:var(--text);margin:1.75rem 0 0;}
+  .to-top{display:inline-block;margin-top:1.5rem;font-size:.8rem;color:var(--text-dim);text-decoration:none;letter-spacing:.04em;}
+  .to-top:hover{color:var(--text);}
+
+  .footer{max-width:760px;margin:0 auto;padding:3.5rem 1.5rem 4rem;text-align:center;}
+  .footer-label{font-size:.7rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--text-dim);margin-bottom:.75rem;}
+  .footer a{text-decoration:none;}
+  .footer-social{display:flex;gap:1.25rem;justify-content:center;margin-top:1.5rem;}
+  .footer-social svg{width:22px;height:22px;fill:var(--text-dim);transition:fill .2s ease;}
+  .footer-social a:hover svg{fill:var(--text);}
+  .footer-bar{margin-top:2.5rem;display:flex;justify-content:center;}
+  .footer-copyright{margin-top:1.5rem;font-size:.7rem;color:var(--text-dim);}
+</style>
+</head>
+<body>
+
+<div class="topbar" id="top">
+  <div class="bar">
+    <a class="wordmark" href="index.html">Schooled</a>
+    <nav class="topnav">
+      <a href="about.html">About</a>
+      <a href="dispatches.html" class="current">Dispatches</a>
+      <a href="reading.html">Reading&nbsp;List</a>
+    </nav>
+  </div>
+</div>
+
+<div class="page-head">
+  <div class="spectrum-bar"><span class="c1"></span><span class="c2"></span><span class="c3"></span><span class="c4"></span></div>
+  <h1 class="page-title">Dispatches</h1>
+  <p class="page-sub">Notes from the making of <em>Schooled</em> &mdash; a new one every few weeks.</p>
+</div>
+
+<nav class="jump">
+  <p class="jump-label">On this page</p>
+  <a href="#update-2"><span class="jdate">Jun 2026</span><span class="jtitle"><span class="jnum">Update&nbsp;#2 &mdash;</span> A team comes together, and Act II takes shape</span></a>
+  <a href="#update-1"><span class="jdate">May 2026</span><span class="jtitle"><span class="jnum">Update&nbsp;#1 &mdash;</span> Success at SXSW EDU, and a Pittsburgh reading booked</span></a>
+</nav>
+
+<!-- signup (top) -->
+<div class="signup">
+  <div class="signup-inner">
+    <p class="signup-label">Follow the journey</p>
+    <form class="signup-form" onsubmit="return subscribe(event)">
+      <input type="email" required placeholder="Email address" aria-label="Email address">
+      <button type="submit">Subscribe</button>
+    </form>
+    <p class="signup-status" role="status"></p>
+  </div>
+</div>
+
+<main class="dispatches">
+
+  <!-- UPDATE #2 -->
+  <article class="dispatch-article" id="update-2">
+    <div class="d-eyebrow">Update #2 <span class="ddate">&middot; June 2026</span></div>
+    <h2 class="d-title">A team comes together, and Act II takes shape.</h2>
+    <p class="d-greeting"><em>Schooled</em> Community!</p>
+    <p>It&rsquo;s been a busy month in <em>Schooled</em> land. Here we go!</p>
+
+    <h3 class="d-subhead">Pittsburgh, October 18</h3>
+    <p>We&rsquo;re preparing for the staged reading coming up October 18, in Pittsburgh, PA. More details to come (probably in the next update) &mdash; but in the meantime, if you&rsquo;re interested in attending, keep <strong>Sunday evening, October 18, in Pittsburgh</strong> on your calendar. It will be the first staged reading of both Act I and Act II, and I couldn&rsquo;t be more grateful for all the support and interest around this.</p>
+
+    <h3 class="d-subhead">Director!</h3>
+    <p>I am <em>beyond thrilled</em> to share that the reading will be directed by <strong>Ryan Dobrin</strong>. Ryan has extraordinary experience both with early-stage work and with full Broadway productions. On Broadway, he was the associate director for the Tony Award&ndash;winning revival of <em>Merrily We Roll Along</em>, with Daniel Radcliffe, Jonathan Groff, and Lindsay Mendez, and he&rsquo;s also a co-producer for <em>Mexodus</em>, which recently seemed to sweep through the off-Broadway award season. And what I&rsquo;m most excited about is his dramaturgical work, close-reading shows. <em>Schooled</em> is a young show, and I&rsquo;m very much looking forward to looking closely at what changes it needs in order to become its best version of itself.</p>
+
+    <h3 class="d-subhead">Music Director!</h3>
+    <p>One thing I learned in Austin is that directing the music of a show is a real skill in itself. (Well, I learned it back in NYC, too.) And while I have some music experience, I&rsquo;m decidedly an amateur at coaching singers, giving feedback, and coordinating all the music components &mdash; all on a tight timeline. So I am <em>so grateful and excited</em> that <strong>Mike Mackey</strong> will be directing the music at the Pittsburgh reading. Mike has music-directed and arranged orchestrations for large shows like <em>Les Mis&eacute;rables</em> and <em>Hello, Dolly!</em>, and he&rsquo;s directed choirs and choruses of all sizes. And what I&rsquo;m most excited about is that he also has a PhD in Jazz Studies. Since jazz textures and harmonies play an important role in Act 2, I&rsquo;m very much looking forward to working closely with him over the summer.</p>
+
+    <h3 class="d-subhead">Writing!</h3>
+    <p>And perhaps most importantly: the <em>writing is taking shape</em>! During May, I wrote out a book version of Act II &mdash; taking the outline I&rsquo;ve had for almost a year and turning it (finally!) into dialogue. Then, since the beginning of June, I&rsquo;ve been &ldquo;songspotting,&rdquo; finding the moments when music makes sense and building those moments into songs. Early scenes have focused on the prologue for Act 2 and a tense reunion of two characters partway into the act &mdash; a scene which, like a tango, mixes intimacy with distance. I&rsquo;m excited for you all to hear it when the time comes! June, July, and August will be a sprint of songwriting. There&rsquo;s a lot to get through, and I&rsquo;m keeping as much of my calendar clear as possible to finish it all.</p>
+
+    <h3 class="d-subhead">What&rsquo;s teaching it</h3>
+    <p>For inspiration, I&rsquo;ve been reading: the developmental history of <em>Cabaret</em> (the parallels are striking!) and <em>Aladdin</em> (a reminder that big shows sometimes don&rsquo;t work in draft stage), <em>The Playwright&rsquo;s Guidebook</em> (full of useful nuggets), &ldquo;40 Questions for a Political Play&rdquo; (an excellent essay by Dan O&rsquo;Brien), <em>Second Act Trouble</em> (a collection of cautionary tales), and more. For every text I read, I catalog the lessons learned &mdash; gathered on the <a class="inline" href="reading.html">reading list</a>.</p>
+
+    <p>I&rsquo;m about to hop on a plane and finish that book on <em>Cabaret</em> &mdash; and then get home and back to writing. More to come, and thank you for following along!</p>
+    <p class="signoff">Peter</p>
+    <a class="to-top" href="#top">&uarr; Top</a>
+  </article>
+
+  <!-- UPDATE #1 -->
+  <article class="dispatch-article" id="update-1">
+    <div class="d-eyebrow">Update #1 <span class="ddate">&middot; May 2026</span></div>
+    <h2 class="d-title">An enormous success at SXSW EDU &mdash; and a full reading booked for Pittsburgh.</h2>
+    <p class="d-greeting"><em>Schooled</em> Community!</p>
+    <p>This is the first update as the journey takes its next step. Here we go!</p>
+
+    <h3 class="d-subhead"><em>Schooled</em> at SXSW EDU</h3>
+    <p>I&rsquo;m so happy to share that the staged reading at SXSW EDU this past March was an enormous success. The actors and team in Austin put together an amazing staged reading in just a week; it was a full house when it started, and it just got fuller as the show went on. Then people were talking about it for days. And for those who like data: the post-show survey had an <strong>NPS of 67</strong> (!), with near-full participation from the audience.</p>
+
+    <h3 class="d-subhead">Next stop: Pittsburgh!</h3>
+    <p>I&rsquo;m thrilled to share that <em>Schooled</em> has now been scheduled for a full staged reading of both Acts I &amp; II for <strong>Sunday evening, October 18, in Pittsburgh</strong>! Two generous funders have committed to supporting the event, and we have a large theater booked &mdash; so mark your calendars now. I&rsquo;ll be sending more information in the weeks and months ahead.</p>
+
+    <h3 class="d-subhead">Building a team</h3>
+    <p>With five and a half months until the performance, my first deadline is to lock in the local team. Fall calendars are already filling for in-demand artists, so I just spent four days in New York City meeting directors for this reading, with calls scheduled with music directors in Pittsburgh. Once these key players are in place, I&rsquo;ll be digging back into the story outline to finish the script and music.</p>
+
+    <h3 class="d-subhead">Wait &mdash; the script and score aren&rsquo;t finished?!</h3>
+    <p>They&rsquo;re fully outlined &mdash; but nope, not finished! A few reasons why: it&rsquo;s really helpful to have a deadline; once a director is on board, I&rsquo;ll have a crucial creative collaborator to help inform Act II (just as Deont&eacute; Warren was an incredible collaborator in Austin); and I learned <em>a lot</em> from the SXSW EDU reading &mdash; it made sense not to build out too much before knowing whether Act II would be a worthwhile endeavor. Turns out Act II is a worthwhile endeavor!</p>
+    <p>More broadly: did you know that <em>Hamilton</em> was booked at the Public Theater with most of Act II incomplete? Or that Sondheim&rsquo;s Pulitzer Prize&ndash;winning <em>Sunday in the Park with George</em> was still missing two songs just <em>days before opening night</em>? Musicals are enormously complex, and one element of successful shows is the deep engagement and commitment of a full creative and producing team. My solo work won&rsquo;t be complete &mdash; a single artist&rsquo;s never is in musical theater.</p>
+
+    <p>So: I&rsquo;m building the team now for this fall, and returning to writing. I look forward to keeping you updated &mdash; and let me know if you have questions!</p>
+    <p class="signoff">Pete</p>
+    <a class="to-top" href="#top">&uarr; Top</a>
+  </article>
+
+</main>
+
+<!-- signup (bottom) -->
+<div class="signup" style="padding-top:1.5rem;padding-bottom:1rem;">
+  <div class="signup-inner">
+    <p class="signup-label">Get the next one in your inbox</p>
+    <form class="signup-form" onsubmit="return subscribe(event)">
+      <input type="email" required placeholder="Email address" aria-label="Email address">
+      <button type="submit">Subscribe</button>
+    </form>
+    <p class="signup-status" role="status"></p>
+  </div>
+</div>
+
+<footer class="footer">
+  <p class="footer-label">Inquiries</p>
+  <p><a href="about.html" style="color:var(--text-muted);text-decoration:underline;text-decoration-color:rgba(255,255,255,.3);text-underline-offset:3px;font-size:.95rem;">Peter Nilsson</a></p>
+  <div class="footer-social">
+    <a href="https://www.instagram.com/schooledthemusical" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+    <a href="https://www.youtube.com/@SchooledtheMusical" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+  </div>
+  <div class="footer-bar"><div class="spectrum-bar"><span class="c1"></span><span class="c2"></span><span class="c3"></span><span class="c4"></span></div></div>
+  <p class="footer-copyright">&copy; 2026 Peter Nilsson. All rights reserved.</p>
+</footer>
+
+<script>
+  function subscribe(e){
+    e.preventDefault();
+    var form=e.target;
+    var email=form.querySelector('input[type=email]').value;
+    var url='https://docs.google.com/forms/d/e/1FAIpQLSf7uT0TsXsQ8eqMijngDyEAcvg7PZzgE84elc5ECdSyUomm5g/formResponse';
+    fetch(url,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:'entry.1394194067='+encodeURIComponent(email)}).catch(function(){});
+    var status=form.closest('.signup-inner').querySelector('.signup-status');
+    status.textContent='Thanks \u2014 you\u2019re on the list.';
+    form.querySelector('input').disabled=true;
+    form.querySelector('button').disabled=true;
+    return false;
+  }
+</script>
+</body>
+</html>
