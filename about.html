@@ -38,25 +38,20 @@
     a { color: var(--teal); text-decoration: none; }
     a:hover { text-decoration: underline; }
 
-    .back-link {
-      position: fixed;
-      top: 24px;
-      left: 24px;
-      font-size: 0.8rem;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      z-index: 100;
-      transition: color 0.2s;
-    }
-    .back-link:hover { color: var(--teal); text-decoration: none; }
-    .back-link span { margin-right: 6px; }
+    .topbar{position:sticky;top:0;z-index:40;background:rgba(17,24,39,.85);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.06);}
+    .topbar .bar{max-width:760px;margin:0 auto;padding:0 1.5rem;height:58px;display:flex;align-items:center;justify-content:space-between;}
+    .wordmark{font-family:'Helvetica Neue',Helvetica,sans-serif;font-weight:700;letter-spacing:.01em;font-size:1.1rem;color:var(--text);text-decoration:none;}
+    .wordmark:hover{text-decoration:none;}
+    .topnav{display:flex;gap:1.5rem;font-size:.85rem;}
+    .topnav a{color:var(--text-muted);text-decoration:none;}
+    .topnav a:hover{color:var(--text);text-decoration:none;}
+    .topnav a.current{color:var(--text);}
+    @media(max-width:560px){.topnav{gap:1rem;font-size:.8rem;}}
 
     .about-container {
       max-width: 960px;
       margin: 0 auto;
-      padding: 100px 24px 80px;
+      padding: 56px 24px 80px;
     }
     .section-label {
       font-size: 0.7rem;
@@ -132,8 +127,7 @@
     .delay-3 { animation-delay: 0.35s; }
 
     @media (max-width: 640px) {
-      .about-container { padding: 80px 20px 60px; }
-      .back-link { top: 16px; left: 16px; }
+      .about-container { padding: 40px 20px 60px; }
       .about-layout { flex-direction: column; gap: 32px; }
       .about-left { flex: none; width: 180px; position: static; }
       .spectrum-bar { width: 160px; }
@@ -142,7 +136,16 @@
 </head>
 <body>
 
-  <a href="/" class="back-link"><span>&#8592;</span> Schooled</a>
+  <div class="topbar" id="top">
+    <div class="bar">
+      <a class="wordmark" href="index.html">Schooled</a>
+      <nav class="topnav">
+        <a href="about.html" class="current">About</a>
+        <a href="dispatches.html">Dispatches</a>
+        <a href="reading.html">Reading&nbsp;List</a>
+      </nav>
+    </div>
+  </div>
 
   <div class="about-container">
     <div class="section-label fade-in delay-1">ABOUT THE CREATOR</div>
