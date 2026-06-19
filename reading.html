@@ -33,13 +33,13 @@
   .topnav a.current{color:var(--text);}
   @media(max-width:560px){.topnav{gap:1rem;font-size:.8rem;}}
 
-  .page-head{max-width:680px;margin:0 auto;padding:4.5rem 1.5rem 1rem;}
+  .page-head{max-width:900px;margin:0 auto;padding:4.5rem 1.5rem 1rem;}
   .page-title{font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(2.6rem,8vw,4rem);line-height:1;margin:1.5rem 0 0;}
   .editor-note{font-style:italic;color:var(--text-muted);font-weight:300;font-size:1.02rem;line-height:1.7;max-width:600px;margin:1.25rem 0 0;}
-  .editor-note .sig{display:block;margin-top:.5rem;color:var(--text);}
+  .editor-note .sig{display:block;margin-top:.5rem;color:var(--text-muted);}
 
   /* now + next combined box */
-  .now{max-width:680px;margin:1.75rem auto 0;padding:0 1.5rem;}
+  .now{max-width:900px;margin:1.75rem auto 0;padding:0 1.5rem;}
   .now-card{background:var(--bg-lighter);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:1.5rem;}
   .now-block.now-next{margin-top:1.3rem;padding-top:1.3rem;border-top:1px solid rgba(255,255,255,.08);}
   .now-eyebrow{font-size:.7rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;margin-bottom:.6rem;}
@@ -51,10 +51,10 @@
   .now-list .bk{margin:0 0 .4rem;}
   .now-list .bk:last-child{margin-bottom:0;}
 
-  .shelf-head{max-width:680px;margin:3rem auto 0;padding:0 1.5rem;}
+  .shelf-head{max-width:900px;margin:3rem auto 0;padding:0 1.5rem;}
   .shelf-head h2{font-family:'Instrument Serif',serif;font-weight:400;font-size:1.75rem;color:var(--text);margin:0;}
 
-  .cat-wrap{max-width:680px;margin:0 auto;padding:0 1.5rem;}
+  .cat-wrap{max-width:900px;margin:0 auto;padding:0 1.5rem;}
   .cat-wrap .cat:first-child .cat-h{margin-top:1.5rem;}
   .cat-h{display:flex;align-items:baseline;gap:.7rem;margin:2.75rem 0 1.2rem;}
   .cat-h .lbl{font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;}
@@ -64,13 +64,13 @@
   .cols1{column-count:1;}
   .cols3{column-count:3;column-gap:2rem;}
   .bk{break-inside:avoid;-webkit-column-break-inside:avoid;margin:0 0 .55rem;}
-  .bk-t{font-weight:500;font-size:.96rem;color:var(--text);}
+  .bk-t{font-weight:500;font-size:.96rem;color:var(--text-muted);}
   .bk-a{font-weight:300;font-size:.84rem;color:var(--text-dim);margin-left:.45rem;}
   @media(max-width:820px){.cols3{column-count:2;}}
   @media(max-width:560px){.cols3{column-count:1;}}
 
   /* signup */
-  .signup{max-width:680px;margin:3rem auto 0;padding:0 1.5rem;}
+  .signup{max-width:900px;margin:3rem auto 0;padding:0 1.5rem;}
   .signup-inner{background:var(--bg-lighter);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:1.4rem 1.5rem;display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1.25rem;}
   .signup-label{font-weight:500;font-size:1rem;color:var(--text);margin:0;flex:0 0 auto;}
   .signup-form{display:flex;align-items:center;gap:.6rem;flex:1 1 260px;}
@@ -107,11 +107,12 @@
 <div class="page-head">
   <div class="spectrum-bar"><span class="c1"></span><span class="c2"></span><span class="c3"></span><span class="c4"></span></div>
   <h1 class="page-title">Reading List</h1>
-  <p class="editor-note">Creating a musical is an epic project &mdash; and one best entered with eyes wide open. So, since first deciding to develop this project, I&rsquo;ve been diving deeply into the literature of musical theater: shows, craft books, librettos, biographies, and more. This is a running list of those texts I&rsquo;ve been reading.<span class="sig">&mdash; Peter</span></p>
+  <p class="editor-note">Creating a musical is an epic project &mdash; and one best entered with eyes wide open. So, since first deciding to develop this project, I&rsquo;ve been diving deeply into the literature of musical theater to try to give myself the best self-directed MFA I can, reading and watching: shows, craft books, librettos, biographies, and more. This is a running list of those texts I&rsquo;ve been reading. I&rsquo;m always looking to learn more, so please send along recommendations!<span class="sig">&mdash; Peter</span></p>
 </div>
 
 <div class="now">
   <div class="now-card">
+    <!-- AUTO:NOW:START -->
     <div class="now-block now-current">
       <div class="now-eyebrow coral">Currently reading</div>
       <div class="now-title">The Making of Cabaret</div>
@@ -126,14 +127,16 @@
         <div class="bk"><span class="bk-t">Spring Awakening</span><span class="bk-a">Steven Sater &amp; Duncan Sheik</span></div>
       </div>
     </div>
+    <!-- AUTO:NOW:END -->
   </div>
 </div>
 
 <div class="shelf-head"><h2>Read &amp; seen so far</h2></div>
 
 <main class="cat-wrap">
+  <!-- AUTO:CATS:START -->
   <section class="cat">
-    <div class="cat-h"><span class="lbl teal">Writing &amp; Story</span><span class="cnt">9</span></div>
+    <div class="cat-h"><span class="lbl teal">Books on Writing and Story</span><span class="cnt">9</span></div>
     <div class="cols1">
         <div class="bk"><span class="bk-t">The Anatomy of Story: 22 Steps to Becoming a Master Storyteller</span><span class="bk-a">John Truby</span></div>
         <div class="bk"><span class="bk-t">Beating Broadway: How to Create Stories for Musicals That Get Standing Ovations</span><span class="bk-a">Steve Cuden</span></div>
@@ -147,7 +150,7 @@
     </div>
   </section>
   <section class="cat">
-    <div class="cat-h"><span class="lbl blue">Development History</span><span class="cnt">12</span></div>
+    <div class="cat-h"><span class="lbl blue">Development Histories</span><span class="cnt">13</span></div>
     <div class="cols1">
         <div class="bk"><span class="bk-t">Aladdin: A Whole New World – The Road to Broadway and Beyond</span><span class="bk-a">Michael Lassell</span></div>
         <div class="bk"><span class="bk-t">But He Doesn’t Know the Territory</span><span class="bk-a">Meredith Willson</span></div>
@@ -161,10 +164,11 @@
         <div class="bk"><span class="bk-t">Putting It Together: How Stephen Sondheim and I Created Sunday in the Park with George</span><span class="bk-a">James Lapine</span></div>
         <div class="bk"><span class="bk-t">Second Act Trouble: Behind the Scenes at Broadway’s Big Musical Bombs</span><span class="bk-a">Steven Suskin</span></div>
         <div class="bk"><span class="bk-t">Wicked: The Grimmerie</span><span class="bk-a">David Cote</span></div>
+        <div class="bk"><span class="bk-t">Working on a Song: The Lyrics of Hadestown</span><span class="bk-a">Anaïs Mitchell</span></div>
     </div>
   </section>
   <section class="cat">
-    <div class="cat-h"><span class="lbl purple">Scripts &amp; Librettos</span><span class="cnt">7</span></div>
+    <div class="cat-h"><span class="lbl purple">Scripts/Librettos</span><span class="cnt">7</span></div>
     <div class="cols1">
         <div class="bk"><span class="bk-t">Appropriate</span><span class="bk-a">Branden Jacobs-Jenkins</span></div>
         <div class="bk"><span class="bk-t">English</span><span class="bk-a">Sanaz Toossi</span></div>
@@ -178,18 +182,12 @@
   <section class="cat">
     <div class="cat-h"><span class="lbl amber">Essays</span><span class="cnt">2</span></div>
     <div class="cols1">
-        <div class="bk"><span class="bk-t">The New American Musical: An Anthology from the End of the Century</span><span class="bk-a">Wiley Hausam (ed.)</span></div>
         <div class="bk"><span class="bk-t">“40 Questions About a Political Play”</span><span class="bk-a">Dan O’Brien</span></div>
+        <div class="bk"><span class="bk-t">The New American Musical: An Anthology from the End of the Century</span><span class="bk-a">Wiley Hausam (ed.)</span></div>
     </div>
   </section>
   <section class="cat">
-    <div class="cat-h"><span class="lbl teal">Lyrics</span><span class="cnt">1</span></div>
-    <div class="cols1">
-        <div class="bk"><span class="bk-t">Working on a Song: The Lyrics of Hadestown</span><span class="bk-a">Anaïs Mitchell</span></div>
-    </div>
-  </section>
-  <section class="cat">
-    <div class="cat-h"><span class="lbl blue">Biography &amp; Autobiography</span><span class="cnt">3</span></div>
+    <div class="cat-h"><span class="lbl teal">Biographies and Autobiographies</span><span class="cnt">3</span></div>
     <div class="cols1">
         <div class="bk"><span class="bk-t">Defying Gravity: The Creative Career of Stephen Schwartz, from Godspell to Wicked</span><span class="bk-a">Carol de Gere</span></div>
         <div class="bk"><span class="bk-t">Lin-Manuel Miranda: The Education of an Artist</span><span class="bk-a">Daniel Pollack-Pelzner</span></div>
@@ -197,7 +195,7 @@
     </div>
   </section>
   <section class="cat">
-    <div class="cat-h"><span class="lbl purple">Live Performance</span><span class="cnt">11</span></div>
+    <div class="cat-h"><span class="lbl blue">Live Performances</span><span class="cnt">11</span></div>
     <div class="cols3">
         <div class="bk"><span class="bk-t">The Connector</span></div>
         <div class="bk"><span class="bk-t">Days of Wine and Roses</span></div>
@@ -213,9 +211,10 @@
     </div>
   </section>
   <section class="cat">
-    <div class="cat-h"><span class="lbl amber">Film</span><span class="cnt">46</span></div>
+    <div class="cat-h"><span class="lbl purple">Film and TV</span><span class="cnt">54</span></div>
     <div class="cols3">
         <div class="bk"><span class="bk-t">1776</span></div>
+        <div class="bk"><span class="bk-t">Adaptation</span></div>
         <div class="bk"><span class="bk-t">Beat Street</span></div>
         <div class="bk"><span class="bk-t">The Best Worst Thing That Ever Could Have Happened</span></div>
         <div class="bk"><span class="bk-t">Blue Moon</span></div>
@@ -245,17 +244,24 @@
         <div class="bk"><span class="bk-t">La La Land</span></div>
         <div class="bk"><span class="bk-t">The Last Five Years</span></div>
         <div class="bk"><span class="bk-t">Les Misérables</span></div>
+        <div class="bk"><span class="bk-t">A Little Night Music</span></div>
         <div class="bk"><span class="bk-t">Mamma Mia!</span></div>
         <div class="bk"><span class="bk-t">Meet Me in St. Louis</span></div>
         <div class="bk"><span class="bk-t">Merrily We Roll Along</span></div>
         <div class="bk"><span class="bk-t">The Music Man</span></div>
         <div class="bk"><span class="bk-t">My Fair Lady</span></div>
+        <div class="bk"><span class="bk-t">Natasha, Pierre &amp; The Great Comet of 1812</span></div>
+        <div class="bk"><span class="bk-t">Next to Normal</span></div>
         <div class="bk"><span class="bk-t">Oklahoma!</span></div>
+        <div class="bk"><span class="bk-t">Original Cast Album: Co-op</span></div>
+        <div class="bk"><span class="bk-t">Original Cast Album: Company</span></div>
         <div class="bk"><span class="bk-t">The Phantom of the Opera</span></div>
         <div class="bk"><span class="bk-t">Pippin</span></div>
         <div class="bk"><span class="bk-t">The Producers</span></div>
         <div class="bk"><span class="bk-t">Rent</span></div>
+        <div class="bk"><span class="bk-t">Schmigadoon!</span></div>
         <div class="bk"><span class="bk-t">Show Boat</span></div>
+        <div class="bk"><span class="bk-t">Suffs</span></div>
         <div class="bk"><span class="bk-t">Sunday in the Park with George</span></div>
         <div class="bk"><span class="bk-t">tick, tick… BOOM!</span></div>
         <div class="bk"><span class="bk-t">Waitress</span></div>
@@ -263,6 +269,24 @@
         <div class="bk"><span class="bk-t">The Wizard of Oz</span></div>
     </div>
   </section>
+  <section class="cat">
+    <div class="cat-h"><span class="lbl amber">YouTube and Podcast Channels</span><span class="cnt">12</span></div>
+    <div class="cols3">
+        <div class="bk"><span class="bk-t">The Art of Storytelling</span></div>
+        <div class="bk"><span class="bk-t">Behind the Curtain</span></div>
+        <div class="bk"><span class="bk-t">The Drama Book Show</span></div>
+        <div class="bk"><span class="bk-t">How to Playwright</span></div>
+        <div class="bk"><span class="bk-t">Howard Ho</span></div>
+        <div class="bk"><span class="bk-t">Into the Hoods</span></div>
+        <div class="bk"><span class="bk-t">Jorge Rivera-Herrans</span></div>
+        <div class="bk"><span class="bk-t">Loving You: The Untold Sondheim</span></div>
+        <div class="bk"><span class="bk-t">The Playbill Podcast</span></div>
+        <div class="bk"><span class="bk-t">Rick Beato</span></div>
+        <div class="bk"><span class="bk-t">Scriptnotes</span></div>
+        <div class="bk"><span class="bk-t">Wait in the Wings</span></div>
+    </div>
+  </section>
+    <!-- AUTO:CATS:END -->
 </main>
 
 <!-- signup -->
