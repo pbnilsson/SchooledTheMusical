@@ -136,6 +136,10 @@
   .dlist li:last-child{border-bottom:none;}
   .dmeta{display:block;font-size:.8rem;color:var(--purple);font-weight:600;margin-bottom:.3rem;}
   .dtext{display:block;color:var(--text-muted);font-size:.86rem;font-weight:300;line-height:1.55;}
+  .plabel a{color:inherit;text-decoration:none;}
+  .plabel a:hover{color:var(--text-muted);}
+  .dlist a{display:block;text-decoration:none;color:inherit;}
+  .dlist a:hover .dtext{color:var(--text);}
   .reading ul{list-style:none;margin:0 0 1.25rem;padding:0;}
   .reading li{padding:.8rem 0;border-bottom:1px solid rgba(255,255,255,.07);}
   .reading li:last-child{border-bottom:none;}
@@ -312,35 +316,42 @@
 
     <div class="twoup reveal">
       <div class="panel dispatch">
-        <p class="plabel">Latest Dispatches</p>
+        <p class="plabel"><a href="dispatches.html">Latest Dispatches</a></p>
         <ul class="dlist">
           <li>
-            <span class="dmeta">Update #2 &middot; June 2026</span>
-            <span class="dtext">Director Ryan Dobrin and music director Mike Mackey join the team; Pittsburgh is set for October 18, and the Act II score begins to take shape.</span>
+            <a href="dispatches.html#update-2">
+              <span class="dmeta">Update #2 &middot; June 2026</span>
+              <span class="dtext">Director Ryan Dobrin and music director Mike Mackey join the team; Pittsburgh is set for October 18, and the Act II score begins to take shape.</span>
+            </a>
           </li>
           <li>
-            <span class="dmeta">Update #1 &middot; May 2026</span>
-            <span class="dtext">Act I&rsquo;s reading at SXSW EDU lands an NPS of 67 &mdash; and a full two-act staged reading is booked for Pittsburgh in October.</span>
+            <a href="dispatches.html#update-1">
+              <span class="dmeta">Update #1 &middot; May 2026</span>
+              <span class="dtext">Act I&rsquo;s reading at SXSW EDU lands an NPS of 67 &mdash; and a full two-act staged reading is booked for Pittsburgh in October.</span>
+            </a>
           </li>
         </ul>
         <a class="more" href="dispatches.html">Read the full updates &rarr;</a>
       </div>
       <div class="panel reading">
-        <p class="plabel">What&rsquo;s on our bookshelf</p>
-        <div class="now-block">
-          <p class="now-eyebrow coral">Currently reading</p>
-          <p class="now-title">Musical Stages: An Autobiography</p>
-          <p class="now-author">Richard Rodgers</p>
-        </div>
-        <div class="now-block now-next">
-          <p class="now-eyebrow amber">On the nightstand <span class="up">up next</span></p>
-          <div class="now-list">
-            <div class="bk"><span class="bk-t">Lyrics on Several Occasions</span><span class="bk-a">Ira Gershwin</span></div>
-            <div class="bk"><span class="bk-t">Marsha Norman: Collected Works</span><span class="bk-a">Marsha Norman</span></div>
-            <div class="bk"><span class="bk-t">August Wilson: A Life</span><span class="bk-a">Patti Hartigan</span></div>
-            <div class="bk"><span class="bk-t">Spring Awakening</span><span class="bk-a">Steven Sater &amp; Duncan Sheik</span></div>
-          </div>
-        </div>
+        <p class="plabel"><a href="reading.html">What&rsquo;s on our bookshelf</a></p>
+        <!-- AUTO:NOW:START -->
+    <div class="now-block now-current">
+      <div class="now-eyebrow coral">Currently reading</div>
+      <div class="now-title">Musical Stages: An Autobiography</div>
+      <div class="now-author">Richard Rodgers</div>
+    </div>
+    <div class="now-block now-next">
+      <div class="now-eyebrow amber">On the nightstand <span class="up">up next</span></div>
+      <div class="now-list">
+        <div class="bk"><span class="bk-t">August Wilson: A Life</span><span class="bk-a">Patti Hartigan</span></div>
+        <div class="bk"><span class="bk-t">Lyrics on Several Occasions</span><span class="bk-a">Ira Gershwin</span></div>
+        <div class="bk"><span class="bk-t">Marsha Norman: Collected Works</span><span class="bk-a">Marsha Norman</span></div>
+        <div class="bk"><span class="bk-t">Spring Awakening</span><span class="bk-a">Steven Sater &amp; Duncan Sheik</span></div>
+      </div>
+    </div>
+    <!-- AUTO:NOW:END -->
+      
         <a class="more" href="reading.html">See the full reading list &rarr;</a>
       </div>
     </div>
