@@ -115,15 +115,21 @@
     <!-- AUTO:NOW:START -->
     <div class="now-block now-current">
       <div class="now-eyebrow coral">Currently reading</div>
-      <div class="now-title">Musical Stages: An Autobiography</div>
-      <div class="now-author">Richard Rodgers</div>
+      <div class="now-title">Marsha Norman: Collected Works</div>
+      <div class="now-author">Marsha Norman</div>
     </div>
     <div class="now-block now-next">
       <div class="now-eyebrow amber">On the nightstand <span class="up">up next</span></div>
       <div class="now-list">
         <div class="bk"><span class="bk-t">August Wilson: A Life</span><span class="bk-a">Patti Hartigan</span></div>
+        <div class="bk"><span class="bk-t">Contradictions: Notes on Twenty-six Years in the Theatre</span><span class="bk-a">Harold Prince</span></div>
+        <div class="bk"><span class="bk-t">The Crafty Art of Playmaking</span><span class="bk-a">Alan Ayckbourn</span></div>
+        <div class="bk"><span class="bk-t">Falsettos</span><span class="bk-a">William Finn &amp; James Lapine</span></div>
+        <div class="bk"><span class="bk-t">The Inheritance</span><span class="bk-a">Matthew Lopez</span></div>
+        <div class="bk"><span class="bk-t">The Kentucky Cycle</span><span class="bk-a">Robert Schenkkan</span></div>
         <div class="bk"><span class="bk-t">Lyrics on Several Occasions</span><span class="bk-a">Ira Gershwin</span></div>
-        <div class="bk"><span class="bk-t">Marsha Norman: Collected Works</span><span class="bk-a">Marsha Norman</span></div>
+        <div class="bk"><span class="bk-t">The Oresteia</span><span class="bk-a">Aeschylus</span></div>
+        <div class="bk"><span class="bk-t">Rashōmon</span><span class="bk-a">Ryūnosuke Akutagawa</span></div>
         <div class="bk"><span class="bk-t">Spring Awakening</span><span class="bk-a">Steven Sater &amp; Duncan Sheik</span></div>
       </div>
     </div>
@@ -193,10 +199,11 @@
     </div>
   </section>
   <section class="cat">
-    <div class="cat-h"><span class="lbl blue">Biographies and Autobiographies</span><span class="cnt">3</span></div>
+    <div class="cat-h"><span class="lbl blue">Biographies and Autobiographies</span><span class="cnt">4</span></div>
     <div class="cols1">
         <div class="bk"><span class="bk-t">Defying Gravity: The Creative Career of Stephen Schwartz, from Godspell to Wicked</span><span class="bk-a">Carol de Gere</span></div>
         <div class="bk"><span class="bk-t">Lin-Manuel Miranda: The Education of an Artist</span><span class="bk-a">Daniel Pollack-Pelzner</span></div>
+        <div class="bk"><span class="bk-t">Musical Stages: An Autobiography</span><span class="bk-a">Richard Rodgers</span></div>
         <div class="bk"><span class="bk-t">Theater Kid: A Broadway Memoir</span><span class="bk-a">Jeffrey Seller</span></div>
     </div>
   </section>
@@ -326,7 +333,7 @@
     var url='https://docs.google.com/forms/d/e/1FAIpQLSf7uT0TsXsQ8eqMijngDyEAcvg7PZzgE84elc5ECdSyUomm5g/formResponse';
     fetch(url,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:'entry.1394194067='+encodeURIComponent(email)}).catch(function(){});
     var status=form.closest('.signup-inner').querySelector('.signup-status');
-    status.textContent='Thanks \u2014 you\u2019re on the list.';
+    status.textContent='Thanks — you’re on the list.';
     form.querySelector('input').disabled=true;
     form.querySelector('button').disabled=true;
     return false;
