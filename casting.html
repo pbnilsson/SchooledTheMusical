@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Casting &mdash; Schooled the Musical</title>
+<meta name="description" content="Open casting calls for Schooled, a new musical by Peter Nilsson. Currently casting a full two-act developmental staged reading in Pittsburgh, October 2026.">
+<meta property="og:title" content="Casting — Schooled the Musical">
+<meta property="og:description" content="Now casting a full two-act developmental staged reading. Pittsburgh, October 2026. Submissions due September 8.">
+<meta property="og:image" content="images/og-image.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="images/og-image.jpg">
+<link rel="icon" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#111827;--bg-lighter:#1a2235;--text:#f1f1f1;--text-muted:#9ca3af;--text-dim:#6b7280;
+    --coral:#f87171;--amber:#fbbf24;--teal:#2dd4bf;--blue:#60a5fa;--purple:#a78bfa;
+  }
+  *{box-sizing:border-box;}
+  html{font-size:16px;scroll-behavior:smooth;}
+  body{background-color:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;line-height:1.6;overflow-x:hidden;margin:0;}
+  a{color:inherit;}
+
+  .spectrum-bar{display:flex;width:100%;max-width:320px;height:3px;border-radius:2px;overflow:hidden;}
+  .spectrum-bar span{flex:1;}
+  .spectrum-bar .c1{background:var(--amber);}.spectrum-bar .c2{background:var(--teal);}
+  .spectrum-bar .c3{background:var(--blue);}.spectrum-bar .c4{background:var(--purple);}
+
+  .topbar{position:sticky;top:0;z-index:40;background:rgba(17,24,39,.85);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.06);}
+  .topbar .bar{max-width:900px;margin:0 auto;padding:0 1.5rem;height:58px;display:flex;align-items:center;justify-content:space-between;}
+  .wordmark{font-family:'Helvetica Neue',Helvetica,sans-serif;font-weight:700;letter-spacing:.01em;font-size:1.1rem;text-decoration:none;}
+  .topnav{display:flex;gap:1.5rem;font-size:.85rem;}
+  .topnav a{color:var(--text-muted);text-decoration:none;}
+  .topnav a:hover{color:var(--text);}
+  @media(max-width:560px){.topnav{gap:1rem;font-size:.8rem;}}
+
+  .page-head{max-width:900px;margin:0 auto;padding:4.5rem 1.5rem 1rem;}
+  .page-title{font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(2.6rem,8vw,4rem);line-height:1;margin:1.5rem 0 .6rem;}
+  .page-sub{color:var(--text-muted);font-weight:300;font-size:1.05rem;margin:0;max-width:620px;}
+
+  .wrap{max-width:900px;margin:0 auto;padding:0 1.5rem;}
+
+  /* ---------- ABOUT THE SHOW (show-level, shared by all calls) ---------- */
+  .about{margin-top:2.5rem;}
+  .about .box{background:var(--bg-lighter);border:1px solid rgba(255,255,255,.06);border-left:3px solid var(--teal);border-radius:12px;padding:1.5rem 1.6rem;}
+  .eyebrow{font-size:.7rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;margin:0 0 .8rem;color:var(--teal);}
+  .eyebrow.amber{color:var(--amber);}
+  .eyebrow.rule{margin-top:1.6rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.08);}
+  .about p{color:var(--text-muted);font-weight:300;font-size:.95rem;line-height:1.7;margin:0 0 .9rem;max-width:70ch;}
+  .about p:last-child{margin-bottom:0;}
+  .about em{font-style:italic;color:var(--text);}
+
+  /* ---------- CALL INDEX (only shown when more than one call is open) ---------- */
+  .call-index{margin-top:3rem;display:flex;flex-wrap:wrap;align-items:center;gap:.6rem;}
+  .call-index .lbl{font-size:.7rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--text-dim);margin-right:.4rem;}
+  .call-index a{font-size:.85rem;color:var(--text-muted);text-decoration:none;background:var(--bg-lighter);border:1px solid rgba(255,255,255,.1);border-radius:999px;padding:.35rem .9rem;}
+  .call-index a:hover{color:var(--text);border-color:rgba(255,255,255,.25);}
+
+  /* ---------- A CALL ---------- */
+  .call{margin-top:3.5rem;scroll-margin-top:70px;}
+  .call + .call{margin-top:5rem;padding-top:3.5rem;border-top:1px solid rgba(255,255,255,.08);}
+  .call-title-row{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem;}
+  .call-title{font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(1.7rem,4.5vw,2.3rem);line-height:1.1;margin:0;}
+  .pill{font-size:.65rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;border-radius:999px;padding:.25rem .7rem;white-space:nowrap;}
+  .pill.open{color:var(--teal);border:1px solid rgba(45,212,191,.45);background:rgba(45,212,191,.08);}
+  .pill.closed{color:var(--text-dim);border:1px solid rgba(255,255,255,.12);}
+  .call-line{color:var(--text-muted);font-weight:300;font-size:1rem;line-height:1.7;margin:.7rem 0 0;max-width:660px;}
+
+  .deadline{margin-top:1.6rem;display:flex;flex-wrap:wrap;align-items:baseline;gap:.4rem 1rem;background:rgba(251,191,36,.07);border:1px solid rgba(251,191,36,.28);border-left:3px solid var(--amber);border-radius:10px;padding:.9rem 1.2rem;}
+  .deadline .dl-label{font-size:.68rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--amber);}
+  .deadline .dl-date{font-size:1rem;font-weight:500;color:var(--text);}
+
+  .facts{margin-top:1.6rem;background:rgba(251,191,36,.07);border:1px solid rgba(251,191,36,.28);border-left:3px solid var(--amber);border-radius:12px;padding:1.4rem 1.6rem;display:grid;grid-template-columns:1fr 1fr;gap:1.1rem 2rem;}
+  .facts .f{display:flex;flex-direction:column;gap:.2rem;}
+  .facts dt{font-size:.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(251,191,36,.75);}
+  .facts dd{margin:0;font-size:.95rem;font-weight:300;color:var(--text-muted);line-height:1.55;}
+  .facts dd strong{color:var(--text);font-weight:500;}
+  .facts dd a{color:var(--text);text-decoration:underline;text-decoration-color:rgba(255,255,255,.3);text-underline-offset:3px;transition:text-decoration-color .2s ease;}
+  .facts dd a:hover{text-decoration-color:var(--teal);}
+  @media(max-width:640px){.facts{grid-template-columns:1fr;}}
+
+  .audition{margin-top:1rem;background:rgba(251,191,36,.07);border:1px solid rgba(251,191,36,.28);border-left:3px solid var(--amber);border-radius:12px;padding:1.4rem 1.6rem;}
+  .audition h3{font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--amber);margin:0 0 .9rem;}
+  .audition p{color:var(--text-muted);font-weight:300;font-size:.97rem;line-height:1.7;margin:0 0 .7rem;}
+  .audition ol{margin:.2rem 0 1rem;padding-left:1.2rem;color:var(--text-muted);font-weight:300;font-size:.97rem;line-height:1.75;}
+  .audition ol li{margin-bottom:.2rem;}
+  .audition .send{color:var(--text);font-weight:400;}
+  .mail{color:var(--teal);text-decoration:underline;text-decoration-color:rgba(45,212,191,.4);text-underline-offset:3px;}
+  .pdfdl{display:inline-flex;align-items:center;gap:.5rem;margin-top:.4rem;font-size:.85rem;color:var(--text-muted);text-decoration:none;border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:.45rem 1rem;transition:border-color .2s ease,color .2s ease;}
+  .pdfdl:hover{color:var(--text);border-color:rgba(255,255,255,.3);}
+  .pdfdl svg{width:14px;height:14px;fill:currentColor;flex:0 0 auto;}
+
+  /* ---------- ROLES ---------- */
+  .roles-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:.5rem .8rem;margin:2.6rem 0 .2rem;}
+  .roles-head h3{font-size:.75rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;margin:0;}
+  .roles-head .count{font-size:.75rem;color:var(--text-dim);font-weight:500;}
+  .roles-head .note{font-size:.82rem;font-weight:300;font-style:italic;color:var(--text-dim);}
+  .g-principal h3{color:var(--teal);}
+  .g-supporting h3{color:var(--blue);}
+  .g-ensemble h3{color:var(--purple);}
+
+  .roles{margin-top:1rem;display:flex;flex-direction:column;gap:1rem;}
+  .role{background:var(--bg-lighter);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:1.3rem 1.4rem;}
+  .g-principal .role{border-left:3px solid var(--teal);}
+  .g-supporting .role{border-left:3px solid var(--blue);}
+  .g-ensemble .role{border-left:3px solid var(--purple);}
+  .role .track{font-size:.65rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--text-dim);margin-bottom:.35rem;}
+  .role .name{font-size:1.05rem;font-weight:600;letter-spacing:-.01em;line-height:1.25;margin-bottom:.3rem;}
+  .role .type{font-size:.82rem;font-weight:400;color:var(--text-muted);margin-bottom:.9rem;}
+  .role dl{margin:0 0 .9rem;display:flex;flex-direction:column;gap:.45rem;}
+  .role dl .m{display:grid;grid-template-columns:6.2rem 1fr;gap:.6rem;align-items:baseline;}
+  .role dt{font-size:.65rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--text-dim);padding-top:.12rem;}
+  .role dd{margin:0;font-size:.88rem;font-weight:300;color:var(--text-muted);line-height:1.55;}
+  .role .desc{font-size:.9rem;font-weight:300;color:var(--text-muted);line-height:1.65;margin:0;}
+  .role .desc + dl{margin-top:.9rem;}
+  @media(max-width:760px){.role dl .m{grid-template-columns:5.4rem 1fr;}}
+
+  .footer{max-width:760px;margin:0 auto;padding:3.5rem 1.5rem 4rem;text-align:center;}
+  .footer-label{font-size:.7rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--text-dim);margin-bottom:.75rem;}
+  .footer a{text-decoration:none;}
+  .footer-social{display:flex;gap:1.25rem;justify-content:center;margin-top:1.5rem;}
+  .footer-social svg{width:22px;height:22px;fill:var(--text-dim);transition:fill .2s ease;}
+  .footer-social a:hover svg{fill:var(--text);}
+  .footer-bar{margin-top:2.5rem;display:flex;justify-content:center;}
+  .footer-copyright{margin-top:1.5rem;font-size:.7rem;color:var(--text-dim);}
+</style>
+</head>
+<body>
+
+<div class="topbar" id="top">
+  <div class="bar">
+    <a class="wordmark" href="index.html">Schooled</a>
+    <nav class="topnav">
+      <a href="about.html">About</a>
+      <a href="dispatches.html">Dispatches</a>
+      <a href="reading.html">Reading&nbsp;List</a>
+    </nav>
+  </div>
+</div>
+
+<div class="page-head">
+  <div class="spectrum-bar"><span class="c1"></span><span class="c2"></span><span class="c3"></span><span class="c4"></span></div>
+  <h1 class="page-title">Casting</h1>
+  <p class="page-sub">Open calls for readings and workshops of <em>Schooled</em>, a new musical by <a href="about.html" style="color:var(--text-muted);text-decoration:underline;text-decoration-color:rgba(255,255,255,.3);text-underline-offset:3px;">Peter Nilsson</a>.</p>
+</div>
+
+<div class="wrap">
+
+  <!-- ============================================================
+       ABOUT THE SHOW  ·  show-level, shared by every call below.
+       Edit here once; it applies to all open calls.
+       ============================================================ -->
+  <div class="about">
+    <div class="box">
+      <p class="eyebrow">The concept</p>
+      <p>Like <em>Hamilton</em> meets <em>The Sound of Music</em> meets <em>Good Night and Good Luck</em> &mdash; all set in and around a high school in the present day &mdash; <em>Schooled</em> is about three friends as they move from their school years into their late twenties amidst the culture wars. Both buoyant and unflinching, it examines how today&rsquo;s turbulent times affect who they are, who they dream to be, and what they can and cannot learn in school.</p>
+      <p><em>Schooled</em>&rsquo;s two acts are set ten years apart: Act I in adolescence, and Act II as they seek to establish careers as a journalist, teacher, and candidate, their youthful experiences ricocheting into their adult, professional lives.</p>
+      <p class="eyebrow amber rule">Musical style</p>
+      <p>A fusion of styles. The score mixes hip-hop, pop, Latin, classical, jazz, and spirituals.</p>
+      <p>Actors must be able to navigate contemporary musical theater styles as well as more classical influences. Every role must be able to handle complex rhythm and flow, blending rhythmic dialogue and rap with musical theater.</p>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       CALL INDEX  ·  uncomment when a second call is open.
+       Add one <a> per call, pointing at that call's id.
+       ============================================================
+  <div class="call-index">
+    <span class="lbl">Open calls</span>
+    <a href="#pittsburgh-2026">Pittsburgh &middot; Oct 2026</a>
+    <a href="#second-call-id">City &middot; Month Year</a>
+  </div>
+  ============================================================ -->
+
+
+  <!-- ============================================================
+       CALL BLOCK  ·  duplicate this entire <section class="call">
+       for each additional open call. Give it a new id, and update
+       the call index above. Closed calls: either delete the block,
+       or swap class "pill open">Open  for  "pill closed">Closed.
+       ============================================================ -->
+  <section class="call" id="pittsburgh-2026">
+
+    <div class="call-title-row">
+      <h2 class="call-title">Pittsburgh &middot; October 2026</h2>
+      <span class="pill open">Now casting</span>
+    </div>
+    <p class="call-line">A one-week engagement for a single performance at an education event, audience of 100+. Multi-genre music. Diverse cast.</p>
+
+    <div class="deadline">
+      <span class="dl-label">Submissions due</span>
+      <span class="dl-date">Tuesday, September 8, 2026 &middot; 8:00am ET</span>
+    </div>
+
+    <dl class="facts">
+      <div class="f"><dt>Project type</dt><dd>Musical theater developmental staged reading at an education event</dd></div>
+      <div class="f"><dt>Pay</dt><dd><strong>$500</strong> &middot; non-union</dd></div>
+      <div class="f"><dt>Director</dt><dd><a href="https://ryandobrin.com" target="_blank" rel="noopener">Ryan Dobrin</a></dd></div>
+      <div class="f"><dt>Music, lyrics &amp; book</dt><dd><a href="about.html">Peter Nilsson</a></dd></div>
+      <div class="f"><dt>Cast size</dt><dd>12 &mdash; 3 principals, 3 supporting, 6 ensemble</dd></div>
+      <div class="f"><dt>Performance</dt><dd><strong>Sunday, October 18, 6:00pm ET</strong></dd></div>
+      <div class="f"><dt>Rehearsals</dt><dd>Sunday, October 11 &ndash; Sunday, October 18. Performers must be available for afternoon rehearsals.</dd></div>
+      <div class="f"><dt>Preparation</dt><dd>Songs to be prepared in advance of rehearsals. Coaching available.</dd></div>
+    </dl>
+
+    <div class="audition">
+      <h3>To audition</h3>
+      <p>Submit a CV and one downloadable video of 90 seconds or less containing:</p>
+      <ol>
+        <li>An excerpt of any song in your most comfortable range</li>
+        <li>Any rap from &mdash; or in the style of &mdash; <em>Hamilton</em> or <em>In the Heights</em></li>
+      </ol>
+      <p class="send">Send your CV and a link to the video file to <a class="mail" id="auditionMail" href="#">schooledthemusical [at] gmail [dot] com</a></p>
+      <a class="pdfdl" href="files/casting-pittsburgh-2026.pdf" download>
+        <svg viewBox="0 0 24 24"><path d="M12 16l-5-5h3V4h4v7h3l-5 5zm-7 2h14v2H5v-2z"/></svg>
+        Download the full breakdown (PDF)
+      </a>
+    </div>
+
+    <!-- PRINCIPALS -->
+    <div class="g-principal">
+      <div class="roles-head">
+        <h3>Principal roles</h3><span class="count">3</span>
+      </div>
+      <div class="roles">
+
+        <div class="role">
+          <div class="name">Marcus Aurelius Washington</div>
+          <div class="type">Lead &middot; Male presenting &middot; Black or mixed race</div>
+          <dl>
+            <div class="m"><dt>Age</dt><dd>18&ndash;35ish, to play 14 and 24</dd></div>
+            <div class="m"><dt>Vocal</dt><dd>Tenor. Must be able to handle complex rhythm and flow.</dd></div>
+          </dl>
+          <p class="desc">Bright-eyed, wildly curious, optimistic, and innocent. His innocence is challenged by tragedy.</p>
+        </div>
+
+        <div class="role">
+          <div class="name">Emily Washington</div>
+          <div class="type">Lead &middot; Female presenting &middot; Black or mixed race</div>
+          <dl>
+            <div class="m"><dt>Age</dt><dd>18&ndash;35ish, to play 17 and 27</dd></div>
+            <div class="m"><dt>Vocal</dt><dd>Soprano. Must be able to handle complex rhythm and flow.</dd></div>
+          </dl>
+          <p class="desc">Marcus&rsquo;s older sister. Driven and bright. Performance-focused to secure a safe future. She begins as a rule-follower.</p>
+        </div>
+
+        <div class="role">
+          <div class="name">Sami &ldquo;Sam&rdquo; Saffadin</div>
+          <div class="type">Lead &middot; Male presenting &middot; Arab-American or MENA</div>
+          <dl>
+            <div class="m"><dt>Age</dt><dd>20&ndash;35ish, to play 17 and 27</dd></div>
+            <div class="m"><dt>Vocal</dt><dd>Baritone/tenor. Must be strong with complex rhythm and flow.</dd></div>
+          </dl>
+          <p class="desc">Civic-minded and passionate. Lost his father, who served in the US army, at a young age. He grows politically active.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- SUPPORTING -->
+    <div class="g-supporting">
+      <div class="roles-head">
+        <h3>Supporting roles</h3><span class="count">3</span>
+        <span class="note">Most supporting roles double in other roles</span>
+      </div>
+      <div class="roles">
+
+        <div class="role">
+          <div class="track">Track 1</div>
+          <div class="name">Mrs. Mary Nestor</div>
+          <div class="type">Supporting &middot; Female presenting &middot; Open ethnicity</div>
+          <dl>
+            <div class="m"><dt>Age</dt><dd>30s&ndash;50s, to play 40s&ndash;50s</dd></div>
+            <div class="m"><dt>Vocal</dt><dd>Soprano</dd></div>
+          </dl>
+          <p class="desc">Head of School. Professional, wise, and savvy. She cares deeply for students. Has her own, private battles to fight.</p>
+        </div>
+
+        <div class="role">
+          <div class="track">Track 2</div>
+          <div class="name">Mr. Mitchell Lyons</div>
+          <div class="type">Supporting &middot; Male presenting</div>
+          <dl>
+            <div class="m"><dt>Age</dt><dd>20s&ndash;30s, to play 23 and 33, and others</dd></div>
+            <div class="m"><dt>Vocal</dt><dd>Flexible</dd></div>
+            <div class="m"><dt>Doubles as</dt><dd>Students, others</dd></div>
+          </dl>
+          <p class="desc">History teacher. In Act I he is right out of college; in Act II, married with a newborn.</p>
+        </div>
+
+        <div class="role">
+          <div class="track">Track 3</div>
+          <div class="name">Ms. Elsie Besant</div>
+          <div class="type">Supporting &middot; Female presenting</div>
+          <dl>
+            <div class="m"><dt>Age</dt><dd>20s&ndash;30s, to play 24 and 34, and others</dd></div>
+            <div class="m"><dt>Vocal</dt><dd>Flexible</dd></div>
+            <div class="m"><dt>Doubles as</dt><dd>Students, others</dd></div>
+          </dl>
+          <p class="desc">English teacher, from soon after college to married with a newborn.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ENSEMBLE -->
+    <div class="g-ensemble">
+      <div class="roles-head">
+        <h3>Ensemble tracks</h3><span class="count">6</span>
+        <span class="note">All ensemble tracks cover multiple roles</span>
+      </div>
+      <div class="roles">
+
+        <div class="role">
+          <div class="track">Track 4</div>
+          <div class="name">Vanderbilt &ldquo;Van&rdquo; Carnegie</div>
+          <div class="type">Supporting &middot; Male presenting</div>
+          <dl>
+            <div class="m"><dt>Age</dt><dd>20s, to play 14, and others</dd></div>
+            <div class="m"><dt>Vocal</dt><dd>Flexible</dd></div>
+            <div class="m"><dt>Doubles as</dt><dd>Mr. Emerson, students</dd></div>
+          </dl>
+          <p class="desc">Freshman boy. Wealthy, naive, kind. Marcus&rsquo;s friend and work-study partner.</p>
+        </div>
+
+        <div class="role">
+          <div class="track">Track 5</div>
+          <div class="name">Jenny Lee</div>
+          <div class="type">Supporting &middot; Female presenting</div>
+          <dl>
+            <div class="m"><dt>Age</dt><dd>20s, to play 14, and others</dd></div>
+            <div class="m"><dt>Vocal</dt><dd>Flexible</dd></div>
+            <div class="m"><dt>Doubles as</dt><dd>Students</dd></div>
+          </dl>
+          <p class="desc">Freshman student. Pragmatic, funny, and protective. Friend of Marcus.</p>
+        </div>
+
+        <div class="role">
+          <div class="track">Track 6</div>
+          <div class="name">Mr. O&rsquo;Brien</div>
+          <div class="type">Supporting &middot; Male presenting</div>
+          <dl>
+            <div class="m"><dt>Age</dt><dd>20s&ndash;30s, to play ~30, and students</dd></div>
+            <div class="m"><dt>Vocal</dt><dd>Flexible</dd></div>
+            <div class="m"><dt>Doubles as</dt><dd>Students, others</dd></div>
+          </dl>
+          <p class="desc">Ethics teacher, provocateur.</p>
+        </div>
+
+        <div class="role">
+          <div class="track">Track 7</div>
+          <div class="name">Comfort</div>
+          <div class="type">Supporting &middot; Female presenting</div>
+          <dl>
+            <div class="m"><dt>Age</dt><dd>20s, to play 17, and others</dd></div>
+            <div class="m"><dt>Vocal</dt><dd>Flexible</dd></div>
+            <div class="m"><dt>Doubles as</dt><dd>Students, others</dd></div>
+          </dl>
+          <p class="desc">Quiet student with different politics from her classmates.</p>
+        </div>
+
+        <div class="role">
+          <div class="track">Track 8</div>
+          <div class="name">Ng</div>
+          <div class="type">Supporting &middot; Male presenting</div>
+          <dl>
+            <div class="m"><dt>Age</dt><dd>20s, to play 17, and others</dd></div>
+            <div class="m"><dt>Vocal</dt><dd>Flexible</dd></div>
+            <div class="m"><dt>Doubles as</dt><dd>Students, others</dd></div>
+          </dl>
+          <p class="desc">Grandson of the head of school, carries a burden unknown to others.</p>
+        </div>
+
+        <div class="role">
+          <div class="track">Track 9</div>
+          <div class="name">Debra</div>
+          <div class="type">Supporting &middot; Female presenting</div>
+          <dl>
+            <div class="m"><dt>Age</dt><dd>20s, to play 17, and others</dd></div>
+            <div class="m"><dt>Vocal</dt><dd>Flexible</dd></div>
+            <div class="m"><dt>Doubles as</dt><dd>Students, others</dd></div>
+          </dl>
+          <p class="desc">Outspoken student, unafraid, great sense of humor.</p>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+  <!-- ============ END CALL BLOCK ============ -->
+
+</div>
+
+<footer class="footer">
+  <p class="footer-label">Inquiries</p>
+  <p><a href="about.html" style="color:var(--text-muted);text-decoration:underline;text-decoration-color:rgba(255,255,255,.3);text-underline-offset:3px;font-size:.95rem;">Peter Nilsson</a></p>
+  <div class="footer-social">
+    <a href="https://www.instagram.com/schooledthemusical" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+    <a href="https://www.youtube.com/@SchooledtheMusical" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+  </div>
+  <div class="footer-bar"><div class="spectrum-bar"><span class="c1"></span><span class="c2"></span><span class="c3"></span><span class="c4"></span></div></div>
+  <p class="footer-copyright">&copy; 2026 Peter Nilsson. All rights reserved.</p>
+</footer>
+
+<script>
+  // Assembled at runtime so the address isn't mangled by Cloudflare's
+  // email-protection filter (and isn't trivially scraped).
+  (function(){
+    var u='schooledthemusical', d='gmail.com';
+    var a=document.getElementById('auditionMail');
+    if(a){ a.href='mailto:'+u+'@'+d+'?subject='+encodeURIComponent('Audition submission — Schooled (Pittsburgh, Oct 2026)'); a.textContent=u+'@'+d; }
+  })();
+</script>
+</body>
+</html>
