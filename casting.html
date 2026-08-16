@@ -84,28 +84,19 @@
   .facts dd a:hover{text-decoration-color:var(--teal);}
   @media(max-width:640px){.facts{grid-template-columns:1fr;}}
 
-  /* ---------- CREATIVE TEAM ---------- */
-  .team{margin-top:1rem;background:var(--bg-lighter);border:1px solid rgba(255,255,255,.06);border-left:3px solid var(--teal);border-radius:12px;padding:1.4rem 1.6rem;}
-  .team h3{font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);margin:0 0 1rem;}
-  .team .rows{display:flex;flex-direction:column;gap:.8rem;}
-  .team .tr{display:grid;grid-template-columns:11rem 1fr;gap:1rem;align-items:baseline;}
-  .team .lbl{font-size:.65rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--text-dim);}
-  .team .who{font-size:.98rem;font-weight:500;color:var(--text);}
-  .team .who a{color:var(--text);text-decoration:underline;text-decoration-color:rgba(255,255,255,.3);text-underline-offset:3px;transition:text-decoration-color .2s ease;}
-  .team .who a:hover{text-decoration-color:var(--teal);}
-  .team .who .cred{display:block;font-size:.85rem;font-weight:300;color:var(--text-muted);margin-top:.15rem;line-height:1.55;max-width:64ch;}
-  .team .who .cred em{font-style:italic;}
-  @media(max-width:640px){.team .tr{grid-template-columns:1fr;gap:.2rem;}}
+  /* creative team: full-width row at the foot of the facts grid */
+  .facts .f.team{grid-column:1 / -1;margin-top:.3rem;padding-top:1.1rem;border-top:1px solid rgba(251,191,36,.22);}
+  .facts .f.team dd{display:flex;flex-wrap:wrap;gap:.35rem 1.6rem;}
+  .facts .f.team .who{white-space:nowrap;}
+  .facts .f.team .who .r{color:var(--text-dim);}
+  @media(max-width:560px){.facts .f.team dd{flex-direction:column;gap:.35rem;}}
 
   .audition{margin-top:1rem;background:rgba(251,191,36,.07);border:1px solid rgba(251,191,36,.28);border-left:3px solid var(--amber);border-radius:12px;padding:1.4rem 1.6rem;}
   .audition h3{font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--amber);margin:0 0 .9rem;}
   .audition p{color:var(--text-muted);font-weight:300;font-size:.97rem;line-height:1.7;margin:0 0 .7rem;}
-  .audition ol,.audition ul.ask{margin:.2rem 0 1rem;padding-left:1.2rem;color:var(--text-muted);font-weight:300;font-size:.97rem;line-height:1.75;}
-  .audition ol li,.audition ul.ask li{margin-bottom:.2rem;}
-  .audition ul.ask{margin-bottom:.35rem;}
-  .audition ul.ask strong{color:var(--text);font-weight:500;}
-  .audition ol.tight{margin-top:0;padding-left:2.8rem;}
-  @media(max-width:560px){.audition ol.tight{padding-left:2.2rem;}}
+  .audition ol{margin:.2rem 0 1rem;padding-left:1.2rem;color:var(--text-muted);font-weight:300;font-size:.97rem;line-height:1.75;}
+  .audition ol li{margin-bottom:.2rem;}
+  .audition strong{color:var(--text);font-weight:500;}
   .audition .send{color:var(--text);font-weight:400;}
   .mail{color:var(--teal);text-decoration:underline;text-decoration-color:rgba(45,212,191,.4);text-underline-offset:3px;}
   .pdfdl{display:inline-flex;align-items:center;gap:.5rem;margin-top:.4rem;font-size:.85rem;color:var(--text-muted);text-decoration:none;border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:.45rem 1rem;transition:border-color .2s ease,color .2s ease;}
@@ -221,49 +212,25 @@
       <div class="f"><dt>Performance</dt><dd><strong>Sunday, October 18, 6:00pm ET</strong></dd></div>
       <div class="f"><dt>Rehearsals</dt><dd>Sunday, October 11 &ndash; Sunday, October 18. Performers must be available for afternoon rehearsals.</dd></div>
       <div class="f"><dt>Preparation</dt><dd>Songs to be prepared in advance of rehearsals. Coaching available.</dd></div>
-    </dl>
-
-    <!-- ============================================================
-         CREATIVE TEAM  ·  per-call. Add a row (label + name + one-line
-         credit) as the team grows: stage manager, choreographer, etc.
-         ============================================================ -->
-    <div class="team">
-      <h3>Creative team</h3>
-      <div class="rows">
-        <div class="tr">
-          <span class="lbl">Director</span>
-          <span class="who"><a href="https://ryandobrin.com" target="_blank" rel="noopener">Ryan Dobrin</a>
-            <span class="cred">Theatre-maker, arts administrator, and teaching artist, working on new plays and musicals in New York and regionally.</span>
-          </span>
-        </div>
-        <div class="tr">
-          <span class="lbl">Music director</span>
-          <span class="who"><a href="https://www.duq.edu/faculty-and-staff/dr-michael-mackey.php" target="_blank" rel="noopener">Mike Mackey</a>
-            <span class="cred">Director of Music and Liturgy at Duquesne University, with a PhD in jazz studies and two decades music directing in Pittsburgh.</span>
-          </span>
-        </div>
-        <div class="tr">
-          <span class="lbl">Music, lyrics &amp; book</span>
-          <span class="who"><a href="about.html">Peter Nilsson</a>
-            <span class="cred">Writer of <em>Schooled</em>, after two decades in schools as an English teacher, academic dean, and head of school.</span>
-          </span>
-        </div>
+      <!-- CREATIVE TEAM · per-call, full-width row. Add a name as the team grows. -->
+      <div class="f team">
+        <dt>Creative team</dt>
+        <dd>
+          <span class="who"><a href="https://ryandobrin.com" target="_blank" rel="noopener">Ryan Dobrin</a>, <span class="r">director</span></span>
+          <span class="who"><a href="https://www.duq.edu/faculty-and-staff/dr-michael-mackey.php" target="_blank" rel="noopener">Mike Mackey</a>, <span class="r">music director</span></span>
+          <span class="who"><a href="about.html">Peter Nilsson</a>, <span class="r">music, lyrics &amp; book</span></span>
+        </dd>
       </div>
-    </div>
+    </dl>
 
     <div class="audition">
       <h3>To audition</h3>
-      <p>Submit three things:</p>
-      <ul class="ask">
-        <li>A <strong>resume</strong></li>
-        <li>A <strong>headshot</strong></li>
-        <li>A <strong>link to a downloadable video</strong> of 90 seconds or less containing:</li>
-      </ul>
-      <ol class="tight">
+      <p>Submit a <strong>resume</strong>, a <strong>headshot</strong>, and a <strong>link to a downloadable video</strong> of 90 seconds or less containing:</p>
+      <ol>
         <li>An excerpt of any song in your most comfortable range</li>
         <li>Any rap from &mdash; or in the style of &mdash; <em>Hamilton</em> or <em>In the Heights</em></li>
       </ol>
-      <p class="send">Send your resume, headshot, and a link to the video file to <a class="mail" id="auditionMail" href="#">schooledthemusical [at] gmail [dot] com</a></p>
+      <p class="send">Send your <strong>resume</strong>, <strong>headshot</strong>, and a <strong>link to the video file</strong> to <a class="mail" id="auditionMail" href="#">schooledthemusical [at] gmail [dot] com</a></p>
       <a class="pdfdl" href="files/casting-pittsburgh-2026.pdf" download>
         <svg viewBox="0 0 24 24"><path d="M12 16l-5-5h3V4h4v7h3l-5 5zm-7 2h14v2H5v-2z"/></svg>
         Download the full breakdown (PDF)
