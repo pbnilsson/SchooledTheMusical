@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Visit Notes — Schooled the Musical</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#111827; --bg-lighter:#1a2235;
+    --text:#f1f1f1; --text-muted:#9ca3af; --text-dim:#6b7280;
+    --coral:#f87171; --amber:#fbbf24; --teal:#2dd4bf; --blue:#60a5fa; --purple:#a78bfa;
+    /* validated chart marks for this dark surface */
+    --s1:#12a594; --s2:#7c74f0;
+    --grid:rgba(255,255,255,.07); --track:rgba(255,255,255,.05);
+  }
+  *{box-sizing:border-box;}
+  body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;
+       line-height:1.6;margin:0;padding:3.5rem 1.5rem 6rem;}
+  .wrap{max-width:900px;margin:0 auto;}
+
+  .spectrum-bar{display:flex;width:100%;max-width:320px;height:3px;border-radius:2px;overflow:hidden;margin:0 0 2rem;}
+  .spectrum-bar span{flex:1;}
+  .c1{background:var(--amber);} .c2{background:var(--teal);}
+  .c3{background:var(--blue);} .c4{background:var(--purple);}
+
+  h1{font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(2rem,5vw,2.75rem);
+     margin:0 0 .35rem;letter-spacing:-.01em;}
+  .sub{color:var(--text-muted);font-weight:300;margin:0 0 .35rem;}
+  .stamp{color:var(--text-dim);font-size:.8rem;margin:0 0 3rem;}
+
+  .tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:3.5rem;}
+  .tile{background:var(--bg-lighter);border:1px solid rgba(255,255,255,.06);
+        border-radius:12px;padding:1.4rem 1.25rem;}
+  .tile-n{font-family:'Instrument Serif',serif;font-size:2.5rem;line-height:1;color:var(--teal);}
+  .tile-l{font-size:.78rem;color:var(--text-muted);margin-top:.5rem;letter-spacing:.02em;}
+  @media(max-width:680px){.tiles{grid-template-columns:repeat(2,1fr);}}
+
+  h2{font-size:.72rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;
+     color:var(--text-muted);margin:0 0 .4rem;}
+  .note{font-size:.85rem;color:var(--text-dim);font-weight:300;margin:0 0 1.25rem;}
+  section{margin-bottom:3.5rem;}
+
+  .legend{display:flex;gap:1.25rem;margin:0 0 .75rem;font-size:.8rem;color:var(--text-muted);}
+  .legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:.4rem;
+            vertical-align:middle;}
+
+  .chartbox{position:relative;}
+  svg{display:block;width:100%;height:auto;overflow:visible;}
+  .tip{position:absolute;pointer-events:none;background:#0b1220;border:1px solid rgba(255,255,255,.12);
+       border-radius:8px;padding:.5rem .7rem;font-size:.78rem;white-space:nowrap;opacity:0;
+       transition:opacity .12s;transform:translate(-50%,-115%);z-index:5;}
+  .tip b{font-weight:600;}
+  .tip .r{display:flex;align-items:center;gap:.4rem;color:var(--text-muted);}
+  .tip .r i{width:8px;height:8px;border-radius:2px;display:inline-block;}
+
+  .bars{display:flex;flex-direction:column;gap:2px;}
+  .bar{display:grid;grid-template-columns:minmax(90px,230px) 1fr auto;gap:.85rem;
+       align-items:center;padding:.3rem 0;}
+  .bar-l{font-size:.85rem;color:var(--text);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .bar-l a{color:inherit;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.15);}
+  .bar-t{background:var(--track);border-radius:4px;height:14px;position:relative;overflow:hidden;}
+  .bar-f{position:absolute;left:0;top:0;bottom:0;background:var(--s1);
+         border-radius:0 4px 4px 0;min-width:2px;}
+  .bar-v{font-size:.82rem;color:var(--text-muted);font-variant-numeric:tabular-nums;min-width:2.5rem;text-align:right;}
+  .bar-v small{color:var(--text-dim);}
+
+  details{margin-top:1rem;}
+  summary{font-size:.78rem;color:var(--text-dim);cursor:pointer;}
+  table{width:100%;border-collapse:collapse;margin-top:.75rem;font-size:.82rem;}
+  th,td{text-align:left;padding:.35rem .5rem;border-bottom:1px solid rgba(255,255,255,.06);}
+  th{color:var(--text-muted);font-weight:500;}
+  td{color:var(--text-muted);font-variant-numeric:tabular-nums;}
+
+  .empty{background:var(--bg-lighter);border:1px solid rgba(255,255,255,.06);border-radius:12px;
+         padding:2.5rem 2rem;color:var(--text-muted);font-weight:300;}
+  .foot{margin-top:4rem;font-size:.85rem;color:var(--text-dim);}
+  .foot a{color:var(--text-muted);}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="spectrum-bar"><span class="c1"></span><span class="c2"></span><span class="c3"></span><span class="c4"></span></div>
+
+  <h1>Visit Notes</h1>
+  <p class="sub">Who's been reading schooledthemusical.com, and what they followed.</p>
+  <p class="stamp" id="stamp">Loading…</p>
+
+  <div id="app"></div>
+
+  <p class="foot">
+    Collected without cookies, IP addresses, or third-party trackers — just paths,
+    referrers, and countries. The record lives in this site's own repository.<br>
+    <a href="/">&#8592; Back to the site</a>
+  </p>
+</div>
+
+<script>
+(function () {
+  var S1 = "#12a594", S2 = "#7c74f0";
+  var app = document.getElementById("app");
+  var stamp = document.getElementById("stamp");
+
+  fetch("data/summary.json?" + Date.now())
+    .then(function (r) { return r.json(); })
+    .then(render)
+    .catch(function () {
+      stamp.textContent = "";
+      app.innerHTML = '<div class="empty">Couldn’t load the data file yet. ' +
+        'It appears after the first nightly sync runs.</div>';
+    });
+
+  function esc(s) {
+    return String(s).replace(/[&<>"]/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
+    });
+  }
+
+  function niceDate(iso) {
+    var d = new Date(iso);
+    return d.toLocaleDateString(undefined, { month: "short", day: "numeric" });
+  }
+
+  function prettyLink(u) {
+    var s = String(u);
+    if (s.indexOf("mailto:") === 0) return s.slice(7);
+    return s.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, "");
+  }
+
+  function prettyPath(p) {
+    if (p === "/" || p === "/index.html") return "Home";
+    var n = String(p).replace(/^\//, "").replace(/\.html$/, "");
+    return n.charAt(0).toUpperCase() + n.slice(1);
+  }
+
+  var SOURCE_WORDS = {
+    direct: "Typed it in or came from a bookmark",
+    search: "Found it through a search engine",
+    social: "Clicked through from social media",
+    referral: "Followed a link on another site",
+    campaign: "Came from a tagged link you shared",
+    internal: "Moved between pages on the site"
+  };
+
+  // ---- bar list -----------------------------------------------------------
+  function bars(items, opts) {
+    opts = opts || {};
+    if (!items.length) return '<p class="note">Nothing yet.</p>';
+    var max = items[0].n || 1;
+    var rows = items.map(function (it) {
+      var w = Math.max(2, Math.round((it.n / max) * 100));
+      var label = opts.label ? opts.label(it) : esc(it.key);
+      var extra = opts.extra ? '<small> ' + opts.extra(it) + "</small>" : "";
+      return '<div class="bar">' +
+        '<div class="bar-l" title="' + esc(it.key) + '">' + label + "</div>" +
+        '<div class="bar-t"><div class="bar-f" style="width:' + w + '%"></div></div>' +
+        '<div class="bar-v">' + it.n + extra + "</div></div>";
+    }).join("");
+    var table = "<details><summary>Show as a table</summary><table><thead><tr><th>" +
+      (opts.head || "Item") + "</th><th>Count</th></tr></thead><tbody>" +
+      items.map(function (it) {
+        return "<tr><td>" + esc(it.key) + "</td><td>" + it.n + "</td></tr>";
+      }).join("") + "</tbody></table></details>";
+    return '<div class="bars">' + rows + "</div>" + table;
+  }
+
+  // ---- line chart ---------------------------------------------------------
+  function lineChart(daily) {
+    var W = 900, H = 240, L = 38, R = 54, T = 16, B = 28;
+    var n = daily.length;
+    var max = 0;
+    daily.forEach(function (d) { max = Math.max(max, d.views, d.visitors); });
+    max = Math.max(4, Math.ceil(max * 1.15));
+    var step = Math.max(1, Math.ceil(max / 4));
+    max = step * 4;
+
+    var x = function (i) { return n < 2 ? L : L + (i * (W - L - R)) / (n - 1); };
+    var y = function (v) { return T + (H - T - B) * (1 - v / max); };
+
+    var grid = "", i;
+    for (i = 0; i <= 4; i++) {
+      var gv = step * i, gy = y(gv);
+      grid += '<line x1="' + L + '" y1="' + gy + '" x2="' + (W - R) + '" y2="' + gy +
+        '" stroke="var(--grid)" stroke-width="1"/>' +
+        '<text x="' + (L - 8) + '" y="' + (gy + 4) + '" text-anchor="end" fill="#6b7280" font-size="11">' + gv + "</text>";
+    }
+
+    function path(key) {
+      return daily.map(function (d, k) {
+        return (k ? "L" : "M") + x(k).toFixed(1) + " " + y(d[key]).toFixed(1);
+      }).join(" ");
+    }
+
+    var marks = "";
+    if (n === 1) {
+      marks += '<circle cx="' + x(0) + '" cy="' + y(daily[0].views) + '" r="5" fill="' + S1 + '" stroke="var(--bg)" stroke-width="2"/>';
+      marks += '<circle cx="' + x(0) + '" cy="' + y(daily[0].visitors) + '" r="5" fill="' + S2 + '" stroke="var(--bg)" stroke-width="2"/>';
+    } else {
+      marks += '<path d="' + path("views") + '" fill="none" stroke="' + S1 + '" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>';
+      marks += '<path d="' + path("visitors") + '" fill="none" stroke="' + S2 + '" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>';
+      marks += '<circle cx="' + x(n - 1) + '" cy="' + y(daily[n - 1].views) + '" r="4.5" fill="' + S1 + '" stroke="var(--bg)" stroke-width="2"/>';
+      marks += '<circle cx="' + x(n - 1) + '" cy="' + y(daily[n - 1].visitors) + '" r="4.5" fill="' + S2 + '" stroke="var(--bg)" stroke-width="2"/>';
+    }
+    // direct labels at the right edge
+    marks += '<text x="' + (x(n - 1) + 10) + '" y="' + (y(daily[n - 1].views) + 4) + '" fill="#9ca3af" font-size="11">views</text>';
+    marks += '<text x="' + (x(n - 1) + 10) + '" y="' + (y(daily[n - 1].visitors) + 4) + '" fill="#9ca3af" font-size="11">people</text>';
+
+    // sparse x labels: first, middle, last
+    var ticks = n === 1 ? [0] : [0, Math.floor((n - 1) / 2), n - 1];
+    var xlab = ticks.filter(function (v, k, a) { return a.indexOf(v) === k; })
+      .map(function (k) {
+        return '<text x="' + x(k) + '" y="' + (H - 6) + '" text-anchor="middle" fill="#6b7280" font-size="11">' +
+          niceDate(daily[k].day) + "</text>";
+      }).join("");
+
+    return '<div class="chartbox">' +
+      '<div class="legend">' +
+        '<span><i style="background:' + S1 + '"></i>Page views</span>' +
+        '<span><i style="background:' + S2 + '"></i>People (browser sessions)</span>' +
+      "</div>" +
+      '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Daily page views and people over time">' +
+        grid + xlab +
+        '<line id="cross" x1="0" y1="' + T + '" x2="0" y2="' + (H - B) + '" stroke="rgba(255,255,255,.18)" stroke-width="1" opacity="0"/>' +
+        marks +
+        '<rect id="hit" x="' + L + '" y="' + T + '" width="' + (W - L - R) + '" height="' + (H - T - B) + '" fill="transparent"/>' +
+      "</svg>" +
+      '<div class="tip" id="tip"></div>' +
+      "</div>";
+  }
+
+  function wireChart(daily) {
+    var svg = document.querySelector("#app svg");
+    if (!svg) return;
+    var hit = svg.querySelector("#hit");
+    var cross = svg.querySelector("#cross");
+    var tip = document.getElementById("tip");
+    var box = svg.parentNode;
+    var W = 900, L = 38, R = 54, n = daily.length;
+
+    function move(ev) {
+      var rect = svg.getBoundingClientRect();
+      var px = ((ev.clientX - rect.left) / rect.width) * W;
+      var i = n < 2 ? 0 : Math.round(((px - L) / (W - L - R)) * (n - 1));
+      i = Math.max(0, Math.min(n - 1, i));
+      var cx = n < 2 ? L : L + (i * (W - L - R)) / (n - 1);
+      cross.setAttribute("x1", cx); cross.setAttribute("x2", cx);
+      cross.setAttribute("opacity", "1");
+      var d = daily[i];
+      tip.innerHTML = "<b>" + niceDate(d.day) + "</b>" +
+        '<div class="r"><i style="background:' + S1 + '"></i>' + d.views + " views</div>" +
+        '<div class="r"><i style="background:' + S2 + '"></i>' + d.visitors + " people</div>";
+      tip.style.left = (cx / W) * rect.width + "px";
+      tip.style.top = (rect.height * 0.35) + "px";
+      tip.style.opacity = "1";
+    }
+    hit.addEventListener("mousemove", move);
+    hit.addEventListener("touchmove", function (e) { move(e.touches[0]); });
+    box.addEventListener("mouseleave", function () {
+      tip.style.opacity = "0"; cross.setAttribute("opacity", "0");
+    });
+  }
+
+  // ---- render -------------------------------------------------------------
+  function render(s) {
+    stamp.textContent = "Last synced " + new Date(s.generated).toLocaleString();
+
+    if (!s.totals.views) {
+      app.innerHTML = '<div class="empty">No visits recorded yet. The collector is ' +
+        'live and listening; numbers appear here after the first nightly sync.</div>';
+      return;
+    }
+
+    var html = "";
+
+    html += '<div class="tiles">' +
+      tile(s.totals.views, "Page views") +
+      tile(s.totals.visitors, "People") +
+      tile(s.totals.clicks, "Links clicked") +
+      tile(s.totals.days, s.totals.days === 1 ? "Day tracked" : "Days tracked") +
+      "</div>";
+
+    html += "<section><h2>The pulse</h2>" +
+      '<p class="note">Page views and distinct browser sessions, day by day.</p>' +
+      lineChart(s.daily) + "</section>";
+
+    html += "<section><h2>What people read</h2>" +
+      '<p class="note">Every page, by how often it was opened. The second number is how many separate people saw it.</p>' +
+      bars(s.pages, {
+        head: "Page",
+        label: function (it) { return esc(prettyPath(it.key)); },
+        extra: function (it) { return "/ " + it.visitors; }
+      }) + "</section>";
+
+    html += "<section><h2>How they arrived</h2>" +
+      '<p class="note">Where each page view came from.</p>' +
+      bars(s.sources, {
+        head: "Source",
+        label: function (it) {
+          var w = SOURCE_WORDS[it.key];
+          return esc(it.key.charAt(0).toUpperCase() + it.key.slice(1)) +
+            (w ? ' <span style="color:var(--text-dim);font-size:.78rem">' + esc(w) + "</span>" : "");
+        }
+      }) + "</section>";
+
+    if (s.referrers.length) {
+      html += "<section><h2>Sites that sent people</h2>" +
+        '<p class="note">The actual domains, minus your own.</p>' +
+        bars(s.referrers.filter(function (r) {
+          return r.key !== "schooledthemusical.com";
+        }), { head: "Referrer" }) + "</section>";
+    }
+
+    if (s.campaigns.length) {
+      html += "<section><h2>Tagged links</h2>" +
+        '<p class="note">Links you shared with a ?utm_source= tag, so you can tell the newsletter from Instagram.</p>' +
+        bars(s.campaigns, { head: "Campaign" }) + "</section>";
+    }
+
+    html += "<section><h2>What they followed</h2>" +
+      '<p class="note">Links clicked that led somewhere — off the site, to a file, or to your inbox. Page-to-page navigation is left out.</p>' +
+      bars(s.links, {
+        head: "Link",
+        label: function (it) {
+          return '<a href="' + esc(it.key) + '" rel="noopener">' + esc(prettyLink(it.key)) + "</a>";
+        }
+      }) + "</section>";
+
+    if (s.countries.length) {
+      html += "<section><h2>Where from</h2>" +
+        '<p class="note">Country only — derived at the edge, never from a stored address.</p>' +
+        bars(s.countries, { head: "Country" }) + "</section>";
+    }
+
+    app.innerHTML = html;
+    wireChart(s.daily);
+  }
+
+  function tile(n, label) {
+    return '<div class="tile"><div class="tile-n">' + n + '</div><div class="tile-l">' + label + "</div></div>";
+  }
+})();
+</script>
+</body>
+</html>
