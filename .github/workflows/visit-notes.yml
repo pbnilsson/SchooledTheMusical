@@ -6,8 +6,8 @@ name: Visit notes
 
 on:
   schedule:
-    - cron: "10 8 * * *"    # 08:10 UTC — about 4am Eastern
-    - cron: "10 20 * * *"   # 20:10 UTC — about 4pm Eastern
+    - cron: "10 8 * * *"    # 08:10 UTC — 4am Eastern in summer, 3am in winter
+    - cron: "10 20 * * *"   # 20:10 UTC — 4pm Eastern in summer, 3pm in winter
   workflow_dispatch:        # ...or whenever you press the button
 
 permissions:
