@@ -51,18 +51,21 @@
   .eyebrow{font-size:.7rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;margin:0 0 .8rem;color:var(--teal);}
   .eyebrow.amber{color:var(--amber);}
   .eyebrow.rule{margin-top:1.6rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.08);}
+  .about .must{color:var(--amber);font-weight:500;}
   .about p{color:var(--text-muted);font-weight:300;font-size:.95rem;line-height:1.7;margin:0 0 .9rem;max-width:70ch;}
   .about p:last-child{margin-bottom:0;}
   .about em{font-style:italic;color:var(--text);}
 
   /* ---------- CALL INDEX (only shown when more than one call is open) ---------- */
   .call-jump{margin:2.5rem 0 0;}
+  .about + .call-jump{margin-top:2.2rem;}
   .call-jump .jump-label{font-size:.7rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--text-dim);margin:0 0 1rem;}
   .call-jump a{display:flex;gap:1rem;align-items:baseline;padding:.85rem 0;border-top:1px solid rgba(255,255,255,.07);text-decoration:none;color:var(--text);font-size:1rem;}
   .call-jump a:last-of-type{border-bottom:1px solid rgba(255,255,255,.07);}
   .call-jump a:hover{color:var(--teal);}
   .call-jump .jcity{flex:1 1 auto;}
-  .call-jump .jwhen{flex:0 0 auto;color:var(--text-dim);font-size:.85rem;font-weight:300;}
+  .call-jump .jdue{flex:0 0 auto;color:var(--amber);font-size:.85rem;font-weight:500;}
+  .call-jump .jwhen{flex:0 0 auto;color:var(--text-dim);font-size:.85rem;font-weight:300;min-width:7.5rem;text-align:right;}
   .call-index{margin-top:3rem;display:flex;flex-wrap:wrap;align-items:center;gap:.6rem;}
   .call-index .lbl{font-size:.7rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--text-dim);margin-right:.4rem;}
   .call-index a{font-size:.85rem;color:var(--text-muted);text-decoration:none;background:var(--bg-lighter);border:1px solid rgba(255,255,255,.1);border-radius:999px;padding:.35rem .9rem;}
@@ -169,30 +172,24 @@
 <div class="wrap">
 
   <!-- ============================================================
+       MUSICAL STYLE  ·  show-level, applies to every call below.
+       ============================================================ -->
+  <div class="about">
+    <div class="box">
+      <p class="eyebrow amber">Musical style</p>
+      <p>A fusion of styles. The score mixes hip-hop, pop, Latin, classical, jazz, and spirituals.</p>
+      <p>Actors must be able to navigate contemporary musical theater styles as well as more classical influences. <span class="must">Every role must be able to handle complex rhythm and flow, blending rhythmic dialogue and rap with musical theater.</span></p>
+    </div>
+  </div>
+
+  <!-- ============================================================
        CALL LIST  ·  one line per open call. Add an <a> here
        whenever you add a call block below, pointing at its id.
        ============================================================ -->
   <nav class="call-jump">
     <p class="jump-label">Open calls</p>
-    <a href="#pittsburgh-2026"><span class="jcity">Pittsburgh</span><span class="jwhen">October 2026</span></a>
+    <a href="#pittsburgh-2026"><span class="jcity">Pittsburgh</span><span class="jdue">Apply by Sept&nbsp;8</span><span class="jwhen">October 2026</span></a>
   </nav>
-
-  <!-- ============================================================
-       ABOUT THE SHOW  ·  show-level, shared by every call below.
-       Edit here once; it applies to all open calls.
-       ============================================================ -->
-  <div class="about">
-    <div class="box">
-      <p class="eyebrow">The concept</p>
-      <p>Like <em>Hamilton</em> meets <em>The Sound of Music</em> meets <em>Good Night and Good Luck</em> &mdash; all set in and around a high school in the present day &mdash; <em>Schooled</em> is about three friends as they move from their school years into their late twenties amidst the culture wars. Both buoyant and unflinching, it examines how today&rsquo;s turbulent times affect who they are, who they dream to be, and what they can and cannot learn in school.</p>
-      <p><em>Schooled</em>&rsquo;s two acts are set ten years apart: Act I in adolescence, and Act II as they seek to establish careers as a journalist, teacher, and candidate, their youthful experiences ricocheting into their adult, professional lives.</p>
-      <p class="eyebrow amber rule">Musical style</p>
-      <p>A fusion of styles. The score mixes hip-hop, pop, Latin, classical, jazz, and spirituals.</p>
-      <p>Actors must be able to navigate contemporary musical theater styles as well as more classical influences. Every role must be able to handle complex rhythm and flow, blending rhythmic dialogue and rap with musical theater.</p>
-    </div>
-  </div>
-
-
 
   <!-- ============================================================
        CALL BLOCK  ·  duplicate this entire <section class="call">
