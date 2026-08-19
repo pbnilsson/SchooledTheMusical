@@ -14,6 +14,11 @@ for (const f of files) {
   if (Array.isArray(parsed)) rows.push(...parsed);
 }
 
+// "/" and "/index.html" are the same page; count them as one.
+for (const r of rows) {
+  if (r.path === "/index.html" || r.path === "/index.htm") r.path = "/";
+}
+
 const views = rows.filter((r) => r.kind === "view");
 const clicks = rows.filter((r) => r.kind === "click");
 
