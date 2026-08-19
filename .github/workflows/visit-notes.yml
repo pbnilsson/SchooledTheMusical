@@ -6,7 +6,8 @@ name: Visit notes
 
 on:
   schedule:
-    - cron: "10 8 * * *"   # 08:10 UTC — about 4am Eastern
+    - cron: "10 8 * * *"    # 08:10 UTC — about 4am Eastern
+    - cron: "10 20 * * *"   # 20:10 UTC — about 4pm Eastern
   workflow_dispatch:        # ...or whenever you press the button
 
 permissions:
@@ -37,5 +38,5 @@ jobs:
           git config user.name "Peter Nilsson"
           git config user.email "pbnilsson@gmail.com"
           git add data
-          git diff --staged --quiet || git commit -m "Visit notes: sync $(date -u +%F)"
+          git diff --staged --quiet || git commit -m "Visit notes: sync $(date -u +'%F %H:%M')"
           git push
