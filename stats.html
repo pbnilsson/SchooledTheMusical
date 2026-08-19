@@ -60,6 +60,10 @@
   .bars{display:flex;flex-direction:column;gap:2px;}
   .bar{display:grid;grid-template-columns:minmax(90px,230px) 1fr auto;gap:.85rem;
        align-items:center;padding:.3rem 0;}
+  .bars.wide .bar{grid-template-columns:minmax(160px,1fr) 120px auto;}
+  .bars.wide .bar-l{white-space:normal;}
+  .bars.roomy .bar{grid-template-columns:minmax(140px,340px) 1fr auto;}
+  .bars.roomy .bar-l{white-space:normal;line-height:1.35;}
   .bar-l{font-size:.85rem;color:var(--text);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
   .bar-l a{color:inherit;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.15);}
   .bar-t{background:var(--track);border-radius:4px;height:14px;position:relative;overflow:hidden;}
@@ -67,6 +71,11 @@
          border-radius:0 4px 4px 0;min-width:2px;}
   .bar-v{font-size:.82rem;color:var(--text-muted);font-variant-numeric:tabular-nums;min-width:2.5rem;text-align:right;}
   .bar-v small{color:var(--text-dim);}
+  .bar-f.alt{background:var(--s2);}
+  .typical{color:var(--text-muted);font-weight:300;margin:-2rem 0 3.5rem;font-size:.95rem;}
+  .typical b{color:var(--text);font-weight:500;}
+  .pair{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;}
+  @media(max-width:680px){.pair{grid-template-columns:1fr;gap:2rem;}}
 
   details{margin-top:1rem;}
   summary{font-size:.78rem;color:var(--text-dim);cursor:pointer;}
@@ -149,22 +158,27 @@
   function bars(items, opts) {
     opts = opts || {};
     if (!items.length) return '<p class="note">Nothing yet.</p>';
-    var max = items[0].n || 1;
+    var max = opts.absolute ? 100 : (items[0].n || 1);
     var rows = items.map(function (it) {
-      var w = Math.max(2, Math.round((it.n / max) * 100));
+      var val = opts.value ? opts.value(it) : it.n;
+      var w = Math.max(2, Math.round((val / max) * 100));
       var label = opts.label ? opts.label(it) : esc(it.key);
       var extra = opts.extra ? '<small> ' + opts.extra(it) + "</small>" : "";
+      var shown = opts.display ? opts.display(it) : it.n;
       return '<div class="bar">' +
         '<div class="bar-l" title="' + esc(it.key) + '">' + label + "</div>" +
-        '<div class="bar-t"><div class="bar-f" style="width:' + w + '%"></div></div>' +
-        '<div class="bar-v">' + it.n + extra + "</div></div>";
+        '<div class="bar-t"><div class="bar-f' + (opts.alt ? " alt" : "") +
+          '" style="width:' + w + '%"></div></div>' +
+        '<div class="bar-v">' + shown + extra + "</div></div>";
     }).join("");
     var table = "<details><summary>Show as a table</summary><table><thead><tr><th>" +
       (opts.head || "Item") + "</th><th>Count</th></tr></thead><tbody>" +
       items.map(function (it) {
         return "<tr><td>" + esc(it.key) + "</td><td>" + it.n + "</td></tr>";
       }).join("") + "</tbody></table></details>";
-    return '<div class="bars">' + rows + "</div>" + table;
+    return '<div class="bars' + (opts.wide ? " wide" : "") +
+      (opts.roomy ? " roomy" : "") + '">' + rows +
+      "</div>" + table;
   }
 
   // ---- line chart ---------------------------------------------------------
@@ -264,6 +278,13 @@
   }
 
   // ---- render -------------------------------------------------------------
+  function fmtTime(secs) {
+    if (!Number.isFinite(secs)) return "—";
+    if (secs < 60) return secs + "s";
+    var m = Math.floor(secs / 60), r = secs % 60;
+    return m + "m" + (r ? " " + r + "s" : "");
+  }
+
   function render(s) {
     stamp.textContent = "Last synced " + new Date(s.generated).toLocaleString();
 
@@ -273,14 +294,24 @@
       return;
     }
 
-    var html = "";
+    var t = s.totals, html = "";
 
     html += '<div class="tiles">' +
-      tile(s.totals.views, "Page views") +
-      tile(s.totals.visitors, "People") +
-      tile(s.totals.clicks, "Links clicked") +
-      tile(s.totals.days, s.totals.days === 1 ? "Day tracked" : "Days tracked") +
+      tile(t.views, "Page views") +
+      tile(t.visitors, "People") +
+      tile(t.signups || 0, t.signups === 1 ? "Signup" : "Signups") +
+      tile(t.days, t.days === 1 ? "Day tracked" : "Days tracked") +
       "</div>";
+
+    if (t.medianPagesPerVisit) {
+      html += '<p class="typical">A typical visit runs <b>' + t.medianPagesPerVisit +
+        (t.medianPagesPerVisit === 1 ? " page" : " pages") + "</b>" +
+        (Number.isFinite(t.medianDepth)
+          ? ", gets <b>" + t.medianDepth + "%</b> of the way down" : "") +
+        (Number.isFinite(t.medianSecs)
+          ? ", and lasts <b>" + fmtTime(t.medianSecs) + "</b> per page" : "") +
+        ".</p>";
+    }
 
     html += "<section><h2>The pulse</h2>" +
       '<p class="note">Page views and distinct browser sessions, day by day.</p>' +
@@ -294,10 +325,49 @@
         extra: function (it) { return "/ " + it.visitors; }
       }) + "</section>";
 
+    var measured = s.pages.filter(function (p) { return p.measured; });
+    if (measured.length) {
+      html += "<section><h2>How far they got</h2>" +
+        '<p class="note">How far down each page a typical reader scrolled before leaving, and how long they stayed. The bar is the full length of the page.</p>' +
+        bars(measured, {
+          head: "Page",
+          absolute: true,
+          alt: true,
+          value: function (it) { return it.depth || 0; },
+          display: function (it) { return (it.depth || 0) + "%"; },
+          label: function (it) { return esc(prettyPath(it.key)); },
+          extra: function (it) { return "· " + fmtTime(it.secs); }
+        }) + "</section>";
+    }
+
+    if (s.journeys && s.journeys.length) {
+      html += "<section><h2>Paths through the site</h2>" +
+        '<p class="note">The routes people actually took, in order. Only visits that went past one page.</p>' +
+        bars(s.journeys, {
+          head: "Path",
+          wide: true,
+          label: function (it) {
+            return esc(it.key.split(" → ").map(prettyPath).join(" → "));
+          }
+        }) + "</section>";
+    }
+
+    if (s.entries && s.entries.length) {
+      html += '<section><div class="pair">' +
+        "<div><h2>Where they land</h2>" +
+        '<p class="note">First page of a visit.</p>' +
+        bars(s.entries, { head: "Entry", label: function (it) { return esc(prettyPath(it.key)); } }) +
+        "</div><div><h2>Where they leave</h2>" +
+        '<p class="note">Last page before they go.</p>' +
+        bars(s.exits, { head: "Exit", alt: true, label: function (it) { return esc(prettyPath(it.key)); } }) +
+        "</div></div></section>";
+    }
+
     html += "<section><h2>How they arrived</h2>" +
       '<p class="note">Where each page view came from.</p>' +
       bars(s.sources, {
         head: "Source",
+        roomy: true,
         label: function (it) {
           var w = SOURCE_WORDS[it.key];
           return esc(it.key.charAt(0).toUpperCase() + it.key.slice(1)) +
@@ -305,18 +375,33 @@
         }
       }) + "</section>";
 
-    if (s.referrers.length) {
+    var refs = (s.referrers || []).filter(function (r) {
+      return r.key !== "schooledthemusical.com";
+    });
+    if (refs.length) {
       html += "<section><h2>Sites that sent people</h2>" +
         '<p class="note">The actual domains, minus your own.</p>' +
-        bars(s.referrers.filter(function (r) {
-          return r.key !== "schooledthemusical.com";
-        }), { head: "Referrer" }) + "</section>";
+        bars(refs, { head: "Referrer" }) + "</section>";
     }
 
-    if (s.campaigns.length) {
+    if (s.campaigns && s.campaigns.length) {
       html += "<section><h2>Tagged links</h2>" +
         '<p class="note">Links you shared with a ?utm_source= tag, so you can tell the newsletter from Instagram.</p>' +
         bars(s.campaigns, { head: "Campaign" }) + "</section>";
+    }
+
+    if (t.signups) {
+      html += '<section><div class="pair">' +
+        "<div><h2>Signups by source</h2>" +
+        '<p class="note">What brought them to the site in the first place.</p>' +
+        bars(s.signupsBySource, {
+          head: "Source",
+          label: function (it) { return esc(it.key.charAt(0).toUpperCase() + it.key.slice(1)); }
+        }) +
+        "</div><div><h2>Signups by page</h2>" +
+        '<p class="note">Where they were standing when they signed up.</p>' +
+        bars(s.signupsByPage, { head: "Page", alt: true, label: function (it) { return esc(prettyPath(it.key)); } }) +
+        "</div></div></section>";
     }
 
     html += "<section><h2>What they followed</h2>" +
@@ -328,10 +413,34 @@
         }
       }) + "</section>";
 
-    if (s.countries.length) {
+    if (s.cities && s.cities.length) {
+      html += "<section><h2>Where from</h2>" +
+        '<p class="note">City and country come from the network edge, never from a stored address.</p>' +
+        '<div class="pair"><div>' + bars(s.cities.slice(0, 10), { head: "City" }) +
+        "</div><div>" + bars(s.countries, { head: "Country", alt: true }) +
+        "</div></div></section>";
+    } else if (s.countries && s.countries.length) {
       html += "<section><h2>Where from</h2>" +
         '<p class="note">Country only — derived at the edge, never from a stored address.</p>' +
         bars(s.countries, { head: "Country" }) + "</section>";
+    }
+
+    if (s.networks && s.networks.length) {
+      html += "<section><h2>Networks</h2>" +
+        '<p class="note">The internet provider each visit came through. Home connections look like Comcast or Verizon; a school or company name means someone browsed from work.</p>' +
+        bars(s.networks.slice(0, 10), { head: "Network" }) + "</section>";
+    }
+
+    if (s.devices && s.devices.length) {
+      html += '<section><h2>What they read on</h2>' +
+        '<p class="note">Three coarse buckets. The full browser signature is never stored.</p>' +
+        '<div class="pair"><div>' +
+        bars(s.devices, {
+          head: "Device",
+          label: function (it) { return esc(it.key.charAt(0).toUpperCase() + it.key.slice(1)); }
+        }) +
+        "</div><div>" + bars(s.browsers, { head: "Browser", alt: true }) +
+        "</div></div></section>";
     }
 
     app.innerHTML = html;

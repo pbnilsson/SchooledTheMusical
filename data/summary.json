@@ -1,10 +1,14 @@
 {
-  "generated": "2026-08-19T00:33:57.320Z",
+  "generated": "2026-08-19T00:49:21.396Z",
   "totals": {
     "views": 6,
     "clicks": 6,
     "visitors": 1,
-    "days": 1
+    "signups": 0,
+    "days": 1,
+    "medianPagesPerVisit": 6,
+    "medianDepth": null,
+    "medianSecs": null
   },
   "daily": [
     {
@@ -17,27 +21,60 @@
     {
       "key": "/",
       "n": 2,
-      "visitors": 1
+      "visitors": 1,
+      "depth": null,
+      "secs": null,
+      "measured": 0
     },
     {
       "key": "/vision.html",
       "n": 1,
-      "visitors": 1
+      "visitors": 1,
+      "depth": null,
+      "secs": null,
+      "measured": 0
     },
     {
       "key": "/about.html",
       "n": 1,
-      "visitors": 1
+      "visitors": 1,
+      "depth": null,
+      "secs": null,
+      "measured": 0
     },
     {
       "key": "/dispatches.html",
       "n": 1,
-      "visitors": 1
+      "visitors": 1,
+      "depth": null,
+      "secs": null,
+      "measured": 0
     },
     {
       "key": "/casting.html",
       "n": 1,
-      "visitors": 1
+      "visitors": 1,
+      "depth": null,
+      "secs": null,
+      "measured": 0
+    }
+  ],
+  "journeys": [
+    {
+      "key": "/ \u2192 /vision.html \u2192 /about.html \u2192 /dispatches.html \u2192 / \u2192 /casting.html",
+      "n": 1
+    }
+  ],
+  "entries": [
+    {
+      "key": "/",
+      "n": 1
+    }
+  ],
+  "exits": [
+    {
+      "key": "/casting.html",
+      "n": 1
     }
   ],
   "sources": [
@@ -63,6 +100,12 @@
       "n": 6
     }
   ],
+  "cities": [],
+  "devices": [],
+  "browsers": [],
+  "systems": [],
+  "signupsBySource": [],
+  "signupsByPage": [],
   "links": [],
   "internalLinks": [
     {
