@@ -9,6 +9,72 @@
   var q = new URLSearchParams(window.location.search);
   var CAMPAIGN = q.get("utm_source") || q.get("ref") || "";
 
+  // ---- silencing your own devices -----------------------------------------
+  // Load any page with ?notrack=1 to stop this browser from ever reporting;
+  // ?track=1 turns it back on. The flag is the only thing this script keeps
+  // beyond the per-tab id, and its only job is to prevent collection — which
+  // is why it needs no more consent than the visit itself.
+  var OFF_KEY = "sn-off";
+
+  function flag(val) {
+    try {
+      if (val === undefined) return localStorage.getItem(OFF_KEY);
+      if (val === null) localStorage.removeItem(OFF_KEY);
+      else localStorage.setItem(OFF_KEY, val);
+    } catch (e) {}
+    return null;
+  }
+
+  function toast(msg) {
+    try {
+      var el = document.createElement("div");
+      el.textContent = msg;
+      el.setAttribute("role", "status");
+      el.id = "sn-toast";
+      el.style.cssText =
+        "position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:9999;" +
+        "background:#1a2235;color:#f1f1f1;border:1px solid rgba(255,255,255,.14);" +
+        "border-radius:999px;padding:.6rem 1.1rem;box-shadow:0 6px 24px rgba(0,0,0,.4);" +
+        "font:500 14px/1.2 'DM Sans',system-ui,-apple-system,sans-serif;" +
+        "opacity:0;transition:opacity .25s;";
+      var place = function () {
+        document.body.appendChild(el);
+        setTimeout(function () { el.style.opacity = "1"; }, 20);
+        setTimeout(function () {
+          el.style.opacity = "0";
+          setTimeout(function () {
+            if (el.parentNode) el.parentNode.removeChild(el);
+          }, 400);
+        }, 4500);
+      };
+      if (document.body) place();
+      else document.addEventListener("DOMContentLoaded", place);
+    } catch (e) {}
+  }
+
+  var asked = q.has("notrack") || q.has("track");
+  if (q.has("notrack")) flag(q.get("notrack") === "0" ? null : "1");
+  if (q.has("track")) flag(q.get("track") === "0" ? "1" : null);
+
+  var OFF = flag() === "1";
+
+  if (window.console && console.log) {
+    console.log(
+      "visit notes: " +
+        (OFF
+          ? "off for this browser — add ?track=1 to any page to turn it back on"
+          : "on — add ?notrack=1 to any page to silence this browser")
+    );
+  }
+  if (asked) {
+    toast(
+      OFF
+        ? "Visit notes off for this browser."
+        : "Visit notes on for this browser."
+    );
+  }
+  if (OFF) return;
+
   // A throwaway id that lives only for this browser tab, so we can tell
   // "one person read four pages" from "four people read one page."
   var v = "";
