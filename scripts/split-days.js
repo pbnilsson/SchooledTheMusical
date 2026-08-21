@@ -14,9 +14,26 @@ if (!Array.isArray(rows)) throw new Error("expected an array of rows");
 // Dropped on the way in, so it never reaches the repo.
 const DROP = ["net"];
 
+// The banding normally happens in the browser, so the exact width never
+// leaves it. Rows already sitting in the collector predate that, and the
+// sync re-reads the last few days on every run — so band here too, or an
+// old exact width walks back into the repo. Values already at a band edge
+// are left alone, which keeps re-running safe.
+const BANDS = [480, 768, 1024, 1440, 1441];
+function band(w) {
+  if (typeof w !== "number" || !w) return w;
+  if (BANDS.includes(w)) return w;
+  if (w < 480) return 480;
+  if (w < 768) return 768;
+  if (w < 1024) return 1024;
+  if (w < 1440) return 1440;
+  return 1441;
+}
+
 const byDay = new Map();
 for (const r of rows) {
   for (const f of DROP) delete r[f];
+  if ("screen" in r) r.screen = band(r.screen);
   const day = String(r.ts || "").slice(0, 10);
   if (!/^\d{4}-\d{2}-\d{2}$/.test(day)) continue;
   if (!byDay.has(day)) byDay.set(day, []);
