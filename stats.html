@@ -615,11 +615,6 @@
         bars(s.countries, { head: "Country" }) + "</section>";
     }
 
-    if (s.networks && s.networks.length) {
-      html += "<section><h2>Networks</h2>" +
-        '<p class="note">The internet provider each visit came through. Home connections look like Comcast or Verizon; a school or company name means someone browsed from work.</p>' +
-        bars(s.networks.slice(0, 10), { head: "Network" }) + "</section>";
-    }
 
     if (s.devices && s.devices.length) {
       html += '<section><h2>What they read on</h2>' +

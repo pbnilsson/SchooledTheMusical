@@ -224,7 +224,6 @@ function summarize(rows, granularity) {
       (r) => (r.city ? r.city + (r.region ? ", " + r.region : "") : null),
       20
     ),
-    networks: tally(views, (r) => r.net, 20),
     devices: tally(views, (r) => r.device),
     browsers: tally(views, (r) => r.browser, 10),
     systems: tally(views, (r) => r.os, 10),

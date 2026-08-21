@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-21T08:54:43.501Z",
+  "generated": "2026-08-21T14:42:33.423Z",
   "defaultRange": "all",
   "order": [
     "24h",
@@ -17,52 +17,22 @@
       "key": "24h",
       "label": "Last 24 hours",
       "short": "24h",
-      "from": "2026-08-20T08:54:43.501Z",
-      "to": "2026-08-21T08:54:43.501Z",
+      "from": "2026-08-20T14:42:33.423Z",
+      "to": "2026-08-21T14:42:33.423Z",
       "available": true,
       "granularity": "hour",
       "totals": {
-        "views": 17,
+        "views": 13,
         "clicks": 4,
         "links": 1,
-        "visitors": 13,
+        "visitors": 9,
         "signups": 0,
         "days": 2,
         "medianPagesPerVisit": 1,
-        "medianDepth": 88,
-        "medianSecs": 32
+        "medianDepth": 91,
+        "medianSecs": 33
       },
       "series": [
-        {
-          "t": "2026-08-20T09:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-08-20T10:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-08-20T11:00:00.000Z",
-          "views": 2,
-          "visitors": 2
-        },
-        {
-          "t": "2026-08-20T12:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-08-20T13:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-08-20T14:00:00.000Z",
-          "views": 3,
-          "visitors": 3
-        },
         {
           "t": "2026-08-20T15:00:00.000Z",
           "views": 1,
@@ -152,24 +122,54 @@
           "t": "2026-08-21T08:00:00.000Z",
           "views": 0,
           "visitors": 0
+        },
+        {
+          "t": "2026-08-21T09:00:00.000Z",
+          "views": 0,
+          "visitors": 0
+        },
+        {
+          "t": "2026-08-21T10:00:00.000Z",
+          "views": 0,
+          "visitors": 0
+        },
+        {
+          "t": "2026-08-21T11:00:00.000Z",
+          "views": 0,
+          "visitors": 0
+        },
+        {
+          "t": "2026-08-21T12:00:00.000Z",
+          "views": 0,
+          "visitors": 0
+        },
+        {
+          "t": "2026-08-21T13:00:00.000Z",
+          "views": 0,
+          "visitors": 0
+        },
+        {
+          "t": "2026-08-21T14:00:00.000Z",
+          "views": 0,
+          "visitors": 0
         }
       ],
       "pages": [
         {
           "key": "/",
-          "n": 8,
-          "visitors": 7,
-          "depth": 87,
-          "secs": 23,
-          "measured": 8
+          "n": 5,
+          "visitors": 4,
+          "depth": 91,
+          "secs": 58,
+          "measured": 6
         },
         {
           "key": "/casting",
-          "n": 5,
-          "visitors": 5,
-          "depth": 57,
-          "secs": 71,
-          "measured": 4
+          "n": 4,
+          "visitors": 4,
+          "depth": 21,
+          "secs": 80,
+          "measured": 3
         },
         {
           "key": "/about.html",
@@ -198,22 +198,22 @@
       ],
       "journeys": [
         {
-          "key": "/casting.html \u2192 /about.html \u2192 /",
+          "key": "/casting.html → /about.html → /",
           "n": 1
         },
         {
-          "key": "/casting \u2192 /about.html",
+          "key": "/casting → /about.html",
           "n": 1
         }
       ],
       "entries": [
         {
-          "key": "/",
-          "n": 6
+          "key": "/casting",
+          "n": 4
         },
         {
-          "key": "/casting",
-          "n": 5
+          "key": "/",
+          "n": 3
         },
         {
           "key": "/casting.html",
@@ -227,11 +227,11 @@
       "exits": [
         {
           "key": "/",
-          "n": 7
+          "n": 4
         },
         {
           "key": "/casting",
-          "n": 4
+          "n": 3
         },
         {
           "key": "/about.html",
@@ -245,7 +245,7 @@
       "sources": [
         {
           "key": "direct",
-          "n": 10
+          "n": 8
         },
         {
           "key": "internal",
@@ -253,10 +253,6 @@
         },
         {
           "key": "social",
-          "n": 2
-        },
-        {
-          "key": "search",
           "n": 1
         }
       ],
@@ -267,10 +263,6 @@
         },
         {
           "key": "facebook.com",
-          "n": 2
-        },
-        {
-          "key": "google.com",
           "n": 1
         }
       ],
@@ -278,7 +270,7 @@
       "countries": [
         {
           "key": "US",
-          "n": 16
+          "n": 12
         },
         {
           "key": "JO",
@@ -291,10 +283,6 @@
           "n": 6
         },
         {
-          "key": "Grapeville, Pennsylvania",
-          "n": 3
-        },
-        {
           "key": "Pittsburgh, Pennsylvania",
           "n": 2
         },
@@ -303,11 +291,7 @@
           "n": 2
         },
         {
-          "key": "New York City, New York",
-          "n": 1
-        },
-        {
-          "key": "Boydton, Virginia",
+          "key": "Grapeville, Pennsylvania",
           "n": 1
         },
         {
@@ -322,21 +306,21 @@
       "devices": [
         {
           "key": "desktop",
-          "n": 9
+          "n": 8
         },
         {
           "key": "mobile",
-          "n": 8
+          "n": 5
         }
       ],
       "browsers": [
         {
           "key": "Safari",
-          "n": 12
+          "n": 9
         },
         {
           "key": "Chrome",
-          "n": 5
+          "n": 4
         }
       ],
       "systems": [
@@ -346,11 +330,7 @@
         },
         {
           "key": "iOS",
-          "n": 7
-        },
-        {
-          "key": "Other",
-          "n": 1
+          "n": 4
         },
         {
           "key": "Android",
@@ -380,8 +360,8 @@
       "key": "week",
       "label": "Last week",
       "short": "Week",
-      "from": "2026-08-14T08:54:43.501Z",
-      "to": "2026-08-21T08:54:43.501Z",
+      "from": "2026-08-14T14:42:33.423Z",
+      "to": "2026-08-21T14:42:33.423Z",
       "available": false,
       "granularity": "day",
       "totals": {
@@ -472,27 +452,27 @@
       ],
       "journeys": [
         {
-          "key": "/casting \u2192 /about.html",
+          "key": "/casting → /about.html",
           "n": 2
         },
         {
-          "key": "/ \u2192 /vision.html \u2192 /about.html \u2192 /dispatches.html \u2192 / \u2192 /casting.html \u2192 / \u2192 /vision.html \u2192 /dispatches.html \u2192 /reading.html \u2192 / \u2192 /casting.html \u2192 / \u2192 /casting.html \u2192 /about.html \u2192 /dispatches.html \u2192 /reading.html \u2192 /dispatches.html \u2192 /about.html \u2192 / \u2192 /vision.html \u2192 / \u2192 /casting.html \u2192 / \u2192 /casting.html \u2192 / \u2192 /vision.html \u2192 /dispatches.html \u2192 /reading.html \u2192 / \u2192 /casting.html \u2192 /",
+          "key": "/ → /vision.html → /about.html → /dispatches.html → / → /casting.html → / → /vision.html → /dispatches.html → /reading.html → / → /casting.html → / → /casting.html → /about.html → /dispatches.html → /reading.html → /dispatches.html → /about.html → / → /vision.html → / → /casting.html → / → /casting.html → / → /vision.html → /dispatches.html → /reading.html → / → /casting.html → /",
           "n": 1
         },
         {
-          "key": "/about.html \u2192 /dispatches.html \u2192 /reading.html \u2192 /",
+          "key": "/about.html → /dispatches.html → /reading.html → /",
           "n": 1
         },
         {
-          "key": "/ \u2192 /reading.html \u2192 /dispatches.html \u2192 /about.html \u2192 / \u2192 /vision.html \u2192 /casting.html",
+          "key": "/ → /reading.html → /dispatches.html → /about.html → / → /vision.html → /casting.html",
           "n": 1
         },
         {
-          "key": "/casting \u2192 /about.html \u2192 /reading.html \u2192 /dispatches.html \u2192 /about.html",
+          "key": "/casting → /about.html → /reading.html → /dispatches.html → /about.html",
           "n": 1
         },
         {
-          "key": "/casting.html \u2192 /about.html \u2192 /",
+          "key": "/casting.html → /about.html → /",
           "n": 1
         }
       ],
@@ -750,8 +730,8 @@
       "key": "month",
       "label": "Last month",
       "short": "Month",
-      "from": "2026-07-22T08:54:43.501Z",
-      "to": "2026-08-21T08:54:43.501Z",
+      "from": "2026-07-22T14:42:33.423Z",
+      "to": "2026-08-21T14:42:33.423Z",
       "available": false,
       "granularity": "day",
       "totals": {
@@ -842,27 +822,27 @@
       ],
       "journeys": [
         {
-          "key": "/casting \u2192 /about.html",
+          "key": "/casting → /about.html",
           "n": 2
         },
         {
-          "key": "/ \u2192 /vision.html \u2192 /about.html \u2192 /dispatches.html \u2192 / \u2192 /casting.html \u2192 / \u2192 /vision.html \u2192 /dispatches.html \u2192 /reading.html \u2192 / \u2192 /casting.html \u2192 / \u2192 /casting.html \u2192 /about.html \u2192 /dispatches.html \u2192 /reading.html \u2192 /dispatches.html \u2192 /about.html \u2192 / \u2192 /vision.html \u2192 / \u2192 /casting.html \u2192 / \u2192 /casting.html \u2192 / \u2192 /vision.html \u2192 /dispatches.html \u2192 /reading.html \u2192 / \u2192 /casting.html \u2192 /",
+          "key": "/ → /vision.html → /about.html → /dispatches.html → / → /casting.html → / → /vision.html → /dispatches.html → /reading.html → / → /casting.html → / → /casting.html → /about.html → /dispatches.html → /reading.html → /dispatches.html → /about.html → / → /vision.html → / → /casting.html → / → /casting.html → / → /vision.html → /dispatches.html → /reading.html → / → /casting.html → /",
           "n": 1
         },
         {
-          "key": "/about.html \u2192 /dispatches.html \u2192 /reading.html \u2192 /",
+          "key": "/about.html → /dispatches.html → /reading.html → /",
           "n": 1
         },
         {
-          "key": "/ \u2192 /reading.html \u2192 /dispatches.html \u2192 /about.html \u2192 / \u2192 /vision.html \u2192 /casting.html",
+          "key": "/ → /reading.html → /dispatches.html → /about.html → / → /vision.html → /casting.html",
           "n": 1
         },
         {
-          "key": "/casting \u2192 /about.html \u2192 /reading.html \u2192 /dispatches.html \u2192 /about.html",
+          "key": "/casting → /about.html → /reading.html → /dispatches.html → /about.html",
           "n": 1
         },
         {
-          "key": "/casting.html \u2192 /about.html \u2192 /",
+          "key": "/casting.html → /about.html → /",
           "n": 1
         }
       ],
@@ -1120,8 +1100,8 @@
       "key": "year",
       "label": "Last year",
       "short": "Year",
-      "from": "2025-08-21T08:54:43.501Z",
-      "to": "2026-08-21T08:54:43.501Z",
+      "from": "2025-08-21T14:42:33.423Z",
+      "to": "2026-08-21T14:42:33.423Z",
       "available": false,
       "granularity": "day",
       "totals": {
@@ -1212,27 +1192,27 @@
       ],
       "journeys": [
         {
-          "key": "/casting \u2192 /about.html",
+          "key": "/casting → /about.html",
           "n": 2
         },
         {
-          "key": "/ \u2192 /vision.html \u2192 /about.html \u2192 /dispatches.html \u2192 / \u2192 /casting.html \u2192 / \u2192 /vision.html \u2192 /dispatches.html \u2192 /reading.html \u2192 / \u2192 /casting.html \u2192 / \u2192 /casting.html \u2192 /about.html \u2192 /dispatches.html \u2192 /reading.html \u2192 /dispatches.html \u2192 /about.html \u2192 / \u2192 /vision.html \u2192 / \u2192 /casting.html \u2192 / \u2192 /casting.html \u2192 / \u2192 /vision.html \u2192 /dispatches.html \u2192 /reading.html \u2192 / \u2192 /casting.html \u2192 /",
+          "key": "/ → /vision.html → /about.html → /dispatches.html → / → /casting.html → / → /vision.html → /dispatches.html → /reading.html → / → /casting.html → / → /casting.html → /about.html → /dispatches.html → /reading.html → /dispatches.html → /about.html → / → /vision.html → / → /casting.html → / → /casting.html → / → /vision.html → /dispatches.html → /reading.html → / → /casting.html → /",
           "n": 1
         },
         {
-          "key": "/about.html \u2192 /dispatches.html \u2192 /reading.html \u2192 /",
+          "key": "/about.html → /dispatches.html → /reading.html → /",
           "n": 1
         },
         {
-          "key": "/ \u2192 /reading.html \u2192 /dispatches.html \u2192 /about.html \u2192 / \u2192 /vision.html \u2192 /casting.html",
+          "key": "/ → /reading.html → /dispatches.html → /about.html → / → /vision.html → /casting.html",
           "n": 1
         },
         {
-          "key": "/casting \u2192 /about.html \u2192 /reading.html \u2192 /dispatches.html \u2192 /about.html",
+          "key": "/casting → /about.html → /reading.html → /dispatches.html → /about.html",
           "n": 1
         },
         {
-          "key": "/casting.html \u2192 /about.html \u2192 /",
+          "key": "/casting.html → /about.html → /",
           "n": 1
         }
       ],
@@ -1491,7 +1471,7 @@
       "label": "All time",
       "short": "All",
       "from": "2026-08-19T00:29:19.264Z",
-      "to": "2026-08-21T08:54:43.501Z",
+      "to": "2026-08-21T14:42:33.423Z",
       "available": true,
       "granularity": "day",
       "totals": {
@@ -1582,27 +1562,27 @@
       ],
       "journeys": [
         {
-          "key": "/casting \u2192 /about.html",
+          "key": "/casting → /about.html",
           "n": 2
         },
         {
-          "key": "/ \u2192 /vision.html \u2192 /about.html \u2192 /dispatches.html \u2192 / \u2192 /casting.html \u2192 / \u2192 /vision.html \u2192 /dispatches.html \u2192 /reading.html \u2192 / \u2192 /casting.html \u2192 / \u2192 /casting.html \u2192 /about.html \u2192 /dispatches.html \u2192 /reading.html \u2192 /dispatches.html \u2192 /about.html \u2192 / \u2192 /vision.html \u2192 / \u2192 /casting.html \u2192 / \u2192 /casting.html \u2192 / \u2192 /vision.html \u2192 /dispatches.html \u2192 /reading.html \u2192 / \u2192 /casting.html \u2192 /",
+          "key": "/ → /vision.html → /about.html → /dispatches.html → / → /casting.html → / → /vision.html → /dispatches.html → /reading.html → / → /casting.html → / → /casting.html → /about.html → /dispatches.html → /reading.html → /dispatches.html → /about.html → / → /vision.html → / → /casting.html → / → /casting.html → / → /vision.html → /dispatches.html → /reading.html → / → /casting.html → /",
           "n": 1
         },
         {
-          "key": "/about.html \u2192 /dispatches.html \u2192 /reading.html \u2192 /",
+          "key": "/about.html → /dispatches.html → /reading.html → /",
           "n": 1
         },
         {
-          "key": "/ \u2192 /reading.html \u2192 /dispatches.html \u2192 /about.html \u2192 / \u2192 /vision.html \u2192 /casting.html",
+          "key": "/ → /reading.html → /dispatches.html → /about.html → / → /vision.html → /casting.html",
           "n": 1
         },
         {
-          "key": "/casting \u2192 /about.html \u2192 /reading.html \u2192 /dispatches.html \u2192 /about.html",
+          "key": "/casting → /about.html → /reading.html → /dispatches.html → /about.html",
           "n": 1
         },
         {
-          "key": "/casting.html \u2192 /about.html \u2192 /",
+          "key": "/casting.html → /about.html → /",
           "n": 1
         }
       ],

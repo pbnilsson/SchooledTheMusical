@@ -86,9 +86,21 @@
     }
   } catch (e) {}
 
+  // Exact viewport widths are a fingerprint, and nothing here needs more than
+  // a rough size — desktop vs mobile already comes from the device field.
+  // Report the band, so the precise number never leaves the browser.
+  function band(w) {
+    if (!w) return 0;
+    if (w < 480) return 480;
+    if (w < 768) return 768;
+    if (w < 1024) return 1024;
+    if (w < 1440) return 1440;
+    return 1441;
+  }
+
   function send(d) {
     d.v = v;
-    d.w = window.innerWidth || 0;
+    d.w = band(window.innerWidth || 0);
     var body = JSON.stringify(d);
     try {
       if (navigator.sendBeacon) {
