@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-22T08:44:28.085Z",
+  "generated": "2026-08-22T20:37:27.495Z",
   "defaultRange": "all",
   "order": [
     "24h",
@@ -17,277 +17,34 @@
       "key": "24h",
       "label": "Last 24 hours",
       "short": "24h",
-      "from": "2026-08-21T08:44:28.085Z",
-      "to": "2026-08-22T08:44:28.085Z",
+      "from": "2026-08-21T20:37:27.495Z",
+      "to": "2026-08-22T20:37:27.495Z",
       "available": true,
       "granularity": "hour",
       "totals": {
-        "views": 7,
+        "views": 0,
         "clicks": 0,
         "links": 0,
-        "visitors": 7,
+        "visitors": 0,
         "signups": 0,
-        "days": 1,
-        "medianPagesPerVisit": 1,
-        "medianDepth": 36,
-        "medianSecs": 20
+        "days": 0,
+        "medianPagesPerVisit": null,
+        "medianDepth": null,
+        "medianSecs": null
       },
-      "series": [
-        {
-          "t": "2026-08-21T09:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-08-21T10:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-08-21T11:00:00.000Z",
-          "views": 1,
-          "visitors": 1
-        },
-        {
-          "t": "2026-08-21T12:00:00.000Z",
-          "views": 1,
-          "visitors": 1
-        },
-        {
-          "t": "2026-08-21T13:00:00.000Z",
-          "views": 1,
-          "visitors": 1
-        },
-        {
-          "t": "2026-08-21T14:00:00.000Z",
-          "views": 2,
-          "visitors": 2
-        },
-        {
-          "t": "2026-08-21T15:00:00.000Z",
-          "views": 2,
-          "visitors": 2
-        },
-        {
-          "t": "2026-08-21T16:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-08-21T17:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-08-21T18:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-08-21T19:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-08-21T20:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-08-21T21:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-08-21T22:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-08-21T23:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-08-22T00:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-08-22T01:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-08-22T02:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-08-22T03:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-08-22T04:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-08-22T05:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-08-22T06:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-08-22T07:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-08-22T08:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        }
-      ],
-      "pages": [
-        {
-          "key": "/",
-          "n": 4,
-          "visitors": 4,
-          "depth": 21,
-          "secs": 37,
-          "measured": 2
-        },
-        {
-          "key": "/casting",
-          "n": 2,
-          "visitors": 2,
-          "depth": 49,
-          "secs": 14,
-          "measured": 1
-        },
-        {
-          "key": "/casting.html",
-          "n": 1,
-          "visitors": 1,
-          "depth": 61,
-          "secs": 25,
-          "measured": 1
-        }
-      ],
+      "series": [],
+      "pages": [],
       "journeys": [],
-      "entries": [
-        {
-          "key": "/",
-          "n": 4
-        },
-        {
-          "key": "/casting",
-          "n": 2
-        },
-        {
-          "key": "/casting.html",
-          "n": 1
-        }
-      ],
-      "exits": [
-        {
-          "key": "/",
-          "n": 4
-        },
-        {
-          "key": "/casting",
-          "n": 2
-        },
-        {
-          "key": "/casting.html",
-          "n": 1
-        }
-      ],
-      "sources": [
-        {
-          "key": "direct",
-          "n": 5
-        },
-        {
-          "key": "search",
-          "n": 2
-        }
-      ],
-      "referrers": [
-        {
-          "key": "google.com",
-          "n": 2
-        }
-      ],
+      "entries": [],
+      "exits": [],
+      "sources": [],
+      "referrers": [],
       "campaigns": [],
-      "countries": [
-        {
-          "key": "US",
-          "n": 7
-        }
-      ],
-      "cities": [
-        {
-          "key": "Fort Wayne, Indiana",
-          "n": 2
-        },
-        {
-          "key": "Franklin Park, Pennsylvania",
-          "n": 2
-        },
-        {
-          "key": "Chester, Pennsylvania",
-          "n": 1
-        },
-        {
-          "key": "Philadelphia, Pennsylvania",
-          "n": 1
-        },
-        {
-          "key": "Follansbee, West Virginia",
-          "n": 1
-        }
-      ],
-      "devices": [
-        {
-          "key": "mobile",
-          "n": 5
-        },
-        {
-          "key": "desktop",
-          "n": 2
-        }
-      ],
-      "browsers": [
-        {
-          "key": "Safari",
-          "n": 5
-        },
-        {
-          "key": "Chrome",
-          "n": 2
-        }
-      ],
-      "systems": [
-        {
-          "key": "iOS",
-          "n": 3
-        },
-        {
-          "key": "macOS",
-          "n": 2
-        },
-        {
-          "key": "Android",
-          "n": 2
-        }
-      ],
+      "countries": [],
+      "cities": [],
+      "devices": [],
+      "browsers": [],
+      "systems": [],
       "signupsBySource": [],
       "signupsByPage": [],
       "links": [],
@@ -297,8 +54,8 @@
       "key": "week",
       "label": "Last week",
       "short": "Week",
-      "from": "2026-08-15T08:44:28.085Z",
-      "to": "2026-08-22T08:44:28.085Z",
+      "from": "2026-08-15T20:37:27.495Z",
+      "to": "2026-08-22T20:37:27.495Z",
       "available": false,
       "granularity": "day",
       "totals": {
@@ -679,8 +436,8 @@
       "key": "month",
       "label": "Last month",
       "short": "Month",
-      "from": "2026-07-23T08:44:28.085Z",
-      "to": "2026-08-22T08:44:28.085Z",
+      "from": "2026-07-23T20:37:27.495Z",
+      "to": "2026-08-22T20:37:27.495Z",
       "available": false,
       "granularity": "day",
       "totals": {
@@ -1061,8 +818,8 @@
       "key": "year",
       "label": "Last year",
       "short": "Year",
-      "from": "2025-08-22T08:44:28.085Z",
-      "to": "2026-08-22T08:44:28.085Z",
+      "from": "2025-08-22T20:37:27.495Z",
+      "to": "2026-08-22T20:37:27.495Z",
       "available": false,
       "granularity": "day",
       "totals": {
@@ -1444,7 +1201,7 @@
       "label": "All time",
       "short": "All",
       "from": "2026-08-19T00:29:19.264Z",
-      "to": "2026-08-22T08:44:28.085Z",
+      "to": "2026-08-22T20:37:27.495Z",
       "available": true,
       "granularity": "day",
       "totals": {
