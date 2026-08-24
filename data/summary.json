@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-24T09:01:12.590Z",
+  "generated": "2026-08-24T20:46:50.110Z",
   "defaultRange": "all",
   "order": [
     "24h",
@@ -17,77 +17,22 @@
       "key": "24h",
       "label": "Last 24 hours",
       "short": "24h",
-      "from": "2026-08-23T09:01:12.590Z",
-      "to": "2026-08-24T09:01:12.590Z",
+      "from": "2026-08-23T20:46:50.110Z",
+      "to": "2026-08-24T20:46:50.110Z",
       "available": true,
       "granularity": "hour",
       "totals": {
-        "views": 1,
+        "views": 2,
         "clicks": 1,
         "links": 1,
-        "visitors": 1,
+        "visitors": 2,
         "signups": 0,
         "days": 1,
         "medianPagesPerVisit": 1,
-        "medianDepth": 33,
-        "medianSecs": 16
+        "medianDepth": 53,
+        "medianSecs": 21
       },
       "series": [
-        {
-          "t": "2026-08-23T10:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-08-23T11:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-08-23T12:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-08-23T13:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-08-23T14:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-08-23T15:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-08-23T16:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-08-23T17:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-08-23T18:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-08-23T19:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-08-23T20:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
         {
           "t": "2026-08-23T21:00:00.000Z",
           "views": 0,
@@ -152,35 +97,90 @@
           "t": "2026-08-24T09:00:00.000Z",
           "views": 0,
           "visitors": 0
+        },
+        {
+          "t": "2026-08-24T10:00:00.000Z",
+          "views": 0,
+          "visitors": 0
+        },
+        {
+          "t": "2026-08-24T11:00:00.000Z",
+          "views": 0,
+          "visitors": 0
+        },
+        {
+          "t": "2026-08-24T12:00:00.000Z",
+          "views": 1,
+          "visitors": 1
+        },
+        {
+          "t": "2026-08-24T13:00:00.000Z",
+          "views": 0,
+          "visitors": 0
+        },
+        {
+          "t": "2026-08-24T14:00:00.000Z",
+          "views": 0,
+          "visitors": 0
+        },
+        {
+          "t": "2026-08-24T15:00:00.000Z",
+          "views": 0,
+          "visitors": 0
+        },
+        {
+          "t": "2026-08-24T16:00:00.000Z",
+          "views": 0,
+          "visitors": 0
+        },
+        {
+          "t": "2026-08-24T17:00:00.000Z",
+          "views": 0,
+          "visitors": 0
+        },
+        {
+          "t": "2026-08-24T18:00:00.000Z",
+          "views": 0,
+          "visitors": 0
+        },
+        {
+          "t": "2026-08-24T19:00:00.000Z",
+          "views": 0,
+          "visitors": 0
+        },
+        {
+          "t": "2026-08-24T20:00:00.000Z",
+          "views": 0,
+          "visitors": 0
         }
       ],
       "pages": [
         {
           "key": "/casting",
-          "n": 1,
-          "visitors": 1,
-          "depth": 54,
-          "secs": 27,
-          "measured": 1
+          "n": 2,
+          "visitors": 2,
+          "depth": 53,
+          "secs": 21,
+          "measured": 2
         }
       ],
       "journeys": [],
       "entries": [
         {
           "key": "/casting",
-          "n": 1
+          "n": 2
         }
       ],
       "exits": [
         {
           "key": "/casting",
-          "n": 1
+          "n": 2
         }
       ],
       "sources": [
         {
           "key": "direct",
-          "n": 1
+          "n": 2
         }
       ],
       "referrers": [],
@@ -188,31 +188,35 @@
       "countries": [
         {
           "key": "US",
-          "n": 1
+          "n": 2
         }
       ],
       "cities": [
         {
           "key": "Pittsburgh, Pennsylvania",
           "n": 1
+        },
+        {
+          "key": "Atlanta, Georgia",
+          "n": 1
         }
       ],
       "devices": [
         {
           "key": "mobile",
-          "n": 1
+          "n": 2
         }
       ],
       "browsers": [
         {
           "key": "Safari",
-          "n": 1
+          "n": 2
         }
       ],
       "systems": [
         {
           "key": "iOS",
-          "n": 1
+          "n": 2
         }
       ],
       "signupsBySource": [],
@@ -229,19 +233,19 @@
       "key": "week",
       "label": "Last week",
       "short": "Week",
-      "from": "2026-08-17T09:01:12.590Z",
-      "to": "2026-08-24T09:01:12.590Z",
+      "from": "2026-08-17T20:46:50.110Z",
+      "to": "2026-08-24T20:46:50.110Z",
       "available": false,
       "granularity": "day",
       "totals": {
-        "views": 104,
+        "views": 105,
         "clicks": 59,
         "links": 6,
-        "visitors": 46,
+        "visitors": 47,
         "signups": 0,
         "days": 6,
         "medianPagesPerVisit": 1,
-        "medianDepth": 74,
+        "medianDepth": 71,
         "medianSecs": 22
       },
       "series": [
@@ -272,8 +276,8 @@
         },
         {
           "d": "2026-08-24",
-          "views": 1,
-          "visitors": 1
+          "views": 2,
+          "visitors": 2
         }
       ],
       "pages": [
@@ -287,11 +291,11 @@
         },
         {
           "key": "/casting",
-          "n": 24,
-          "visitors": 24,
+          "n": 25,
+          "visitors": 25,
           "depth": 52,
-          "secs": 19,
-          "measured": 16
+          "secs": 15,
+          "measured": 17
         },
         {
           "key": "/about.html",
@@ -363,7 +367,7 @@
       "entries": [
         {
           "key": "/casting",
-          "n": 24
+          "n": 25
         },
         {
           "key": "/",
@@ -385,7 +389,7 @@
       "exits": [
         {
           "key": "/casting",
-          "n": 21
+          "n": 22
         },
         {
           "key": "/",
@@ -411,7 +415,7 @@
         },
         {
           "key": "direct",
-          "n": 28
+          "n": 29
         },
         {
           "key": "social",
@@ -444,7 +448,7 @@
       "countries": [
         {
           "key": "US",
-          "n": 103
+          "n": 104
         },
         {
           "key": "JO",
@@ -527,6 +531,10 @@
         {
           "key": "Follansbee, West Virginia",
           "n": 1
+        },
+        {
+          "key": "Atlanta, Georgia",
+          "n": 1
         }
       ],
       "devices": [
@@ -536,13 +544,13 @@
         },
         {
           "key": "mobile",
-          "n": 44
+          "n": 45
         }
       ],
       "browsers": [
         {
           "key": "Safari",
-          "n": 82
+          "n": 83
         },
         {
           "key": "Chrome",
@@ -560,7 +568,7 @@
         },
         {
           "key": "iOS",
-          "n": 35
+          "n": 36
         },
         {
           "key": "Android",
@@ -626,19 +634,19 @@
       "key": "month",
       "label": "Last month",
       "short": "Month",
-      "from": "2026-07-25T09:01:12.590Z",
-      "to": "2026-08-24T09:01:12.590Z",
+      "from": "2026-07-25T20:46:50.110Z",
+      "to": "2026-08-24T20:46:50.110Z",
       "available": false,
       "granularity": "day",
       "totals": {
-        "views": 104,
+        "views": 105,
         "clicks": 59,
         "links": 6,
-        "visitors": 46,
+        "visitors": 47,
         "signups": 0,
         "days": 6,
         "medianPagesPerVisit": 1,
-        "medianDepth": 74,
+        "medianDepth": 71,
         "medianSecs": 22
       },
       "series": [
@@ -669,8 +677,8 @@
         },
         {
           "d": "2026-08-24",
-          "views": 1,
-          "visitors": 1
+          "views": 2,
+          "visitors": 2
         }
       ],
       "pages": [
@@ -684,11 +692,11 @@
         },
         {
           "key": "/casting",
-          "n": 24,
-          "visitors": 24,
+          "n": 25,
+          "visitors": 25,
           "depth": 52,
-          "secs": 19,
-          "measured": 16
+          "secs": 15,
+          "measured": 17
         },
         {
           "key": "/about.html",
@@ -760,7 +768,7 @@
       "entries": [
         {
           "key": "/casting",
-          "n": 24
+          "n": 25
         },
         {
           "key": "/",
@@ -782,7 +790,7 @@
       "exits": [
         {
           "key": "/casting",
-          "n": 21
+          "n": 22
         },
         {
           "key": "/",
@@ -808,7 +816,7 @@
         },
         {
           "key": "direct",
-          "n": 28
+          "n": 29
         },
         {
           "key": "social",
@@ -841,7 +849,7 @@
       "countries": [
         {
           "key": "US",
-          "n": 103
+          "n": 104
         },
         {
           "key": "JO",
@@ -924,6 +932,10 @@
         {
           "key": "Follansbee, West Virginia",
           "n": 1
+        },
+        {
+          "key": "Atlanta, Georgia",
+          "n": 1
         }
       ],
       "devices": [
@@ -933,13 +945,13 @@
         },
         {
           "key": "mobile",
-          "n": 44
+          "n": 45
         }
       ],
       "browsers": [
         {
           "key": "Safari",
-          "n": 82
+          "n": 83
         },
         {
           "key": "Chrome",
@@ -957,7 +969,7 @@
         },
         {
           "key": "iOS",
-          "n": 35
+          "n": 36
         },
         {
           "key": "Android",
@@ -1023,19 +1035,19 @@
       "key": "year",
       "label": "Last year",
       "short": "Year",
-      "from": "2025-08-24T09:01:12.590Z",
-      "to": "2026-08-24T09:01:12.590Z",
+      "from": "2025-08-24T20:46:50.110Z",
+      "to": "2026-08-24T20:46:50.110Z",
       "available": false,
       "granularity": "day",
       "totals": {
-        "views": 104,
+        "views": 105,
         "clicks": 59,
         "links": 6,
-        "visitors": 46,
+        "visitors": 47,
         "signups": 0,
         "days": 6,
         "medianPagesPerVisit": 1,
-        "medianDepth": 74,
+        "medianDepth": 71,
         "medianSecs": 22
       },
       "series": [
@@ -1066,8 +1078,8 @@
         },
         {
           "d": "2026-08-24",
-          "views": 1,
-          "visitors": 1
+          "views": 2,
+          "visitors": 2
         }
       ],
       "pages": [
@@ -1081,11 +1093,11 @@
         },
         {
           "key": "/casting",
-          "n": 24,
-          "visitors": 24,
+          "n": 25,
+          "visitors": 25,
           "depth": 52,
-          "secs": 19,
-          "measured": 16
+          "secs": 15,
+          "measured": 17
         },
         {
           "key": "/about.html",
@@ -1157,7 +1169,7 @@
       "entries": [
         {
           "key": "/casting",
-          "n": 24
+          "n": 25
         },
         {
           "key": "/",
@@ -1179,7 +1191,7 @@
       "exits": [
         {
           "key": "/casting",
-          "n": 21
+          "n": 22
         },
         {
           "key": "/",
@@ -1205,7 +1217,7 @@
         },
         {
           "key": "direct",
-          "n": 28
+          "n": 29
         },
         {
           "key": "social",
@@ -1238,7 +1250,7 @@
       "countries": [
         {
           "key": "US",
-          "n": 103
+          "n": 104
         },
         {
           "key": "JO",
@@ -1321,6 +1333,10 @@
         {
           "key": "Follansbee, West Virginia",
           "n": 1
+        },
+        {
+          "key": "Atlanta, Georgia",
+          "n": 1
         }
       ],
       "devices": [
@@ -1330,13 +1346,13 @@
         },
         {
           "key": "mobile",
-          "n": 44
+          "n": 45
         }
       ],
       "browsers": [
         {
           "key": "Safari",
-          "n": 82
+          "n": 83
         },
         {
           "key": "Chrome",
@@ -1354,7 +1370,7 @@
         },
         {
           "key": "iOS",
-          "n": 35
+          "n": 36
         },
         {
           "key": "Android",
@@ -1421,18 +1437,18 @@
       "label": "All time",
       "short": "All",
       "from": "2026-08-19T00:29:19.264Z",
-      "to": "2026-08-24T09:01:12.590Z",
+      "to": "2026-08-24T20:46:50.110Z",
       "available": true,
       "granularity": "day",
       "totals": {
-        "views": 104,
+        "views": 105,
         "clicks": 59,
         "links": 6,
-        "visitors": 46,
+        "visitors": 47,
         "signups": 0,
         "days": 6,
         "medianPagesPerVisit": 1,
-        "medianDepth": 74,
+        "medianDepth": 71,
         "medianSecs": 22
       },
       "series": [
@@ -1463,8 +1479,8 @@
         },
         {
           "d": "2026-08-24",
-          "views": 1,
-          "visitors": 1
+          "views": 2,
+          "visitors": 2
         }
       ],
       "pages": [
@@ -1478,11 +1494,11 @@
         },
         {
           "key": "/casting",
-          "n": 24,
-          "visitors": 24,
+          "n": 25,
+          "visitors": 25,
           "depth": 52,
-          "secs": 19,
-          "measured": 16
+          "secs": 15,
+          "measured": 17
         },
         {
           "key": "/about.html",
@@ -1554,7 +1570,7 @@
       "entries": [
         {
           "key": "/casting",
-          "n": 24
+          "n": 25
         },
         {
           "key": "/",
@@ -1576,7 +1592,7 @@
       "exits": [
         {
           "key": "/casting",
-          "n": 21
+          "n": 22
         },
         {
           "key": "/",
@@ -1602,7 +1618,7 @@
         },
         {
           "key": "direct",
-          "n": 28
+          "n": 29
         },
         {
           "key": "social",
@@ -1635,7 +1651,7 @@
       "countries": [
         {
           "key": "US",
-          "n": 103
+          "n": 104
         },
         {
           "key": "JO",
@@ -1718,6 +1734,10 @@
         {
           "key": "Follansbee, West Virginia",
           "n": 1
+        },
+        {
+          "key": "Atlanta, Georgia",
+          "n": 1
         }
       ],
       "devices": [
@@ -1727,13 +1747,13 @@
         },
         {
           "key": "mobile",
-          "n": 44
+          "n": 45
         }
       ],
       "browsers": [
         {
           "key": "Safari",
-          "n": 82
+          "n": 83
         },
         {
           "key": "Chrome",
@@ -1751,7 +1771,7 @@
         },
         {
           "key": "iOS",
-          "n": 35
+          "n": 36
         },
         {
           "key": "Android",
