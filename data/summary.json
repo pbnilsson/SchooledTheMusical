@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-25T08:56:24.614Z",
+  "generated": "2026-08-25T20:44:35.203Z",
   "defaultRange": "all",
   "order": [
     "24h",
@@ -17,82 +17,22 @@
       "key": "24h",
       "label": "Last 24 hours",
       "short": "24h",
-      "from": "2026-08-24T08:56:24.614Z",
-      "to": "2026-08-25T08:56:24.614Z",
+      "from": "2026-08-24T20:44:35.203Z",
+      "to": "2026-08-25T20:44:35.203Z",
       "available": true,
       "granularity": "hour",
       "totals": {
-        "views": 4,
+        "views": 7,
         "clicks": 1,
         "links": 0,
-        "visitors": 3,
+        "visitors": 6,
         "signups": 0,
         "days": 2,
         "medianPagesPerVisit": 1,
-        "medianDepth": 63,
-        "medianSecs": 21
+        "medianDepth": 82,
+        "medianSecs": 46
       },
       "series": [
-        {
-          "t": "2026-08-24T09:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-08-24T10:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-08-24T11:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-08-24T12:00:00.000Z",
-          "views": 1,
-          "visitors": 1
-        },
-        {
-          "t": "2026-08-24T13:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-08-24T14:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-08-24T15:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-08-24T16:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-08-24T17:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-08-24T18:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-08-24T19:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-08-24T20:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
         {
           "t": "2026-08-24T21:00:00.000Z",
           "views": 1,
@@ -152,24 +92,76 @@
           "t": "2026-08-25T08:00:00.000Z",
           "views": 0,
           "visitors": 0
+        },
+        {
+          "t": "2026-08-25T09:00:00.000Z",
+          "views": 0,
+          "visitors": 0
+        },
+        {
+          "t": "2026-08-25T10:00:00.000Z",
+          "views": 0,
+          "visitors": 0
+        },
+        {
+          "t": "2026-08-25T11:00:00.000Z",
+          "views": 0,
+          "visitors": 0
+        },
+        {
+          "t": "2026-08-25T12:00:00.000Z",
+          "views": 1,
+          "visitors": 1
+        },
+        {
+          "t": "2026-08-25T13:00:00.000Z",
+          "views": 0,
+          "visitors": 0
+        },
+        {
+          "t": "2026-08-25T14:00:00.000Z",
+          "views": 0,
+          "visitors": 0
+        },
+        {
+          "t": "2026-08-25T15:00:00.000Z",
+          "views": 0,
+          "visitors": 0
+        },
+        {
+          "t": "2026-08-25T16:00:00.000Z",
+          "views": 0,
+          "visitors": 0
+        },
+        {
+          "t": "2026-08-25T17:00:00.000Z",
+          "views": 0,
+          "visitors": 0
+        },
+        {
+          "t": "2026-08-25T18:00:00.000Z",
+          "views": 2,
+          "visitors": 2
+        },
+        {
+          "t": "2026-08-25T19:00:00.000Z",
+          "views": 1,
+          "visitors": 1
+        },
+        {
+          "t": "2026-08-25T20:00:00.000Z",
+          "views": 0,
+          "visitors": 0
         }
       ],
       "pages": [
         {
           "key": "/",
-          "n": 2,
-          "visitors": 2,
-          "depth": 42,
-          "secs": 19,
-          "measured": 2
-        },
-        {
-          "key": "/casting",
-          "n": 1,
-          "visitors": 1,
-          "depth": 52,
-          "secs": 15,
-          "measured": 1
+          "n": 6,
+          "visitors": 6,
+          "depth": 74,
+          "secs": 56,
+          "measured": 5
         },
         {
           "key": "/casting.html",
@@ -189,21 +181,13 @@
       "entries": [
         {
           "key": "/",
-          "n": 2
-        },
-        {
-          "key": "/casting",
-          "n": 1
+          "n": 6
         }
       ],
       "exits": [
         {
-          "key": "/casting",
-          "n": 1
-        },
-        {
           "key": "/",
-          "n": 1
+          "n": 5
         },
         {
           "key": "/casting.html",
@@ -213,14 +197,18 @@
       "sources": [
         {
           "key": "direct",
-          "n": 2
+          "n": 3
         },
         {
           "key": "search",
-          "n": 1
+          "n": 2
         },
         {
           "key": "internal",
+          "n": 1
+        },
+        {
+          "key": "referral",
           "n": 1
         }
       ],
@@ -232,13 +220,21 @@
         {
           "key": "schooledthemusical.com",
           "n": 1
+        },
+        {
+          "key": "google.com",
+          "n": 1
+        },
+        {
+          "key": "peternilsson.us",
+          "n": 1
         }
       ],
       "campaigns": [],
       "countries": [
         {
           "key": "US",
-          "n": 4
+          "n": 7
         }
       ],
       "cities": [
@@ -247,38 +243,62 @@
           "n": 2
         },
         {
-          "key": "Atlanta, Georgia",
+          "key": "Bridgeville, Pennsylvania",
           "n": 1
         },
         {
-          "key": "Bridgeville, Pennsylvania",
+          "key": "Fort Wayne, Indiana",
+          "n": 1
+        },
+        {
+          "key": "New York City, New York",
+          "n": 1
+        },
+        {
+          "key": "Boise, Idaho",
+          "n": 1
+        },
+        {
+          "key": "Dumont, New Jersey",
           "n": 1
         }
       ],
       "devices": [
         {
-          "key": "mobile",
+          "key": "desktop",
           "n": 4
+        },
+        {
+          "key": "mobile",
+          "n": 3
         }
       ],
       "browsers": [
         {
-          "key": "Safari",
-          "n": 2
+          "key": "Chrome",
+          "n": 5
         },
         {
-          "key": "Chrome",
+          "key": "Safari",
           "n": 2
         }
       ],
       "systems": [
         {
-          "key": "iOS",
+          "key": "Android",
           "n": 2
         },
         {
-          "key": "Android",
+          "key": "macOS",
           "n": 2
+        },
+        {
+          "key": "Windows",
+          "n": 2
+        },
+        {
+          "key": "iOS",
+          "n": 1
         }
       ],
       "signupsBySource": [],
@@ -295,20 +315,20 @@
       "key": "week",
       "label": "Last week",
       "short": "Week",
-      "from": "2026-08-18T08:56:24.614Z",
-      "to": "2026-08-25T08:56:24.614Z",
+      "from": "2026-08-18T20:44:35.203Z",
+      "to": "2026-08-25T20:44:35.203Z",
       "available": false,
       "granularity": "day",
       "totals": {
-        "views": 108,
+        "views": 112,
         "clicks": 60,
         "links": 6,
-        "visitors": 49,
+        "visitors": 53,
         "signups": 0,
         "days": 7,
         "medianPagesPerVisit": 1,
         "medianDepth": 74,
-        "medianSecs": 22
+        "medianSecs": 24
       },
       "series": [
         {
@@ -343,18 +363,18 @@
         },
         {
           "d": "2026-08-25",
-          "views": 2,
-          "visitors": 1
+          "views": 6,
+          "visitors": 5
         }
       ],
       "pages": [
         {
           "key": "/",
-          "n": 36,
-          "visitors": 21,
-          "depth": 76,
-          "secs": 24,
-          "measured": 28
+          "n": 40,
+          "visitors": 25,
+          "depth": 77,
+          "secs": 26,
+          "measured": 31
         },
         {
           "key": "/casting",
@@ -442,7 +462,7 @@
         },
         {
           "key": "/",
-          "n": 19
+          "n": 23
         },
         {
           "key": "/about.html",
@@ -459,12 +479,12 @@
       ],
       "exits": [
         {
-          "key": "/casting",
-          "n": 22
+          "key": "/",
+          "n": 23
         },
         {
-          "key": "/",
-          "n": 19
+          "key": "/casting",
+          "n": 22
         },
         {
           "key": "/about.html",
@@ -486,7 +506,7 @@
         },
         {
           "key": "direct",
-          "n": 30
+          "n": 32
         },
         {
           "key": "social",
@@ -494,7 +514,11 @@
         },
         {
           "key": "search",
-          "n": 6
+          "n": 7
+        },
+        {
+          "key": "referral",
+          "n": 1
         }
       ],
       "referrers": [
@@ -508,7 +532,7 @@
         },
         {
           "key": "google.com",
-          "n": 5
+          "n": 6
         },
         {
           "key": "lm.facebook.com",
@@ -517,13 +541,17 @@
         {
           "key": "com.google.android.googlequicksearchbox",
           "n": 1
+        },
+        {
+          "key": "peternilsson.us",
+          "n": 1
         }
       ],
       "campaigns": [],
       "countries": [
         {
           "key": "US",
-          "n": 107
+          "n": 111
         },
         {
           "key": "JO",
@@ -533,7 +561,7 @@
       "cities": [
         {
           "key": "Fort Wayne, Indiana",
-          "n": 48
+          "n": 49
         },
         {
           "key": "Pittsburgh, Pennsylvania",
@@ -564,6 +592,10 @@
           "n": 2
         },
         {
+          "key": "New York City, New York",
+          "n": 2
+        },
+        {
           "key": "Newtown, Pennsylvania",
           "n": 2
         },
@@ -585,10 +617,6 @@
         },
         {
           "key": "Clinton, Pennsylvania",
-          "n": 1
-        },
-        {
-          "key": "New York City, New York",
           "n": 1
         },
         {
@@ -615,7 +643,7 @@
       "devices": [
         {
           "key": "desktop",
-          "n": 52
+          "n": 56
         },
         {
           "key": "mobile",
@@ -625,11 +653,11 @@
       "browsers": [
         {
           "key": "Safari",
-          "n": 84
+          "n": 85
         },
         {
           "key": "Chrome",
-          "n": 15
+          "n": 18
         },
         {
           "key": "Other",
@@ -639,7 +667,7 @@
       "systems": [
         {
           "key": "macOS",
-          "n": 50
+          "n": 52
         },
         {
           "key": "iOS",
@@ -651,6 +679,10 @@
         },
         {
           "key": "Other",
+          "n": 2
+        },
+        {
+          "key": "Windows",
           "n": 2
         }
       ],
@@ -709,20 +741,20 @@
       "key": "month",
       "label": "Last month",
       "short": "Month",
-      "from": "2026-07-26T08:56:24.614Z",
-      "to": "2026-08-25T08:56:24.614Z",
+      "from": "2026-07-26T20:44:35.203Z",
+      "to": "2026-08-25T20:44:35.203Z",
       "available": false,
       "granularity": "day",
       "totals": {
-        "views": 108,
+        "views": 112,
         "clicks": 60,
         "links": 6,
-        "visitors": 49,
+        "visitors": 53,
         "signups": 0,
         "days": 7,
         "medianPagesPerVisit": 1,
         "medianDepth": 74,
-        "medianSecs": 22
+        "medianSecs": 24
       },
       "series": [
         {
@@ -757,18 +789,18 @@
         },
         {
           "d": "2026-08-25",
-          "views": 2,
-          "visitors": 1
+          "views": 6,
+          "visitors": 5
         }
       ],
       "pages": [
         {
           "key": "/",
-          "n": 36,
-          "visitors": 21,
-          "depth": 76,
-          "secs": 24,
-          "measured": 28
+          "n": 40,
+          "visitors": 25,
+          "depth": 77,
+          "secs": 26,
+          "measured": 31
         },
         {
           "key": "/casting",
@@ -856,7 +888,7 @@
         },
         {
           "key": "/",
-          "n": 19
+          "n": 23
         },
         {
           "key": "/about.html",
@@ -873,12 +905,12 @@
       ],
       "exits": [
         {
-          "key": "/casting",
-          "n": 22
+          "key": "/",
+          "n": 23
         },
         {
-          "key": "/",
-          "n": 19
+          "key": "/casting",
+          "n": 22
         },
         {
           "key": "/about.html",
@@ -900,7 +932,7 @@
         },
         {
           "key": "direct",
-          "n": 30
+          "n": 32
         },
         {
           "key": "social",
@@ -908,7 +940,11 @@
         },
         {
           "key": "search",
-          "n": 6
+          "n": 7
+        },
+        {
+          "key": "referral",
+          "n": 1
         }
       ],
       "referrers": [
@@ -922,7 +958,7 @@
         },
         {
           "key": "google.com",
-          "n": 5
+          "n": 6
         },
         {
           "key": "lm.facebook.com",
@@ -931,13 +967,17 @@
         {
           "key": "com.google.android.googlequicksearchbox",
           "n": 1
+        },
+        {
+          "key": "peternilsson.us",
+          "n": 1
         }
       ],
       "campaigns": [],
       "countries": [
         {
           "key": "US",
-          "n": 107
+          "n": 111
         },
         {
           "key": "JO",
@@ -947,7 +987,7 @@
       "cities": [
         {
           "key": "Fort Wayne, Indiana",
-          "n": 48
+          "n": 49
         },
         {
           "key": "Pittsburgh, Pennsylvania",
@@ -978,6 +1018,10 @@
           "n": 2
         },
         {
+          "key": "New York City, New York",
+          "n": 2
+        },
+        {
           "key": "Newtown, Pennsylvania",
           "n": 2
         },
@@ -999,10 +1043,6 @@
         },
         {
           "key": "Clinton, Pennsylvania",
-          "n": 1
-        },
-        {
-          "key": "New York City, New York",
           "n": 1
         },
         {
@@ -1029,7 +1069,7 @@
       "devices": [
         {
           "key": "desktop",
-          "n": 52
+          "n": 56
         },
         {
           "key": "mobile",
@@ -1039,11 +1079,11 @@
       "browsers": [
         {
           "key": "Safari",
-          "n": 84
+          "n": 85
         },
         {
           "key": "Chrome",
-          "n": 15
+          "n": 18
         },
         {
           "key": "Other",
@@ -1053,7 +1093,7 @@
       "systems": [
         {
           "key": "macOS",
-          "n": 50
+          "n": 52
         },
         {
           "key": "iOS",
@@ -1065,6 +1105,10 @@
         },
         {
           "key": "Other",
+          "n": 2
+        },
+        {
+          "key": "Windows",
           "n": 2
         }
       ],
@@ -1123,20 +1167,20 @@
       "key": "year",
       "label": "Last year",
       "short": "Year",
-      "from": "2025-08-25T08:56:24.614Z",
-      "to": "2026-08-25T08:56:24.614Z",
+      "from": "2025-08-25T20:44:35.203Z",
+      "to": "2026-08-25T20:44:35.203Z",
       "available": false,
       "granularity": "day",
       "totals": {
-        "views": 108,
+        "views": 112,
         "clicks": 60,
         "links": 6,
-        "visitors": 49,
+        "visitors": 53,
         "signups": 0,
         "days": 7,
         "medianPagesPerVisit": 1,
         "medianDepth": 74,
-        "medianSecs": 22
+        "medianSecs": 24
       },
       "series": [
         {
@@ -1171,18 +1215,18 @@
         },
         {
           "d": "2026-08-25",
-          "views": 2,
-          "visitors": 1
+          "views": 6,
+          "visitors": 5
         }
       ],
       "pages": [
         {
           "key": "/",
-          "n": 36,
-          "visitors": 21,
-          "depth": 76,
-          "secs": 24,
-          "measured": 28
+          "n": 40,
+          "visitors": 25,
+          "depth": 77,
+          "secs": 26,
+          "measured": 31
         },
         {
           "key": "/casting",
@@ -1270,7 +1314,7 @@
         },
         {
           "key": "/",
-          "n": 19
+          "n": 23
         },
         {
           "key": "/about.html",
@@ -1287,12 +1331,12 @@
       ],
       "exits": [
         {
-          "key": "/casting",
-          "n": 22
+          "key": "/",
+          "n": 23
         },
         {
-          "key": "/",
-          "n": 19
+          "key": "/casting",
+          "n": 22
         },
         {
           "key": "/about.html",
@@ -1314,7 +1358,7 @@
         },
         {
           "key": "direct",
-          "n": 30
+          "n": 32
         },
         {
           "key": "social",
@@ -1322,7 +1366,11 @@
         },
         {
           "key": "search",
-          "n": 6
+          "n": 7
+        },
+        {
+          "key": "referral",
+          "n": 1
         }
       ],
       "referrers": [
@@ -1336,7 +1384,7 @@
         },
         {
           "key": "google.com",
-          "n": 5
+          "n": 6
         },
         {
           "key": "lm.facebook.com",
@@ -1345,13 +1393,17 @@
         {
           "key": "com.google.android.googlequicksearchbox",
           "n": 1
+        },
+        {
+          "key": "peternilsson.us",
+          "n": 1
         }
       ],
       "campaigns": [],
       "countries": [
         {
           "key": "US",
-          "n": 107
+          "n": 111
         },
         {
           "key": "JO",
@@ -1361,7 +1413,7 @@
       "cities": [
         {
           "key": "Fort Wayne, Indiana",
-          "n": 48
+          "n": 49
         },
         {
           "key": "Pittsburgh, Pennsylvania",
@@ -1392,6 +1444,10 @@
           "n": 2
         },
         {
+          "key": "New York City, New York",
+          "n": 2
+        },
+        {
           "key": "Newtown, Pennsylvania",
           "n": 2
         },
@@ -1413,10 +1469,6 @@
         },
         {
           "key": "Clinton, Pennsylvania",
-          "n": 1
-        },
-        {
-          "key": "New York City, New York",
           "n": 1
         },
         {
@@ -1443,7 +1495,7 @@
       "devices": [
         {
           "key": "desktop",
-          "n": 52
+          "n": 56
         },
         {
           "key": "mobile",
@@ -1453,11 +1505,11 @@
       "browsers": [
         {
           "key": "Safari",
-          "n": 84
+          "n": 85
         },
         {
           "key": "Chrome",
-          "n": 15
+          "n": 18
         },
         {
           "key": "Other",
@@ -1467,7 +1519,7 @@
       "systems": [
         {
           "key": "macOS",
-          "n": 50
+          "n": 52
         },
         {
           "key": "iOS",
@@ -1479,6 +1531,10 @@
         },
         {
           "key": "Other",
+          "n": 2
+        },
+        {
+          "key": "Windows",
           "n": 2
         }
       ],
@@ -1538,19 +1594,19 @@
       "label": "All time",
       "short": "All",
       "from": "2026-08-19T00:29:19.264Z",
-      "to": "2026-08-25T08:56:24.614Z",
+      "to": "2026-08-25T20:44:35.203Z",
       "available": true,
       "granularity": "day",
       "totals": {
-        "views": 108,
+        "views": 112,
         "clicks": 60,
         "links": 6,
-        "visitors": 49,
+        "visitors": 53,
         "signups": 0,
         "days": 7,
         "medianPagesPerVisit": 1,
         "medianDepth": 74,
-        "medianSecs": 22
+        "medianSecs": 24
       },
       "series": [
         {
@@ -1585,18 +1641,18 @@
         },
         {
           "d": "2026-08-25",
-          "views": 2,
-          "visitors": 1
+          "views": 6,
+          "visitors": 5
         }
       ],
       "pages": [
         {
           "key": "/",
-          "n": 36,
-          "visitors": 21,
-          "depth": 76,
-          "secs": 24,
-          "measured": 28
+          "n": 40,
+          "visitors": 25,
+          "depth": 77,
+          "secs": 26,
+          "measured": 31
         },
         {
           "key": "/casting",
@@ -1684,7 +1740,7 @@
         },
         {
           "key": "/",
-          "n": 19
+          "n": 23
         },
         {
           "key": "/about.html",
@@ -1701,12 +1757,12 @@
       ],
       "exits": [
         {
-          "key": "/casting",
-          "n": 22
+          "key": "/",
+          "n": 23
         },
         {
-          "key": "/",
-          "n": 19
+          "key": "/casting",
+          "n": 22
         },
         {
           "key": "/about.html",
@@ -1728,7 +1784,7 @@
         },
         {
           "key": "direct",
-          "n": 30
+          "n": 32
         },
         {
           "key": "social",
@@ -1736,7 +1792,11 @@
         },
         {
           "key": "search",
-          "n": 6
+          "n": 7
+        },
+        {
+          "key": "referral",
+          "n": 1
         }
       ],
       "referrers": [
@@ -1750,7 +1810,7 @@
         },
         {
           "key": "google.com",
-          "n": 5
+          "n": 6
         },
         {
           "key": "lm.facebook.com",
@@ -1759,13 +1819,17 @@
         {
           "key": "com.google.android.googlequicksearchbox",
           "n": 1
+        },
+        {
+          "key": "peternilsson.us",
+          "n": 1
         }
       ],
       "campaigns": [],
       "countries": [
         {
           "key": "US",
-          "n": 107
+          "n": 111
         },
         {
           "key": "JO",
@@ -1775,7 +1839,7 @@
       "cities": [
         {
           "key": "Fort Wayne, Indiana",
-          "n": 48
+          "n": 49
         },
         {
           "key": "Pittsburgh, Pennsylvania",
@@ -1806,6 +1870,10 @@
           "n": 2
         },
         {
+          "key": "New York City, New York",
+          "n": 2
+        },
+        {
           "key": "Newtown, Pennsylvania",
           "n": 2
         },
@@ -1827,10 +1895,6 @@
         },
         {
           "key": "Clinton, Pennsylvania",
-          "n": 1
-        },
-        {
-          "key": "New York City, New York",
           "n": 1
         },
         {
@@ -1857,7 +1921,7 @@
       "devices": [
         {
           "key": "desktop",
-          "n": 52
+          "n": 56
         },
         {
           "key": "mobile",
@@ -1867,11 +1931,11 @@
       "browsers": [
         {
           "key": "Safari",
-          "n": 84
+          "n": 85
         },
         {
           "key": "Chrome",
-          "n": 15
+          "n": 18
         },
         {
           "key": "Other",
@@ -1881,7 +1945,7 @@
       "systems": [
         {
           "key": "macOS",
-          "n": 50
+          "n": 52
         },
         {
           "key": "iOS",
@@ -1893,6 +1957,10 @@
         },
         {
           "key": "Other",
+          "n": 2
+        },
+        {
+          "key": "Windows",
           "n": 2
         }
       ],
