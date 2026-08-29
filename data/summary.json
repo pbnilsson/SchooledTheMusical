@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-28T20:10:45.302Z",
+  "generated": "2026-08-29T02:48:26.044Z",
   "defaultRange": "all",
   "order": [
     "24h",
@@ -10,59 +10,29 @@
   ],
   "span": {
     "first": "2026-08-19T00:29:19.264Z",
-    "days": 10
+    "days": 11
   },
   "ranges": {
     "24h": {
       "key": "24h",
       "label": "Last 24 hours",
       "short": "24h",
-      "from": "2026-08-27T20:10:45.302Z",
-      "to": "2026-08-28T20:10:45.302Z",
+      "from": "2026-08-28T02:48:26.044Z",
+      "to": "2026-08-29T02:48:26.044Z",
       "available": true,
       "granularity": "hour",
       "totals": {
-        "views": 28,
+        "views": 22,
         "clicks": 4,
         "links": 0,
-        "visitors": 22,
+        "visitors": 16,
         "signups": 0,
         "days": 2,
         "medianPagesPerVisit": 1,
-        "medianDepth": 57,
-        "medianSecs": 26
+        "medianDepth": 38,
+        "medianSecs": 19
       },
       "series": [
-        {
-          "t": "2026-08-27T21:00:00.000Z",
-          "views": 1,
-          "visitors": 1
-        },
-        {
-          "t": "2026-08-27T22:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-08-27T23:00:00.000Z",
-          "views": 2,
-          "visitors": 2
-        },
-        {
-          "t": "2026-08-28T00:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-08-28T01:00:00.000Z",
-          "views": 4,
-          "visitors": 4
-        },
-        {
-          "t": "2026-08-28T02:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
         {
           "t": "2026-08-28T03:00:00.000Z",
           "views": 1,
@@ -152,32 +122,54 @@
           "t": "2026-08-28T20:00:00.000Z",
           "views": 0,
           "visitors": 0
+        },
+        {
+          "t": "2026-08-28T21:00:00.000Z",
+          "views": 0,
+          "visitors": 0
+        },
+        {
+          "t": "2026-08-28T22:00:00.000Z",
+          "views": 0,
+          "visitors": 0
+        },
+        {
+          "t": "2026-08-28T23:00:00.000Z",
+          "views": 1,
+          "visitors": 1
+        },
+        {
+          "t": "2026-08-29T00:00:00.000Z",
+          "views": 1,
+          "visitors": 1
+        },
+        {
+          "t": "2026-08-29T01:00:00.000Z",
+          "views": 0,
+          "visitors": 0
+        },
+        {
+          "t": "2026-08-29T02:00:00.000Z",
+          "views": 0,
+          "visitors": 0
         }
       ],
       "pages": [
         {
           "key": "/casting.html",
-          "n": 13,
-          "visitors": 12,
-          "depth": 66,
-          "secs": 37,
-          "measured": 12
-        },
-        {
-          "key": "/casting",
-          "n": 6,
-          "visitors": 6,
-          "depth": 50,
-          "secs": 18,
-          "measured": 6
+          "n": 10,
+          "visitors": 9,
+          "depth": 38,
+          "secs": 33,
+          "measured": 9
         },
         {
           "key": "/",
-          "n": 3,
-          "visitors": 3,
-          "depth": 85,
-          "secs": 13,
-          "measured": 3
+          "n": 4,
+          "visitors": 4,
+          "depth": 52,
+          "secs": 12,
+          "measured": 4
         },
         {
           "key": "/dispatches.html",
@@ -186,6 +178,14 @@
           "depth": 21,
           "secs": 42,
           "measured": 1
+        },
+        {
+          "key": "/casting",
+          "n": 2,
+          "visitors": 2,
+          "depth": 66,
+          "secs": 18,
+          "measured": 2
         },
         {
           "key": "/reading.html",
@@ -221,15 +221,15 @@
       "entries": [
         {
           "key": "/casting.html",
-          "n": 10
-        },
-        {
-          "key": "/casting",
-          "n": 6
+          "n": 7
         },
         {
           "key": "/",
-          "n": 3
+          "n": 4
+        },
+        {
+          "key": "/casting",
+          "n": 2
         },
         {
           "key": "/dispatches.html",
@@ -243,29 +243,29 @@
       "exits": [
         {
           "key": "/casting.html",
-          "n": 11
-        },
-        {
-          "key": "/casting",
-          "n": 6
+          "n": 8
         },
         {
           "key": "/dispatches.html",
           "n": 3
         },
         {
-          "key": "/reading.html",
-          "n": 1
+          "key": "/casting",
+          "n": 2
         },
         {
           "key": "/",
+          "n": 2
+        },
+        {
+          "key": "/reading.html",
           "n": 1
         }
       ],
       "sources": [
         {
           "key": "direct",
-          "n": 15
+          "n": 12
         },
         {
           "key": "internal",
@@ -273,7 +273,7 @@
         },
         {
           "key": "social",
-          "n": 5
+          "n": 2
         },
         {
           "key": "search",
@@ -286,15 +286,15 @@
           "n": 6
         },
         {
-          "key": "facebook.com",
-          "n": 4
-        },
-        {
           "key": "google.com",
           "n": 2
         },
         {
           "key": "lm.facebook.com",
+          "n": 1
+        },
+        {
+          "key": "facebook.com",
           "n": 1
         }
       ],
@@ -302,25 +302,21 @@
       "countries": [
         {
           "key": "US",
-          "n": 28
+          "n": 22
         }
       ],
       "cities": [
         {
           "key": "Pittsburgh, Pennsylvania",
-          "n": 16
-        },
-        {
-          "key": "Harrisburg, Pennsylvania",
-          "n": 3
+          "n": 12
         },
         {
           "key": "Boston, Massachusetts",
           "n": 3
         },
         {
-          "key": "Mason, Ohio",
-          "n": 1
+          "key": "Harrisburg, Pennsylvania",
+          "n": 2
         },
         {
           "key": "Sewickley, Pennsylvania",
@@ -346,17 +342,17 @@
       "devices": [
         {
           "key": "mobile",
-          "n": 19
+          "n": 16
         },
         {
           "key": "desktop",
-          "n": 9
+          "n": 6
         }
       ],
       "browsers": [
         {
           "key": "Safari",
-          "n": 25
+          "n": 19
         },
         {
           "key": "Chrome",
@@ -366,11 +362,11 @@
       "systems": [
         {
           "key": "iOS",
-          "n": 18
+          "n": 15
         },
         {
           "key": "macOS",
-          "n": 9
+          "n": 6
         },
         {
           "key": "Android",
@@ -403,17 +399,17 @@
       "key": "week",
       "label": "Last week",
       "short": "Week",
-      "from": "2026-08-21T20:10:45.302Z",
-      "to": "2026-08-28T20:10:45.302Z",
+      "from": "2026-08-22T02:48:26.044Z",
+      "to": "2026-08-29T02:48:26.044Z",
       "available": true,
       "granularity": "day",
       "totals": {
-        "views": 245,
+        "views": 247,
         "clicks": 56,
         "links": 10,
-        "visitors": 192,
+        "visitors": 194,
         "signups": 0,
-        "days": 5,
+        "days": 6,
         "medianPagesPerVisit": 1,
         "medianDepth": 68,
         "medianSecs": 30
@@ -441,26 +437,31 @@
         },
         {
           "d": "2026-08-28",
-          "views": 24,
-          "visitors": 18
+          "views": 25,
+          "visitors": 19
+        },
+        {
+          "d": "2026-08-29",
+          "views": 1,
+          "visitors": 1
         }
       ],
       "pages": [
         {
           "key": "/casting.html",
-          "n": 98,
-          "visitors": 93,
+          "n": 99,
+          "visitors": 94,
           "depth": 70,
           "secs": 32,
-          "measured": 89
+          "measured": 90
         },
         {
           "key": "/",
-          "n": 74,
-          "visitors": 71,
+          "n": 75,
+          "visitors": 72,
           "depth": 56,
           "secs": 18,
-          "measured": 69
+          "measured": 70
         },
         {
           "key": "/casting",
@@ -568,11 +569,11 @@
       "entries": [
         {
           "key": "/casting.html",
-          "n": 88
+          "n": 89
         },
         {
           "key": "/",
-          "n": 65
+          "n": 66
         },
         {
           "key": "/casting",
@@ -598,11 +599,11 @@
       "exits": [
         {
           "key": "/casting.html",
-          "n": 85
+          "n": 86
         },
         {
           "key": "/",
-          "n": 61
+          "n": 62
         },
         {
           "key": "/casting",
@@ -628,7 +629,7 @@
       "sources": [
         {
           "key": "direct",
-          "n": 134
+          "n": 136
         },
         {
           "key": "internal",
@@ -693,7 +694,7 @@
       "countries": [
         {
           "key": "US",
-          "n": 235
+          "n": 237
         },
         {
           "key": "SE",
@@ -723,7 +724,7 @@
       "cities": [
         {
           "key": "Pittsburgh, Pennsylvania",
-          "n": 99
+          "n": 101
         },
         {
           "key": "Fort Wayne, Indiana",
@@ -805,7 +806,7 @@
       "devices": [
         {
           "key": "mobile",
-          "n": 142
+          "n": 144
         },
         {
           "key": "desktop",
@@ -815,7 +816,7 @@
       "browsers": [
         {
           "key": "Safari",
-          "n": 179
+          "n": 181
         },
         {
           "key": "Chrome",
@@ -833,7 +834,7 @@
       "systems": [
         {
           "key": "iOS",
-          "n": 132
+          "n": 134
         },
         {
           "key": "macOS",
@@ -919,17 +920,17 @@
       "key": "month",
       "label": "Last month",
       "short": "Month",
-      "from": "2026-07-29T20:10:45.302Z",
-      "to": "2026-08-28T20:10:45.302Z",
+      "from": "2026-07-30T02:48:26.044Z",
+      "to": "2026-08-29T02:48:26.044Z",
       "available": false,
       "granularity": "day",
       "totals": {
-        "views": 348,
+        "views": 350,
         "clicks": 114,
         "links": 15,
-        "visitors": 237,
+        "visitors": 239,
         "signups": 0,
-        "days": 10,
+        "days": 11,
         "medianPagesPerVisit": 1,
         "medianDepth": 68,
         "medianSecs": 28
@@ -982,26 +983,31 @@
         },
         {
           "d": "2026-08-28",
-          "views": 24,
-          "visitors": 18
+          "views": 25,
+          "visitors": 19
+        },
+        {
+          "d": "2026-08-29",
+          "views": 1,
+          "visitors": 1
         }
       ],
       "pages": [
         {
           "key": "/casting.html",
-          "n": 110,
-          "visitors": 97,
+          "n": 111,
+          "visitors": 98,
           "depth": 70,
           "secs": 36,
-          "measured": 99
+          "measured": 100
         },
         {
           "key": "/",
-          "n": 108,
-          "visitors": 90,
-          "depth": 60,
+          "n": 109,
+          "visitors": 91,
+          "depth": 57,
           "secs": 22,
-          "measured": 94
+          "measured": 95
         },
         {
           "key": "/casting",
@@ -1109,11 +1115,11 @@
       "entries": [
         {
           "key": "/casting.html",
-          "n": 90
+          "n": 91
         },
         {
           "key": "/",
-          "n": 82
+          "n": 83
         },
         {
           "key": "/casting",
@@ -1139,11 +1145,11 @@
       "exits": [
         {
           "key": "/casting.html",
-          "n": 87
+          "n": 88
         },
         {
           "key": "/",
-          "n": 79
+          "n": 80
         },
         {
           "key": "/casting",
@@ -1169,7 +1175,7 @@
       "sources": [
         {
           "key": "direct",
-          "n": 161
+          "n": 163
         },
         {
           "key": "internal",
@@ -1234,7 +1240,7 @@
       "countries": [
         {
           "key": "US",
-          "n": 337
+          "n": 339
         },
         {
           "key": "SE",
@@ -1268,7 +1274,7 @@
       "cities": [
         {
           "key": "Pittsburgh, Pennsylvania",
-          "n": 109
+          "n": 111
         },
         {
           "key": "Fort Wayne, Indiana",
@@ -1350,7 +1356,7 @@
       "devices": [
         {
           "key": "mobile",
-          "n": 185
+          "n": 187
         },
         {
           "key": "desktop",
@@ -1360,7 +1366,7 @@
       "browsers": [
         {
           "key": "Safari",
-          "n": 260
+          "n": 262
         },
         {
           "key": "Chrome",
@@ -1378,7 +1384,7 @@
       "systems": [
         {
           "key": "iOS",
-          "n": 166
+          "n": 168
         },
         {
           "key": "macOS",
@@ -1468,17 +1474,17 @@
       "key": "year",
       "label": "Last year",
       "short": "Year",
-      "from": "2025-08-28T20:10:45.302Z",
-      "to": "2026-08-28T20:10:45.302Z",
+      "from": "2025-08-29T02:48:26.044Z",
+      "to": "2026-08-29T02:48:26.044Z",
       "available": false,
       "granularity": "day",
       "totals": {
-        "views": 348,
+        "views": 350,
         "clicks": 114,
         "links": 15,
-        "visitors": 237,
+        "visitors": 239,
         "signups": 0,
-        "days": 10,
+        "days": 11,
         "medianPagesPerVisit": 1,
         "medianDepth": 68,
         "medianSecs": 28
@@ -1531,26 +1537,31 @@
         },
         {
           "d": "2026-08-28",
-          "views": 24,
-          "visitors": 18
+          "views": 25,
+          "visitors": 19
+        },
+        {
+          "d": "2026-08-29",
+          "views": 1,
+          "visitors": 1
         }
       ],
       "pages": [
         {
           "key": "/casting.html",
-          "n": 110,
-          "visitors": 97,
+          "n": 111,
+          "visitors": 98,
           "depth": 70,
           "secs": 36,
-          "measured": 99
+          "measured": 100
         },
         {
           "key": "/",
-          "n": 108,
-          "visitors": 90,
-          "depth": 60,
+          "n": 109,
+          "visitors": 91,
+          "depth": 57,
           "secs": 22,
-          "measured": 94
+          "measured": 95
         },
         {
           "key": "/casting",
@@ -1658,11 +1669,11 @@
       "entries": [
         {
           "key": "/casting.html",
-          "n": 90
+          "n": 91
         },
         {
           "key": "/",
-          "n": 82
+          "n": 83
         },
         {
           "key": "/casting",
@@ -1688,11 +1699,11 @@
       "exits": [
         {
           "key": "/casting.html",
-          "n": 87
+          "n": 88
         },
         {
           "key": "/",
-          "n": 79
+          "n": 80
         },
         {
           "key": "/casting",
@@ -1718,7 +1729,7 @@
       "sources": [
         {
           "key": "direct",
-          "n": 161
+          "n": 163
         },
         {
           "key": "internal",
@@ -1783,7 +1794,7 @@
       "countries": [
         {
           "key": "US",
-          "n": 337
+          "n": 339
         },
         {
           "key": "SE",
@@ -1817,7 +1828,7 @@
       "cities": [
         {
           "key": "Pittsburgh, Pennsylvania",
-          "n": 109
+          "n": 111
         },
         {
           "key": "Fort Wayne, Indiana",
@@ -1899,7 +1910,7 @@
       "devices": [
         {
           "key": "mobile",
-          "n": 185
+          "n": 187
         },
         {
           "key": "desktop",
@@ -1909,7 +1920,7 @@
       "browsers": [
         {
           "key": "Safari",
-          "n": 260
+          "n": 262
         },
         {
           "key": "Chrome",
@@ -1927,7 +1938,7 @@
       "systems": [
         {
           "key": "iOS",
-          "n": 166
+          "n": 168
         },
         {
           "key": "macOS",
@@ -2018,16 +2029,16 @@
       "label": "All time",
       "short": "All",
       "from": "2026-08-19T00:29:19.264Z",
-      "to": "2026-08-28T20:10:45.302Z",
+      "to": "2026-08-29T02:48:26.044Z",
       "available": true,
       "granularity": "day",
       "totals": {
-        "views": 348,
+        "views": 350,
         "clicks": 114,
         "links": 15,
-        "visitors": 237,
+        "visitors": 239,
         "signups": 0,
-        "days": 10,
+        "days": 11,
         "medianPagesPerVisit": 1,
         "medianDepth": 68,
         "medianSecs": 28
@@ -2080,26 +2091,31 @@
         },
         {
           "d": "2026-08-28",
-          "views": 24,
-          "visitors": 18
+          "views": 25,
+          "visitors": 19
+        },
+        {
+          "d": "2026-08-29",
+          "views": 1,
+          "visitors": 1
         }
       ],
       "pages": [
         {
           "key": "/casting.html",
-          "n": 110,
-          "visitors": 97,
+          "n": 111,
+          "visitors": 98,
           "depth": 70,
           "secs": 36,
-          "measured": 99
+          "measured": 100
         },
         {
           "key": "/",
-          "n": 108,
-          "visitors": 90,
-          "depth": 60,
+          "n": 109,
+          "visitors": 91,
+          "depth": 57,
           "secs": 22,
-          "measured": 94
+          "measured": 95
         },
         {
           "key": "/casting",
@@ -2207,11 +2223,11 @@
       "entries": [
         {
           "key": "/casting.html",
-          "n": 90
+          "n": 91
         },
         {
           "key": "/",
-          "n": 82
+          "n": 83
         },
         {
           "key": "/casting",
@@ -2237,11 +2253,11 @@
       "exits": [
         {
           "key": "/casting.html",
-          "n": 87
+          "n": 88
         },
         {
           "key": "/",
-          "n": 79
+          "n": 80
         },
         {
           "key": "/casting",
@@ -2267,7 +2283,7 @@
       "sources": [
         {
           "key": "direct",
-          "n": 161
+          "n": 163
         },
         {
           "key": "internal",
@@ -2332,7 +2348,7 @@
       "countries": [
         {
           "key": "US",
-          "n": 337
+          "n": 339
         },
         {
           "key": "SE",
@@ -2366,7 +2382,7 @@
       "cities": [
         {
           "key": "Pittsburgh, Pennsylvania",
-          "n": 109
+          "n": 111
         },
         {
           "key": "Fort Wayne, Indiana",
@@ -2448,7 +2464,7 @@
       "devices": [
         {
           "key": "mobile",
-          "n": 185
+          "n": 187
         },
         {
           "key": "desktop",
@@ -2458,7 +2474,7 @@
       "browsers": [
         {
           "key": "Safari",
-          "n": 260
+          "n": 262
         },
         {
           "key": "Chrome",
@@ -2476,7 +2492,7 @@
       "systems": [
         {
           "key": "iOS",
-          "n": 166
+          "n": 168
         },
         {
           "key": "macOS",
