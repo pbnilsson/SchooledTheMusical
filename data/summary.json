@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-31T16:07:35.141Z",
+  "generated": "2026-08-31T23:49:19.240Z",
   "defaultRange": "all",
   "order": [
     "24h",
@@ -17,57 +17,22 @@
       "key": "24h",
       "label": "Last 24 hours",
       "short": "24h",
-      "from": "2026-08-30T16:07:35.141Z",
-      "to": "2026-08-31T16:07:35.141Z",
+      "from": "2026-08-30T23:49:19.240Z",
+      "to": "2026-08-31T23:49:19.240Z",
       "available": true,
       "granularity": "hour",
       "totals": {
-        "views": 22,
-        "clicks": 7,
-        "links": 0,
-        "visitors": 17,
+        "views": 20,
+        "clicks": 8,
+        "links": 1,
+        "visitors": 15,
         "signups": 0,
-        "days": 2,
+        "days": 1,
         "medianPagesPerVisit": 1,
-        "medianDepth": 41,
-        "medianSecs": 11
+        "medianDepth": 22,
+        "medianSecs": 9
       },
       "series": [
-        {
-          "t": "2026-08-30T17:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-08-30T18:00:00.000Z",
-          "views": 1,
-          "visitors": 1
-        },
-        {
-          "t": "2026-08-30T19:00:00.000Z",
-          "views": 3,
-          "visitors": 3
-        },
-        {
-          "t": "2026-08-30T20:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-08-30T21:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-08-30T22:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-08-30T23:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
         {
           "t": "2026-08-31T00:00:00.000Z",
           "views": 1,
@@ -152,24 +117,59 @@
           "t": "2026-08-31T16:00:00.000Z",
           "views": 0,
           "visitors": 0
+        },
+        {
+          "t": "2026-08-31T17:00:00.000Z",
+          "views": 1,
+          "visitors": 1
+        },
+        {
+          "t": "2026-08-31T18:00:00.000Z",
+          "views": 0,
+          "visitors": 0
+        },
+        {
+          "t": "2026-08-31T19:00:00.000Z",
+          "views": 0,
+          "visitors": 0
+        },
+        {
+          "t": "2026-08-31T20:00:00.000Z",
+          "views": 0,
+          "visitors": 0
+        },
+        {
+          "t": "2026-08-31T21:00:00.000Z",
+          "views": 0,
+          "visitors": 0
+        },
+        {
+          "t": "2026-08-31T22:00:00.000Z",
+          "views": 1,
+          "visitors": 1
+        },
+        {
+          "t": "2026-08-31T23:00:00.000Z",
+          "views": 0,
+          "visitors": 0
         }
       ],
       "pages": [
         {
           "key": "/casting.html",
-          "n": 9,
-          "visitors": 8,
-          "depth": 26,
-          "secs": 16,
-          "measured": 8
+          "n": 8,
+          "visitors": 7,
+          "depth": 15,
+          "secs": 7,
+          "measured": 7
         },
         {
           "key": "/",
           "n": 6,
           "visitors": 6,
-          "depth": 34,
-          "secs": 11,
-          "measured": 6
+          "depth": 22,
+          "secs": 9,
+          "measured": 5
         },
         {
           "key": "/dispatches.html",
@@ -186,14 +186,6 @@
           "depth": 84,
           "secs": 15,
           "measured": 2
-        },
-        {
-          "key": "/casting",
-          "n": 1,
-          "visitors": 1,
-          "depth": 100,
-          "secs": 51,
-          "measured": 1
         }
       ],
       "journeys": [
@@ -208,20 +200,16 @@
       ],
       "entries": [
         {
-          "key": "/casting.html",
-          "n": 7
+          "key": "/",
+          "n": 6
         },
         {
-          "key": "/",
+          "key": "/casting.html",
           "n": 6
         },
         {
           "key": "/dispatches.html",
           "n": 2
-        },
-        {
-          "key": "/casting",
-          "n": 1
         },
         {
           "key": "/about.html",
@@ -231,7 +219,7 @@
       "exits": [
         {
           "key": "/casting.html",
-          "n": 7
+          "n": 6
         },
         {
           "key": "/",
@@ -240,10 +228,6 @@
         {
           "key": "/dispatches.html",
           "n": 4
-        },
-        {
-          "key": "/casting",
-          "n": 1
         }
       ],
       "sources": [
@@ -256,10 +240,6 @@
           "n": 8
         },
         {
-          "key": "social",
-          "n": 2
-        },
-        {
           "key": "search",
           "n": 1
         }
@@ -270,14 +250,6 @@
           "n": 8
         },
         {
-          "key": "l.facebook.com",
-          "n": 1
-        },
-        {
-          "key": "facebook.com",
-          "n": 1
-        },
-        {
           "key": "mail.google.com",
           "n": 1
         }
@@ -286,37 +258,17 @@
       "countries": [
         {
           "key": "US",
-          "n": 21
-        },
-        {
-          "key": "CA",
-          "n": 1
+          "n": 20
         }
       ],
       "cities": [
         {
           "key": "Mason, Ohio",
-          "n": 10
+          "n": 11
         },
         {
           "key": "Bridgeport, Connecticut",
           "n": 3
-        },
-        {
-          "key": "Pittsburgh, Pennsylvania",
-          "n": 1
-        },
-        {
-          "key": "Toronto, Ontario",
-          "n": 1
-        },
-        {
-          "key": "Chicago, Illinois",
-          "n": 1
-        },
-        {
-          "key": "Washington, District of Columbia",
-          "n": 1
         },
         {
           "key": "Needham, Massachusetts",
@@ -337,12 +289,16 @@
         {
           "key": "Dorchester, Massachusetts",
           "n": 1
+        },
+        {
+          "key": "Haslet, Texas",
+          "n": 1
         }
       ],
       "devices": [
         {
           "key": "mobile",
-          "n": 15
+          "n": 13
         },
         {
           "key": "desktop",
@@ -352,34 +308,35 @@
       "browsers": [
         {
           "key": "Safari",
-          "n": 17
+          "n": 16
         },
         {
           "key": "Chrome",
-          "n": 5
+          "n": 4
         }
       ],
       "systems": [
         {
           "key": "iOS",
-          "n": 14
+          "n": 13
         },
         {
           "key": "macOS",
-          "n": 6
-        },
-        {
-          "key": "Android",
-          "n": 1
+          "n": 5
         },
         {
           "key": "Windows",
-          "n": 1
+          "n": 2
         }
       ],
       "signupsBySource": [],
       "signupsByPage": [],
-      "links": [],
+      "links": [
+        {
+          "key": "https://schooledthemusical.com/files/casting-pittsburgh-2026.pdf",
+          "n": 1
+        }
+      ],
       "internalLinks": [
         {
           "key": "https://schooledthemusical.com/about.html",
@@ -403,27 +360,22 @@
       "key": "week",
       "label": "Last week",
       "short": "Week",
-      "from": "2026-08-24T16:07:35.141Z",
-      "to": "2026-08-31T16:07:35.141Z",
+      "from": "2026-08-24T23:49:19.240Z",
+      "to": "2026-08-31T23:49:19.240Z",
       "available": true,
       "granularity": "day",
       "totals": {
-        "views": 301,
-        "clicks": 76,
-        "links": 11,
-        "visitors": 226,
+        "views": 302,
+        "clicks": 77,
+        "links": 12,
+        "visitors": 227,
         "signups": 0,
-        "days": 8,
+        "days": 7,
         "medianPagesPerVisit": 1,
         "medianDepth": 67,
         "medianSecs": 28
       },
       "series": [
-        {
-          "d": "2026-08-24",
-          "views": 1,
-          "visitors": 1
-        },
         {
           "d": "2026-08-25",
           "views": 35,
@@ -456,8 +408,8 @@
         },
         {
           "d": "2026-08-31",
-          "views": 18,
-          "visitors": 13
+          "views": 20,
+          "visitors": 15
         }
       ],
       "pages": [
@@ -471,8 +423,8 @@
         },
         {
           "key": "/",
-          "n": 86,
-          "visitors": 81,
+          "n": 87,
+          "visitors": 82,
           "depth": 54,
           "secs": 18,
           "measured": 80
@@ -587,7 +539,7 @@
         },
         {
           "key": "/",
-          "n": 75
+          "n": 76
         },
         {
           "key": "/casting",
@@ -617,7 +569,7 @@
         },
         {
           "key": "/",
-          "n": 69
+          "n": 70
         },
         {
           "key": "/casting",
@@ -643,7 +595,7 @@
       "sources": [
         {
           "key": "direct",
-          "n": 164
+          "n": 165
         },
         {
           "key": "internal",
@@ -712,7 +664,7 @@
       "countries": [
         {
           "key": "US",
-          "n": 290
+          "n": 291
         },
         {
           "key": "SE",
@@ -762,11 +714,7 @@
         },
         {
           "key": "Mason, Ohio",
-          "n": 12
-        },
-        {
-          "key": "Bridgeville, Pennsylvania",
-          "n": 7
+          "n": 13
         },
         {
           "key": "Dormont, Pennsylvania",
@@ -774,6 +722,10 @@
         },
         {
           "key": "Detroit, Michigan",
+          "n": 6
+        },
+        {
+          "key": "Bridgeville, Pennsylvania",
           "n": 6
         },
         {
@@ -828,7 +780,7 @@
         },
         {
           "key": "desktop",
-          "n": 128
+          "n": 129
         }
       ],
       "browsers": [
@@ -838,7 +790,7 @@
         },
         {
           "key": "Chrome",
-          "n": 68
+          "n": 69
         },
         {
           "key": "Other",
@@ -860,7 +812,7 @@
         },
         {
           "key": "Windows",
-          "n": 20
+          "n": 21
         },
         {
           "key": "Android",
@@ -880,7 +832,7 @@
       "links": [
         {
           "key": "https://schooledthemusical.com/files/casting-pittsburgh-2026.pdf",
-          "n": 6
+          "n": 7
         },
         {
           "key": "https://ryandobrin.com/",
@@ -938,19 +890,19 @@
       "key": "month",
       "label": "Last month",
       "short": "Month",
-      "from": "2026-08-01T16:07:35.141Z",
-      "to": "2026-08-31T16:07:35.141Z",
+      "from": "2026-08-01T23:49:19.240Z",
+      "to": "2026-08-31T23:49:19.240Z",
       "available": false,
       "granularity": "day",
       "totals": {
-        "views": 406,
-        "clicks": 135,
-        "links": 17,
-        "visitors": 273,
+        "views": 408,
+        "clicks": 136,
+        "links": 18,
+        "visitors": 275,
         "signups": 0,
         "days": 13,
         "medianPagesPerVisit": 1,
-        "medianDepth": 68,
+        "medianDepth": 67,
         "medianSecs": 26
       },
       "series": [
@@ -1016,8 +968,8 @@
         },
         {
           "d": "2026-08-31",
-          "views": 18,
-          "visitors": 13
+          "views": 20,
+          "visitors": 15
         }
       ],
       "pages": [
@@ -1031,11 +983,11 @@
         },
         {
           "key": "/",
-          "n": 120,
-          "visitors": 100,
-          "depth": 57,
-          "secs": 20,
-          "measured": 106
+          "n": 122,
+          "visitors": 102,
+          "depth": 56,
+          "secs": 18,
+          "measured": 107
         },
         {
           "key": "/casting",
@@ -1147,7 +1099,7 @@
         },
         {
           "key": "/",
-          "n": 92
+          "n": 94
         },
         {
           "key": "/casting",
@@ -1177,7 +1129,7 @@
         },
         {
           "key": "/",
-          "n": 87
+          "n": 89
         },
         {
           "key": "/casting",
@@ -1203,7 +1155,7 @@
       "sources": [
         {
           "key": "direct",
-          "n": 193
+          "n": 195
         },
         {
           "key": "internal",
@@ -1272,7 +1224,7 @@
       "countries": [
         {
           "key": "US",
-          "n": 394
+          "n": 396
         },
         {
           "key": "SE",
@@ -1326,7 +1278,7 @@
         },
         {
           "key": "Mason, Ohio",
-          "n": 12
+          "n": 13
         },
         {
           "key": "Sharpsburg, Pennsylvania",
@@ -1388,21 +1340,21 @@
       "devices": [
         {
           "key": "mobile",
-          "n": 218
+          "n": 219
         },
         {
           "key": "desktop",
-          "n": 180
+          "n": 181
         }
       ],
       "browsers": [
         {
           "key": "Safari",
-          "n": 307
+          "n": 308
         },
         {
           "key": "Chrome",
-          "n": 81
+          "n": 82
         },
         {
           "key": "Other",
@@ -1416,7 +1368,7 @@
       "systems": [
         {
           "key": "iOS",
-          "n": 196
+          "n": 197
         },
         {
           "key": "macOS",
@@ -1428,7 +1380,7 @@
         },
         {
           "key": "Windows",
-          "n": 20
+          "n": 21
         },
         {
           "key": "Other",
@@ -1444,7 +1396,7 @@
       "links": [
         {
           "key": "https://schooledthemusical.com/files/casting-pittsburgh-2026.pdf",
-          "n": 10
+          "n": 11
         },
         {
           "key": "https://ryandobrin.com/",
@@ -1506,19 +1458,19 @@
       "key": "year",
       "label": "Last year",
       "short": "Year",
-      "from": "2025-08-31T16:07:35.141Z",
-      "to": "2026-08-31T16:07:35.141Z",
+      "from": "2025-08-31T23:49:19.240Z",
+      "to": "2026-08-31T23:49:19.240Z",
       "available": false,
       "granularity": "day",
       "totals": {
-        "views": 406,
-        "clicks": 135,
-        "links": 17,
-        "visitors": 273,
+        "views": 408,
+        "clicks": 136,
+        "links": 18,
+        "visitors": 275,
         "signups": 0,
         "days": 13,
         "medianPagesPerVisit": 1,
-        "medianDepth": 68,
+        "medianDepth": 67,
         "medianSecs": 26
       },
       "series": [
@@ -1584,8 +1536,8 @@
         },
         {
           "d": "2026-08-31",
-          "views": 18,
-          "visitors": 13
+          "views": 20,
+          "visitors": 15
         }
       ],
       "pages": [
@@ -1599,11 +1551,11 @@
         },
         {
           "key": "/",
-          "n": 120,
-          "visitors": 100,
-          "depth": 57,
-          "secs": 20,
-          "measured": 106
+          "n": 122,
+          "visitors": 102,
+          "depth": 56,
+          "secs": 18,
+          "measured": 107
         },
         {
           "key": "/casting",
@@ -1715,7 +1667,7 @@
         },
         {
           "key": "/",
-          "n": 92
+          "n": 94
         },
         {
           "key": "/casting",
@@ -1745,7 +1697,7 @@
         },
         {
           "key": "/",
-          "n": 87
+          "n": 89
         },
         {
           "key": "/casting",
@@ -1771,7 +1723,7 @@
       "sources": [
         {
           "key": "direct",
-          "n": 193
+          "n": 195
         },
         {
           "key": "internal",
@@ -1840,7 +1792,7 @@
       "countries": [
         {
           "key": "US",
-          "n": 394
+          "n": 396
         },
         {
           "key": "SE",
@@ -1894,7 +1846,7 @@
         },
         {
           "key": "Mason, Ohio",
-          "n": 12
+          "n": 13
         },
         {
           "key": "Sharpsburg, Pennsylvania",
@@ -1956,21 +1908,21 @@
       "devices": [
         {
           "key": "mobile",
-          "n": 218
+          "n": 219
         },
         {
           "key": "desktop",
-          "n": 180
+          "n": 181
         }
       ],
       "browsers": [
         {
           "key": "Safari",
-          "n": 307
+          "n": 308
         },
         {
           "key": "Chrome",
-          "n": 81
+          "n": 82
         },
         {
           "key": "Other",
@@ -1984,7 +1936,7 @@
       "systems": [
         {
           "key": "iOS",
-          "n": 196
+          "n": 197
         },
         {
           "key": "macOS",
@@ -1996,7 +1948,7 @@
         },
         {
           "key": "Windows",
-          "n": 20
+          "n": 21
         },
         {
           "key": "Other",
@@ -2012,7 +1964,7 @@
       "links": [
         {
           "key": "https://schooledthemusical.com/files/casting-pittsburgh-2026.pdf",
-          "n": 10
+          "n": 11
         },
         {
           "key": "https://ryandobrin.com/",
@@ -2075,18 +2027,18 @@
       "label": "All time",
       "short": "All",
       "from": "2026-08-19T00:29:19.264Z",
-      "to": "2026-08-31T16:07:35.141Z",
+      "to": "2026-08-31T23:49:19.240Z",
       "available": true,
       "granularity": "day",
       "totals": {
-        "views": 406,
-        "clicks": 135,
-        "links": 17,
-        "visitors": 273,
+        "views": 408,
+        "clicks": 136,
+        "links": 18,
+        "visitors": 275,
         "signups": 0,
         "days": 13,
         "medianPagesPerVisit": 1,
-        "medianDepth": 68,
+        "medianDepth": 67,
         "medianSecs": 26
       },
       "series": [
@@ -2152,8 +2104,8 @@
         },
         {
           "d": "2026-08-31",
-          "views": 18,
-          "visitors": 13
+          "views": 20,
+          "visitors": 15
         }
       ],
       "pages": [
@@ -2167,11 +2119,11 @@
         },
         {
           "key": "/",
-          "n": 120,
-          "visitors": 100,
-          "depth": 57,
-          "secs": 20,
-          "measured": 106
+          "n": 122,
+          "visitors": 102,
+          "depth": 56,
+          "secs": 18,
+          "measured": 107
         },
         {
           "key": "/casting",
@@ -2283,7 +2235,7 @@
         },
         {
           "key": "/",
-          "n": 92
+          "n": 94
         },
         {
           "key": "/casting",
@@ -2313,7 +2265,7 @@
         },
         {
           "key": "/",
-          "n": 87
+          "n": 89
         },
         {
           "key": "/casting",
@@ -2339,7 +2291,7 @@
       "sources": [
         {
           "key": "direct",
-          "n": 193
+          "n": 195
         },
         {
           "key": "internal",
@@ -2408,7 +2360,7 @@
       "countries": [
         {
           "key": "US",
-          "n": 394
+          "n": 396
         },
         {
           "key": "SE",
@@ -2462,7 +2414,7 @@
         },
         {
           "key": "Mason, Ohio",
-          "n": 12
+          "n": 13
         },
         {
           "key": "Sharpsburg, Pennsylvania",
@@ -2524,21 +2476,21 @@
       "devices": [
         {
           "key": "mobile",
-          "n": 218
+          "n": 219
         },
         {
           "key": "desktop",
-          "n": 180
+          "n": 181
         }
       ],
       "browsers": [
         {
           "key": "Safari",
-          "n": 307
+          "n": 308
         },
         {
           "key": "Chrome",
-          "n": 81
+          "n": 82
         },
         {
           "key": "Other",
@@ -2552,7 +2504,7 @@
       "systems": [
         {
           "key": "iOS",
-          "n": 196
+          "n": 197
         },
         {
           "key": "macOS",
@@ -2564,7 +2516,7 @@
         },
         {
           "key": "Windows",
-          "n": 20
+          "n": 21
         },
         {
           "key": "Other",
@@ -2580,7 +2532,7 @@
       "links": [
         {
           "key": "https://schooledthemusical.com/files/casting-pittsburgh-2026.pdf",
-          "n": 10
+          "n": 11
         },
         {
           "key": "https://ryandobrin.com/",
