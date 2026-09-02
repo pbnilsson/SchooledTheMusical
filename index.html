@@ -36,6 +36,19 @@
   .spectrum-bar .c3{background:var(--blue);}
   .spectrum-bar .c4{background:var(--purple);}
 
+  /* ---------- TOP BAR (hidden at the top of the page, slides in on scroll) ---------- */
+  .topbar{position:fixed;top:0;left:0;right:0;z-index:40;background:rgba(17,24,39,.85);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.06);transform:translateY(-100%);opacity:0;pointer-events:none;transition:transform .35s ease,opacity .35s ease;}
+  .topbar.visible{transform:translateY(0);opacity:1;pointer-events:auto;}
+  .topbar .bar{max-width:760px;margin:0 auto;padding:0 1.5rem;height:58px;display:flex;align-items:center;justify-content:space-between;}
+  .wordmark{font-family:'Helvetica Neue',Helvetica,sans-serif;font-weight:700;letter-spacing:.01em;font-size:1.1rem;color:var(--text);text-decoration:none;}
+  .wordmark:hover{text-decoration:none;}
+  .topnav{display:flex;gap:1.5rem;font-size:.85rem;}
+  .topnav a{color:var(--text-muted);text-decoration:none;}
+  .topnav a:hover{color:var(--text);text-decoration:none;}
+  .topnav a.current{color:var(--text);}
+  @media(max-width:640px){.topnav{gap:.9rem;font-size:.78rem;}}
+  @media(max-width:440px){.topbar .bar{flex-wrap:wrap;height:auto;padding:.5rem 1rem;justify-content:flex-start;row-gap:.15rem;}.topnav{width:100%;gap:.8rem;font-size:.75rem;}.topnav a{white-space:nowrap;}}
+
   /* ---------- HERO (unchanged) ---------- */
   .hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:2rem 1.5rem;position:relative;}
   .hero-kicker{font-size:0.75rem;font-weight:500;letter-spacing:0.3em;text-transform:uppercase;color:var(--text-muted);margin-bottom:1.25rem;opacity:0;animation:fadeUp .8s ease .2s forwards;}
@@ -211,13 +224,28 @@
     .hero-kicker,.hero-title,.hero-tagline,.hero-genres,.hero-credit,.hero-spectrum,.hero-scroll{opacity:1;animation:none;}
     .hero-scroll svg{animation:none;}
     html{scroll-behavior:auto;}
+    .topbar{transition:none;}
   }
 </style>
 </head>
 <body>
 
+<!-- 0 · TOP BAR (appears once you scroll past the hero) -->
+<div class="topbar" id="topbar">
+  <div class="bar">
+    <a class="wordmark" href="#top">Schooled</a>
+    <nav class="topnav">
+      <a href="#about" class="current">About</a>
+      <a href="about.html">Creator</a>
+      <a href="casting.html">Casting</a>
+      <a href="dispatches.html">Dispatches</a>
+      <a href="reading.html">Reading&nbsp;List</a>
+    </nav>
+  </div>
+</div>
+
 <!-- 1 · HERO (unchanged) -->
-<section class="hero">
+<section class="hero" id="top">
   <p class="hero-kicker">A New Musical in Development</p>
   <h1 class="hero-title">Schooled</h1>
   <p class="hero-tagline"><i>Hamilton</i> meets <i>The Sound of Music</i> meets <i>Good Night, and Good Luck</i> &mdash;<br>all set in and around a contemporary high school</p>
@@ -399,6 +427,37 @@
 </footer>
 
 <script>
+  // top bar: hidden over the hero, slides in once you scroll past it
+  (function(){
+    var bar=document.getElementById('topbar');
+    if(!bar) return;
+    function threshold(){return Math.min(window.innerHeight*0.6,520);}
+    function update(){
+      var y=window.scrollY||document.documentElement.scrollTop||0;
+      if(y>threshold()){bar.classList.add('visible');}else{bar.classList.remove('visible');}
+    }
+    window.addEventListener('scroll',update,{passive:true});
+    window.addEventListener('resize',update);
+    update();
+
+    // land on the right spot when arriving with #about (images can shift layout after load)
+    function jumpToHash(){
+      if(!location.hash) return;
+      var el=null;
+      try{el=document.querySelector(location.hash);}catch(e){}
+      if(!el) return;
+      var root=document.documentElement, prev=root.style.scrollBehavior;
+      root.style.scrollBehavior='auto';
+      el.scrollIntoView();
+      root.style.scrollBehavior=prev;
+      update();
+    }
+    if(location.hash){
+      jumpToHash();
+      window.addEventListener('load',function(){jumpToHash();setTimeout(jumpToHash,120);});
+    }
+  })();
+
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
   document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
 
