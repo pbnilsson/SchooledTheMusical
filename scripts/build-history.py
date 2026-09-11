@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Regenerate history.html and the index.html timeline from data/productions.json.
 
+JSON order is chronological. The history page renders it reversed (newest first);
+the index timeline renders it as-is.
+
 data/productions.json is the source of truth. Edit it, run this script, commit both
 the JSON and the generated HTML. Never hand-edit the blocks between the
 AUTO:...:START / AUTO:...:END markers — this script overwrites them.
@@ -22,7 +25,6 @@ NAV = """    <nav class="topnav">
       <a href="index.html#about">About</a>
       <a href="about.html">Creator</a>
       <a href="casting.html">Casting</a>
-      <a href="history.html" class="current">History</a>
       <a href="dispatches.html">Dispatches</a>
       <a href="reading.html">Reading&nbsp;List</a>
     </nav>"""
@@ -109,10 +111,6 @@ def render_timeline(prods):
         bits.append('<div class="pl">%s</div>' % esc(place))
         # The rail stays terse: use timelineBilling when the page copy runs long.
         bits.append('<div class="ds">%s</div>' % (p.get("timelineBilling") or p["billing"]))
-        director = next((c for c in p.get("credits", []) if c["role"] == "Director"), None)
-        if director:
-            bits.append('<a class="crd" href="history.html#%s">Dir. %s &rarr;</a>'
-                        % (p["id"], names_html(director["names"])))
         if p.get("cta"):
             bits.append('<a class="cta" href="%s">%s</a>' % (p["cta"]["href"], p["cta"]["label"]))
         bits.append("</div>")
@@ -135,7 +133,8 @@ def main():
 
     with open(HISTORY, encoding="utf-8") as fh:
         history = fh.read()
-    body = "\n\n".join(render_production(p) for p in prods)
+    # History page reads newest first; the index timeline stays chronological.
+    body = "\n\n".join(render_production(p) for p in reversed(prods))
     history = replace_block(history, "PRODUCTIONS", body, "history.html")
     with open(HISTORY, "w", encoding="utf-8") as fh:
         fh.write(history)

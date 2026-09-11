@@ -110,7 +110,10 @@
   .show-section{text-align:center;}
   .show-heading{font-family:'Instrument Serif',serif;font-size:clamp(1.8rem,4vw,2.7rem);font-weight:400;letter-spacing:0;line-height:1.24;margin:0 auto 1.75rem;max-width:720px;color:var(--text);}
   .show-synopsis{max-width:640px;margin:0 auto;font-size:1.05rem;font-weight:300;line-height:1.8;color:var(--text-muted);}
-  .trilogy-teaser{max-width:600px;margin:3.5rem auto 0;padding-top:2.5rem;border-top:1px solid rgba(255,255,255,.08);}
+  .trilogy-teaser{max-width:600px;margin:3.5rem auto 0;padding-top:2.5rem;border-top:1px solid rgba(255,255,255,.08);display:grid;grid-template-columns:1fr 1fr;gap:2.25rem;}
+  .teaser-col{display:flex;flex-direction:column;align-items:center;}
+  .teaser-col p{flex:1 0 auto;}
+  @media(max-width:560px){.trilogy-teaser{grid-template-columns:1fr;gap:2rem;}}
   .trilogy-teaser p{font-size:.95rem;font-weight:300;line-height:1.7;color:var(--text-muted);margin:0 0 1rem;}
   .trilogy-teaser .more{font-size:.85rem;font-weight:500;letter-spacing:.03em;color:var(--text);text-decoration:underline;text-decoration-color:var(--purple);text-underline-offset:4px;}
 
@@ -240,7 +243,6 @@
       <a href="#about" class="current">About</a>
       <a href="about.html">Creator</a>
       <a href="casting.html">Casting</a>
-      <a href="history.html">History</a>
       <a href="dispatches.html">Dispatches</a>
       <a href="reading.html">Reading&nbsp;List</a>
     </nav>
@@ -323,8 +325,14 @@
     <h2 class="show-heading">Who you are,<br>who you dream to be,<br>and what you can and cannot learn in school.</h2>
     <p class="show-synopsis">Starting with the thrill of the first day of class, Act I follows their adolescent years amidst turbulent times &mdash; classes, romance, a letter that goes viral, a rally that ends in violence, and the surprising, often humorous work of growing together. Act II jumps ahead ten years, tracing how those years shape their early adulthood, and how their dreams grow, shift, and collide with reality. Told through a joyous blend of classical, contemporary, and hip-hop, it&rsquo;s a show about awe, ambition, and justice.</p>
     <div class="trilogy-teaser">
-      <p><em>Schooled</em> is the first in a trilogy.</p>
-      <a class="more" href="vision.html">The full vision &rarr;</a>
+      <div class="teaser-col">
+        <p><em>Schooled</em> has had five readings.</p>
+        <a class="more" href="history.html">The full history &rarr;</a>
+      </div>
+      <div class="teaser-col">
+        <p><em>Schooled</em> is the first in a trilogy.</p>
+        <a class="more" href="vision.html">The full vision &rarr;</a>
+      </div>
     </div>
   </div>
 </section>
@@ -338,10 +346,10 @@
       <div class="rail"></div>
       <div class="nodes">
 <!-- AUTO:TIMELINE:START -->
-        <div class="node"><div class="dot"></div><div class="yr">2019</div><div class="pl">School meeting</div><div class="ds">A 35-minute show composed for 25 teachers to perform for their students.</div><a class="crd" href="history.html#deerfield-2019">Dir. Peter Nilsson &rarr;</a></div>
-        <div class="node"><div class="dot"></div><div class="yr">Oct 2023</div><div class="pl">NY Times Center, NYC</div><div class="ds">Distilled to a 15-minute core; staged reading by on- and off-Broadway actors as part of a 29-hour reading.</div><a class="crd" href="history.html#nyc-2023">Dir. J. Kyle Manzay &rarr;</a></div>
-        <div class="node"><div class="dot"></div><div class="yr">Apr 2024</div><div class="pl">San Diego</div><div class="ds">Another reading of the core for a larger audience at a national conference.</div><a class="crd" href="history.html#san-diego-2024">Dir. Stephen Brotebeck &rarr;</a></div>
-        <div class="node"><div class="dot"></div><div class="yr">Mar 2026</div><div class="pl">SXSW EDU, Austin</div><div class="ds">60-minute Act I staged reading with Q&amp;A. 96 survey responses. NPS 67.</div><a class="crd" href="history.html#sxsw-2026">Dir. Deonté Warren &rarr;</a></div>
+        <div class="node"><div class="dot"></div><div class="yr">2019</div><div class="pl">School meeting</div><div class="ds">A 35-minute show composed for 25 teachers to perform for their students.</div></div>
+        <div class="node"><div class="dot"></div><div class="yr">Oct 2023</div><div class="pl">NY Times Center, NYC</div><div class="ds">Distilled to a 15-minute core; staged reading by 12 on- and off-Broadway actors.</div></div>
+        <div class="node"><div class="dot"></div><div class="yr">Apr 2024</div><div class="pl">San Diego</div><div class="ds">Another reading of the core for a larger audience at a national conference.</div></div>
+        <div class="node"><div class="dot"></div><div class="yr">Mar 2026</div><div class="pl">SXSW EDU, Austin</div><div class="ds">60-minute Act I staged reading with Q&amp;A. 96 survey responses. NPS 67.</div></div>
         <div class="node"><div class="dot"></div><div class="yr">Oct 2026</div><div class="pl">Pittsburgh</div><div class="ds">First full two-act staged reading &mdash; workshopped with director, music director, and cast.</div><a class="cta" href="casting.html">Casting call &mdash; extended to Sept&nbsp;18</a></div>
 <!-- AUTO:TIMELINE:END -->
       </div>
