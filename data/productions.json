@@ -1,0 +1,119 @@
+{
+  "_note": "Source of truth for the production history. Edit this file, then run scripts/build-history.py to regenerate history.html and the timeline credit lines in index.html. Do not hand-edit the generated blocks.",
+  "productions": [
+    {
+      "id": "deerfield-2019",
+      "accent": "coral",
+      "year": "2019",
+      "date": "April 2019",
+      "place": "Deerfield, Massachusetts",
+      "venue": "Deerfield Academy",
+      "host": "Deerfield Academy",
+      "billing": "A 35-minute show composed for 25 teachers to perform for their students.",
+      "credits": [
+        { "role": "Director", "names": ["Peter Nilsson"] },
+        { "role": "Producer", "names": ["Peter Nilsson"] }
+      ],
+      "castLabel": "Cast, voice and stage",
+      "cast": [
+        "Nils Ahbel", "Libby Anderson", "Brian Barbato", "Darnel Barnes",
+        "Sam Chapin", "Lori Clark", "Amie Creagh", "Marc Dancer",
+        "Ray DeMartino", "Jan Flaska", "Ben Grimm", "Hannah Insuik",
+        "Kevin Kelly", "Amy Lareau", "Parker Lawlor", "Peter Nilsson",
+        "Emily Richardson", "Josh Relin", "Julia Rivellino-Lyons", "Elliot Sakach",
+        "Stephanie Shumway", "Khaleh Thomas", "Sam Watson", "Susan Watson",
+        "Marjorie Young"
+      ],
+      "additional": [
+        { "role": "Lighting Design", "names": ["John Laprade"] },
+        { "role": "Lighting Tech", "names": ["Mia Silberstein ’20"] },
+        { "role": "Audio Tech", "names": ["Valentina Saldarriaga ’20"] },
+        { "role": "Cinematography", "names": ["Jacklyn Bunch", "Brent Hale", "Neil Nie ’19"] },
+        { "role": "Editing", "names": ["Jacklyn Bunch"] }
+      ]
+    },
+    {
+      "id": "nyc-2023",
+      "accent": "amber",
+      "year": "Oct 2023",
+      "date": "October 2023",
+      "place": "New York, New York",
+      "venue": "The New York Times Center",
+      "host": "EdTech Week",
+      "billing": "Distilled to a 15-minute core; staged reading by on- and off-Broadway actors as part of a 29-hour reading.",
+      "timelineBilling": "Distilled to a 15-minute core; staged reading by 12 on- and off-Broadway actors.",
+      "credits": [
+        { "role": "Director", "names": ["J. Kyle Manzay"] },
+        { "role": "Music Director", "names": ["Peter Nilsson"] },
+        { "role": "Producer", "names": ["EdTech Week"] },
+        { "role": "General Manager", "names": ["Aaron Grant Theatrical"] },
+        { "role": "Stage Manager", "names": ["Amanda Wingo"] },
+        { "role": "Video Production", "names": ["Rian Alfiero"] }
+      ],
+      "castLabel": "Cast",
+      "castNote": "Inquire for details",
+      "cast": []
+    },
+    {
+      "id": "san-diego-2024",
+      "accent": "teal",
+      "year": "Apr 2024",
+      "date": "April 2024",
+      "place": "San Diego, California",
+      "venue": "San Diego Convention Center",
+      "host": "ASU/GSV",
+      "billing": "Another reading of the core for a larger audience at a national conference.",
+      "credits": [
+        { "role": "Director", "names": ["Stephen Brotebeck"] },
+        { "role": "Music Director", "names": ["Peter Nilsson"] },
+        { "role": "Producer", "names": ["EdTech Week"] },
+        { "role": "Stage Manager", "names": ["Anya Veach"] }
+      ],
+      "castLabel": "Cast",
+      "cast": [
+        "Van Angelo", "Bella Brady", "Justin Brill", "Ethan Cruz",
+        "Ryan Flores", "Sierra Goria", "Lindsey Grant", "Zakk Mannella",
+        "Natalie McClure", "Wilfred Paloma", "Sarah Salonga"
+      ]
+    },
+    {
+      "id": "sxsw-2026",
+      "accent": "blue",
+      "year": "Mar 2026",
+      "date": "March 2026",
+      "place": "Austin, Texas",
+      "venue": "Antone’s Nightclub",
+      "host": "SXSW EDU",
+      "billing": "60-minute Act I staged reading with Q&amp;A. 96 survey responses. NPS 67.",
+      "credits": [
+        { "role": "Director", "names": ["Deonté Warren"] },
+        { "role": "Music Director", "names": ["Peter Nilsson"] },
+        { "role": "Producer", "names": ["Crowdfunded"] },
+        { "role": "Stage Manager", "names": ["Emma Frith"] },
+        { "role": "Video Production", "names": ["Rian Alfiero"] }
+      ],
+      "castLabel": "Cast",
+      "cast": [
+        "Jacob Baird", "Isaiah Choice", "Michelle Ko", "Grisham Locke",
+        "Will Mallick", "Max McGuire", "Carolyn O’Brien", "Rachel Pallante",
+        "Sebi Rose", "Abbigayle Scott", "Luz Tellus", "Aiden Valentine"
+      ]
+    },
+    {
+      "id": "pittsburgh-2026",
+      "accent": "purple",
+      "year": "Oct 2026",
+      "date": "October 2026",
+      "place": "Pittsburgh, Pennsylvania",
+      "venue": "",
+      "host": "",
+      "upcoming": true,
+      "billing": "First full two-act staged reading &mdash; workshopped with director, music director, and cast.",
+      "credits": [],
+      "castLabel": "Cast",
+      "castNote": "To be announced",
+      "cast": [],
+      "cta": { "href": "casting.html", "label": "Casting call &mdash; extended to Sept&nbsp;18" }
+    }
+  ]
+}

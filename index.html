@@ -46,8 +46,8 @@
   .topnav a{color:var(--text-muted);text-decoration:none;}
   .topnav a:hover{color:var(--text);text-decoration:none;}
   .topnav a.current{color:var(--text);}
-  @media(max-width:640px){.topnav{gap:.9rem;font-size:.78rem;}}
-  @media(max-width:440px){.topbar .bar{flex-wrap:wrap;height:auto;padding:.5rem 1rem;justify-content:flex-start;row-gap:.15rem;}.topnav{width:100%;gap:.8rem;font-size:.75rem;}.topnav a{white-space:nowrap;}}
+  @media(max-width:860px){.topnav{gap:1rem;font-size:.8rem;}}
+  @media(max-width:660px){.topbar .bar{flex-wrap:wrap;height:auto;padding:.5rem 1rem;justify-content:flex-start;row-gap:.15rem;}.topnav{width:100%;gap:.75rem;font-size:.76rem;flex-wrap:wrap;row-gap:.1rem;}.topnav a{white-space:nowrap;}}
 
   /* ---------- HERO (unchanged) ---------- */
   .hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:2rem 1.5rem;position:relative;}
@@ -122,7 +122,7 @@
   .tl{position:relative;margin:0 auto;max-width:980px;}
   .tl .rail{position:absolute;top:6px;left:0;right:0;height:2px;background:rgba(255,255,255,.1);}
   .tl .nodes{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;position:relative;}
-  .tl .node{text-align:center;}
+  .tl .node{text-align:center;display:flex;flex-direction:column;}
   .tl .node .dot{width:13px;height:13px;border-radius:50%;margin:0 auto 1rem;border:2px solid var(--bg-lighter);}
   .tl .node:nth-child(1) .dot{background:var(--coral);}
   .tl .node:nth-child(2) .dot{background:var(--amber);}
@@ -137,7 +137,9 @@
   .tl .node:nth-child(5) .yr{color:var(--purple);}
   .tl .node .pl{font-size:.72rem;color:var(--text-dim);margin:.15rem 0 .5rem;}
   .tl .node .ds{font-size:.78rem;color:var(--text-muted);font-weight:300;line-height:1.45;}
-  .tl .node .cta{display:inline-block;margin-top:.55rem;font-size:.72rem;font-style:italic;font-weight:500;color:var(--amber);text-decoration:none;border-bottom:1px solid rgba(251,191,36,.35);padding-bottom:1px;transition:color .2s ease,border-color .2s ease;}
+  .tl .node .crd{display:block;margin-top:auto;padding-top:.7rem;font-size:.7rem;font-weight:400;color:var(--text-dim);text-decoration:none;border-bottom:1px solid transparent;transition:color .2s ease,border-color .2s ease;}
+  .tl .node .crd:hover{color:var(--text-muted);border-bottom-color:rgba(255,255,255,.2);}
+  .tl .node .cta{display:inline-block;margin-top:auto;padding-top:.75rem;font-size:.72rem;font-style:italic;font-weight:500;color:var(--amber);text-decoration:none;border-bottom:1px solid rgba(251,191,36,.35);padding-bottom:1px;transition:color .2s ease,border-color .2s ease;}
   .tl .node .cta:hover{color:#fcd34d;border-color:var(--amber);}
   .tl-foot{font-family:'Instrument Serif',serif;font-style:italic;text-align:center;color:var(--text-muted);margin-top:2.25rem;font-size:1.05rem;}
 
@@ -238,6 +240,7 @@
       <a href="#about" class="current">About</a>
       <a href="about.html">Creator</a>
       <a href="casting.html">Casting</a>
+      <a href="history.html">History</a>
       <a href="dispatches.html">Dispatches</a>
       <a href="reading.html">Reading&nbsp;List</a>
     </nav>
@@ -334,11 +337,13 @@
     <div class="tl reveal">
       <div class="rail"></div>
       <div class="nodes">
-        <div class="node"><div class="dot"></div><div class="yr">2019</div><div class="pl">School meeting</div><div class="ds">A 35-minute show composed for 25 teachers to perform for their students.</div></div>
-        <div class="node"><div class="dot"></div><div class="yr">Oct 2023</div><div class="pl">NY Times Center, NYC</div><div class="ds">Distilled to a 15-minute core; staged reading by 12 on- and off-Broadway actors.</div></div>
-        <div class="node"><div class="dot"></div><div class="yr">Apr 2024</div><div class="pl">San Diego</div><div class="ds">Another reading of the core for a larger audience at a national conference.</div></div>
-        <div class="node"><div class="dot"></div><div class="yr">Mar 2026</div><div class="pl">SXSW EDU, Austin</div><div class="ds">60-minute Act I staged reading with Q&amp;A. 96 survey responses. NPS 67.</div></div>
+<!-- AUTO:TIMELINE:START -->
+        <div class="node"><div class="dot"></div><div class="yr">2019</div><div class="pl">School meeting</div><div class="ds">A 35-minute show composed for 25 teachers to perform for their students.</div><a class="crd" href="history.html#deerfield-2019">Dir. Peter Nilsson &rarr;</a></div>
+        <div class="node"><div class="dot"></div><div class="yr">Oct 2023</div><div class="pl">NY Times Center, NYC</div><div class="ds">Distilled to a 15-minute core; staged reading by on- and off-Broadway actors as part of a 29-hour reading.</div><a class="crd" href="history.html#nyc-2023">Dir. J. Kyle Manzay &rarr;</a></div>
+        <div class="node"><div class="dot"></div><div class="yr">Apr 2024</div><div class="pl">San Diego</div><div class="ds">Another reading of the core for a larger audience at a national conference.</div><a class="crd" href="history.html#san-diego-2024">Dir. Stephen Brotebeck &rarr;</a></div>
+        <div class="node"><div class="dot"></div><div class="yr">Mar 2026</div><div class="pl">SXSW EDU, Austin</div><div class="ds">60-minute Act I staged reading with Q&amp;A. 96 survey responses. NPS 67.</div><a class="crd" href="history.html#sxsw-2026">Dir. Deonté Warren &rarr;</a></div>
         <div class="node"><div class="dot"></div><div class="yr">Oct 2026</div><div class="pl">Pittsburgh</div><div class="ds">First full two-act staged reading &mdash; workshopped with director, music director, and cast.</div><a class="cta" href="casting.html">Casting call &mdash; extended to Sept&nbsp;18</a></div>
+<!-- AUTO:TIMELINE:END -->
       </div>
     </div>
 
@@ -386,7 +391,6 @@
         <div class="bk"><span class="bk-t">Gem of the Ocean</span><span class="bk-a">August Wilson</span></div>
         <div class="bk"><span class="bk-t">The Inheritance</span><span class="bk-a">Matthew Lopez</span></div>
         <div class="bk"><span class="bk-t">The Kentucky Cycle</span><span class="bk-a">Robert Schenkkan</span></div>
-        <div class="bk"><span class="bk-t">’night, Mother</span><span class="bk-a">Marsha Norman</span></div>
         <div class="bk"><span class="bk-t">The Oresteia</span><span class="bk-a">Aeschylus</span></div>
         <div class="bk"><span class="bk-t">Spring Awakening</span><span class="bk-a">Steven Sater &amp; Duncan Sheik</span></div>
       </div>
