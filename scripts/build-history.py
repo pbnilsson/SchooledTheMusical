@@ -91,6 +91,21 @@ def render_production(p):
     return "\n".join(out)
 
 
+def render_jump(prods):
+    """The jump pills at the top of history.html, newest first — same order as
+    the sections below. Label defaults to <year> &middot; <city>; a production
+    can override it with a "jumpLabel" field."""
+    out = []
+    for p in prods:
+        label = p.get("jumpLabel")
+        if not label:
+            year = re.search(r"\d{4}", p["year"]).group(0)
+            city = p["place"].split(",")[0]
+            label = "%s &middot; %s" % (year, esc(city))
+        out.append('    <a href="#%s"><span class="jd %s"></span>%s</a>'
+                   % (p["id"], p.get("accent", "amber"), label))
+    return "\n".join(out)
+
 def render_timeline(prods):
     """The five .node divs inside index.html's .tl .nodes container."""
     out = []
@@ -136,6 +151,7 @@ def main():
     # History page reads newest first; the index timeline stays chronological.
     body = "\n\n".join(render_production(p) for p in reversed(prods))
     history = replace_block(history, "PRODUCTIONS", body, "history.html")
+    history = replace_block(history, "JUMP", render_jump(list(reversed(prods))), "history.html")
     with open(HISTORY, "w", encoding="utf-8") as fh:
         fh.write(history)
 
