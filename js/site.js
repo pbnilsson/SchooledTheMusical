@@ -188,3 +188,19 @@
     if (document.visibilityState === "hidden") close();
   });
 })();
+
+/* Contact addresses, assembled at runtime so Cloudflare's email-protection
+   filter doesn't mangle them (and they aren't trivially scraped). Markup:
+   <a data-mail="info" data-mail-subject="..." href="#">info [at] ... </a> */
+(function () {
+  "use strict";
+  var domain = "schooledthemusical" + "." + "com";
+  var nodes = document.querySelectorAll("a[data-mail]");
+  for (var i = 0; i < nodes.length; i++) {
+    var a = nodes[i];
+    var addr = a.getAttribute("data-mail") + "@" + domain;
+    var subj = a.getAttribute("data-mail-subject");
+    a.href = "mailto:" + addr + (subj ? "?subject=" + encodeURIComponent(subj) : "");
+    a.textContent = addr;
+  }
+})();
