@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Regenerate history.html and the index.html timeline from data/productions.json.
+"""Regenerate history.html, the index.html timeline, and the about.html
+collaborators block from data/productions.json.
 
 JSON order is chronological. The history page renders it reversed (newest first);
 the index timeline renders it as-is.
@@ -20,10 +21,11 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "data", "productions.json")
 HISTORY = os.path.join(ROOT, "history.html")
 INDEX = os.path.join(ROOT, "index.html")
+ABOUT = os.path.join(ROOT, "about.html")
 
 NAV = """    <nav class="topnav">
       <a href="index.html#about">About</a>
-      <a href="about.html">Creator</a>
+      <a href="about.html">Team</a>
       <a href="casting.html">Casting</a>
       <a href="dispatches.html">Dispatches</a>
       <a href="reading.html">Reading&nbsp;List</a>
@@ -88,6 +90,40 @@ def render_production(p):
                    % (p["cta"]["href"], p["cta"]["label"]))
 
     out.append("  </section>")
+    return "\n".join(out)
+
+
+# Roles surfaced on the Team page. Everything else (stage management, producers,
+# design, cast) stays on history.html, which remains the full record.
+COLLAB_ROLES = ("Director", "Music Director")
+
+
+def render_collaborators(prods):
+    """The per-reading collaborator entries inside about.html's .collab-list.
+
+    Newest first, matching history.html. A production with none of COLLAB_ROLES
+    filled is skipped entirely — an announced reading whose director is not yet
+    set must not render as an empty slot.
+    """
+    out = []
+    for p in prods:
+        lines = []
+        for role in COLLAB_ROLES:
+            for c in p.get("credits", []):
+                if c["role"] == role and c.get("names"):
+                    lines.append('          <div class="collab-who">'
+                                 '<span class="r">%s</span> %s</div>'
+                                 % (esc(role), names_html(c["names"])))
+        if not lines:
+            continue
+        where = p["venue"] or p["place"]
+        city = p["place"].split(",")[0]
+        when = "%s &middot; %s" % (esc(p["date"]), esc(where))
+        if city and city not in where:
+            when += ", %s" % esc(city)
+        out.append('        <div class="collab-reading">\n'
+                   '          <div class="collab-when">%s</div>\n%s\n'
+                   '        </div>' % (when, "\n".join(lines)))
     return "\n".join(out)
 
 
@@ -161,7 +197,15 @@ def main():
     with open(INDEX, "w", encoding="utf-8") as fh:
         fh.write(index)
 
-    print("wrote history.html (%d productions) and the index.html timeline" % len(prods))
+    with open(ABOUT, encoding="utf-8") as fh:
+        about = fh.read()
+    about = replace_block(about, "COLLABORATORS",
+                          render_collaborators(list(reversed(prods))), "about.html")
+    with open(ABOUT, "w", encoding="utf-8") as fh:
+        fh.write(about)
+
+    print("wrote history.html, the index.html timeline, and the about.html "
+          "collaborators block (%d productions)" % len(prods))
 
 
 if __name__ == "__main__":

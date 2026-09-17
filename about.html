@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About the Creator — Schooled the Musical</title>
-  <meta name="description" content="Peter Nilsson is the book writer, lyricist, and composer of Schooled, an original musical set at the intersection of American education and the culture wars.">
-  <meta property="og:title" content="About the Creator — Schooled the Musical">
-  <meta property="og:description" content="Peter Nilsson — book, music & lyrics">
+  <title>Team — Schooled the Musical</title>
+  <meta name="description" content="The team behind Schooled, an original musical set at the intersection of American education and the culture wars — and the collaborators who led each of its readings.">
+  <meta property="og:title" content="Team — Schooled the Musical">
+  <meta property="og:description" content="The team behind Schooled the Musical, and the collaborators who led its readings.">
   <meta property="og:image" content="/images/og-image.jpg">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
@@ -117,6 +117,39 @@
     }
     .about-footer a { font-size: 0.8rem; color: var(--teal); }
 
+    .member-contact { font-size: 0.78rem; margin-top: 6px; line-height: 1.5; }
+    .member-contact a { color: var(--text-muted); text-decoration: underline;
+      text-decoration-color: rgba(255,255,255,.3); text-underline-offset: 3px; word-break: break-word; }
+    .member-contact a:hover { color: var(--text); }
+
+    .team-section { margin-top: 64px; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.06); }
+    .sub-label { font-family: 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700;
+      font-size: 1.15rem; letter-spacing: -0.01em; margin-bottom: 10px; }
+    .team-note { font-size: 0.88rem; color: var(--text-muted); max-width: 640px; margin-bottom: 30px; }
+    .collab-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 26px 40px; }
+    .collab-when { font-size: 0.7rem; letter-spacing: .14em; text-transform: uppercase;
+      color: var(--text-dim); margin-bottom: 7px; }
+    .collab-who { font-size: 0.95rem; color: rgba(241,241,241,0.82); line-height: 1.6; }
+    .collab-who .r { color: var(--text-muted); font-size: 0.78rem; letter-spacing: .04em; }
+    .collab-more { margin-top: 28px; font-size: 0.85rem; }
+    .invite p { font-size: 0.95rem; color: rgba(241,241,241,0.82); max-width: 640px; margin-bottom: 14px; }
+    .invite .perf { font-size: 0.85rem; color: var(--text-muted); }
+
+    .footer{max-width:760px;margin:0 auto;padding:3.5rem 1.5rem 4rem;text-align:center;}
+    .footer-label{font-size:.7rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--text-dim);margin-bottom:.75rem;}
+    .footer a{text-decoration:none;}
+    .footer-social{display:flex;gap:1.25rem;justify-content:center;margin-top:1.5rem;}
+    .footer-social svg{width:22px;height:22px;fill:var(--text-dim);transition:fill .2s ease;}
+    .footer-social a:hover svg{fill:var(--text);}
+    .footer-bar{margin-top:2.5rem;display:flex;justify-content:center;}
+    .footer-copyright{margin-top:1.5rem;font-size:.7rem;color:var(--text-dim);}
+    .footer .spectrum-bar{display:flex;width:100%;max-width:320px;height:3px;margin:0;background:none;border-radius:2px;overflow:hidden;}
+    .footer .spectrum-bar span{flex:1;}
+    .footer .spectrum-bar .c1{background:var(--amber);}
+    .footer .spectrum-bar .c2{background:var(--teal);}
+    .footer .spectrum-bar .c3{background:var(--blue);}
+    .footer .spectrum-bar .c4{background:var(--purple);}
+
     .fade-in {
       opacity: 0;
       transform: translateY(12px);
@@ -142,7 +175,7 @@
       <a class="wordmark" href="index.html">Schooled</a>
       <nav class="topnav">
         <a href="index.html#about">About</a>
-        <a href="about.html" class="current">Creator</a>
+        <a href="about.html" class="current">Team</a>
         <a href="casting.html">Casting</a>
         <a href="dispatches.html">Dispatches</a>
         <a href="reading.html">Reading&nbsp;List</a>
@@ -151,12 +184,13 @@
   </div>
 
   <div class="about-container">
-    <div class="section-label fade-in delay-1">ABOUT THE CREATOR</div>
+    <div class="section-label fade-in delay-1">THE TEAM</div>
 
     <div class="about-layout">
       <div class="about-left fade-in delay-2">
         <h1 class="creator-name">Peter Nilsson</h1>
         <div class="creator-role">Book, music &amp; lyrics</div>
+        <div class="member-contact"><a data-mail="peter" href="#">peter [at] schooledthemusical [dot] com</a></div>
         <div class="spectrum-bar"></div>
         <div class="headshot-wrapper">
           <img src="/images/headshot.jpg" alt="Peter Nilsson">
@@ -173,11 +207,57 @@
         <p>Nilsson is the co-author of <em>Irreplaceable: How AI Changes Everything (and Nothing) in Teaching and Learning</em>, a recipient of the Wolfram Innovator Award, and the editor of The Educator&#8217;s Notebook. The very first version of <i>Schooled</i> was a short, original, one-act performed by 25 teachers at a school meeting as a total surprise to the student body.</p>
       </div>
     </div>
+
+    <section class="team-section fade-in delay-3">
+      <h2 class="sub-label">Collaborators on past readings</h2>
+      <p class="team-note">Each reading of <em>Schooled</em> has been built with a different company.
+        The artists below led the readings listed here; every new production is cast and crewed anew.</p>
+      <div class="collab-list">
+<!-- AUTO:COLLABORATORS:START -->
+        <div class="collab-reading">
+          <div class="collab-when">March 2026 &middot; Antone’s Nightclub, Austin</div>
+          <div class="collab-who"><span class="r">Director</span> Deonté Warren</div>
+          <div class="collab-who"><span class="r">Music Director</span> Peter Nilsson</div>
+        </div>
+        <div class="collab-reading">
+          <div class="collab-when">April 2024 &middot; San Diego Convention Center</div>
+          <div class="collab-who"><span class="r">Director</span> Stephen Brotebeck</div>
+          <div class="collab-who"><span class="r">Music Director</span> Peter Nilsson</div>
+        </div>
+        <div class="collab-reading">
+          <div class="collab-when">October 2023 &middot; The New York Times Center</div>
+          <div class="collab-who"><span class="r">Director</span> J. Kyle Manzay</div>
+          <div class="collab-who"><span class="r">Music Director</span> Peter Nilsson</div>
+        </div>
+        <div class="collab-reading">
+          <div class="collab-when">April 2019 &middot; Deerfield Academy</div>
+          <div class="collab-who"><span class="r">Director</span> Peter Nilsson</div>
+        </div>
+<!-- AUTO:COLLABORATORS:END -->
+      </div>
+      <p class="collab-more"><a href="history.html">Full credits for every reading &rarr;</a></p>
+    </section>
+
+    <section class="team-section invite fade-in delay-3">
+      <h2 class="sub-label">Join us</h2>
+      <p><em>Schooled</em> is still growing. If you are a producer, presenter, director, designer,
+        or supporter interested in helping bring the show to new stages, we would like to hear from
+        you &mdash; write to <a data-mail="info" href="#">info [at] schooledthemusical [dot] com</a>.</p>
+      <p class="perf">Performers: open casting calls are posted on the
+        <a href="casting.html">casting page</a>.</p>
+    </section>
   </div>
 
-  <div class="about-footer fade-in delay-3">
-    <a href="/">&#8592; Back to Schooled the Musical</a>
+<footer class="footer">
+  <p class="footer-label">Inquiries</p>
+  <p><a class="footer-mail" data-mail="info" href="#" style="color:var(--text-muted);text-decoration:underline;text-decoration-color:rgba(255,255,255,.3);text-underline-offset:3px;font-size:.95rem;">info [at] schooledthemusical [dot] com</a></p>
+  <div class="footer-social">
+    <a href="https://www.instagram.com/schooledthemusical" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+    <a href="https://www.youtube.com/@SchooledtheMusical" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
   </div>
+  <div class="footer-bar"><div class="spectrum-bar"><span class="c1"></span><span class="c2"></span><span class="c3"></span><span class="c4"></span></div></div>
+  <p class="footer-copyright">&copy; 2026 Schooled the Musical, LLC. All rights reserved.</p>
+</footer>
 
 <script src="/js/site.js" defer></script>
 </body>
