@@ -46,6 +46,8 @@ PERSON_LINKS = {
     "Deont\u00e9 Warren": "https://www.deontelwarren.com",
     "Stephen Brotebeck": "https://stephenbrotebeck.com",
     "Rebecca Aparicio": "https://www.rebeccaaparicio.com",
+    "Mike Mackey": "https://www.duq.edu/faculty-and-staff/dr-michael-mackey.php",
+    "Aaron Grant Theatrical": "https://www.theatrical.ag",
 }
 
 
@@ -111,9 +113,20 @@ def render_production(p):
     return "\n".join(out)
 
 
-# Roles surfaced on the Team page. Everything else (stage management, producers,
-# design, cast) stays on history.html, which remains the full record.
-COLLAB_ROLES = ("Director", "Music Director")
+# Roles surfaced on the Team page: the creative team only. Casting, producing,
+# stage management and cast stay on history.html, which remains the full record.
+# Order here is the order they render. Add a role label as the team grows — a
+# label not listed here simply never reaches the Team page.
+COLLAB_ROLES = (
+    "Director",
+    "Music Director",
+    "Choreographer",
+    "Orchestrator",
+    "Scenic Designer",
+    "Costume Designer",
+    "Lighting Designer",
+    "Sound Designer",
+)
 
 
 def render_collaborators(prods):
