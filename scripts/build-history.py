@@ -38,8 +38,26 @@ def esc(s):
     return (s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;"))
 
 
+# Personal or professional sites for collaborators. A name listed here is
+# rendered as a link everywhere a credit is generated — history.html and the
+# about.html collaborators block. Names not listed render as plain text.
+PERSON_LINKS = {
+    "J. Kyle Manzay": "https://www.uproartheatrics.com/authors/j-kyle-manzay",
+    "Deont\u00e9 Warren": "https://www.deontelwarren.com",
+    "Stephen Brotebeck": "https://stephenbrotebeck.com",
+    "Rebecca Aparicio": "https://www.rebeccaaparicio.com",
+}
+
+
+def name_html(name):
+    url = PERSON_LINKS.get(name)
+    if not url:
+        return esc(name)
+    return '<a href="%s" target="_blank" rel="noopener">%s</a>' % (esc(url), esc(name))
+
+
 def names_html(names):
-    return ", ".join(esc(n) for n in names)
+    return ", ".join(name_html(n) for n in names)
 
 
 def render_production(p):
