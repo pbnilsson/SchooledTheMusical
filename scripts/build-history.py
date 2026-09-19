@@ -51,6 +51,7 @@ PERSON_LINKS = {
     "Amanda Wingo": "https://www.amandawingo.com",
     "Rian Alfiero": "https://www.fvsevents.com",
     "EdTech Week": "https://www.edtechweek.com",
+    "Ryan Dobrin": "https://ryandobrin.com",
 }
 
 
