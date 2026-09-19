@@ -48,6 +48,9 @@ PERSON_LINKS = {
     "Rebecca Aparicio": "https://www.rebeccaaparicio.com",
     "Mike Mackey": "https://www.duq.edu/faculty-and-staff/dr-michael-mackey.php",
     "Aaron Grant Theatrical": "https://www.theatrical.ag",
+    "Amanda Wingo": "https://www.amandawingo.com",
+    "Rian Alfiero": "https://www.fvsevents.com",
+    "EdTech Week": "https://www.edtechweek.com",
 }
 
 
