@@ -14,6 +14,23 @@ if (!Array.isArray(rows)) throw new Error("expected an array of rows");
 // Dropped on the way in, so it never reaches the repo.
 const DROP = ["net"];
 
+// Peter's own visits. The ?notrack=1 opt-out is per-browser localStorage and
+// was only ever armed in Chrome, so every Fort Wayne + Safari row is his Mac or
+// his iPhone: across the first month not one Fort Wayne row came from any other
+// browser. History was scrubbed from data/days/ on 19 Sept 2026, but the sync
+// rewrites the last three days from whatever D1 still holds, so the rows have to
+// be dropped here too or they walk straight back in. Dated so it expires by
+// itself once Safari is armed — after the cutoff, genuine Fort Wayne visitors
+// are counted normally again.
+const SELF_CUTOFF = "2026-10-03";
+function isSelf(r) {
+  return (
+    r.city === "Fort Wayne" &&
+    r.browser === "Safari" &&
+    String(r.ts || "").slice(0, 10) < SELF_CUTOFF
+  );
+}
+
 // The banding normally happens in the browser, so the exact width never
 // leaves it. Rows already sitting in the collector predate that, and the
 // sync re-reads the last few days on every run — so band here too, or an
@@ -32,6 +49,7 @@ function band(w) {
 
 const byDay = new Map();
 for (const r of rows) {
+  if (isSelf(r)) continue;
   for (const f of DROP) delete r[f];
   if ("screen" in r) r.screen = band(r.screen);
   const day = String(r.ts || "").slice(0, 10);
