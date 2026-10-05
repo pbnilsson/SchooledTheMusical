@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Casting &mdash; Schooled the Musical</title>
-<meta name="description" content="Open casting calls for Schooled, a new musical by Peter Nilsson. Currently casting a full two-act developmental staged reading in Pittsburgh, October 2026.">
+<meta name="description" content="Casting for Schooled, a new musical by Peter Nilsson. There is no casting live right now; new calls are posted here when they open.">
 <meta property="og:title" content="Casting — Schooled the Musical">
-<meta property="og:description" content="Now casting a full two-act developmental staged reading. Pittsburgh, October 2026. Deadline extended &mdash; submissions due September 21.">
+<meta property="og:description" content="No casting is live right now. New calls for Schooled are posted here when they open.">
 <meta property="og:image" content="images/og-image.jpg">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
@@ -57,6 +57,13 @@
   .about p{color:var(--text-muted);font-weight:300;font-size:.95rem;line-height:1.7;margin:0 0 .9rem;max-width:70ch;}
   .about p:last-child{margin-bottom:0;}
   .about em{font-style:italic;color:var(--text);}
+
+  /* ---------- NO CASTING LIVE ---------- */
+  .none-live{margin:2.5rem 0 0;background:var(--bg-lighter);border:1px solid rgba(255,255,255,.06);border-left:3px solid var(--text-dim);border-radius:12px;padding:1.5rem 1.6rem;}
+  .none-live .nl-title{font-size:1.05rem;font-weight:500;margin:0 0 .5rem;color:var(--text);}
+  .none-live .nl-text{color:var(--text-muted);font-weight:300;font-size:.97rem;line-height:1.7;margin:0;max-width:70ch;}
+  .none-live .nl-text a{color:var(--text);text-decoration:underline;text-decoration-color:rgba(255,255,255,.3);text-underline-offset:3px;}
+  .none-live .nl-text a:hover{text-decoration-color:var(--teal);}
 
   /* ---------- CALL INDEX (only shown when more than one call is open) ---------- */
   .call-jump{margin:2.5rem 0 0;}
@@ -176,185 +183,22 @@
 <div class="page-head">
   <div class="spectrum-bar"><span class="c1"></span><span class="c2"></span><span class="c3"></span><span class="c4"></span></div>
   <h1 class="page-title">Casting</h1>
-  <p class="page-sub">Open calls for readings and workshops of <em>Schooled</em>, a new musical by <a href="about.html" style="color:var(--text-muted);text-decoration:underline;text-decoration-color:rgba(255,255,255,.3);text-underline-offset:3px;">Peter Nilsson</a>.</p>
+  <p class="page-sub">Casting calls for readings and workshops of <em>Schooled</em>, a new musical by <a href="about.html" style="color:var(--text-muted);text-decoration:underline;text-decoration-color:rgba(255,255,255,.3);text-underline-offset:3px;">Peter Nilsson</a>.</p>
 </div>
 
 <div class="wrap">
 
   <!-- ============================================================
-       CALL LIST  ·  one line per open call. Add an <a> here
-       whenever you add a call block below, pointing at its id.
+       NO CASTING LIVE (Oct 5, 2026). The Pittsburgh call block and
+       open-calls row were removed. When a new call opens, restore
+       the <nav class="call-jump"> list and a <section class="call">
+       block (see git history, commit before this change) and delete
+       this notice.
        ============================================================ -->
-  <nav class="call-jump">
-    <p class="jump-label">Open calls</p>
-    <a href="#pittsburgh-2026"><span class="jcity">Pittsburgh</span><span class="jdue">Extended to Sept&nbsp;21</span><span class="jwhen">October 2026</span></a>
-  </nav>
-
-  <!-- ============================================================
-       CALL BLOCK  ·  duplicate this entire <section class="call">
-       for each additional open call. Give it a new id, and update
-       the call index above. Closed calls: either delete the block,
-       or swap class "pill open">Open  for  "pill closed">Closed.
-       ============================================================ -->
-  <section class="call" id="pittsburgh-2026">
-
-    <div class="call-title-row">
-      <h2 class="call-title">Pittsburgh &middot; October 2026</h2>
-      <span class="pill open">Now casting</span>
-    </div>
-    <p class="call-line">A one-week engagement for a single performance at an education event, audience of 100+. Hip-hop, pop, Latin, classical, jazz, and spirituals.</p>
-
-    <div class="deadline">
-      <span class="dl-label">Submissions due &mdash; extended</span>
-      <span class="dl-date">Monday, September 21, 2026 &middot; 1:00pm ET</span>
-    </div>
-
-    <dl class="facts">
-      <div class="f"><dt>Project type</dt><dd>Musical theater developmental staged reading at an education event</dd></div>
-      <div class="f"><dt>Pay</dt><dd><strong>$500</strong> &middot; Equity Single Engagement Agreement &middot; Equity and non-Equity performers may submit</dd></div>
-      <div class="f"><dt>Cast size</dt><dd>12 &mdash; 3 principals, 3 supporting, 6 ensemble</dd></div>
-      <div class="f"><dt>Performance</dt><dd><strong>Sunday, October 18, 6:00pm ET</strong></dd></div>
-      <div class="f"><dt>Rehearsals</dt><dd>Sunday, October 11 &ndash; Sunday, October 18. Rehearsal times will be scheduled around the availability of the cast.</dd></div>
-      <div class="f"><dt>Preparation</dt><dd>Songs to be prepared in advance of rehearsals. Coaching available.</dd></div>
-      <!-- CREATIVE TEAM · per-call, full-width row. Add a name as the team grows. -->
-      <div class="f team">
-        <dt>Creative team</dt>
-        <dd>
-          <span class="who"><a href="https://www.rebeccaaparicio.com" target="_blank" rel="noopener">Rebecca Aparicio</a>, <span class="r">director</span></span>
-          <span class="who"><a href="https://www.duq.edu/faculty-and-staff/dr-michael-mackey.php" target="_blank" rel="noopener">Mike Mackey</a>, <span class="r">music director</span></span>
-          <span class="who"><a href="about.html">Peter Nilsson</a>, <span class="r">music, lyrics &amp; book</span></span>
-        </dd>
-      </div>
-      <!-- MUSICAL STYLE · show-level, full-width row below the creative team. -->
-      <div class="f style">
-        <dt>Musical style</dt>
-        <dd>
-          <p>A fusion of styles. The score mixes hip-hop, pop, Latin, classical, jazz, and spirituals.</p>
-          <p>Actors must be able to navigate contemporary musical theater styles as well as more classical influences. <span class="must">Every role must be able to handle complex rhythm and flow, blending rhythmic dialogue and rap with musical theater.</span></p>
-        </dd>
-      </div>
-    </dl>
-
-    <div class="audition">
-      <h3>To audition</h3>
-      <p>Submit a <strong>resume</strong>, a <strong>headshot</strong>, and a <strong>link to a downloadable video</strong> of 90 seconds or less containing:</p>
-      <ol>
-        <li>An excerpt of any song in your most comfortable range</li>
-        <li>Any rap from &mdash; or in the style of &mdash; <em>Hamilton</em> or <em>In the Heights</em></li>
-      </ol>
-      <p class="send">Send your <strong>resume</strong>, <strong>headshot</strong>, and a <strong>link to the video file</strong> to <a class="mail" data-mail="casting" data-mail-subject="Audition submission &mdash; Schooled (Pittsburgh, Oct 2026)" href="#">casting [at] schooledthemusical [dot] com</a></p>
-      <a class="pdfdl" href="files/casting-pittsburgh-2026.pdf" download>
-        <svg viewBox="0 0 24 24"><path d="M12 16l-5-5h3V4h4v7h3l-5 5zm-7 2h14v2H5v-2z"/></svg>
-        Download the full breakdown (PDF)
-      </a>
-    </div>
-
-    <!-- PRINCIPALS -->
-    <div class="g-principal">
-      <div class="roles-head">
-        <h3>Principal roles</h3><span class="count">3</span>
-      </div>
-      <div class="roles">
-
-        <div class="role">
-          <div class="rtop"><span class="name">Marcus Aurelius Washington</span><span class="type">Lead &middot; Male &middot; Black or mixed race</span></div>
-          <div class="meta">18&ndash;35ish, to play 14 and 24 &middot; Tenor</div>
-          <p class="desc">Bright-eyed, wildly curious, optimistic, and innocent. His innocence is challenged by tragedy.</p>
-        </div>
-
-        <div class="role">
-          <div class="rtop"><span class="name">Emily Washington</span><span class="type">Lead &middot; Female &middot; Black or mixed race</span></div>
-          <div class="meta">18&ndash;35ish, to play 17 and 27 &middot; Soprano</div>
-          <p class="desc">Marcus&rsquo;s older sister. Driven and bright. Performance-focused to secure a safe future. She begins as a rule-follower.</p>
-        </div>
-
-        <div class="role">
-          <div class="rtop"><span class="name">Sami &ldquo;Sam&rdquo; Saffadin</span><span class="type">Lead &middot; Male &middot; Arab-American or MENA</span></div>
-          <div class="meta">20&ndash;35ish, to play 17 and 27 &middot; Baritone/tenor</div>
-          <p class="desc">Civic-minded and passionate. Lost his father, who served in the US army, at a young age. He grows politically active.</p>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- SUPPORTING -->
-    <div class="g-supporting">
-      <div class="roles-head">
-        <h3>Supporting roles</h3><span class="count">3</span>
-        <span class="note">Most supporting roles double in other roles</span>
-      </div>
-      <div class="roles">
-
-        <div class="role">
-          <div class="rtop"><span class="name">Mrs. Mary Nestor</span><span class="type">Supporting &middot; Female &middot; Open ethnicity</span><span class="track">Track 1</span></div>
-          <div class="meta">30s&ndash;50s, to play 40s&ndash;50s &middot; Soprano</div>
-          <p class="desc">Head of School. Professional, wise, and savvy. She cares deeply for students. Has her own, private battles to fight.</p>
-        </div>
-
-        <div class="role">
-          <div class="rtop"><span class="name">Mr. Mitchell Lyons</span><span class="type">Supporting &middot; Male &middot; Open ethnicity</span><span class="track">Track 2</span></div>
-          <div class="meta">20s&ndash;30s, to play 23 and 33, and others &middot; Any voice type &middot; Doubles: Students, others</div>
-          <p class="desc">History teacher. In Act I he is right out of college; in Act II, married with a newborn.</p>
-        </div>
-
-        <div class="role">
-          <div class="rtop"><span class="name">Ms. Elsie Besant</span><span class="type">Supporting &middot; Female &middot; Open ethnicity</span><span class="track">Track 3</span></div>
-          <div class="meta">20s&ndash;30s, to play 24 and 34, and others &middot; Any voice type &middot; Doubles: Students, others</div>
-          <p class="desc">English teacher. In Act I she is right out of college; in Act II, married with a newborn.</p>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- ENSEMBLE -->
-    <div class="g-ensemble">
-      <div class="roles-head">
-        <h3>Ensemble tracks</h3><span class="count">6</span>
-        <span class="note">All ensemble tracks cover multiple roles</span>
-      </div>
-      <div class="roles">
-
-        <div class="role">
-          <div class="rtop"><span class="name">Vanderbilt &ldquo;Van&rdquo; Carnegie</span><span class="type">Supporting &middot; Male &middot; Open ethnicity</span><span class="track">Track 4</span></div>
-          <div class="meta">20s, to play 14, and others &middot; Any voice type &middot; Doubles: Mr. Emerson, students</div>
-          <p class="desc">Freshman boy. Wealthy, naive, kind. Marcus&rsquo;s friend and work-study partner.</p>
-        </div>
-
-        <div class="role">
-          <div class="rtop"><span class="name">Jenny Lee</span><span class="type">Supporting &middot; Female &middot; Open ethnicity</span><span class="track">Track 5</span></div>
-          <div class="meta">20s, to play 14, and others &middot; Any voice type &middot; Doubles: Students</div>
-          <p class="desc">Freshman student. Pragmatic, funny, and protective. Friend of Marcus.</p>
-        </div>
-
-        <div class="role">
-          <div class="rtop"><span class="name">Mr. O&rsquo;Brien</span><span class="type">Supporting &middot; Male &middot; Open ethnicity</span><span class="track">Track 6</span></div>
-          <div class="meta">20s&ndash;30s, to play ~30, and students &middot; Any voice type &middot; Doubles: Students, others</div>
-          <p class="desc">Ethics teacher, provocateur.</p>
-        </div>
-
-        <div class="role">
-          <div class="rtop"><span class="name">Comfort</span><span class="type">Supporting &middot; Female &middot; Open ethnicity</span><span class="track">Track 7</span></div>
-          <div class="meta">20s, to play 17, and others &middot; Any voice type &middot; Doubles: Students, others</div>
-          <p class="desc">Quiet student with different politics from her classmates.</p>
-        </div>
-
-        <div class="role">
-          <div class="rtop"><span class="name">NG</span><span class="type">Supporting &middot; Male &middot; Open ethnicity</span><span class="track">Track 8</span></div>
-          <div class="meta">20s, to play 17, and others &middot; Any voice type &middot; Doubles: Students, others</div>
-          <p class="desc">Grandson of the head of school, carries a burden unknown to others.</p>
-        </div>
-
-        <div class="role">
-          <div class="rtop"><span class="name">Debra</span><span class="type">Supporting &middot; Female &middot; Open ethnicity</span><span class="track">Track 9</span></div>
-          <div class="meta">20s, to play 17, and others &middot; Any voice type &middot; Doubles: Students, others</div>
-          <p class="desc">Outspoken student, unafraid, great sense of humor.</p>
-        </div>
-
-      </div>
-    </div>
-
-  </section>
-  <!-- ============ END CALL BLOCK ============ -->
+  <div class="none-live">
+    <p class="nl-title">No casting is live right now.</p>
+    <p class="nl-text">There are no open calls at the moment. New calls will be posted on this page when they open. To hear about them first, <a href="dispatches.html">subscribe to the dispatches</a>.</p>
+  </div>
 
 </div>
 
