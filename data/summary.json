@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-10T00:01:47.910Z",
+  "generated": "2026-10-10T14:26:20.730Z",
   "defaultRange": "all",
   "order": [
     "24h",
@@ -10,99 +10,29 @@
   ],
   "span": {
     "first": "2026-08-19T00:29:19.264Z",
-    "days": 52
+    "days": 53
   },
   "ranges": {
     "24h": {
       "key": "24h",
       "label": "Last 24 hours",
       "short": "24h",
-      "from": "2026-10-09T00:01:47.910Z",
-      "to": "2026-10-10T00:01:47.910Z",
+      "from": "2026-10-09T14:26:20.730Z",
+      "to": "2026-10-10T14:26:20.730Z",
       "available": true,
       "granularity": "hour",
       "totals": {
-        "views": 34,
-        "clicks": 18,
-        "links": 5,
-        "visitors": 19,
+        "views": 31,
+        "clicks": 17,
+        "links": 4,
+        "visitors": 17,
         "signups": 0,
-        "days": 1,
+        "days": 2,
         "medianPagesPerVisit": 1,
         "medianDepth": 34,
-        "medianSecs": 9
+        "medianSecs": 6
       },
       "series": [
-        {
-          "t": "2026-10-09T01:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-10-09T02:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-10-09T03:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-10-09T04:00:00.000Z",
-          "views": 5,
-          "visitors": 2
-        },
-        {
-          "t": "2026-10-09T05:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-10-09T06:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-10-09T07:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-10-09T08:00:00.000Z",
-          "views": 9,
-          "visitors": 1
-        },
-        {
-          "t": "2026-10-09T09:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-10-09T10:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-10-09T11:00:00.000Z",
-          "views": 1,
-          "visitors": 1
-        },
-        {
-          "t": "2026-10-09T12:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-10-09T13:00:00.000Z",
-          "views": 5,
-          "visitors": 1
-        },
-        {
-          "t": "2026-10-09T14:00:00.000Z",
-          "views": 2,
-          "visitors": 2
-        },
         {
           "t": "2026-10-09T15:00:00.000Z",
           "views": 2,
@@ -152,83 +82,137 @@
           "t": "2026-10-10T00:00:00.000Z",
           "views": 0,
           "visitors": 0
+        },
+        {
+          "t": "2026-10-10T01:00:00.000Z",
+          "views": 0,
+          "visitors": 0
+        },
+        {
+          "t": "2026-10-10T02:00:00.000Z",
+          "views": 0,
+          "visitors": 0
+        },
+        {
+          "t": "2026-10-10T03:00:00.000Z",
+          "views": 0,
+          "visitors": 0
+        },
+        {
+          "t": "2026-10-10T04:00:00.000Z",
+          "views": 0,
+          "visitors": 0
+        },
+        {
+          "t": "2026-10-10T05:00:00.000Z",
+          "views": 0,
+          "visitors": 0
+        },
+        {
+          "t": "2026-10-10T06:00:00.000Z",
+          "views": 0,
+          "visitors": 0
+        },
+        {
+          "t": "2026-10-10T07:00:00.000Z",
+          "views": 0,
+          "visitors": 0
+        },
+        {
+          "t": "2026-10-10T08:00:00.000Z",
+          "views": 15,
+          "visitors": 1
+        },
+        {
+          "t": "2026-10-10T09:00:00.000Z",
+          "views": 0,
+          "visitors": 0
+        },
+        {
+          "t": "2026-10-10T10:00:00.000Z",
+          "views": 0,
+          "visitors": 0
+        },
+        {
+          "t": "2026-10-10T11:00:00.000Z",
+          "views": 0,
+          "visitors": 0
+        },
+        {
+          "t": "2026-10-10T12:00:00.000Z",
+          "views": 1,
+          "visitors": 1
+        },
+        {
+          "t": "2026-10-10T13:00:00.000Z",
+          "views": 2,
+          "visitors": 2
+        },
+        {
+          "t": "2026-10-10T14:00:00.000Z",
+          "views": 0,
+          "visitors": 0
         }
       ],
       "pages": [
         {
           "key": "/",
-          "n": 20,
-          "visitors": 18,
-          "depth": 66,
-          "secs": 7,
-          "measured": 14
+          "n": 18,
+          "visitors": 16,
+          "depth": 65,
+          "secs": 3,
+          "measured": 13
         },
         {
           "key": "/dispatches.html",
-          "n": 8,
-          "visitors": 3,
+          "n": 5,
+          "visitors": 1,
           "depth": 16,
-          "secs": 8,
-          "measured": 8
+          "secs": 5,
+          "measured": 5
         },
         {
-          "key": "/casting.html",
-          "n": 2,
-          "visitors": 2,
-          "depth": 100,
-          "secs": 17,
-          "measured": 2
+          "key": "/history.html",
+          "n": 4,
+          "visitors": 1,
+          "depth": 30,
+          "secs": 9,
+          "measured": 4
         },
         {
           "key": "/reading.html",
           "n": 2,
           "visitors": 2,
-          "depth": 29,
-          "secs": 6,
+          "depth": 31,
+          "secs": 11,
           "measured": 2
         },
         {
-          "key": "/vision.html",
-          "n": 1,
+          "key": "/casting.html",
+          "n": 2,
           "visitors": 1,
           "depth": 100,
-          "secs": 14,
-          "measured": 1
-        },
-        {
-          "key": "/history.html",
-          "n": 1,
-          "visitors": 1,
-          "depth": 89,
-          "secs": 1015,
-          "measured": 1
+          "secs": 6,
+          "measured": 2
         }
       ],
       "journeys": [
         {
-          "key": "/ → /dispatches.html → / → /dispatches.html",
-          "n": 1
-        },
-        {
-          "key": "/dispatches.html → /casting.html → / → /vision.html → /history.html → /dispatches.html",
-          "n": 1
-        },
-        {
-          "key": "/ → /casting.html → /dispatches.html → /reading.html",
+          "key": "/dispatches.html → /casting.html → /dispatches.html → /casting.html → / → /history.html → / → /history.html → /dispatches.html → /reading.html → / → /dispatches.html",
           "n": 1
         }
       ],
       "entries": [
         {
           "key": "/",
-          "n": 17
-        },
-        {
-          "key": "/dispatches.html",
-          "n": 1
+          "n": 15
         },
         {
           "key": "/reading.html",
+          "n": 1
+        },
+        {
+          "key": "/dispatches.html",
           "n": 1
         }
       ],
@@ -238,51 +222,51 @@
           "n": 15
         },
         {
-          "key": "/dispatches.html",
-          "n": 2
+          "key": "/reading.html",
+          "n": 1
         },
         {
-          "key": "/reading.html",
-          "n": 2
+          "key": "/dispatches.html",
+          "n": 1
         }
       ],
       "sources": [
         {
-          "key": "direct",
-          "n": 18
-        },
-        {
           "key": "internal",
-          "n": 12
+          "n": 16
         },
         {
-          "key": "referral",
-          "n": 3
+          "key": "direct",
+          "n": 10
         },
         {
           "key": "search",
-          "n": 1
+          "n": 3
+        },
+        {
+          "key": "referral",
+          "n": 2
         }
       ],
       "referrers": [
         {
           "key": "schooledthemusical.com",
-          "n": 12
-        },
-        {
-          "key": "peternilsson.us",
-          "n": 3
+          "n": 16
         },
         {
           "key": "google.com",
-          "n": 1
+          "n": 3
+        },
+        {
+          "key": "peternilsson.us",
+          "n": 2
         }
       ],
       "campaigns": [],
       "countries": [
         {
           "key": "US",
-          "n": 33
+          "n": 30
         },
         {
           "key": "DE",
@@ -291,23 +275,19 @@
       ],
       "cities": [
         {
-          "key": "Pittsburgh, Pennsylvania",
-          "n": 11
-        },
-        {
           "key": "Las Vegas, Nevada",
-          "n": 9
+          "n": 15
         },
         {
           "key": "Ashburn, Virginia",
-          "n": 6
+          "n": 7
         },
         {
-          "key": "Inglewood, California",
-          "n": 1
+          "key": "Wilkinsburg, Pennsylvania",
+          "n": 2
         },
         {
-          "key": "Bridgeville, Pennsylvania",
+          "key": "Pittsburgh, Pennsylvania",
           "n": 1
         },
         {
@@ -338,21 +318,25 @@
       "devices": [
         {
           "key": "desktop",
-          "n": 21
+          "n": 26
         },
         {
           "key": "mobile",
-          "n": 13
+          "n": 5
         }
       ],
       "browsers": [
         {
           "key": "Chrome",
-          "n": 22
+          "n": 25
         },
         {
           "key": "Safari",
-          "n": 11
+          "n": 3
+        },
+        {
+          "key": "Firefox",
+          "n": 2
         },
         {
           "key": "Other",
@@ -362,19 +346,19 @@
       "systems": [
         {
           "key": "Windows",
-          "n": 14
+          "n": 23
         },
         {
           "key": "iOS",
-          "n": 12
-        },
-        {
-          "key": "macOS",
-          "n": 5
+          "n": 4
         },
         {
           "key": "Linux",
           "n": 2
+        },
+        {
+          "key": "macOS",
+          "n": 1
         },
         {
           "key": "Android",
@@ -389,10 +373,6 @@
           "n": 2
         },
         {
-          "key": "mailto:info@schooledthemusical.com",
-          "n": 1
-        },
-        {
           "key": "https://ryandobrin.com/",
           "n": 1
         },
@@ -403,15 +383,11 @@
       ],
       "internalLinks": [
         {
-          "key": "https://schooledthemusical.com/dispatches.html#update-5",
-          "n": 3
-        },
-        {
           "key": "https://schooledthemusical.com/dispatches.html",
-          "n": 2
+          "n": 4
         },
         {
-          "key": "https://schooledthemusical.com/index.html#about",
+          "key": "https://schooledthemusical.com/dispatches.html#update-5",
           "n": 2
         },
         {
@@ -419,8 +395,8 @@
           "n": 2
         },
         {
-          "key": "https://schooledthemusical.com/vision.html",
-          "n": 1
+          "key": "https://schooledthemusical.com/index.html#about",
+          "n": 2
         },
         {
           "key": "https://schooledthemusical.com/history.html",
@@ -440,26 +416,26 @@
       "key": "week",
       "label": "Last week",
       "short": "Week",
-      "from": "2026-10-03T00:01:47.910Z",
-      "to": "2026-10-10T00:01:47.910Z",
+      "from": "2026-10-03T14:26:20.730Z",
+      "to": "2026-10-10T14:26:20.730Z",
       "available": true,
       "granularity": "day",
       "totals": {
-        "views": 197,
-        "clicks": 85,
-        "links": 13,
-        "visitors": 127,
+        "views": 209,
+        "clicks": 101,
+        "links": 17,
+        "visitors": 126,
         "signups": 0,
-        "days": 7,
+        "days": 8,
         "medianPagesPerVisit": 1,
-        "medianDepth": 44,
-        "medianSecs": 12
+        "medianDepth": 42,
+        "medianSecs": 10
       },
       "series": [
         {
           "d": "2026-10-03",
-          "views": 21,
-          "visitors": 17
+          "views": 15,
+          "visitors": 12
         },
         {
           "d": "2026-10-04",
@@ -490,56 +466,61 @@
           "d": "2026-10-09",
           "views": 34,
           "visitors": 19
+        },
+        {
+          "d": "2026-10-10",
+          "views": 18,
+          "visitors": 4
         }
       ],
       "pages": [
         {
           "key": "/",
-          "n": 103,
-          "visitors": 94,
-          "depth": 44,
-          "secs": 12,
-          "measured": 91
-        },
-        {
-          "key": "/casting.html",
-          "n": 24,
-          "visitors": 21,
+          "n": 104,
+          "visitors": 93,
           "depth": 47,
-          "secs": 8,
-          "measured": 24
+          "secs": 12,
+          "measured": 92
         },
         {
           "key": "/dispatches.html",
-          "n": 23,
-          "visitors": 17,
+          "n": 28,
+          "visitors": 18,
           "depth": 16,
           "secs": 9,
-          "measured": 23
+          "measured": 28
+        },
+        {
+          "key": "/casting.html",
+          "n": 26,
+          "visitors": 22,
+          "depth": 54,
+          "secs": 8,
+          "measured": 26
         },
         {
           "key": "/about.html",
-          "n": 22,
-          "visitors": 22,
-          "depth": 66,
-          "secs": 13,
-          "measured": 22
+          "n": 21,
+          "visitors": 21,
+          "depth": 73,
+          "secs": 14,
+          "measured": 21
         },
         {
           "key": "/history.html",
-          "n": 12,
-          "visitors": 11,
-          "depth": 68,
-          "secs": 40,
-          "measured": 11
+          "n": 16,
+          "visitors": 12,
+          "depth": 36,
+          "secs": 24,
+          "measured": 15
         },
         {
           "key": "/reading.html",
-          "n": 7,
-          "visitors": 7,
-          "depth": 39,
-          "secs": 7,
-          "measured": 7
+          "n": 8,
+          "visitors": 8,
+          "depth": 40,
+          "secs": 9,
+          "measured": 8
         },
         {
           "key": "/vision.html",
@@ -552,10 +533,6 @@
       ],
       "journeys": [
         {
-          "key": "/ → /about.html",
-          "n": 3
-        },
-        {
           "key": "/ → /about.html → /history.html",
           "n": 2
         },
@@ -565,6 +542,10 @@
         },
         {
           "key": "/casting.html → /about.html",
+          "n": 2
+        },
+        {
+          "key": "/ → /about.html",
           "n": 2
         },
         {
@@ -615,15 +596,15 @@
       "entries": [
         {
           "key": "/",
-          "n": 91
+          "n": 89
+        },
+        {
+          "key": "/dispatches.html",
+          "n": 12
         },
         {
           "key": "/casting.html",
           "n": 12
-        },
-        {
-          "key": "/dispatches.html",
-          "n": 11
         },
         {
           "key": "/about.html",
@@ -641,11 +622,11 @@
       "exits": [
         {
           "key": "/",
-          "n": 77
+          "n": 76
         },
         {
           "key": "/dispatches.html",
-          "n": 12
+          "n": 13
         },
         {
           "key": "/casting.html",
@@ -653,7 +634,7 @@
         },
         {
           "key": "/about.html",
-          "n": 11
+          "n": 10
         },
         {
           "key": "/history.html",
@@ -671,15 +652,15 @@
       "sources": [
         {
           "key": "direct",
-          "n": 97
+          "n": 96
         },
         {
           "key": "internal",
-          "n": 71
+          "n": 84
         },
         {
           "key": "search",
-          "n": 17
+          "n": 19
         },
         {
           "key": "referral",
@@ -687,25 +668,21 @@
         },
         {
           "key": "social",
-          "n": 4
+          "n": 2
         }
       ],
       "referrers": [
         {
           "key": "schooledthemusical.com",
-          "n": 71
+          "n": 84
         },
         {
           "key": "google.com",
-          "n": 15
+          "n": 17
         },
         {
           "key": "peternilsson.us",
           "n": 7
-        },
-        {
-          "key": "l.instagram.com",
-          "n": 2
         },
         {
           "key": "facebook.com",
@@ -732,7 +709,7 @@
       "countries": [
         {
           "key": "US",
-          "n": 194
+          "n": 206
         },
         {
           "key": "JP",
@@ -746,27 +723,27 @@
       "cities": [
         {
           "key": "Pittsburgh, Pennsylvania",
-          "n": 33
-        },
-        {
-          "key": "Yonkers, New York",
-          "n": 26
+          "n": 32
         },
         {
           "key": "Las Vegas, Nevada",
-          "n": 16
+          "n": 31
         },
         {
-          "key": "Ashburn, Virginia",
-          "n": 13
+          "key": "Yonkers, New York",
+          "n": 25
         },
         {
           "key": "Wilkinsburg, Pennsylvania",
-          "n": 12
+          "n": 14
+        },
+        {
+          "key": "Ashburn, Virginia",
+          "n": 14
         },
         {
           "key": "New York City, New York",
-          "n": 10
+          "n": 8
         },
         {
           "key": "Boston, Massachusetts",
@@ -793,14 +770,6 @@
           "n": 4
         },
         {
-          "key": "Marblehead, Massachusetts",
-          "n": 3
-        },
-        {
-          "key": "Fort Wayne, Indiana",
-          "n": 3
-        },
-        {
           "key": "North Las Vegas, Nevada",
           "n": 3
         },
@@ -817,7 +786,15 @@
           "n": 3
         },
         {
+          "key": "Fort Wayne, Indiana",
+          "n": 2
+        },
+        {
           "key": "Hickory Hills, Illinois",
+          "n": 2
+        },
+        {
+          "key": "Marblehead, Massachusetts",
           "n": 2
         },
         {
@@ -827,30 +804,30 @@
       ],
       "devices": [
         {
-          "key": "mobile",
-          "n": 99
+          "key": "desktop",
+          "n": 113
         },
         {
-          "key": "desktop",
-          "n": 95
+          "key": "mobile",
+          "n": 94
         },
         {
           "key": "tablet",
-          "n": 3
+          "n": 2
         }
       ],
       "browsers": [
         {
           "key": "Safari",
-          "n": 119
+          "n": 113
         },
         {
           "key": "Chrome",
-          "n": 76
+          "n": 92
         },
         {
           "key": "Firefox",
-          "n": 1
+          "n": 3
         },
         {
           "key": "Other",
@@ -860,7 +837,7 @@
       "systems": [
         {
           "key": "iOS",
-          "n": 98
+          "n": 92
         },
         {
           "key": "macOS",
@@ -868,7 +845,7 @@
         },
         {
           "key": "Windows",
-          "n": 28
+          "n": 46
         },
         {
           "key": "Linux",
@@ -888,57 +865,57 @@
       "links": [
         {
           "key": "https://www.rebeccaaparicio.com/",
-          "n": 5
+          "n": 7
         },
         {
           "key": "https://www.duq.edu/faculty-and-staff/dr-michael-mackey.php",
-          "n": 4
-        },
-        {
-          "key": "mailto:info@schooledthemusical.com",
-          "n": 2
+          "n": 5
         },
         {
           "key": "https://ryandobrin.com/",
+          "n": 3
+        },
+        {
+          "key": "mailto:info@schooledthemusical.com",
           "n": 2
         }
       ],
       "internalLinks": [
         {
           "key": "https://schooledthemusical.com/about.html",
-          "n": 17
+          "n": 16
         },
         {
           "key": "https://schooledthemusical.com/casting.html",
-          "n": 12
+          "n": 14
         },
         {
           "key": "https://schooledthemusical.com/dispatches.html#update-5",
+          "n": 11
+        },
+        {
+          "key": "https://schooledthemusical.com/index.html#about",
+          "n": 9
+        },
+        {
+          "key": "https://schooledthemusical.com/dispatches.html",
           "n": 9
         },
         {
           "key": "https://schooledthemusical.com/history.html",
-          "n": 7
-        },
-        {
-          "key": "https://schooledthemusical.com/index.html#about",
-          "n": 7
+          "n": 8
         },
         {
           "key": "https://schooledthemusical.com/vision.html",
           "n": 6
         },
         {
-          "key": "https://schooledthemusical.com/dispatches.html",
+          "key": "https://schooledthemusical.com/reading.html",
           "n": 5
         },
         {
-          "key": "https://schooledthemusical.com/reading.html",
-          "n": 4
-        },
-        {
           "key": "https://schooledthemusical.com/history.html#pittsburgh-2026",
-          "n": 2
+          "n": 3
         },
         {
           "key": "https://schooledthemusical.com/dispatches.html#update-4",
@@ -958,17 +935,17 @@
       "key": "month",
       "label": "Last month",
       "short": "Month",
-      "from": "2026-09-10T00:01:47.910Z",
-      "to": "2026-10-10T00:01:47.910Z",
+      "from": "2026-09-10T14:26:20.730Z",
+      "to": "2026-10-10T14:26:20.730Z",
       "available": true,
       "granularity": "day",
       "totals": {
-        "views": 1040,
-        "clicks": 460,
-        "links": 91,
-        "visitors": 644,
+        "views": 1056,
+        "clicks": 477,
+        "links": 95,
+        "visitors": 646,
         "signups": 2,
-        "days": 30,
+        "days": 31,
         "medianPagesPerVisit": 1,
         "medianDepth": 54,
         "medianSecs": 15
@@ -976,8 +953,8 @@
       "series": [
         {
           "d": "2026-09-10",
-          "views": 13,
-          "visitors": 8
+          "views": 11,
+          "visitors": 6
         },
         {
           "d": "2026-09-11",
@@ -1123,24 +1100,29 @@
           "d": "2026-10-09",
           "views": 34,
           "visitors": 19
+        },
+        {
+          "d": "2026-10-10",
+          "views": 18,
+          "visitors": 4
         }
       ],
       "pages": [
         {
           "key": "/casting.html",
-          "n": 376,
-          "visitors": 310,
-          "depth": 59,
+          "n": 378,
+          "visitors": 311,
+          "depth": 60,
           "secs": 19,
-          "measured": 357
+          "measured": 359
         },
         {
           "key": "/",
-          "n": 369,
-          "visitors": 324,
-          "depth": 46,
+          "n": 374,
+          "visitors": 327,
+          "depth": 48,
           "secs": 13,
-          "measured": 332
+          "measured": 336
         },
         {
           "key": "/about.html",
@@ -1152,35 +1134,35 @@
         },
         {
           "key": "/dispatches.html",
-          "n": 65,
-          "visitors": 50,
+          "n": 70,
+          "visitors": 51,
           "depth": 16,
           "secs": 10,
-          "measured": 63
-        },
-        {
-          "key": "/reading.html",
-          "n": 41,
-          "visitors": 38,
-          "depth": 31,
-          "secs": 14,
-          "measured": 39
+          "measured": 68
         },
         {
           "key": "/history.html",
-          "n": 39,
-          "visitors": 36,
-          "depth": 79,
-          "secs": 31,
-          "measured": 35
+          "n": 43,
+          "visitors": 37,
+          "depth": 68,
+          "secs": 24,
+          "measured": 39
+        },
+        {
+          "key": "/reading.html",
+          "n": 42,
+          "visitors": 39,
+          "depth": 34,
+          "secs": 14,
+          "measured": 40
         },
         {
           "key": "/casting",
-          "n": 29,
-          "visitors": 29,
-          "depth": 96,
-          "secs": 32,
-          "measured": 28
+          "n": 28,
+          "visitors": 28,
+          "depth": 95,
+          "secs": 31,
+          "measured": 27
         },
         {
           "key": "/vision.html",
@@ -1256,7 +1238,7 @@
       "entries": [
         {
           "key": "/",
-          "n": 297
+          "n": 299
         },
         {
           "key": "/casting.html",
@@ -1268,7 +1250,7 @@
         },
         {
           "key": "/casting",
-          "n": 29
+          "n": 28
         },
         {
           "key": "/history.html",
@@ -1276,7 +1258,7 @@
         },
         {
           "key": "/dispatches.html",
-          "n": 14
+          "n": 15
         },
         {
           "key": "/reading.html",
@@ -1294,7 +1276,7 @@
         },
         {
           "key": "/",
-          "n": 242
+          "n": 244
         },
         {
           "key": "/about.html",
@@ -1302,7 +1284,7 @@
         },
         {
           "key": "/casting",
-          "n": 25
+          "n": 24
         },
         {
           "key": "/history.html",
@@ -1310,7 +1292,7 @@
         },
         {
           "key": "/dispatches.html",
-          "n": 19
+          "n": 20
         },
         {
           "key": "/reading.html",
@@ -1324,15 +1306,15 @@
       "sources": [
         {
           "key": "direct",
-          "n": 509
+          "n": 510
         },
         {
           "key": "internal",
-          "n": 400
+          "n": 414
         },
         {
           "key": "search",
-          "n": 86
+          "n": 87
         },
         {
           "key": "social",
@@ -1350,11 +1332,11 @@
       "referrers": [
         {
           "key": "schooledthemusical.com",
-          "n": 400
+          "n": 414
         },
         {
           "key": "google.com",
-          "n": 73
+          "n": 74
         },
         {
           "key": "facebook.com",
@@ -1422,11 +1404,7 @@
       "countries": [
         {
           "key": "US",
-          "n": 1015
-        },
-        {
-          "key": "KG",
-          "n": 4
+          "n": 1032
         },
         {
           "key": "JP",
@@ -1442,6 +1420,10 @@
         },
         {
           "key": "GB",
+          "n": 3
+        },
+        {
+          "key": "KG",
           "n": 3
         },
         {
@@ -1471,11 +1453,11 @@
           "n": 294
         },
         {
-          "key": "Lancaster, Pennsylvania",
-          "n": 65
+          "key": "Las Vegas, Nevada",
+          "n": 80
         },
         {
-          "key": "Las Vegas, Nevada",
+          "key": "Lancaster, Pennsylvania",
           "n": 65
         },
         {
@@ -1496,11 +1478,11 @@
         },
         {
           "key": "Wilkinsburg, Pennsylvania",
-          "n": 22
+          "n": 24
         },
         {
           "key": "Ashburn, Virginia",
-          "n": 21
+          "n": 22
         },
         {
           "key": "North Las Vegas, Nevada",
@@ -1554,7 +1536,7 @@
         },
         {
           "key": "desktop",
-          "n": 432
+          "n": 448
         },
         {
           "key": "tablet",
@@ -1564,19 +1546,19 @@
       "browsers": [
         {
           "key": "Safari",
-          "n": 618
+          "n": 617
         },
         {
           "key": "Chrome",
-          "n": 402
+          "n": 417
+        },
+        {
+          "key": "Firefox",
+          "n": 9
         },
         {
           "key": "Edge",
           "n": 8
-        },
-        {
-          "key": "Firefox",
-          "n": 7
         },
         {
           "key": "Other",
@@ -1594,11 +1576,11 @@
         },
         {
           "key": "macOS",
-          "n": 227
+          "n": 225
         },
         {
           "key": "Windows",
-          "n": 191
+          "n": 209
         },
         {
           "key": "Android",
@@ -1639,16 +1621,16 @@
           "n": 23
         },
         {
-          "key": "https://www.duq.edu/faculty-and-staff/dr-michael-mackey.php",
-          "n": 17
+          "key": "https://www.rebeccaaparicio.com/",
+          "n": 19
         },
         {
-          "key": "https://www.rebeccaaparicio.com/",
-          "n": 17
+          "key": "https://www.duq.edu/faculty-and-staff/dr-michael-mackey.php",
+          "n": 18
         },
         {
           "key": "https://ryandobrin.com/",
-          "n": 6
+          "n": 7
         },
         {
           "key": "https://www.instagram.com/schooledthemusical",
@@ -1694,7 +1676,7 @@
       "internalLinks": [
         {
           "key": "https://schooledthemusical.com/casting.html",
-          "n": 91
+          "n": 93
         },
         {
           "key": "https://schooledthemusical.com/about.html",
@@ -1702,27 +1684,27 @@
         },
         {
           "key": "https://schooledthemusical.com/index.html#about",
-          "n": 43
+          "n": 45
         },
         {
           "key": "https://schooledthemusical.com/dispatches.html",
-          "n": 38
+          "n": 42
         },
         {
           "key": "https://schooledthemusical.com/reading.html",
-          "n": 32
+          "n": 33
         },
         {
           "key": "https://schooledthemusical.com/history.html",
-          "n": 23
+          "n": 24
+        },
+        {
+          "key": "https://schooledthemusical.com/dispatches.html#update-5",
+          "n": 15
         },
         {
           "key": "https://schooledthemusical.com/vision.html",
           "n": 14
-        },
-        {
-          "key": "https://schooledthemusical.com/dispatches.html#update-5",
-          "n": 13
         },
         {
           "key": "https://schooledthemusical.com/index.html",
@@ -1741,11 +1723,11 @@
           "n": 5
         },
         {
-          "key": "https://schooledthemusical.com/index.html#top",
-          "n": 3
+          "key": "https://schooledthemusical.com/history.html#pittsburgh-2026",
+          "n": 4
         },
         {
-          "key": "https://schooledthemusical.com/history.html#pittsburgh-2026",
+          "key": "https://schooledthemusical.com/index.html#top",
           "n": 3
         },
         {
@@ -1774,20 +1756,20 @@
       "key": "year",
       "label": "Last year",
       "short": "Year",
-      "from": "2025-10-10T00:01:47.910Z",
-      "to": "2026-10-10T00:01:47.910Z",
+      "from": "2025-10-10T14:26:20.730Z",
+      "to": "2026-10-10T14:26:20.730Z",
       "available": false,
       "granularity": "day",
       "totals": {
-        "views": 1588,
-        "clicks": 625,
-        "links": 132,
-        "visitors": 1061,
+        "views": 1606,
+        "clicks": 642,
+        "links": 136,
+        "visitors": 1065,
         "signups": 4,
-        "days": 52,
+        "days": 53,
         "medianPagesPerVisit": 1,
         "medianDepth": 56,
-        "medianSecs": 18
+        "medianSecs": 17
       },
       "series": [
         {
@@ -2049,24 +2031,29 @@
           "d": "2026-10-09",
           "views": 34,
           "visitors": 19
+        },
+        {
+          "d": "2026-10-10",
+          "views": 18,
+          "visitors": 4
         }
       ],
       "pages": [
         {
           "key": "/casting.html",
-          "n": 572,
-          "visitors": 494,
+          "n": 574,
+          "visitors": 495,
           "depth": 60,
-          "secs": 25,
-          "measured": 540
+          "secs": 24,
+          "measured": 542
         },
         {
           "key": "/",
-          "n": 527,
-          "visitors": 472,
-          "depth": 44,
+          "n": 533,
+          "visitors": 476,
+          "depth": 45,
           "secs": 14,
-          "measured": 471
+          "measured": 477
         },
         {
           "key": "/about.html",
@@ -2086,27 +2073,27 @@
         },
         {
           "key": "/dispatches.html",
-          "n": 85,
-          "visitors": 70,
+          "n": 90,
+          "visitors": 71,
           "depth": 16,
-          "secs": 12,
-          "measured": 76
+          "secs": 10,
+          "measured": 81
         },
         {
           "key": "/reading.html",
-          "n": 73,
-          "visitors": 61,
+          "n": 74,
+          "visitors": 62,
           "depth": 37,
           "secs": 14,
-          "measured": 66
+          "measured": 67
         },
         {
           "key": "/history.html",
-          "n": 39,
-          "visitors": 36,
-          "depth": 79,
-          "secs": 31,
-          "measured": 35
+          "n": 43,
+          "visitors": 37,
+          "depth": 68,
+          "secs": 24,
+          "measured": 39
         },
         {
           "key": "/vision.html",
@@ -2182,7 +2169,7 @@
       "entries": [
         {
           "key": "/",
-          "n": 437
+          "n": 440
         },
         {
           "key": "/casting.html",
@@ -2198,7 +2185,7 @@
         },
         {
           "key": "/dispatches.html",
-          "n": 19
+          "n": 20
         },
         {
           "key": "/reading.html",
@@ -2220,7 +2207,7 @@
         },
         {
           "key": "/",
-          "n": 367
+          "n": 370
         },
         {
           "key": "/casting",
@@ -2231,11 +2218,11 @@
           "n": 64
         },
         {
-          "key": "/reading.html",
-          "n": 29
+          "key": "/dispatches.html",
+          "n": 30
         },
         {
-          "key": "/dispatches.html",
+          "key": "/reading.html",
           "n": 29
         },
         {
@@ -2250,11 +2237,11 @@
       "sources": [
         {
           "key": "direct",
-          "n": 801
+          "n": 803
         },
         {
           "key": "internal",
-          "n": 531
+          "n": 545
         },
         {
           "key": "social",
@@ -2262,7 +2249,7 @@
         },
         {
           "key": "search",
-          "n": 115
+          "n": 117
         },
         {
           "key": "referral",
@@ -2276,11 +2263,11 @@
       "referrers": [
         {
           "key": "schooledthemusical.com",
-          "n": 531
+          "n": 545
         },
         {
           "key": "google.com",
-          "n": 98
+          "n": 100
         },
         {
           "key": "facebook.com",
@@ -2360,7 +2347,7 @@
       "countries": [
         {
           "key": "US",
-          "n": 1532
+          "n": 1550
         },
         {
           "key": "KG",
@@ -2438,7 +2425,7 @@
         },
         {
           "key": "Las Vegas, Nevada",
-          "n": 77
+          "n": 92
         },
         {
           "key": "Lancaster, Pennsylvania",
@@ -2453,12 +2440,12 @@
           "n": 48
         },
         {
-          "key": "Yonkers, New York",
+          "key": "Ashburn, Virginia",
           "n": 31
         },
         {
-          "key": "Ashburn, Virginia",
-          "n": 30
+          "key": "Yonkers, New York",
+          "n": 31
         },
         {
           "key": "Washington, District of Columbia",
@@ -2478,7 +2465,7 @@
         },
         {
           "key": "Wilkinsburg, Pennsylvania",
-          "n": 22
+          "n": 24
         },
         {
           "key": "North Las Vegas, Nevada",
@@ -2520,7 +2507,7 @@
         },
         {
           "key": "desktop",
-          "n": 620
+          "n": 638
         },
         {
           "key": "tablet",
@@ -2534,7 +2521,7 @@
         },
         {
           "key": "Chrome",
-          "n": 535
+          "n": 551
         },
         {
           "key": "Other",
@@ -2546,7 +2533,7 @@
         },
         {
           "key": "Firefox",
-          "n": 7
+          "n": 9
         },
         {
           "key": "Opera",
@@ -2564,7 +2551,7 @@
         },
         {
           "key": "Windows",
-          "n": 239
+          "n": 257
         },
         {
           "key": "Android",
@@ -2614,15 +2601,15 @@
         },
         {
           "key": "https://www.duq.edu/faculty-and-staff/dr-michael-mackey.php",
-          "n": 21
+          "n": 22
         },
         {
           "key": "https://www.rebeccaaparicio.com/",
-          "n": 17
+          "n": 19
         },
         {
           "key": "https://ryandobrin.com/",
-          "n": 11
+          "n": 12
         },
         {
           "key": "mailto:schooledthemusical@gmail.com?subject=Audition%20submission%20%E2%80%94%20Schooled%20(Pittsburgh%2C%20Oct%202026)",
@@ -2668,7 +2655,7 @@
       "internalLinks": [
         {
           "key": "https://schooledthemusical.com/casting.html",
-          "n": 118
+          "n": 120
         },
         {
           "key": "https://schooledthemusical.com/about.html",
@@ -2676,19 +2663,19 @@
         },
         {
           "key": "https://schooledthemusical.com/dispatches.html",
-          "n": 52
+          "n": 56
         },
         {
           "key": "https://schooledthemusical.com/index.html#about",
-          "n": 49
+          "n": 51
         },
         {
           "key": "https://schooledthemusical.com/reading.html",
-          "n": 46
+          "n": 47
         },
         {
           "key": "https://schooledthemusical.com/history.html",
-          "n": 23
+          "n": 24
         },
         {
           "key": "https://schooledthemusical.com/vision.html",
@@ -2700,7 +2687,7 @@
         },
         {
           "key": "https://schooledthemusical.com/dispatches.html#update-5",
-          "n": 13
+          "n": 15
         },
         {
           "key": "https://schooledthemusical.com/dispatches.html#update-4",
@@ -2723,11 +2710,11 @@
           "n": 5
         },
         {
-          "key": "https://schooledthemusical.com/index.html#top",
-          "n": 3
+          "key": "https://schooledthemusical.com/history.html#pittsburgh-2026",
+          "n": 4
         },
         {
-          "key": "https://schooledthemusical.com/history.html#pittsburgh-2026",
+          "key": "https://schooledthemusical.com/index.html#top",
           "n": 3
         },
         {
@@ -2753,19 +2740,19 @@
       "label": "All time",
       "short": "All",
       "from": "2026-08-19T00:29:19.264Z",
-      "to": "2026-10-10T00:01:47.910Z",
+      "to": "2026-10-10T14:26:20.730Z",
       "available": true,
       "granularity": "day",
       "totals": {
-        "views": 1588,
-        "clicks": 625,
-        "links": 132,
-        "visitors": 1061,
+        "views": 1606,
+        "clicks": 642,
+        "links": 136,
+        "visitors": 1065,
         "signups": 4,
-        "days": 52,
+        "days": 53,
         "medianPagesPerVisit": 1,
         "medianDepth": 56,
-        "medianSecs": 18
+        "medianSecs": 17
       },
       "series": [
         {
@@ -3027,24 +3014,29 @@
           "d": "2026-10-09",
           "views": 34,
           "visitors": 19
+        },
+        {
+          "d": "2026-10-10",
+          "views": 18,
+          "visitors": 4
         }
       ],
       "pages": [
         {
           "key": "/casting.html",
-          "n": 572,
-          "visitors": 494,
+          "n": 574,
+          "visitors": 495,
           "depth": 60,
-          "secs": 25,
-          "measured": 540
+          "secs": 24,
+          "measured": 542
         },
         {
           "key": "/",
-          "n": 527,
-          "visitors": 472,
-          "depth": 44,
+          "n": 533,
+          "visitors": 476,
+          "depth": 45,
           "secs": 14,
-          "measured": 471
+          "measured": 477
         },
         {
           "key": "/about.html",
@@ -3064,27 +3056,27 @@
         },
         {
           "key": "/dispatches.html",
-          "n": 85,
-          "visitors": 70,
+          "n": 90,
+          "visitors": 71,
           "depth": 16,
-          "secs": 12,
-          "measured": 76
+          "secs": 10,
+          "measured": 81
         },
         {
           "key": "/reading.html",
-          "n": 73,
-          "visitors": 61,
+          "n": 74,
+          "visitors": 62,
           "depth": 37,
           "secs": 14,
-          "measured": 66
+          "measured": 67
         },
         {
           "key": "/history.html",
-          "n": 39,
-          "visitors": 36,
-          "depth": 79,
-          "secs": 31,
-          "measured": 35
+          "n": 43,
+          "visitors": 37,
+          "depth": 68,
+          "secs": 24,
+          "measured": 39
         },
         {
           "key": "/vision.html",
@@ -3160,7 +3152,7 @@
       "entries": [
         {
           "key": "/",
-          "n": 437
+          "n": 440
         },
         {
           "key": "/casting.html",
@@ -3176,7 +3168,7 @@
         },
         {
           "key": "/dispatches.html",
-          "n": 19
+          "n": 20
         },
         {
           "key": "/reading.html",
@@ -3198,7 +3190,7 @@
         },
         {
           "key": "/",
-          "n": 367
+          "n": 370
         },
         {
           "key": "/casting",
@@ -3209,11 +3201,11 @@
           "n": 64
         },
         {
-          "key": "/reading.html",
-          "n": 29
+          "key": "/dispatches.html",
+          "n": 30
         },
         {
-          "key": "/dispatches.html",
+          "key": "/reading.html",
           "n": 29
         },
         {
@@ -3228,11 +3220,11 @@
       "sources": [
         {
           "key": "direct",
-          "n": 801
+          "n": 803
         },
         {
           "key": "internal",
-          "n": 531
+          "n": 545
         },
         {
           "key": "social",
@@ -3240,7 +3232,7 @@
         },
         {
           "key": "search",
-          "n": 115
+          "n": 117
         },
         {
           "key": "referral",
@@ -3254,11 +3246,11 @@
       "referrers": [
         {
           "key": "schooledthemusical.com",
-          "n": 531
+          "n": 545
         },
         {
           "key": "google.com",
-          "n": 98
+          "n": 100
         },
         {
           "key": "facebook.com",
@@ -3338,7 +3330,7 @@
       "countries": [
         {
           "key": "US",
-          "n": 1532
+          "n": 1550
         },
         {
           "key": "KG",
@@ -3416,7 +3408,7 @@
         },
         {
           "key": "Las Vegas, Nevada",
-          "n": 77
+          "n": 92
         },
         {
           "key": "Lancaster, Pennsylvania",
@@ -3431,12 +3423,12 @@
           "n": 48
         },
         {
-          "key": "Yonkers, New York",
+          "key": "Ashburn, Virginia",
           "n": 31
         },
         {
-          "key": "Ashburn, Virginia",
-          "n": 30
+          "key": "Yonkers, New York",
+          "n": 31
         },
         {
           "key": "Washington, District of Columbia",
@@ -3456,7 +3448,7 @@
         },
         {
           "key": "Wilkinsburg, Pennsylvania",
-          "n": 22
+          "n": 24
         },
         {
           "key": "North Las Vegas, Nevada",
@@ -3498,7 +3490,7 @@
         },
         {
           "key": "desktop",
-          "n": 620
+          "n": 638
         },
         {
           "key": "tablet",
@@ -3512,7 +3504,7 @@
         },
         {
           "key": "Chrome",
-          "n": 535
+          "n": 551
         },
         {
           "key": "Other",
@@ -3524,7 +3516,7 @@
         },
         {
           "key": "Firefox",
-          "n": 7
+          "n": 9
         },
         {
           "key": "Opera",
@@ -3542,7 +3534,7 @@
         },
         {
           "key": "Windows",
-          "n": 239
+          "n": 257
         },
         {
           "key": "Android",
@@ -3592,15 +3584,15 @@
         },
         {
           "key": "https://www.duq.edu/faculty-and-staff/dr-michael-mackey.php",
-          "n": 21
+          "n": 22
         },
         {
           "key": "https://www.rebeccaaparicio.com/",
-          "n": 17
+          "n": 19
         },
         {
           "key": "https://ryandobrin.com/",
-          "n": 11
+          "n": 12
         },
         {
           "key": "mailto:schooledthemusical@gmail.com?subject=Audition%20submission%20%E2%80%94%20Schooled%20(Pittsburgh%2C%20Oct%202026)",
@@ -3646,7 +3638,7 @@
       "internalLinks": [
         {
           "key": "https://schooledthemusical.com/casting.html",
-          "n": 118
+          "n": 120
         },
         {
           "key": "https://schooledthemusical.com/about.html",
@@ -3654,19 +3646,19 @@
         },
         {
           "key": "https://schooledthemusical.com/dispatches.html",
-          "n": 52
+          "n": 56
         },
         {
           "key": "https://schooledthemusical.com/index.html#about",
-          "n": 49
+          "n": 51
         },
         {
           "key": "https://schooledthemusical.com/reading.html",
-          "n": 46
+          "n": 47
         },
         {
           "key": "https://schooledthemusical.com/history.html",
-          "n": 23
+          "n": 24
         },
         {
           "key": "https://schooledthemusical.com/vision.html",
@@ -3678,7 +3670,7 @@
         },
         {
           "key": "https://schooledthemusical.com/dispatches.html#update-5",
-          "n": 13
+          "n": 15
         },
         {
           "key": "https://schooledthemusical.com/dispatches.html#update-4",
@@ -3701,11 +3693,11 @@
           "n": 5
         },
         {
-          "key": "https://schooledthemusical.com/index.html#top",
-          "n": 3
+          "key": "https://schooledthemusical.com/history.html#pittsburgh-2026",
+          "n": 4
         },
         {
-          "key": "https://schooledthemusical.com/history.html#pittsburgh-2026",
+          "key": "https://schooledthemusical.com/index.html#top",
           "n": 3
         },
         {
