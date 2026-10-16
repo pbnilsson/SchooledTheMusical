@@ -124,6 +124,7 @@ def render_production(p):
 COLLAB_ROLES = (
     "Director",
     "Music Director",
+    "Dramaturgy",
     "Choreographer",
     "Orchestrator",
     "Scenic Designer",
