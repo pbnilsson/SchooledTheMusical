@@ -191,9 +191,12 @@ def render_jump(prods):
     return "\n".join(out)
 
 def render_timeline(prods):
-    """The five .node divs inside index.html's .tl .nodes container."""
+    """The .node divs inside index.html's .tl .nodes container."""
     out = []
     for p in prods:
+        # "timeline": false keeps a production on history.html but off the rail.
+        if p.get("timeline") is False:
+            continue
         bits = ['<div class="node">', '<div class="dot"></div>',
                 '<div class="yr">%s</div>' % esc(p["year"])]
         place = p["venue"] or p["place"]
@@ -207,6 +210,8 @@ def render_timeline(prods):
             place = "SXSW EDU, Austin"
         elif p["id"] == "pittsburgh-2026":
             place = "Pittsburgh"
+        elif p["id"] == "boston-2026":
+            place = "NAIS Gather, Boston"
         bits.append('<div class="pl">%s</div>' % esc(place))
         # The rail stays terse: use timelineBilling when the page copy runs long.
         bits.append('<div class="ds">%s</div>' % (p.get("timelineBilling") or p["billing"]))
