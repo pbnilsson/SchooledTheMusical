@@ -70,7 +70,7 @@ def names_html(names, equity=()):
 # Agreement: an asterisk beside each Equity Actor or Stage Manager wherever a
 # cast list is provided, with this note. List the members in a production's
 # "equity" array; names stay clean in the JSON and the asterisk is added here.
-EQUITY_NOTE = ("*Appear through the courtesy of Actors\u2019 Equity Association, "
+EQUITY_NOTE = ("*Appeared through the courtesy of Actors\u2019 Equity Association, "
                "the Union of Professional Actors and Stage Managers in the United States.")
 
 
