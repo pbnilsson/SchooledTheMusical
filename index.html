@@ -18,7 +18,7 @@
     --amber:#fbbf24;
     --teal:#2dd4bf;
     --blue:#60a5fa;
-    --purple:#a78bfa;
+    --purple:#a78bfa;--pink:#f472b6;
   }
   *{box-sizing:border-box;}
   html{font-size:16px;scroll-behavior:smooth;}
@@ -127,17 +127,17 @@
   .tl .nodes{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;position:relative;}
   .tl .node{text-align:center;display:flex;flex-direction:column;}
   .tl .node .dot{width:13px;height:13px;border-radius:50%;margin:0 auto 1rem;border:2px solid var(--bg-lighter);}
-  .tl .node:nth-child(1) .dot{background:var(--coral);}
-  .tl .node:nth-child(2) .dot{background:var(--amber);}
-  .tl .node:nth-child(3) .dot{background:var(--teal);}
-  .tl .node:nth-child(4) .dot{background:var(--blue);}
-  .tl .node:nth-child(5) .dot{background:var(--purple);}
+  .tl .node.coral .dot{background:var(--coral);}
+  .tl .node.amber .dot{background:var(--amber);}
+  .tl .node.teal .dot{background:var(--teal);}
+  .tl .node.blue .dot{background:var(--blue);}
+  .tl .node.purple .dot{background:var(--purple);}
+  .tl .node.pink .dot{background:var(--pink);}
+  .tl .node.next .dot{background:transparent;border-color:currentColor;box-shadow:0 0 0 3px rgba(255,255,255,.08);}
   .tl .node .yr{font-weight:700;font-size:.9rem;}
-  .tl .node:nth-child(1) .yr{color:var(--coral);}
-  .tl .node:nth-child(2) .yr{color:var(--amber);}
-  .tl .node:nth-child(3) .yr{color:var(--teal);}
-  .tl .node:nth-child(4) .yr{color:var(--blue);}
-  .tl .node:nth-child(5) .yr{color:var(--purple);}
+  .tl .node.coral{color:var(--coral);} .tl .node.amber{color:var(--amber);}
+  .tl .node.teal{color:var(--teal);} .tl .node.blue{color:var(--blue);}
+  .tl .node.purple{color:var(--purple);} .tl .node.pink{color:var(--pink);}
   .tl .node .pl{font-size:.72rem;color:var(--text-dim);margin:.15rem 0 .5rem;}
   .tl .node .ds{font-size:.78rem;color:var(--text-muted);font-weight:300;line-height:1.45;}
   .tl .node .crd{display:block;margin-top:auto;padding-top:.7rem;font-size:.7rem;font-weight:400;color:var(--text-dim);text-decoration:none;border-bottom:1px solid transparent;transition:color .2s ease,border-color .2s ease;}
@@ -346,11 +346,11 @@
       <div class="rail"></div>
       <div class="nodes">
 <!-- AUTO:TIMELINE:START -->
-        <div class="node"><div class="dot"></div><div class="yr">2019</div><div class="pl">School meeting</div><div class="ds">A 35-minute show composed for 25 teachers to perform for their students.</div></div>
-        <div class="node"><div class="dot"></div><div class="yr">Oct 2023</div><div class="pl">NY Times Center, NYC</div><div class="ds">Distilled to a 15-minute core; staged reading by 12 on- and off-Broadway actors.</div></div>
-        <div class="node"><div class="dot"></div><div class="yr">Apr 2024</div><div class="pl">San Diego</div><div class="ds">Another reading of the core for a larger audience at a national conference.</div></div>
-        <div class="node"><div class="dot"></div><div class="yr">Mar 2026</div><div class="pl">SXSW EDU, Austin</div><div class="ds">60-minute Act I staged reading with Q&amp;A. 96 survey responses. NPS 67.</div></div>
-        <div class="node"><div class="dot"></div><div class="yr">Oct 2026</div><div class="pl">Pittsburgh</div><div class="ds">First full two-act staged reading<br>Rosemary Heyl Theatre</div></div>
+        <div class="node coral"><div class="dot"></div><div class="yr">2019</div><div class="pl">School meeting</div><div class="ds">A 35-minute show composed for 25 teachers to perform for their students.</div></div>
+        <div class="node amber"><div class="dot"></div><div class="yr">2023–24</div><div class="pl">NYC &amp; San Diego</div><div class="ds">Distilled to a 15-minute core; staged at two national conferences.</div></div>
+        <div class="node blue"><div class="dot"></div><div class="yr">Mar 2026</div><div class="pl">SXSW EDU, Austin</div><div class="ds">60-minute Act I staged reading with Q&amp;A. 96 survey responses. NPS 67.</div></div>
+        <div class="node purple"><div class="dot"></div><div class="yr">Oct 2026</div><div class="pl">Pittsburgh</div><div class="ds">First full two-act staged reading<br>Rosemary Heyl Theatre</div></div>
+        <div class="node pink next"><div class="dot"></div><div class="yr">Dec 4, 2026</div><div class="pl">NAIS Gather, Boston</div><div class="ds">45-minute staging of selected scenes from Act I.</div></div>
 <!-- AUTO:TIMELINE:END -->
       </div>
     </div>

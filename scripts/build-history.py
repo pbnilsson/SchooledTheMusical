@@ -194,16 +194,22 @@ def render_timeline(prods):
     """The .node divs inside index.html's .tl .nodes container."""
     out = []
     for p in prods:
-        # "timeline": false keeps a production on history.html but off the rail.
+        # "timeline": false keeps a production on history.html but off the rail
+        # (San Diego shares the 2023\u201324 node with NYC via timelineYear).
         if p.get("timeline") is False:
             continue
-        bits = ['<div class="node">', '<div class="dot"></div>',
-                '<div class="yr">%s</div>' % esc(p["year"])]
+        # Colour comes from the production's accent, matching history.html;
+        # an upcoming production gets the hollow dot.
+        cls = "node %s" % p.get("accent", "amber")
+        if p.get("upcoming"):
+            cls += " next"
+        bits = ['<div class="%s">' % cls, '<div class="dot"></div>',
+                '<div class="yr">%s</div>' % esc(p.get("timelineYear") or p["year"])]
         place = p["venue"] or p["place"]
         if p["id"] == "deerfield-2019":
             place = "School meeting"
         elif p["id"] == "nyc-2023":
-            place = "NY Times Center, NYC"
+            place = "NYC & San Diego"
         elif p["id"] == "san-diego-2024":
             place = "San Diego"
         elif p["id"] == "sxsw-2026":
