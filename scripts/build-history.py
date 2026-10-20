@@ -62,12 +62,21 @@ def name_html(name):
     return '<a href="%s" target="_blank" rel="noopener">%s</a>' % (esc(url), esc(name))
 
 
-def names_html(names):
-    return ", ".join(name_html(n) for n in names)
+def names_html(names, equity=()):
+    return ", ".join(name_html(n) + ("*" if n in equity else "") for n in names)
+
+
+# Actors' Equity Association courtesy line. Rule 4(A) of the Single Engagement
+# Agreement: an asterisk beside each Equity Actor or Stage Manager wherever a
+# cast list is provided, with this note. List the members in a production's
+# "equity" array; names stay clean in the JSON and the asterisk is added here.
+EQUITY_NOTE = ("*Appear through the courtesy of Actors\u2019 Equity Association, "
+               "the Union of Professional Actors and Stage Managers in the United States.")
 
 
 def render_production(p):
     accent = p.get("accent", "amber")
+    equity = set(p.get("equity", ()))
     out = []
     out.append('  <section class="prod" id="%s">' % p["id"])
     out.append('    <div class="prod-head">')
@@ -88,7 +97,7 @@ def render_production(p):
     if p.get("credits"):
         out.append('    <dl class="prod-credits">')
         for c in p["credits"]:
-            out.append("      <dt>%s</dt><dd>%s</dd>" % (esc(c["role"]), names_html(c["names"])))
+            out.append("      <dt>%s</dt><dd>%s</dd>" % (esc(c["role"]), names_html(c["names"], equity)))
         out.append("    </dl>")
 
     out.append('    <div class="prod-cast">')
@@ -97,7 +106,7 @@ def render_production(p):
         cols = "cast-cols" if len(p["cast"]) > 6 else "cast-cols cast-cols-2"
         out.append('      <div class="%s">' % cols)
         for n in p["cast"]:
-            out.append('        <span class="cast-name">%s</span>' % esc(n))
+            out.append('        <span class="cast-name">%s%s</span>' % (esc(n), "*" if n in equity else ""))
         out.append("      </div>")
     elif p.get("castNote"):
         out.append('      <p class="cast-note">%s</p>' % esc(p["castNote"]))
@@ -106,8 +115,11 @@ def render_production(p):
     if p.get("additional"):
         out.append('    <dl class="prod-credits prod-extra">')
         for c in p["additional"]:
-            out.append("      <dt>%s</dt><dd>%s</dd>" % (esc(c["role"]), names_html(c["names"])))
+            out.append("      <dt>%s</dt><dd>%s</dd>" % (esc(c["role"]), names_html(c["names"], equity)))
         out.append("    </dl>")
+
+    if equity:
+        out.append('    <p class="equity-note">%s</p>' % esc(EQUITY_NOTE))
 
     if p.get("cta"):
         out.append('    <p class="prod-cta"><a href="%s">%s</a></p>'
