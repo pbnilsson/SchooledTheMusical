@@ -65,25 +65,22 @@
 
     .about-layout {
       display: flex;
-      gap: 48px;
-      align-items: flex-start;
+      flex-direction: column;
+      gap: 8px;
+      align-items: stretch;
     }
-    .about-left {
-      flex: 0 0 220px;
-      position: sticky;
-      top: 100px;
-    }
-    .headshot-wrapper img {
-      width: 100%;
-      border-radius: 8px;
-      display: block;
+    .member-line {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 4px 16px;
     }
     .creator-name {
       font-family: 'Helvetica Neue', Helvetica, sans-serif;
       font-weight: 700;
       font-size: 1.5rem;
       letter-spacing: -0.02em;
-      margin-bottom: 4px;
+      margin: 0;
     }
     .creator-role {
       font-size: 0.82rem;
@@ -91,14 +88,14 @@
     }
     .spectrum-bar {
       height: 3px;
-      width: 100%;
+      width: 220px;
       margin-top: 8px;
       margin-bottom: 20px;
       background: linear-gradient(90deg, var(--amber), var(--teal), var(--blue), var(--purple));
       border-radius: 2px;
     }
 
-    .about-right { flex: 1; min-width: 0; }
+    .about-right { max-width: 720px; }
     .bio p {
       font-size: 0.95rem;
       color: rgba(241, 241, 241, 0.82);
@@ -117,7 +114,7 @@
     }
     .about-footer a { font-size: 0.8rem; color: var(--teal); }
 
-    .member-contact { font-size: 0.78rem; margin-top: 6px; line-height: 1.5; }
+    .member-contact { font-size: 0.78rem; line-height: 1.5; }
     .member-contact a { color: var(--text-muted); text-decoration: underline;
       text-decoration-color: rgba(255,255,255,.3); text-underline-offset: 3px; word-break: break-word; }
     .member-contact a:hover { color: var(--text); }
@@ -165,8 +162,6 @@
 
     @media (max-width: 640px) {
       .about-container { padding: 40px 20px 60px; }
-      .about-layout { flex-direction: column; gap: 32px; }
-      .about-left { flex: none; width: 180px; position: static; }
       .spectrum-bar { width: 160px; }
     }
   </style>
@@ -191,13 +186,12 @@
 
     <div class="about-layout">
       <div class="about-left fade-in delay-2">
-        <h1 class="creator-name">Peter Nilsson</h1>
-        <div class="creator-role">Book, music &amp; lyrics</div>
-        <div class="member-contact"><a data-mail="peter" href="#">peter [at] schooledthemusical [dot] com</a></div>
-        <div class="spectrum-bar"></div>
-        <div class="headshot-wrapper">
-          <img src="/images/headshot.jpg" alt="Peter Nilsson">
+        <div class="member-line">
+          <h1 class="creator-name">Peter Nilsson</h1>
+          <span class="creator-role">Book, music &amp; lyrics</span>
+          <span class="member-contact"><a data-mail="peter" href="#">peter [at] schooledthemusical [dot] com</a></span>
         </div>
+        <div class="spectrum-bar"></div>
       </div>
 
       <div class="about-right bio fade-in delay-3">
