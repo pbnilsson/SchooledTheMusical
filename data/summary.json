@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-25T13:09:24.654Z",
+  "generated": "2026-10-25T22:31:38.054Z",
   "defaultRange": "all",
   "order": [
     "24h",
@@ -17,67 +17,22 @@
       "key": "24h",
       "label": "Last 24 hours",
       "short": "24h",
-      "from": "2026-10-24T13:09:24.654Z",
-      "to": "2026-10-25T13:09:24.654Z",
+      "from": "2026-10-24T22:31:38.054Z",
+      "to": "2026-10-25T22:31:38.054Z",
       "available": true,
       "granularity": "hour",
       "totals": {
-        "views": 6,
+        "views": 9,
         "clicks": 3,
         "links": 0,
-        "visitors": 3,
+        "visitors": 6,
         "signups": 0,
         "days": 1,
         "medianPagesPerVisit": 1,
         "medianDepth": 21,
-        "medianSecs": 9
+        "medianSecs": 8
       },
       "series": [
-        {
-          "t": "2026-10-24T14:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-10-24T15:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-10-24T16:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-10-24T17:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-10-24T18:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-10-24T19:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-10-24T20:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-10-24T21:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
-        {
-          "t": "2026-10-24T22:00:00.000Z",
-          "views": 0,
-          "visitors": 0
-        },
         {
           "t": "2026-10-24T23:00:00.000Z",
           "views": 0,
@@ -150,6 +105,51 @@
         },
         {
           "t": "2026-10-25T13:00:00.000Z",
+          "views": 1,
+          "visitors": 1
+        },
+        {
+          "t": "2026-10-25T14:00:00.000Z",
+          "views": 0,
+          "visitors": 0
+        },
+        {
+          "t": "2026-10-25T15:00:00.000Z",
+          "views": 2,
+          "visitors": 2
+        },
+        {
+          "t": "2026-10-25T16:00:00.000Z",
+          "views": 0,
+          "visitors": 0
+        },
+        {
+          "t": "2026-10-25T17:00:00.000Z",
+          "views": 0,
+          "visitors": 0
+        },
+        {
+          "t": "2026-10-25T18:00:00.000Z",
+          "views": 0,
+          "visitors": 0
+        },
+        {
+          "t": "2026-10-25T19:00:00.000Z",
+          "views": 0,
+          "visitors": 0
+        },
+        {
+          "t": "2026-10-25T20:00:00.000Z",
+          "views": 0,
+          "visitors": 0
+        },
+        {
+          "t": "2026-10-25T21:00:00.000Z",
+          "views": 0,
+          "visitors": 0
+        },
+        {
+          "t": "2026-10-25T22:00:00.000Z",
           "views": 0,
           "visitors": 0
         }
@@ -157,11 +157,11 @@
       "pages": [
         {
           "key": "/",
-          "n": 3,
-          "visitors": 3,
-          "depth": 46,
-          "secs": 18,
-          "measured": 2
+          "n": 6,
+          "visitors": 6,
+          "depth": 21,
+          "secs": 6,
+          "measured": 5
         },
         {
           "key": "/about.html",
@@ -189,7 +189,7 @@
       "entries": [
         {
           "key": "/",
-          "n": 2
+          "n": 5
         },
         {
           "key": "/about.html",
@@ -199,7 +199,7 @@
       "exits": [
         {
           "key": "/",
-          "n": 2
+          "n": 5
         },
         {
           "key": "/reading.html",
@@ -209,7 +209,7 @@
       "sources": [
         {
           "key": "direct",
-          "n": 3
+          "n": 6
         },
         {
           "key": "internal",
@@ -226,7 +226,7 @@
       "countries": [
         {
           "key": "US",
-          "n": 5
+          "n": 8
         },
         {
           "key": "AE",
@@ -245,35 +245,51 @@
         {
           "key": "Abu Dhabi, Abu Dhabi",
           "n": 1
+        },
+        {
+          "key": "Waterbury, Connecticut",
+          "n": 1
+        },
+        {
+          "key": "Pittsburgh, Pennsylvania",
+          "n": 1
+        },
+        {
+          "key": "Moses Lake, Washington",
+          "n": 1
         }
       ],
       "devices": [
         {
           "key": "mobile",
-          "n": 5
+          "n": 7
         },
         {
           "key": "desktop",
-          "n": 1
+          "n": 2
         }
       ],
       "browsers": [
         {
           "key": "Safari",
-          "n": 5
+          "n": 7
         },
         {
           "key": "Chrome",
-          "n": 1
+          "n": 2
         }
       ],
       "systems": [
         {
           "key": "iOS",
-          "n": 5
+          "n": 7
         },
         {
           "key": "Windows",
+          "n": 1
+        },
+        {
+          "key": "Other",
           "n": 1
         }
       ],
@@ -299,26 +315,26 @@
       "key": "week",
       "label": "Last week",
       "short": "Week",
-      "from": "2026-10-18T13:09:24.654Z",
-      "to": "2026-10-25T13:09:24.654Z",
+      "from": "2026-10-18T22:31:38.054Z",
+      "to": "2026-10-25T22:31:38.054Z",
       "available": true,
       "granularity": "day",
       "totals": {
-        "views": 158,
-        "clicks": 82,
-        "links": 8,
-        "visitors": 85,
+        "views": 127,
+        "clicks": 66,
+        "links": 6,
+        "visitors": 68,
         "signups": 0,
         "days": 8,
         "medianPagesPerVisit": 1,
-        "medianDepth": 43,
+        "medianDepth": 36,
         "medianSecs": 9
       },
       "series": [
         {
           "d": "2026-10-18",
-          "views": 42,
-          "visitors": 23
+          "views": 8,
+          "visitors": 3
         },
         {
           "d": "2026-10-19",
@@ -352,50 +368,50 @@
         },
         {
           "d": "2026-10-25",
-          "views": 6,
-          "visitors": 3
+          "views": 9,
+          "visitors": 6
         }
       ],
       "pages": [
         {
           "key": "/",
-          "n": 85,
-          "visitors": 73,
-          "depth": 39,
+          "n": 69,
+          "visitors": 60,
+          "depth": 36,
           "secs": 11,
-          "measured": 75
-        },
-        {
-          "key": "/dispatches.html",
-          "n": 19,
-          "visitors": 17,
-          "depth": 16,
-          "secs": 13,
-          "measured": 19
-        },
-        {
-          "key": "/casting.html",
-          "n": 18,
-          "visitors": 14,
-          "depth": 96,
-          "secs": 5,
-          "measured": 18
+          "measured": 60
         },
         {
           "key": "/about.html",
-          "n": 17,
-          "visitors": 13,
-          "depth": 64,
-          "secs": 14,
-          "measured": 16
+          "n": 14,
+          "visitors": 10,
+          "depth": 59,
+          "secs": 11,
+          "measured": 13
+        },
+        {
+          "key": "/dispatches.html",
+          "n": 14,
+          "visitors": 12,
+          "depth": 18,
+          "secs": 10,
+          "measured": 14
+        },
+        {
+          "key": "/casting.html",
+          "n": 13,
+          "visitors": 10,
+          "depth": 100,
+          "secs": 4,
+          "measured": 13
         },
         {
           "key": "/history.html",
-          "n": 13,
-          "visitors": 11,
+          "n": 11,
+          "visitors": 9,
           "depth": 34,
-          "secs": 18,
-          "measured": 13
+          "secs": 14,
+          "measured": 12
         },
         {
           "key": "/reading.html",
@@ -416,14 +432,6 @@
       ],
       "journeys": [
         {
-          "key": "/ → /dispatches.html",
-          "n": 2
-        },
-        {
-          "key": "/ → /history.html",
-          "n": 2
-        },
-        {
           "key": "/ → /casting.html",
           "n": 2
         },
@@ -432,15 +440,7 @@
           "n": 2
         },
         {
-          "key": "/ → /about.html → /casting.html → /dispatches.html",
-          "n": 1
-        },
-        {
-          "key": "/casting.html → /about.html → /history.html → /",
-          "n": 1
-        },
-        {
-          "key": "/ → /about.html → /",
+          "key": "/ → /history.html",
           "n": 1
         },
         {
@@ -474,24 +474,36 @@
         {
           "key": "/dispatches.html → /",
           "n": 1
+        },
+        {
+          "key": "/dispatches.html → /history.html",
+          "n": 1
+        },
+        {
+          "key": "/ → /about.html → /casting.html → /about.html → /",
+          "n": 1
+        },
+        {
+          "key": "/ → /dispatches.html → /history.html → /",
+          "n": 1
+        },
+        {
+          "key": "/about.html → /casting.html → /dispatches.html → / → /casting.html → /about.html",
+          "n": 1
         }
       ],
       "entries": [
         {
           "key": "/",
-          "n": 66
-        },
-        {
-          "key": "/dispatches.html",
-          "n": 7
+          "n": 54
         },
         {
           "key": "/about.html",
           "n": 6
         },
         {
-          "key": "/casting.html",
-          "n": 3
+          "key": "/dispatches.html",
+          "n": 5
         },
         {
           "key": "/history.html",
@@ -505,18 +517,10 @@
       "exits": [
         {
           "key": "/",
-          "n": 59
-        },
-        {
-          "key": "/dispatches.html",
-          "n": 7
+          "n": 50
         },
         {
           "key": "/history.html",
-          "n": 6
-        },
-        {
-          "key": "/casting.html",
           "n": 5
         },
         {
@@ -524,22 +528,30 @@
           "n": 5
         },
         {
+          "key": "/casting.html",
+          "n": 3
+        },
+        {
           "key": "/reading.html",
           "n": 3
+        },
+        {
+          "key": "/dispatches.html",
+          "n": 2
         }
       ],
       "sources": [
         {
           "key": "internal",
-          "n": 70
+          "n": 59
         },
         {
           "key": "direct",
-          "n": 46
+          "n": 38
         },
         {
           "key": "search",
-          "n": 37
+          "n": 25
         },
         {
           "key": "referral",
@@ -553,11 +565,11 @@
       "referrers": [
         {
           "key": "schooledthemusical.com",
-          "n": 70
+          "n": 59
         },
         {
           "key": "google.com",
-          "n": 35
+          "n": 23
         },
         {
           "key": "peternilsson.us",
@@ -580,7 +592,7 @@
       "countries": [
         {
           "key": "US",
-          "n": 153
+          "n": 122
         },
         {
           "key": "AE",
@@ -594,7 +606,7 @@
       "cities": [
         {
           "key": "Pittsburgh, Pennsylvania",
-          "n": 40
+          "n": 32
         },
         {
           "key": "Las Vegas, Nevada",
@@ -602,43 +614,23 @@
         },
         {
           "key": "New York City, New York",
-          "n": 18
-        },
-        {
-          "key": "Bridgeville, Pennsylvania",
-          "n": 9
+          "n": 14
         },
         {
           "key": "Honolulu, Hawaii",
           "n": 9
         },
         {
-          "key": "Washington, District of Columbia",
-          "n": 5
-        },
-        {
           "key": "Beverly, Massachusetts",
           "n": 5
-        },
-        {
-          "key": "Plymouth Meeting, Pennsylvania",
-          "n": 4
         },
         {
           "key": "North Las Vegas, Nevada",
           "n": 4
         },
         {
-          "key": "Fort George G Mead Junction, Maryland",
-          "n": 3
-        },
-        {
           "key": "Bakerstown, Pennsylvania",
           "n": 3
-        },
-        {
-          "key": "Ashburn, Virginia",
-          "n": 2
         },
         {
           "key": "Arlington, Virginia",
@@ -646,6 +638,10 @@
         },
         {
           "key": "Hickory Hills, Illinois",
+          "n": 2
+        },
+        {
+          "key": "Moses Lake, Washington",
           "n": 2
         },
         {
@@ -671,26 +667,42 @@
         {
           "key": "Dubai, Dubai",
           "n": 2
+        },
+        {
+          "key": "Waterbury, Connecticut",
+          "n": 2
+        },
+        {
+          "key": "Syracuse, New York",
+          "n": 1
+        },
+        {
+          "key": "Bridgeville, Pennsylvania",
+          "n": 1
+        },
+        {
+          "key": "Parsippany, New Jersey",
+          "n": 1
         }
       ],
       "devices": [
         {
-          "key": "mobile",
-          "n": 84
+          "key": "desktop",
+          "n": 67
         },
         {
-          "key": "desktop",
-          "n": 74
+          "key": "mobile",
+          "n": 60
         }
       ],
       "browsers": [
         {
           "key": "Safari",
-          "n": 90
+          "n": 62
         },
         {
           "key": "Chrome",
-          "n": 64
+          "n": 61
         },
         {
           "key": "Edge",
@@ -704,19 +716,19 @@
       "systems": [
         {
           "key": "iOS",
-          "n": 82
+          "n": 58
         },
         {
           "key": "Windows",
-          "n": 40
+          "n": 38
         },
         {
           "key": "macOS",
-          "n": 31
+          "n": 25
         },
         {
           "key": "Other",
-          "n": 3
+          "n": 4
         },
         {
           "key": "Android",
@@ -727,15 +739,15 @@
       "signupsByPage": [],
       "links": [
         {
-          "key": "https://www.paispa.org/events/elevate-learning-conference",
-          "n": 3
-        },
-        {
           "key": "https://www.rebeccaaparicio.com/",
           "n": 3
         },
         {
           "key": "https://www.instagram.com/schooledthemusical",
+          "n": 1
+        },
+        {
+          "key": "https://www.paispa.org/events/elevate-learning-conference",
           "n": 1
         },
         {
@@ -746,27 +758,27 @@
       "internalLinks": [
         {
           "key": "https://schooledthemusical.com/casting.html",
-          "n": 12
-        },
-        {
-          "key": "https://schooledthemusical.com/about.html",
-          "n": 10
-        },
-        {
-          "key": "https://schooledthemusical.com/dispatches.html",
-          "n": 10
+          "n": 11
         },
         {
           "key": "https://schooledthemusical.com/dispatches.html#update-5",
-          "n": 10
+          "n": 8
         },
         {
           "key": "https://schooledthemusical.com/index.html#about",
-          "n": 10
+          "n": 8
         },
         {
           "key": "https://schooledthemusical.com/history.html",
-          "n": 9
+          "n": 7
+        },
+        {
+          "key": "https://schooledthemusical.com/about.html",
+          "n": 7
+        },
+        {
+          "key": "https://schooledthemusical.com/dispatches.html",
+          "n": 7
         },
         {
           "key": "https://schooledthemusical.com/reading.html",
@@ -775,10 +787,6 @@
         {
           "key": "https://schooledthemusical.com/index.html",
           "n": 3
-        },
-        {
-          "key": "https://schooledthemusical.com/history.html#pittsburgh-2026",
-          "n": 2
         },
         {
           "key": "https://schooledthemusical.com/history.html#boston-2026",
@@ -791,6 +799,10 @@
         {
           "key": "https://schooledthemusical.com/vision.html",
           "n": 1
+        },
+        {
+          "key": "https://schooledthemusical.com/history.html#pittsburgh-2026",
+          "n": 1
         }
       ]
     },
@@ -798,27 +810,22 @@
       "key": "month",
       "label": "Last month",
       "short": "Month",
-      "from": "2026-09-25T13:09:24.654Z",
-      "to": "2026-10-25T13:09:24.654Z",
+      "from": "2026-09-25T22:31:38.054Z",
+      "to": "2026-10-25T22:31:38.054Z",
       "available": true,
       "granularity": "day",
       "totals": {
-        "views": 836,
+        "views": 837,
         "clicks": 435,
         "links": 61,
-        "visitors": 450,
+        "visitors": 451,
         "signups": 1,
-        "days": 31,
+        "days": 30,
         "medianPagesPerVisit": 1,
-        "medianDepth": 47,
+        "medianDepth": 46,
         "medianSecs": 11
       },
       "series": [
-        {
-          "d": "2026-09-25",
-          "views": 2,
-          "visitors": 2
-        },
         {
           "d": "2026-09-26",
           "views": 7,
@@ -966,18 +973,18 @@
         },
         {
           "d": "2026-10-25",
-          "views": 6,
-          "visitors": 3
+          "views": 9,
+          "visitors": 6
         }
       ],
       "pages": [
         {
           "key": "/",
-          "n": 383,
-          "visitors": 335,
+          "n": 386,
+          "visitors": 338,
           "depth": 45,
           "secs": 12,
-          "measured": 339
+          "measured": 342
         },
         {
           "key": "/casting.html",
@@ -997,11 +1004,11 @@
         },
         {
           "key": "/about.html",
-          "n": 91,
-          "visitors": 78,
-          "depth": 74,
+          "n": 89,
+          "visitors": 76,
+          "depth": 73,
           "secs": 15,
-          "measured": 87
+          "measured": 85
         },
         {
           "key": "/history.html",
@@ -1093,7 +1100,7 @@
       "entries": [
         {
           "key": "/",
-          "n": 313
+          "n": 316
         },
         {
           "key": "/casting.html",
@@ -1105,7 +1112,7 @@
         },
         {
           "key": "/about.html",
-          "n": 22
+          "n": 20
         },
         {
           "key": "/history.html",
@@ -1123,19 +1130,19 @@
       "exits": [
         {
           "key": "/",
-          "n": 256
+          "n": 259
         },
         {
           "key": "/casting.html",
           "n": 60
         },
         {
-          "key": "/about.html",
+          "key": "/dispatches.html",
           "n": 39
         },
         {
-          "key": "/dispatches.html",
-          "n": 39
+          "key": "/about.html",
+          "n": 37
         },
         {
           "key": "/history.html",
@@ -1157,11 +1164,11 @@
         },
         {
           "key": "direct",
-          "n": 311
+          "n": 314
         },
         {
           "key": "search",
-          "n": 128
+          "n": 126
         },
         {
           "key": "referral",
@@ -1183,7 +1190,7 @@
         },
         {
           "key": "google.com",
-          "n": 118
+          "n": 116
         },
         {
           "key": "peternilsson.us",
@@ -1243,7 +1250,7 @@
       "countries": [
         {
           "key": "US",
-          "n": 819
+          "n": 820
         },
         {
           "key": "KG",
@@ -1285,7 +1292,7 @@
         },
         {
           "key": "Pittsburgh, Pennsylvania",
-          "n": 151
+          "n": 152
         },
         {
           "key": "New York City, New York",
@@ -1320,16 +1327,16 @@
           "n": 17
         },
         {
-          "key": "Bridgeville, Pennsylvania",
-          "n": 15
-        },
-        {
           "key": "Parsippany, New Jersey",
           "n": 14
         },
         {
           "key": "Milwaukee, Wisconsin",
           "n": 14
+        },
+        {
+          "key": "Bridgeville, Pennsylvania",
+          "n": 13
         },
         {
           "key": "Sharpsburg, Pennsylvania",
@@ -1363,7 +1370,7 @@
       "devices": [
         {
           "key": "desktop",
-          "n": 429
+          "n": 430
         },
         {
           "key": "mobile",
@@ -1381,7 +1388,7 @@
         },
         {
           "key": "Chrome",
-          "n": 399
+          "n": 400
         },
         {
           "key": "Edge",
@@ -1419,7 +1426,7 @@
         },
         {
           "key": "Other",
-          "n": 9
+          "n": 10
         }
       ],
       "signupsBySource": [
@@ -1567,15 +1574,15 @@
       "key": "year",
       "label": "Last year",
       "short": "Year",
-      "from": "2025-10-25T13:09:24.654Z",
-      "to": "2026-10-25T13:09:24.654Z",
+      "from": "2025-10-25T22:31:38.054Z",
+      "to": "2026-10-25T22:31:38.054Z",
       "available": false,
       "granularity": "day",
       "totals": {
-        "views": 1975,
+        "views": 1978,
         "clicks": 845,
         "links": 157,
-        "visitors": 1256,
+        "visitors": 1259,
         "signups": 4,
         "days": 68,
         "medianPagesPerVisit": 1,
@@ -1920,18 +1927,18 @@
         },
         {
           "d": "2026-10-25",
-          "views": 6,
-          "visitors": 3
+          "views": 9,
+          "visitors": 6
         }
       ],
       "pages": [
         {
           "key": "/",
-          "n": 703,
-          "visitors": 624,
+          "n": 706,
+          "visitors": 627,
           "depth": 42,
           "secs": 13,
-          "measured": 628
+          "measured": 631
         },
         {
           "key": "/casting.html",
@@ -2055,7 +2062,7 @@
       "entries": [
         {
           "key": "/",
-          "n": 577
+          "n": 580
         },
         {
           "key": "/casting.html",
@@ -2089,7 +2096,7 @@
       "exits": [
         {
           "key": "/",
-          "n": 483
+          "n": 486
         },
         {
           "key": "/casting.html",
@@ -2123,7 +2130,7 @@
       "sources": [
         {
           "key": "direct",
-          "n": 916
+          "n": 919
         },
         {
           "key": "internal",
@@ -2237,7 +2244,7 @@
       "countries": [
         {
           "key": "US",
-          "n": 1911
+          "n": 1914
         },
         {
           "key": "KG",
@@ -2319,7 +2326,7 @@
       "cities": [
         {
           "key": "Pittsburgh, Pennsylvania",
-          "n": 567
+          "n": 568
         },
         {
           "key": "Las Vegas, Nevada",
@@ -2401,11 +2408,11 @@
       "devices": [
         {
           "key": "mobile",
-          "n": 1108
+          "n": 1110
         },
         {
           "key": "desktop",
-          "n": 843
+          "n": 844
         },
         {
           "key": "tablet",
@@ -2415,11 +2422,11 @@
       "browsers": [
         {
           "key": "Safari",
-          "n": 1170
+          "n": 1172
         },
         {
           "key": "Chrome",
-          "n": 734
+          "n": 735
         },
         {
           "key": "Edge",
@@ -2441,7 +2448,7 @@
       "systems": [
         {
           "key": "iOS",
-          "n": 1031
+          "n": 1033
         },
         {
           "key": "macOS",
@@ -2457,7 +2464,7 @@
         },
         {
           "key": "Other",
-          "n": 20
+          "n": 21
         },
         {
           "key": "Linux",
@@ -2654,14 +2661,14 @@
       "label": "All time",
       "short": "All",
       "from": "2026-08-19T00:29:19.264Z",
-      "to": "2026-10-25T13:09:24.654Z",
+      "to": "2026-10-25T22:31:38.054Z",
       "available": true,
       "granularity": "day",
       "totals": {
-        "views": 1975,
+        "views": 1978,
         "clicks": 845,
         "links": 157,
-        "visitors": 1256,
+        "visitors": 1259,
         "signups": 4,
         "days": 68,
         "medianPagesPerVisit": 1,
@@ -3006,18 +3013,18 @@
         },
         {
           "d": "2026-10-25",
-          "views": 6,
-          "visitors": 3
+          "views": 9,
+          "visitors": 6
         }
       ],
       "pages": [
         {
           "key": "/",
-          "n": 703,
-          "visitors": 624,
+          "n": 706,
+          "visitors": 627,
           "depth": 42,
           "secs": 13,
-          "measured": 628
+          "measured": 631
         },
         {
           "key": "/casting.html",
@@ -3141,7 +3148,7 @@
       "entries": [
         {
           "key": "/",
-          "n": 577
+          "n": 580
         },
         {
           "key": "/casting.html",
@@ -3175,7 +3182,7 @@
       "exits": [
         {
           "key": "/",
-          "n": 483
+          "n": 486
         },
         {
           "key": "/casting.html",
@@ -3209,7 +3216,7 @@
       "sources": [
         {
           "key": "direct",
-          "n": 916
+          "n": 919
         },
         {
           "key": "internal",
@@ -3323,7 +3330,7 @@
       "countries": [
         {
           "key": "US",
-          "n": 1911
+          "n": 1914
         },
         {
           "key": "KG",
@@ -3405,7 +3412,7 @@
       "cities": [
         {
           "key": "Pittsburgh, Pennsylvania",
-          "n": 567
+          "n": 568
         },
         {
           "key": "Las Vegas, Nevada",
@@ -3487,11 +3494,11 @@
       "devices": [
         {
           "key": "mobile",
-          "n": 1108
+          "n": 1110
         },
         {
           "key": "desktop",
-          "n": 843
+          "n": 844
         },
         {
           "key": "tablet",
@@ -3501,11 +3508,11 @@
       "browsers": [
         {
           "key": "Safari",
-          "n": 1170
+          "n": 1172
         },
         {
           "key": "Chrome",
-          "n": 734
+          "n": 735
         },
         {
           "key": "Edge",
@@ -3527,7 +3534,7 @@
       "systems": [
         {
           "key": "iOS",
-          "n": 1031
+          "n": 1033
         },
         {
           "key": "macOS",
@@ -3543,7 +3550,7 @@
         },
         {
           "key": "Other",
-          "n": 20
+          "n": 21
         },
         {
           "key": "Linux",
