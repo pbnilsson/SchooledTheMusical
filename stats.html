@@ -616,6 +616,16 @@
     }
 
 
+    // Data-center traffic the builder set aside (see scripts/build-summary.js).
+    var dcn = s.dataCenter;
+    if (dcn && dcn.views) {
+      html += '<p class="note" style="font-style:italic;font-size:.9em;margin-top:-36px">Not counted on this page: ' +
+        dcn.views + (dcn.views === 1 ? " page view" : " page views") +
+        " from cloud data centers" +
+        (dcn.places && dcn.places.length ? ", mostly " + esc(dcn.places[0].key) : "") +
+        ". Nearly all of it is automated.</p>";
+    }
+
     if (s.devices && s.devices.length) {
       html += '<section><h2>What they read on</h2>' +
         '<p class="note">Three coarse buckets. The full browser signature is never stored.</p>' +

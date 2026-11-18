@@ -19,6 +19,12 @@ for (const f of files) {
   if (Array.isArray(parsed)) allRows.push(...parsed);
 }
 
+// Rows the collector tagged as cloud data-center traffic (dc: 1), which is
+// almost always automated. Kept on file, left out of every count below, and
+// tallied on their own so the stats page can say how many were set aside.
+const dcRows = allRows.filter((r) => r.dc);
+for (let i = allRows.length - 1; i >= 0; i--) if (allRows[i].dc) allRows.splice(i, 1);
+
 // "/" and "/index.html" are the same page; count them as one.
 for (const r of allRows) {
   if (r.path === "/index.html" || r.path === "/index.htm") r.path = "/";
@@ -236,6 +242,28 @@ function summarize(rows, granularity) {
 
 // ---- the five windows ------------------------------------------------------
 
+function dcTally(from) {
+  const views = dcRows.filter((r) => {
+    if (r.kind !== "view") return false;
+    if (from === null) return true;
+    const t = ms(r);
+    return t !== null && t >= from;
+  });
+  const where = new Map();
+  for (const r of views) {
+    const k = r.city ? r.city + (r.region ? ", " + r.region : "") : r.country || "Unknown";
+    where.set(k, (where.get(k) || 0) + 1);
+  }
+  return {
+    views: views.length,
+    visits: new Set(views.map((r) => r.visit).filter(Boolean)).size,
+    places: [...where.entries()]
+      .map(([key, n]) => ({ key, n }))
+      .sort((a, b) => b.n - a.n)
+      .slice(0, 5),
+  };
+}
+
 const RANGES = [
   { key: "24h", label: "Last 24 hours", short: "24h", days: 1, granularity: "hour" },
   { key: "week", label: "Last week", short: "Week", days: 7, granularity: "day" },
@@ -276,7 +304,8 @@ for (const r of RANGES) {
       to: now.toISOString(),
       available,
     },
-    summarize(rows, r.granularity)
+    summarize(rows, r.granularity),
+    { dataCenter: dcTally(from) }
   );
 }
 
