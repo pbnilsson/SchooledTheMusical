@@ -52,6 +52,7 @@ PERSON_LINKS = {
     "Rian Alfiero": "https://www.fvsevents.com",
     "EdTech Week": "https://www.edtechweek.com",
     "Ryan Dobrin": "https://ryandobrin.com",
+    "Jorden Amir": "https://jordanamirmusic.com",
 }
 
 
